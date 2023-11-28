@@ -1,0 +1,191 @@
+add_newline = false
+format = '$all$username$hostname$directory$status$shell$character'
+
+[character]
+success_symbol = '[\$](bold green) '
+error_symbol = '[>](bold red) '
+
+[hostname]
+ssh_only = false
+ssh_symbol = '% '
+format = '[$ssh_symbol$hostname]($style):'
+
+[line_break]
+disabled = true
+
+[status]
+disabled = false
+format = '[$status]($style) '
+
+[username]
+format = '[$user]($style)@'
+show_always = true
+
+[python]
+symbol = 'py '
+
+[cobol]
+symbol = 'cobo '
+
+[conda]
+symbol = 'conda '
+
+[container]
+symbol = 'cont '
+
+[crystal]
+symbol = 'cristal '
+
+[cmake]
+symbol = 'cm '
+
+[daml]
+symbol = 'daml '
+
+[dart]
+symbol = 'dart '
+
+[deno]
+symbol = 'deno '
+
+[docker_context]
+symbol = 'docker '
+
+[elixir]
+symbol = 'elix '
+
+[elm]
+symbol = 'elm '
+
+[erlang]
+symbol = 'erlang '
+
+[fennel]
+symbol = 'fenn '
+
+[gcloud]
+symbol = 'gcl '
+
+[golang]
+symbol = 'go '
+
+[guix_shell]
+symbol = 'guixsh '
+
+[gradle]
+symbol = 'grad '
+
+[haskell]
+symbol = 'hask '
+
+[haxe]
+symbol = 'haxe '
+
+[helm]
+symbol = 'helm '
+
+[java]
+symbol = 'java '
+
+[julia]
+symbol = 'jul '
+
+[kotlin]
+symbol = 'kot '
+
+[lua]
+symbol = 'lua '
+
+[meson]
+symbol = 'meson '
+
+[nim]
+symbol = 'nim '
+
+[nix_shell]
+symbol = 'nixsh '
+
+[nodejs]
+symbol = 'njs '
+
+[ocaml]
+symbol = 'ocam '
+
+[opa]
+symbol = 'opa '
+
+[openstack]
+symbol = 'ostac '
+
+[package]
+symbol = 'pac '
+
+[perl]
+symbol = 'perl '
+
+[php]
+symbol = 'php '
+
+[pulumi ]
+symbol = 'pulu '
+
+[purescript]
+symbol = 'pures '
+
+[rlang]
+symbol = 'rlang '
+
+[raku]
+symbol = 'raku '
+
+[red]
+symbol = 'red '
+
+[ruby]
+symbol = 'ruby '
+
+[rust]
+symbol = 'rust '
+
+[scala]
+symbol = 'scala '
+
+[shlvl]
+symbol = 'shlvl '
+
+[swift]
+symbol = 'swift '
+
+[terraform ]
+symbol = 'tf '
+
+[vagrant]
+symbol = 'vagrt '
+
+[zig]
+symbol = 'zig '
+
+[jobs]
+symbol = 'jobs'
+
+[memory_usage]
+disabled = false
+format = 'using $symbol [${ram}( \| ${swap})]($style) '
+symbol = 'mem '
+
+[battery]
+full_symbol = ''
+charging_symbol = '+ '
+discharging_symbol = '- '
+unknown_symbol = '? '
+empty_symbol = '! '
+format = 'b at [$symbol$percentage]($style) '
+
+[[battery.display]]
+threshold = 15
+
+[directory]
+read_only = 'r'
+
+[shell]
+disabled = false
