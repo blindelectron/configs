@@ -1,1 +1,1 @@
-ln -s .config ~/.config
+ln -s ~/configs/.config ~/.config
