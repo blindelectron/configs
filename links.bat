@@ -1,1 +1,1 @@
-mklink -J .config %userprofile%\.config
+mklink /J %userprofile%\.config .config
