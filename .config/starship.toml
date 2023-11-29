@@ -33,9 +33,6 @@ symbol = 'buf '
 [bun]
 symbol = 'bun' 
 
-
-
-
 [python]
 symbol = 'py '
 
@@ -107,6 +104,10 @@ symbol = 'jul '
 
 [kotlin]
 symbol = 'kot '
+
+[kubernetes]
+symbol = 'k3s '
+disabled = false
 
 [lua]
 symbol = 'lua '
