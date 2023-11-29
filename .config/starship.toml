@@ -21,6 +21,21 @@ format = '[$status]($style) '
 format = '[$user]($style)@'
 show_always = true
 
+[aws]
+symbol = 'aws '
+
+[azure]
+symbol = 'azure '
+
+[buf]
+symbol = 'buf '
+
+[bun]
+symbol = 'bun' 
+
+
+
+
 [python]
 symbol = 'py '
 
