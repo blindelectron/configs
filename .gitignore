@@ -8,3 +8,10 @@ foobar2000-v2/nobadshutdown
 foobar2000-v2/running
 foobar2000-v2/index-data/
 ExplorerPatcher/Update *
+nvda/addonStore/
+nvda/logs/
+nvda/nao/
+nvda/translation-cache/
+nvda/updates/
+nvda/teleNVDA.ini
+__pycache__/
