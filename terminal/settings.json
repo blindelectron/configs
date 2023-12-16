@@ -110,13 +110,6 @@
                 "name": "Cygwin"
             },
             {
-                "bellStyle": "none",
-                "commandline": "%SystemRoot%\\System32\\OpenSSH\\ssh.exe -p4141 ethan@blind-electron.ml",
-                "guid": "{4a12f145-f4f4-429b-9952-0103fc83abae}",
-                "hidden": false,
-                "name": "kevin ssh"
-            },
-            {
                 "commandline": "%localappdata%\\Programs\\Python\\Python310\\python.exe",
                 "guid": "{fbad2cc8-6783-41b8-9572-03acc1631f6f}",
                 "hidden": false,
