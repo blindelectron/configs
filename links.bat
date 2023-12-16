@@ -3,3 +3,4 @@ mklink /J %appdata%\ExplorerPatcher ExplorerPatcher
 mklink /J %appdata%\Rizonesoft Rizonesoft 
 mklink /J %userprofile%\Documents\WindowsPowerShell ps5
 mklink /J %userprofile%\Documents\PowerShell ps7
+mklink /J %localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState terminal
