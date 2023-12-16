@@ -89,20 +89,6 @@
             },
             {
                 "bellStyle": "none",
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "bellStyle": "none",
-                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
-                "hidden": false,
-                "name": "Arch",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "bellStyle": "none",
                 "closeOnExit": "graceful",
                 "commandline": "%ChocolateyInstall%\\bin\\cygwin.exe",
                 "guid": "{20ba9be5-a70c-46b7-aee0-964916678c96}",
@@ -141,28 +127,28 @@
                 "startingDirectory": "C:/tools/msys64/home/%USERNAME%"
             },
             {
-                "guid": "{5cd1c58d-3723-5b8a-aa96-c02f534375e0}",
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
-                "name": "Developer Command Prompt for VS 2022",
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{e119c1c1-88e6-531f-9f71-026f938ad41f}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2019",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{5154952a-1d14-5d93-9f75-d2f731391db1}",
+                "guid": "{ba974987-72a9-5e43-90c6-fd326ac41348}",
                 "hidden": false,
-                "name": "Developer PowerShell for VS 2022",
+                "name": "Developer PowerShell for VS 2019",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{bf33c763-8f1d-5df4-9594-efbd6b6bb6b6}",
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
-                "name": "Developer Command Prompt for VS 2022 (2)",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{36221897-ef71-5ddc-8767-a92012b5ddb9}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 2022 (2)",
-                "source": "Windows.Terminal.VisualStudio"
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
             }
         ]
     },
