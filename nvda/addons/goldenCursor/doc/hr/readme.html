@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Golden Cursor 6.2.1</title>
+</head>
+<body>
+<h1>Zlatni kursor (Golden Cursor)</h1>
+<ul>
+<li>Autor: Salah Atair, Joseph Lee</li>
+<li>Preuzmi <a href="https://www.nvaccess.org/addonStore/legacy?file=goldenCursor">stabilnu verziju</a></li>
+<li>NVDA kompatibilnost: 2022.4 i novije verzije</li>
+</ul>
+<p>Ovaj dodatak dozvoljava pomicati strelicu miša koristeći tipkovnicu i
+spremanje pozicije miša za programe.</p>
+<h2>Tipkovnički prečaci</h2>
+<ul>
+<li>Kontrol+NVDA+L: pregled spremljenih pozicija miša za aplikaciju, ako ih
+  ima. Također možeš dodijeliti geste tim pozicijama u ovom dijaloškom
+  okviru. Pritiskom na dodijeljenu gestu, izvršit će se lijevi klik u
+  spremljenoj poziciji.</li>
+<li>Šift+NVDA+l: spremi oznaku ili vrijednost za trenutačnu poziciju miša u
+  trenutačno fokusiranoj aplikaciji.</li>
+<li>Windows+NVDA+C: promijeni jedinicu pomicanja miša.</li>
+<li>Windows+NVDA+R: promijeni ograničenje pomicanja miša.</li>
+<li>Windows+NVDA+S: uključi ili isključi izvještavanje o poziciji miša u
+  pikselima.</li>
+<li>Windows+NVDA+J: premjesti poziciju miša na određenu x i y poziciju.</li>
+<li>Windows+NVDA+P: izvijesti o poziciji miša.</li>
+<li>Windows+NVDA+M: uključi ili isključi pomicanje miša strelicama.</li>
+<li>Windows+NVDA+tipke strelica (ili samo tipke strelica, ako je uključeno
+  pomicanje miša strelicama): pomakni miša.</li>
+</ul>
+<p>Napomena: Ove geste je moguće promijeniti u dijaloškom okviru „Ulazne geste”
+pod kategorijom „Zlatni kursor”.</p>
+<h2>Napomene</h2>
+<ul>
+<li>Kad se pozicije (oznake) dijele, svatko treba koristiti istu rezoluciju
+  ekrana.</li>
+<li>Za maksimalnu kompatibilnost, trebate maksimizirati prozore pritiskom
+  kombinacije tipaka Windows+Strelica gore.</li>
+<li>Kad se pozicije dijele, potrebno je preimenovati postojeće vrijednosti
+  pozicija.</li>
+<li>Formati verzije 1.x i 2.x pozicije miša nisu kompatibilni.</li>
+<li>Za izvođenje funkcija koje zahtijevaju korištenje tipki strelica, najprije
+  isključi strelice miša.</li>
+<li>Tijekom brisanja spremljenih pozicija, ako više nema spremljenih pozicija,
+  uklonit će se pozicije za aplikaciju.</li>
+</ul>
+<h2>Verzija 6.2</h2>
+<ul>
+<li>Zahtijeva NVDA verziju 2022.4 ili noviju.</li>
+<li>Kompatibilno s NVDA čitačem 2023.1.</li>
+</ul>
+<h2>Verzija 6.1</h2>
+<ul>
+<li>Zahtijeva NVDA 2021.3 ili noviju verziju.</li>
+<li>Sada možeš dodijeliti prečace za spremljene pozicije iz popisa
+  pozicija. Kad pritisneš prečac izvršit će se lijevi klik za poziciju.</li>
+</ul>
+<h2>Verzija 5.0</h2>
+<ul>
+<li>Moderniziran izvorni kod dodatka kako bi bio kompatibilan s NVDA 2021.1.</li>
+<li>Riješeno mnogo problema sa stilom kodiranja i potencijalnih grešaka s
+  Flake8.</li>
+</ul>
+<h2>Verzija 4.0</h2>
+<ul>
+<li>Zahtijeva NVDA 2019.3 ili noviju verziju.</li>
+<li>Dijaloški okvir za Golden Cursor postavke, zamijenjen je s pločom za
+  Golden Cursor postavke.</li>
+</ul>
+<h2>Verzija 3.3</h2>
+<ul>
+<li>Unutarnje promjene, kako bi se podržala buduća NVDA izdanja.</li>
+</ul>
+<h2>Verzija 3.2</h2>
+<ul>
+<li>Dodatak je kompatibilan s NVDA 2018.3 (wxPython 4).</li>
+</ul>
+<h2>Verzija 3.0</h2>
+<ul>
+<li>U NVDA 2018.2, postavke dodatka se nalaze u novom višekategorijskom
+  prozoru postavki  pod kategorijom „Zlatni kursor”.</li>
+</ul>
+<h2>Verzija 2.1</h2>
+<ul>
+<li>Ispravljena greška dekodiranja unikoda tijekom pokušaja brisanja naziva
+  oznake.</li>
+<li>Sprečavanje višestrukih instanci prilikom otvaranja dijaloških okvira
+  raznih dodatka.</li>
+<li>Poboljšan izgled popisa pozicija miša i skok na dijaloške okvire pozicija.</li>
+</ul>
+<h2>Verzija 2.0</h2>
+<ul>
+<li>Zahtijeva NVDA 2017.3 i noviji.</li>
+<li>Format datoteke pozicije nije kompatibilan s 1.x verzijama. Ako je
+  pronađen format pozicije u 1.x formatu, pozicije u starom formatu bit će
+  pretvorene u novi format tijekom instalacije.</li>
+<li>U NVDA izborniku postavki je dodan novi dijaloški okvir „Postavke dodatka
+  Zlatni kursor” za definiranje jedinice pomicanja miša i za obavještavanje
+  o pozicijama miša prilikom pomicanja miša.</li>
+<li>Promijenjene su različite poruke ovog dodatka.</li>
+<li>Prilikom uključivanja i isključivanja različitih postavki, više se neće
+  čuti odgovarajući zvuk.</li>
+<li>Sad je moguće pokrenuti modus pomicanje miša strelicama, u kojem je moguće
+  pomicati miša pomoću tipki sa strelicama.</li>
+<li>Promjene u dijaloškom okviru Popis pozicija uključuju novo ime (sad se
+  zove „Pozicije miša”) i raspored, prikaz koordinata miša za vrijednost i
+  prikaz imena trenutačnog programa kao dio naslova.</li>
+<li>U dijaloškom okviru „Pozicije miša”, pritiskom tipke Enter na spremljenu
+  vrijednost, miš će se pomaknuti na spremljenu lokaciju.</li>
+<li>Ako se pozicija miša preimenuje, pojavit će se dijaloški okvir greške ako
+  postoji vrijednost s istim imenom.</li>
+<li>Prilikom brisanja ili uklanjanja pozicija miša, sad je potrebno odgovoriti
+  s „Da”, prije samog brisanja ili uklanjanja.</li>
+<li>Promjene u značajki Skok na poziciju miša uključuju novo ime (sad se zove
+  „Nova pozicija miša”) i mogućnost unošenja X i Y koordinata odvojeno ili
+  korištenja tipki sa strelicama gore ili dolje.</li>
+<li>Dijaloški okvir koji se prikazuje tijekom spremanja trenutne pozicije miša
+  sada prikazuje koordinate za trenutnu lokaciju miša.</li>
+<li>Tijekom spremanja pozicija, ispravljena je greška gdje je NVDA ponekad
+  reproducirao zvukove pogreške ako mapa pozicija ne postoji.</li>
+</ul>
+<h2>Verzija 1.4</h2>
+<ul>
+<li>Uklonjena je ovisnost od win32api kako bi dodatak bio kompatibilan s
+  prošlim i budućim verzijama NVDA čitača.</li>
+</ul>
+<h2>Verzija 1.0</h2>
+<ul>
+<li>Inicijalno izdanje.</li>
+</ul>
+<p>[[!tag stable dev]]</p>
+</body>
+</html>

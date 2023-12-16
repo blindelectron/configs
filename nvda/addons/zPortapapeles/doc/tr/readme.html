@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>zPano 0.5.1</title>
+</head>
+<body>
+<h1>zPano Kılavuzu:</h1>
+<p>Bu eklenti, Fake Clipboard eklentisinin tabanına sahiptir.  </p>
+<p>zPano ile kopyalama, yapıştırma, geri alma, kesme ve tümünü seçme işlemleri için ilgili kısa yol tuşlarına bastığımızda bildirim duyarız.  </p>
+<p>Mesajları güçlendiren sesleri etkinleştirme ve devre dışı bırakma imkanının yanı sıra odağı kopyalayabileceğimiz bir geçmiş penceresi de eklentiye dahil edildi.  </p>
+<h2>Girdi hareketleri...</h2>
+<p>NVDA Girdi Hareketleri... bölümünde, zPano kategorisini ararsak, Geçmiş penceresini görüntülemek için  varsayılan olarak atanmamış bir tuş kombinasyonu ekleyebiliriz.  </p>
+<p>Ayrıca panoya atıfta bulunulan tetik tuşlarını değiştirebileceğimiz bir bölümümüz olacak, bu bölüm ancak dilimiz veya sistemimiz panoya varsayılan olarak atanmış başka tuşlara sahipse değiştirilebilir.  </p>
+<h2>Eklenti Seçenekleri:</h2>
+<p>NVDA&gt;Tercihler&gt;Ayarlar iletişim kutusu içerisinde bulunan zPano seçeneklerinde, hem sesli bildirim istiyorsak hem de geçmişin etkinleştirilmesini istiyorsak onay kutularından etkinleştirip devre dışı bırakabiliriz, ayrıca Ses çalma özelliğini de isteyip istemediğimizi seçebiliriz.  </p>
+<p>Geçmiş onay kutusu etkinleştirilirse, pano izleme süresini seçebileceğimiz bir seçim kutusu, geçmişe bir öğe eklendiğinde ses çalınmasını istersek de bir başka onay kutusu daha olacaktır.  </p>
+<p>Geçmişi etkinleştir onay Kutusunun seçimi kaldırılırsa, hem birleşik seçim kutusu hem de geçmişte ses isteyip istemediğimizi seçme özelliği görünmez.  </p>
+<p>Pano hatalarını almaya başlarsak pano izleme süresini artırmanın uygun olduğunu unutmamalıyız.  </p>
+<h2>Geçmiş İletişim Kutusu:</h2>
+<p>Pano geçmişi iletişim kutusu için varsayılanda kısa yol atanmamıştır. Görüntülüyebilmek için Girdi hareketleri içerisinden bir tuş  atamamız gerekir.  </p>
+<p>Geçmiş içerisinde görebileceğimiz öğeler varsa bu iletişim kutusunu açabiliriz. Aksi taktirde açılmaz.  </p>
+<p>İletişim kutusu açıldığında, geçmiş öğelerinin  bulunduğu liste ve aşağıdaki 4 düğmeden oluşur:  </p>
+<ul>
+<li>Sil Alt+S: Bu düğmeye basarsak, listede odaklanılan girişi siler.</li>
+<li>Tümünü Sil Alt+T: Tüm geçmiş girdilerini siler.</li>
+<li>Yenile Alt+Y: Geçmiş iletişim kutusu açıkken eklenen yeni öğeleri görebilmek için kullanılır.</li>
+<li>Kapat Alt+K, Escape veya Alt+F4: Geçmiş iletişim kutusunu kapatır.  </li>
+</ul>
+<p>Listedeyken ENTER tuşuna basarsak, odaktaki giriş, geçmiş iletişim kutusunun arkasındaki uygulamaya kopyalanacaktır.  </p>
+<p>Örneğin, not defterimiz açıksa, geçmişi açarsak ve ilk girişte ENTER'a basarsak, seçilen öğeyi not defterine kopyalayacaktır.  </p>
+<h2>zPano'nun sınırlamaları:</h2>
+<p>zPano, Fake Clipboard veya Clipspeak gibi aynı işlevi gerçekleştiren diğer eklentilerle uyumlu değildir. Bu eklentiler yüklüyse ve zPano kullanılmak isteniyorsa, iki eklentinin de devre dışı bırakılması gerekir.  </p>
+<p>NVDA'yı yeniden başlattığımızda geçmiş girişlerinin silineceğini unutmayın.  </p>
+<p>zPano geçmişini kullanırsak, Windows pano geçmişinde yinelenen girişler olabilir. Hangisini kullanmak istersek seçmemiz gerekir.  </p>
+<h2>teşekkürler:</h2>
+<ul>
+<li>Javi Domínguez: Özverili yardımları ve pano izleme işlevine katkıda bulunduğu için.</li>
+<li>Portekizce Brezilya: pedro-hdias</li>
+<li>Rusça: Valentin Kupriyanov</li>
+<li>Türkçe: Umut KORKMAZ</li>
+<li>İtalyanca: Alessio Lenzi</li>
+<li>Fransızca: Rémy Ruiz</li>
+<li>Arapça: Wafiq Taher</li>
+</ul>
+<h1>Sürüm Geçmişi:</h1>
+<h2>Sürüm 0.4.2:</h2>
+<ul>
+<li>1024 karakterden uzun panolar dahil pano içeriğini okuma özelliği eklendi.</li>
+</ul>
+<h2>Sürüm 0.4.1:</h2>
+<ul>
+<li>Oyun modu yenileme süresini kaydetme sorunu düzeltildi.</li>
+</ul>
+<h2>Sürüm 0.4.</h2>
+<ul>
+<li>Oyun modu eklendi.</li>
+</ul>
+<p>Bu modu etkinleştirmek için, girdi Hareketleri penceresinde bir hareket atamamız gerekir.  </p>
+<p>Bu mod, panoya kopyalanan ve çeviriye ihtiyaç duyan oyunlar için iyi çalışır.  </p>
+<p>Eklenti seçeneklerinde, pano güncellemesinin yenileme hızını artırma ve çevirinin hedef dilini seçme olanağına sahip olacağız.  </p>
+<p>Bu durumda oyunun kaynak dili otomatik olarak algılanacak ve panoya kopyalananlar seçtiğimiz dile çevrilecektir.  </p>
+<p>Oyun modu etkinleştirilirken, pano geçmişi de dahil olmak üzere eklentinin geri kalan tüm komutları devre dışı bırakılır.  </p>
+<h2>Sürüm 0.3.1.</h2>
+<ul>
+<li>Eklentinin güvenli ekranlarda çalışmasını önlemek için güncelleme yapıldı.</li>
+<li>Arapça dil eklendi.</li>
+</ul>
+<h2>Sürüm 0.3:</h2>
+<ul>
+<li>Kopyalama sırasında metin seçilirse algılama eklendi.</li>
+</ul>
+<p>Artık kopyaladığımızda metin algılamıyorsa eklenti bize bir mesaj ile bildirecektir.  </p>
+<ul>
+<li>Pano ile ilgili eklenti işlevlerini hızlı bir şekilde devre dışı bırakabilme ve etkinleştirebilme özelliği eklendi.</li>
+</ul>
+<p>Girdi hareketlerinde, panoya atıfta bulunulanları hızlı bir şekilde etkinleştirmek ve devre dışı bırakmak için bir kombinasyon yapılandırabiliriz.  </p>
+<p>Panoyu devre dışı bıraktığımızda mesajlar, NVDA'nın pano için önceden tanımladığı mesajlarla birlikte Windows'un yerel mesajları olacaktır.  </p>
+<p>Bu, aktif olduğu takdirde etkin olan geçmişi etkilemeyecektir.  </p>
+<ul>
+<li>Kiril karakterlerini kullanan klavyeler için destek eklendi.</li>
+</ul>
+<p>Kiril karakterlerini kullanan klavye düzenlerindeki bir sorun düzeltildi.  </p>
+<ul>
+<li>Rusça, Türkçe ve Portekizce Brezilya dilleri eklendi.</li>
+</ul>
+<h2>Sürüm 0.2:</h2>
+<ul>
+<li>Tüm pano işlevleri cTypes olarak değiştirildi.</li>
+<li>Artık pano, NVDA ve wxpython işlevlerini kullanmaktan kaçınarak sistem işlevleriyle doğrudan ele alınacaktır.</li>
+<li>Eklenti çevrilmeye hazır hale getirildi.</li>
+</ul>
+<h2>Sürüm 0.1.5:</h2>
+<ul>
+<li>Panoya kopyalananları ve Geçmişe eklenenleri duyrur.</li>
+</ul>
+<p>Eklenti seçeneklerinde Pano geçmişini aç seçeneğini etkinleştirdiysek, bir seçeneğe daha sahibiz.</p>
+<p>Bu seçenek ile geçmişe ne kopyalanırsa sesçendirilecektir.  </p>
+<p>Sadece son kopyalanan diziden bahsedilecek ve kopyalanan başka bir dizi tekrar söyleninceye kadar tekrarlanmayacaktır.</p>
+<ul>
+<li>Eklentiyi ilk kez başlattığınızda pano temizlenecektir.</li>
+</ul>
+<p>Artık NVDA'yı başlattığımızda panoda bulunanları kopyalamayacak, pano boş olacak.  </p>
+<p>Bu, Windows pano geçmişini etkilemez.  </p>
+<p><strong><em> Uyarı: Panoda sahip olduğumuz önemli bir şeyin silinebileceğinden bunu dikkate almalıyız. </em></strong></p>
+<h2>Sürüm 0.1.4:</h2>
+<ul>
+<li>Pano verilerini alma şekli değiştirildi.</li>
+</ul>
+<h2>Sürüm 0.1.3:</h2>
+<ul>
+<li>Kullanılacak minimum sürüm olarak NVDA 2021.2'ye eklenti gereksinimi yüklendi.</li>
+<li>Geçmiş için seçenekler eklendi.</li>
+<li>Artık geçmişe bir şey kopyalandığında ses istiyormuş gibi izleme süresini seçebiliriz.</li>
+<li>Pano anahtarlarını duyurmamak için Word ve Excel desteği eklendi.</li>
+<li>Pano artık izleniyor, böylece panoya kopyalayan herhangi bir eklenti artık destekleniyor, hatta NVDA'dan odaklanmaya kopyalama bile.</li>
+</ul>
+<h2>Sürüm 0.1.2:</h2>
+<ul>
+<li>Seçeneklerde pano sesli duyurularını etkinleştir veya devre dışı bırak eklendi.</li>
+<li>İzin verilen uygulamalarda pano tuşlarına karşılık gelen mesajları atlayacaktır.</li>
+</ul>
+<h2>Sürüm 0.1.1:</h2>
+<ul>
+<li>Pano yakalamaları ve bunların yönetme şekli değiştirildi.</li>
+<li>Panoyu açık bırakan hata düzeltildi.</li>
+</ul>
+<h2>Sürüm 0.1:</h2>
+<ul>
+<li>İlk Sürüm.</li>
+</ul>
+</body>
+</html>

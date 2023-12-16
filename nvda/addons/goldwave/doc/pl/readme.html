@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>GoldWave 23.04</title>
+</head>
+<body>
+<h1>GoldWave</h1>
+<ul>
+<li>Autorzy: Joseph Lee, współpracownicy NVDA.</li>
+<li>Pobierz <a href="https://addons.nvda-project.org/files/get.php?file=goldwave">wersja stabilna</a></li>
+<li>NVDA compatibility: 2022.4 and later</li>
+</ul>
+<p>Ten dodatek zwiększa dostępność i użyteczność edytora audio Goldwave.</p>
+<h2>Skróty</h2>
+<ul>
+<li>NVDA+Shift+C: przełącza wypowiadanie komend podczas edycji audio.</li>
+<li>Control+Shift+P: odczytuje aktualną pozycję ścieżki.</li>
+<li>NVDA+Shift+R: Oznajmia pozostały czas dla aktualnie edytowanego utworu.</li>
+<li>Control+NVDA+1: wypowiada aktualnie edytowany kanał.</li>
+<li>Control+NVDA+2: wypowiada całkowitą długość pliku dźwiękowego.</li>
+<li>Control+NVDA+3: Wymawia podsumowanie informacji o zaznaczonym fragmencie
+  dźwięku.</li>
+<li>Control+NVDA+4: wypowiada aktualny poziom powiększenia.</li>
+</ul>
+<p>Więcej informacji o Goldwave i jego klawiszach skrótów, znajduje się w
+podręczniku Goldwave.</p>
+<p>Uwaga: Wymagana jest wersja GoldWave 6 lub nowsza.</p>
+<h2>Version 23.02</h2>
+<ul>
+<li>NVDA 2022.4 or later is required.</li>
+<li>Windows 10 21H2 (November 2021 Update/build 19044) or later is required.</li>
+</ul>
+<h2>Version 23.01</h2>
+<ul>
+<li>NVDA 2022.3 or later is required.</li>
+<li>Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
+  supported by Microsoft as of January 2023.</li>
+</ul>
+<h2>Wersja 22.03</h2>
+<ul>
+<li>Wymagana jest nvda 2021.3 lub nowsza.</li>
+<li>Podczas próby zainstalowania dodatku w systemie Windows 7, 8 i 8.1
+  zostanie wyświetlony komunikat ostrzegawczy.</li>
+</ul>
+<h2>Wersja 21.10</h2>
+<ul>
+<li>NVDA 2021.2 lub nowsza jest wymagana ze względu na zmiany w NVDA, które
+  mają wpływ na ten dodatek.</li>
+<li>W GoldWave 6.57 i nowszych wersjach NVDA nie będzie już powtarzać nazwy
+  załadowanego pliku po naciśnięciu odtwarzania/przewijania do
+  tyłu/zatrzymania.</li>
+</ul>
+<h2>Wersja 21.06</h2>
+<ul>
+<li>Rozwiązano dodatkowe problemy ze stylem kodowania i potencjalne błędy w
+  Flake8.</li>
+</ul>
+<h2>Wersja 20.06</h2>
+<ul>
+<li>Naprawiono mnóstwo błędów w kodzie oraz potencjalne błędy związane z
+  Flake8.</li>
+</ul>
+<h2>Wersja 20.04</h2>
+<ul>
+<li>Dodany komunikat pomocy klawiatury dla polecenia (NVDA+Shift+R).</li>
+<li>Polecenie służące do włączania oraz wyłączania wymowy zdarzeń naciśniętych
+  poleceń  (NVDA+Shift+C) od teraz będzie się pojawiało w
+  kategorii"GoldWave" w dialogu Zdarzeń wejścia NVDA.</li>
+</ul>
+<h2>Wersja 20.01</h2>
+<ul>
+<li>Wymaga wersji NVDA 2019.3 lub nowszej.</li>
+</ul>
+<h2>Wersja 19.11</h2>
+<ul>
+<li>Windows 7 SP1, GoldWave 6.x, i NVDA 2019.1 i nowsze są wymagane.</li>
+<li>Dodano wiadomość kontekstową doa okna dźwięku (dostępne jeśli dodatek
+  Control usage assistant jest zainstalowany).</li>
+</ul>
+<h2>Wersja 18.12</h2>
+<ul>
+<li>NVDA już nie będzie odtwarzała dźwięk tonu lub robiła nic gdy niektóre
+  polecenia goldwawe są wypełniane z wyłączonym wymawianiem poleceń (może to
+  w niektórych sytuacjach dźiwnie działać).</li>
+<li>Zmiany wewnętrzne dla wsparcia nowych wersji NVDA.</li>
+</ul>
+<h2>Wersja 18.07</h2>
+<ul>
+<li>Naprawiony błąd w którym wiodące zera nie były wyświetlane gdy próbowało
+  się dostarczyć pozostały czas dla utworu aktualnego.</li>
+</ul>
+<h2>Wersja 17.05</h2>
+<ul>
+<li>Dodano możliwość dostarczania informacji o debugowaniu po uruchomieniu
+  NVDA w trybie debugowania (NVDA w wersji 2017.1 lub nowszej).</li>
+<li>Zaktualizowane tłumaczenia.</li>
+</ul>
+<h2>Wersja 16.12</h2>
+<ul>
+<li>Schemat wersjonowania został zmieniony i teraz brzmi on rok.miesiąc
+  zamiast duży.mniejszy.</li>
+</ul>
+<h2>Zmiany dla wersji 4.0</h2>
+<ul>
+<li>Repozytorium tego dodatku zostało przeniesione na Github (teraz znajdujący
+  się pod adresem https://github.com/josephsl/goldwave).</li>
+<li>Ulepszona wydajność przy pobieraniu informacji takich jak nazwa kanału i
+  inne informacje statusu.</li>
+</ul>
+<h2>Zmiany dla wersji 3.0</h2>
+<ul>
+<li>Dodano komendę do ogłaszania aktualnego czasu aktualnego
+  utworu(NVDA+Shift+R).</li>
+<li>Trochę większe ulepszenia czytania informacji stanu takich jak informacji
+  o kanale.</li>
+</ul>
+<h2>Zmiany dla wersji 2.0</h2>
+<ul>
+<li>Wsparcie dla GoldWave 6, włącznie z 64-bitową wersją GoldWave (zobacz
+  powyższą uwagę).</li>
+<li>Pomoc dodatku dostępna w managerze dodatków (NVDA 2014.3 i nowsze).</li>
+<li>NVDA oznajmia wybrany kanał po wciśnięciu polecenia zmiany zaznaczonego
+  kanału np. Control+Shift+L dla zaznaczenia lewego kanału.</li>
+<li>Rozwiązano różne problemy z edycją pól numerycznych, np. pole cenzora i
+  wybór czasu w oknie miksowania, w tym zaznaczanie tekstu, aktualizowanie
+  wartości itd.</li>
+<li>Przełącznik oznajmiania komend jest zapamiętywany po przejściu do innych
+  programów.</li>
+</ul>
+<h2>Zmiany dla wersji 1.2</h2>
+<ul>
+<li>Poprawiono problem dotyczący odczytywania przez NVDA niektórych pól
+  edycji.</li>
+<li>Nowe i zaktualizowane tłumaczenia.</li>
+<li>Proszę zwrócić uwagę, że w związku z ostatnimi zmianami w NVDA,
+  zaznaczanie audio i inne polecenia statusu mogą nie działać na niektórych
+  systemach zgodnie z oczekiwaniami.</li>
+</ul>
+<h2>Zmiany dla wersji 1.1</h2>
+<ul>
+<li>Obsługa powiadomień w brajlu.</li>
+<li>Podsumowanie zaznaczenia audio jest prezentowane w językach innych niż
+  angielski.</li>
+<li>Dodane oznajmianie większej liczby komend, uwzględniające takie polecenia
+  jak przemieszczenia wskaźników, operacje usuwania i przycinania.</li>
+<li>Poprawiono problem w polach edycji liczb, np. w różnych okienkach efektów,
+  gdzie oznajmiana była nieprawidłowa nazwa, albo brak nazwy kontrolki.</li>
+<li>Nowe i zaktualizowane tłumaczenia.</li>
+</ul>
+<h2>Zmiany dla wersji 1.0</h2>
+<ul>
+<li>Początkowa wersja.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

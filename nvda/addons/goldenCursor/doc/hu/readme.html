@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Golden Cursor 6.2.1</title>
+</head>
+<body>
+<h1>Aranykurzor</h1>
+<ul>
+<li>Készítők: salah atair, Joseph Lee</li>
+<li>Letöltés <a href="https://www.nvaccess.org/addonStore/legacy?file=goldenCursor">Stabil verzió</a></li>
+<li>NVDA compatibility: 2022.4 and beyond</li>
+</ul>
+<p>Ez a kiegészítő lehetővé teszi az egérkurzor mozgatását a billentyűzet
+használatával, ill. elmenthet vele egérkurzor-koordinátákat a különböző
+alkalmazásokhoz.</p>
+<h2>Billentyűparancsok</h2>
+<ul>
+<li>Control+NVDA+L: view saved mouse positions for an application, if any. You
+  can also assign gestures to these positions from this dialog. When
+  pressing the assigned gesture, a left click will be performed in the saved
+  position.</li>
+<li>Shift+NVDA+l: Aktuális egérpozíció elmentése az aktív alkalmazáshoz.</li>
+<li>Windows+NVDA+C: az egérmutató elmozdulás mértékének változtatása.</li>
+<li>Windows+NVDA+R: Be- vagy kikapcsolja az Egérmozgatás korlátozását az aktív
+  ablakra.</li>
+<li>Windows+NVDA+S: Be- vagy kikapcsolja az egérkurzor pozíciójának
+  bemondását. Az egérkurzor helye képpontban értendő.</li>
+<li>Windows+NVDA+J: Az egérkurzort a képernyő egy x, y koordinátákkal megadott
+  pontjára helyezi.</li>
+<li>Windows+NVDA+P: aktuális egérpozíció bejelentése.</li>
+<li>Windows+NVDA+M: egérmozgatás nyílbillentyűkkel be- vagy kikapcsolása.</li>
+<li>Windows+NVDA+nyílbillentyűk (vagy csak nyílbillentyűk, ha az egérmozgatás
+  nyílbillentyűkkel be van kapcsolva ): egérkurzor mozgatása.</li>
+</ul>
+<p>Megjegyzés: Ezek a parancsok megváltoztathatók az NVDA Beviteli parancsok
+párbeszédpanelén az Aranykurzor kategóriában.</p>
+<h2>Megjegyzések</h2>
+<ul>
+<li>A pozíciók megosztása csak azonos képernyőfelbontást használók között
+  működik megfelelően.</li>
+<li>A legmegfelelőbb működéshez tegye teljes képernyőssé az ablakokat a
+  Windows gomb+felnyíl paranccsal</li>
+<li>A pozíciók megosztása esetén át kell nevezni a már létező elnevezésekkel
+  ütközőket.</li>
+<li>Az 1.x és a 2.x verzióban elmentett egérkurzor pozíciók adatai nem
+  kompatibilisek egymással.</li>
+<li>Amint ismét a nyílbillentyűk hagyományos funkcióira van szükség ki kell
+  kapcsolni az egérmozgatás nyílbillentyűkkel opciót.</li>
+<li>Amennyiben az elmentett egérpozíciók törlése után nem marad adott
+  alkalmazáshoz egy egérpozíció sem, az alkalmazáshoz tartozó egérpozíciós
+  fájl is törlődik.</li>
+</ul>
+<h2>Version 6.2</h2>
+<ul>
+<li>Requires NVDA 2022.4 or later.</li>
+<li>Compatible with NVDA 2023.1.</li>
+</ul>
+<h2>Version 6.1</h2>
+<ul>
+<li>Requires NVDA 2021.3 or later.</li>
+<li>Now, you can assign shortcuts for saved positions from the positions
+  list. When pressing a shortcut, a left click will be performed for the
+  position.</li>
+</ul>
+<h2>Version 5.0</h2>
+<ul>
+<li>Modernized add-on source code to make it compatible with NVDA 2021.1.</li>
+<li>Resolved many coding style issues and potential bugs with Flake8.</li>
+</ul>
+<h2>4.0-s verzió</h2>
+<ul>
+<li>Az NVDA 2019.3 és újabb verziójára van szükség a futtatáshoz.</li>
+<li>Az Aranykurzor beállításai mostantól az NVDA beállításai között érhetőek
+  el az Aranykurzor kategóriában.</li>
+</ul>
+<h2>3.3-as verzió</h2>
+<ul>
+<li>későbbi NVDA kiadások támogatása</li>
+</ul>
+<h2>3.2-es verzió</h2>
+<ul>
+<li>A bővítmény már kompatibilis az NVDA 2018.3 kiadásával (wxPython 3).</li>
+</ul>
+<h2>3.0-s verzió</h2>
+<ul>
+<li>Az NVDA 2018.2 kiadásában az Aranykurzor beállításai az NVDA beállításai
+  közé kerültek az Aranykurzor kategóriába.</li>
+</ul>
+<h2>2.1-es verzió</h2>
+<ul>
+<li>Javították az Unicode kódolási hibát ami az elnevezett egérpozíciók
+  törlésénél lépett fel.</li>
+<li>A bővítménynek mindig csak egy párbeszédablaka lehet nyitva.</li>
+<li>Javították az egérpozíciók listájának és a megadott pozícióra ugrás
+  ablakának megjelenését.</li>
+</ul>
+<h2>2.0-s verzió</h2>
+<ul>
+<li>Az NVDA 2017.3 vagy újabb kiadására van szükség a bővítmény használatához.</li>
+<li>Az 1.x verzióban elmentett egérpozíciók nem kompatibilisek ezzel a
+  kiadással, de a bővítmény telepítése során a program elvégzi a szükséges
+  átalakításokat, hogy a korábban elmentett egérpozíciók továbbra is
+  használhatóak legyenek.</li>
+<li>Az Aranykurzor beállításai elérhetők az NVDA Beállítások menüjéből. A
+  megjelenő párbeszédablakon az egérpozíció bemondását és az egérkurzor
+  elmozdulásának a mértékét lehet beállítani.</li>
+<li>A bővítményben több üzenetet is megváltoztattak.</li>
+<li>A beállítások változtatásakor a program már nem ad hangjelzést.</li>
+<li>Már lehetséges az egérkurzort a nyílbillentyűkkel mozgatni, ehhez be kell
+  kapcsolni az egérmozgatás a nyílbillentyűkkel opciót.</li>
+<li>Az egérpozíciók listáján az elmentett egérpozíciók mellett már látszanak
+  az elmentett pozíció koordinátái, illetve az ablak címsorának már része az
+  alkalmazás neve,amihez az elmentett egérpozíciók tartoznak.</li>
+<li>Az egérpozíciók listáján már az enter lenyomásával is a kívánt pozícióra
+  ugrik az egérkurzor.</li>
+<li>Az elmentett egérpozíciók átnevezésénél a program már figyelmeztet, ha egy
+  már létező nevet próbálunk megadni.</li>
+<li>Az elmentett egérpozíciók törlésénél a program már kér megerősítést a
+  művelet végrehajtása előtt.</li>
+<li>Megváltozott az Ugrás pozícióra lehetőség: Meg lehet adni az x és y
+  koordinátákat egymástól külön-külön, számértékekkel, vagy a felnyíl és
+  lenyíl segítségével.</li>
+<li>Az egérpozíciók elmentésére szolgáló ablak már mutatja az aktuális
+  egérpozíció koordinátáit.</li>
+<li>When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.</li>
+</ul>
+<h2>1.4-es verzió</h2>
+<ul>
+<li>eltávolították a Win32 API függőséget, hogy a bővítmény kompatibilis
+  legyen az NVDA későbbi kiadásaival.</li>
+</ul>
+<h2>1.0-s verzió</h2>
+<ul>
+<li>Első kiadás</li>
+</ul>
+<p>[[!tag stable dev]]</p>
+</body>
+</html>

@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: resourceMonitor 2.1\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-07-09 12:48-0700\n"
+"PO-Revision-Date: 2023-05-29 15:52+0100\n"
+"Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
+"Language-Team: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+
+#. Resource Monitor requires Windows 10 21H2 or later.
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+msgid "Unsupported Windows release"
+msgstr "Versione di Windows non supportata"
+
+#. Translators: Dialog text shown when trying to install the add-on on
+#. releases earlier than minimum supported release.
+#, python-brace-format
+msgid ""
+"You are using {releaseName} ({build}), a Windows release not supported by "
+"this add-on.\n"
+"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
+msgstr ""
+"Stai utilizzando {releaseName} ({build}), una versione di Windows non "
+"supportata da questo componente aggiuntivo.\n"
+"Questo componente aggiuntivo richiede {supportedReleaseName} "
+"({supportedBuild}) o versioni successive."
+
+msgid "No authentication (Open)"
+msgstr ""
+
+msgid "Connected to {}"
+msgstr ""
+
+msgid "Disconnected from {}"
+msgstr ""
+
+msgid "A wireless device has been enabled"
+msgstr ""
+
+msgid "A wireless device has been disabled"
+msgstr ""
+
+#. Translators: Message reported when there is no battery on the system,
+#. mostly laptops with battery pack removed and running on AC power.
+msgid "This computer does not have a battery connected."
+msgstr "Questo computer non ha una batteria collegata."
+
+#. Translators: message presented when AC is connected and battery is charging,
+#. also show current battery percentage.
+#, python-brace-format
+msgid "{percent}%, battery charging."
+msgstr "{percent}%, batteria in carica."
+
+#. Translators: message presented when computer is running on battery power,
+#. showing percentage remaining yet battery time is unknown.
+#, python-brace-format
+msgid "{percent}% battery remaining, battery time unknown."
+msgstr "{percent}% di batteria rimanente; tempo rimanente sconosciuto."
+
+#. Translators: battery and system uptime in hours.
+#. Translators: system uptime in hours.
+msgid "1 hour"
+msgstr "1 ora,"
+
+#. Translators: battery and system uptime in hours.
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} hours"
+msgstr "{0} ore,"
+
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
+msgid "1 minute"
+msgstr "1 minuto"
+
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
+#, python-brace-format
+msgid "{0} minutes"
+msgstr "{0} minuti"
+
+#. Translators: message presented when computer is running on battery power,
+#. showing percentage remaining and estimated remaining time.
+#, python-brace-format
+msgid "{percent}% battery remaining, about {time}."
+msgstr "{percent}% di batteria rimanente, circa {time}."
+
+#. Translators: Message reported when battery level is low.
+msgid " Warning: low battery."
+msgstr " Attenzione: livello batteria basso."
+
+#. Translators: Message reported when battery level is critical.
+msgid " Warning: critically low battery."
+msgstr " Attenzione: batteria quasi scarica."
+
+#. Translators: Presents Windows version
+#. (example output: "Windows 10 (32-bit)").
+#, python-brace-format
+msgid "{winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit})"
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "Resource Monitor"
+
+#. Translators: Input help message about battery info command in Resource Monitor.
+msgid ""
+"Presents battery percentage, charging status, remaining time (if not "
+"charging), and a warning if the battery is low or critical."
+msgstr ""
+"Annuncia la percentuale della batteria, lo stato di carica, il tempo "
+"rimanente (se non in carica), e un avviso se la batteria è scarica."
+
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Annuncia lo spazio utilizzato e totale dei drive fissi e rimovibili presenti "
+"su questo computer."
+
+#. Translators: Shows drive letter, type of drive (fixed or removable),
+#. used capacity and total capacity of a drive
+#. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr ""
+"drive {driveName} ({driveType}): {usedSpace} su {totalSpace} utilizzati "
+"{percent}%."
+
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr "Annuncia il carico medio del processore e il carico di ciascun core."
+
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
+msgid "Core {coreNumber}: {corePercent}%"
+msgstr "Core {coreNumber}: {corePercent}%"
+
+#. Translators: Shows average load of the processor on single-core systems.
+#, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "Carico medio della CPU  {avgLoad}%."
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#, python-brace-format
+msgid "Average CPU load {avgLoad}%, {cores}."
+msgstr "Carico medio della CPU  {avgLoad}%, {cores}."
+
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr ""
+"Annuncia lo spazio utilizzato e totale per la ram sia fisica che virtuale."
+
+#. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
+msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
+msgstr "Fisica: {physicalUsed} su {physicalTotal} usata ({physicalPercent}%). "
+
+#. Translators: Shows virtual memory usage.
+#, python-brace-format
+msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
+msgstr ""
+"Virtuale: {virtualUsed} su {virtualTotal} utilizzati ({virtualPercent}%)."
+
+#. Translators: Input help mode message about Windows version command in Resource Monitor.
+msgid "Announces the version of Windows you are using."
+msgstr "Annuncia la versione di Windows in uso."
+
+#. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+msgid "Announces the system's wireless network ssid name, and its strength."
+msgstr ""
+
+msgid "No wireless devices"
+msgstr ""
+
+msgid "No wireless connections"
+msgstr ""
+
+msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
+msgstr ""
+
+#. Translators: system uptime in days.
+msgid "1 day"
+msgstr "1 giorno"
+
+#. Translators: system uptime in days.
+#, python-brace-format
+msgid "{0} days"
+msgstr "{0} giorni"
+
+#. Translators: system uptime in seconds.
+msgid "1 second"
+msgstr "1 secondo"
+
+#. Translators: system uptime in seconds.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr "{0} secondi"
+
+#. Translators: Input help mode message about obtaining the system's uptime
+msgid "Announces the system's uptime."
+msgstr "Legge il tempo di attività del sistema."
+
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Errore nello stabilire il tempo di attività del sistema."
+
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr ""
+"Annuncia la quantità di ram usata, il carico medio del processore e "
+"informazioni sulla batteria, se disponibili."
+
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent}% di RAM usata, CPU al {cpuPercent}%."
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
+msgstr ""
+"Un'utile analizzatore di risorse per segnalare il carico della CPU, "
+"l'utilizzo della memoria, lo stato della batteria,  la quantità di spazio "
+"utilizzato sul disco ed altro."

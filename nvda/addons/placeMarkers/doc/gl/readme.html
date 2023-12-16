@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Place markers 34.0.0</title>
+</head>
+<body>
+<h1>placeMarkers</h1>
+<ul>
+<li>Autores: Noelia, Chris.</li>
+</ul>
+<p>This add-on is used for saving and searching specific text strings or
+placemarkers. It can be used on web pages or documents in NVDA's browse
+mode. It can also be used for saving or searching strings of text in
+multi-line controls; in this case, if it's not possible to update the caret,
+the corresponding string will be copied to the clipboard, so that it can be
+searched using other tools.  The plugin saves the specified strings and
+placemarkers to files whose name is based on the title and URL of the
+current document.  This add-on is based on SpecificSearch and
+Bookmark&amp;Search, developed by the same author. You should uninstall them to
+use this one, since they have common keystrokes and features.</p>
+<h2>Ordes de teclado:</h2>
+<ul>
+<li>control+shift+NVDA+f: abre un diálogo cunha caixa de edición que amosa a
+  última procura gardada; neste diálogo tamén podes selecionar as procuras
+  anteriormente gardadas dende unha Caixa combinada ou borrar a cadea
+  selecionada dende o historial utilizando unha caixa de verificación. Podes
+  escoller se o texto contido na caixa de edición se engadirá ao histórico
+  de textos gardados. Finalmente, escoller unha acción do seguinte grupo de
+  botóns de opción (entre procurar seguinte, procurar anterior ou non
+  procurar), e especificar se NVDA fará unha procura sensible ás
+  maiúsculas. Cando premas Aceptar, NVDA procurará esta cadea.</li>
+<li>control+shift+NVDA+y: Saves the current position as a placemarker. If you
+  want to provide a name for this placemarker, select some text from this
+  position before saving it.</li>
+<li>control+shift+NVDA+delete: Deletes the placemarker corresponding to this
+  position.</li>
+<li>NVDA+y: Moves to the next placemarker.</li>
+<li>shift+NVDA+y: Moves to the previous placemarker.</li>
+<li>Not assigned: Shows the file name where the placemarkers data will be
+  saved in browse mode, without an extension.</li>
+<li>alt+NVDA+y: Opens a dialog with the placemarkers saved for this
+  document. You can write a note for each placemarker; press Save note to
+  save changes. Pressing Delete you can remove the selected
+  placemarker. Pressing OK you can move to the selected position.</li>
+<li>Not assigned: Saves a position as a temporary placemarker.</li>
+<li>Not assigned: Moves to the temporary placemarker for the current document.</li>
+<li>Sen asignar: Buscar seguinte ocorrencia do último texto procurado en
+  calquera documento específico.</li>
+<li>Sen asignar: Buscar ocorrencia anterior do último texto procurado en
+  calquera documento específico.</li>
+</ul>
+<h2>PlaceMarkers Submenu (NVDA+N)</h2>
+<p>Using the PlaceMarkers submenu under NVDA's Preferences menu, you can
+access:</p>
+<ul>
+<li>Specific search folder: Opens a folder of specific searches previously
+  saved.</li>
+<li>Bookmarks folder: Opens a folder of the saved placemarkers.</li>
+<li>Copy placeMarkers folder: You can save a copy of the placeMarkers folder.</li>
+<li>Restore placeMarkers: You can restore your placeMarkers from a previously
+  saved placeMarkers folder.</li>
+</ul>
+<p>Note: The placemarker position is based on the number of characters; and
+therefore in dynamic pages it is better to use the specific search, not
+placemarkers.</p>
+<h2>Changes for 24.0</h2>
+<ul>
+<li>Y is used instead of k in gestures such as NVDA+k, NVDA+shift+k,
+  NVDA+alt+k and NVDA+control+shift+k.</li>
+<li>Compatible with NVDA 2023.1.</li>
+</ul>
+<h2>Cambios para 23.0</h2>
+<ul>
+<li>O complemento volve a funcionar con Microsoft Word.</li>
+</ul>
+<h2>Cambios para 22.0</h2>
+<ul>
+<li>Podemos movernos a marcadores e eliminalos con UIA activado, grazas a
+  Abdel.</li>
+</ul>
+<h2>Cambios para 21.0</h2>
+<ul>
+<li>Pódense gardar os marcadores con UIA activado en navegadores baseados en
+  Chromium, grazas a Abdel.</li>
+</ul>
+<h2>Cambios para 20.0</h2>
+<ul>
+<li>Require NVDA 2022.1 ou posterior.</li>
+</ul>
+<h2>Cambios para 19.0</h2>
+<ul>
+<li>O complemento non se pode executar en pantallas seguras.</li>
+</ul>
+<h2>Cambios para 18.0</h2>
+<ul>
+<li>O atallo para amosar a ruta de placeMarkers amosa se hai marcas
+  permanentes, texto para busca específica ou unha marca temporal para o
+  documento actual.</li>
+</ul>
+<h2>Cambios para 17.0</h2>
+<ul>
+<li>Arranxado un erro que non permitía gardar marcas de posición nalgúns
+  documentos.</li>
+<li>Arranxadas as cadeas traducidas facendo funcionar correctamente as
+  traducións.</li>
+</ul>
+<h2>Cambios para 16.0</h2>
+<ul>
+<li>Compatible with NVDA 2021.1 or later (required).</li>
+<li>Sopórtase a lectura superficial ao moverse a unha marca temporal.</li>
+<li>If needed, you can download <a href="https://github.com/nvdaes/placeMarkers/releases">other
+  versions</a>.</li>
+</ul>
+<h2>Cambios para 15.0</h2>
+<ul>
+<li>Ó ler con ler todo en modo exploración, os atallos específico buscar
+  anterior e específico buscar seguinte xa non deteñen a lectura se a opción
+  Permitir lectura superficial está habilitada, en consoancia cos atallos
+  buscar seguinte e buscar anterior de NVDA 2020.4.</li>
+<li>Cando o diálogo de busca específico se abre despois de executar o atallo
+  específico buscar anterior, seleccionarase a opción buscar anterior.</li>
+</ul>
+<h2>Cambios para 14.0</h2>
+<ul>
+<li>O atallo para copiar o nome do arquivo onde se gardarán os datos dos
+  marcadores de ubicación reemprazouse por un atallo que amosa este nome de
+  arquivo en modo exploración. Está sen asignar a ningún xesto.</li>
+<li>O campo "Texto a buscar" xa non solapa ao campo "Texto gardado". (Grazas a
+  Cyrille Bougot).</li>
+<li>Require NVDA 2019.3 ou posterior.</li>
+</ul>
+<h2>Cambios para 13.0</h2>
+<ul>
+<li>Engadidas ordes sen asignar para buscar a próxima e anterior ocorrencia do
+  último texto procurado en calquera documento específico.</li>
+<li>A característica de busca específica funciona cando o diálogo Acerca de
+  NVDA está aberto.</li>
+<li>No diálogo Busca específica, a caixa de verificación sensible ás
+  maiúsculas estará verificada se esta opción se seleccionou na busca
+  anterior.</li>
+<li>Cando o complemento se actualice, os marcadores e as cadeas da busca
+  específica gardadas na versión anterior do complemento copiaranse
+  automaticamente á nova versión, a menos que prefiras importar os
+  marcadores de lugar gardados no cartafol principal de configuración de
+  NVDA.</li>
+<li>Ao utilizar o diálogo para copiar marcadores de lugar, se o cartafol
+  escollido non se chama placeMarkersBackup, crearase un subcartafol co
+  mesmo nome para previr a eliminación de directorios que conteñan datos
+  importantes, como Documentos ou Descargas.</li>
+</ul>
+<h2>Cambios para 12.0</h2>
+<ul>
+<li>Solucionado un erro crítico que causaba o peche de NVDA ao tratar de abrir
+  o diálogo de notas cando estaban seleccionados caracteres chinos antes de
+  gardar marcadores.</li>
+</ul>
+<h2>Cambios para 11.0</h2>
+<ul>
+<li>Compatible co NVDA 2018.3 ou posterior (requerido).</li>
+<li>Se fora necesario, podes descargar a <a href="https://www.nvaccess.org/addonStore/legacy?file=pm-o">última versión compatible co NVDA
+  2017.3</a>.</li>
+</ul>
+<h2>Cambios para 10.0</h2>
+<ul>
+<li>En Edge, os xestos asociados coa seleción de marcas, como NVDA+k,
+  NVDA+shift+k ou NVDA+alt+k, enviaranse á aplicación en lugar de tentar
+  mover o cursor ás marcas, para evitar erros, especialmente en documentos
+  longos.</li>
+<li>Agora admítese a procura específica en Edge.</li>
+</ul>
+<h2>Cambios para 9.0</h2>
+<ul>
+<li>Ao se mover a unha marca dende a Caixa de diálogo Notas, o cursor de
+  revisión segue ao cursor do sistema.</li>
+<li>A orde para selecionar a marca anterior funciona de novo adecuadamente.</li>
+<li>As marcas poden borrarse dende a Caixa de diálogo Notas.</li>
+<li>Agora podes asignar xestos para gardar e moverte a unha marca temporal
+  para cada documento.</li>
+</ul>
+<h2>Cambios para 8.0</h2>
+<ul>
+<li>Elimináronse os identificadores de fragmentos dos nomes de ficheiro de
+  marcadores , que poden evitar problemas no VitalSource Bookshelf
+  EPUBReader.</li>
+<li>Engadiuse un diálogo Notas, para asociar comentarios para marcas gardadas
+  e para moverte cara a posición selecionada.</li>
+</ul>
+<h2>Cambios para 7.0</h2>
+<ul>
+<li>O diálogo para gardar unha cadea de texto para unha procura específica
+  eliminouse. Esta funcionalidade agora inclúese no diálogo Procura
+  Específica, o que se rediseñou para permitir accións diferentes ao se
+  premer o botón Aceptar.</li>
+<li>Mellorouse a presentación visual do diálogo, adheríndose á apariencia dos
+  diálogos amosados no NVDA.</li>
+<li>Ao se realizar unha orde procurar seguinte ou procurar anterior en Modo
+  exploración agora farase correctamente unha procura sensible ás maiúsculas
+  se a procura orixinal era sensible ás maiúsculas.</li>
+<li>Requírese do NVDA 2016.4 ou posterior.</li>
+<li>Agora podes asignar xestos para abrir os diálogos Copiar e Restaurar
+  marcadores.</li>
+<li>NVDA presentará unha mensaxe para notificar cando se copiaran ou
+  restauraran os marcadores cos diálogos correspondentes.</li>
+</ul>
+<h2>Cambios para 6.0</h2>
+<ul>
+<li>Cando as características do complemento non son usables, os xestos
+  envíanse á aplicación correspondente.</li>
+</ul>
+<h2>Cambios para 5.0</h2>
+<ul>
+<li>Engadida busca sensible ás maiúsculas.</li>
+<li>Eliminada a opción para abrir documentación dende o menú Place markers.</li>
+<li>Ordes de teclado máis intuitivas.</li>
+</ul>
+<h2>Cambios para 4.0</h2>
+<ul>
+<li>Elimináronse os identificadores de fragmentos dos nomes de ficheiro de
+  marcadores , que poden evitar problemas no complemento de Firefox
+  EPUBReader.</li>
+<li>A axuda do complemento está dispoñible no Administrador de Complementos.</li>
+</ul>
+<h2>Cambios para 3.1</h2>
+<ul>
+<li>Actualizacións das traduccións e novas linguas.</li>
+<li>A posición do marcador non se anuncia na lectura superficial.</li>
+</ul>
+<h2>Cambios para 3.0</h2>
+<ul>
+<li>Engadido o soporte para lectura superficial.</li>
+</ul>
+<h2>Cambios para 2.0</h2>
+<ul>
+<li>Engadidas opcións para gardar e borrar diferentes buscas para cada
+  ficheiro.</li>
+<li>Solucionado un problema que rompía cando as rutas contiñan caracteres non
+  latinos.</li>
+<li>Os atallos de teclado agora pódense reasignar utilizando o diálogo xestos
+  de entrada do NVDA.</li>
+</ul>
+<h2>Cambios para 1.0</h2>
+<ul>
+<li>Versión inicial.</li>
+<li>Traducido ó: Alemán, Español, Eslovaco, Esloveno, Farsi, Finés, Francés,
+  Galego, Italiano, Coreán, Nepalí, Portugués, Portugués do Brasil, Tamil,
+  Xaponés.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

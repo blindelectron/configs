@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Place markers 34.0.0</title>
+</head>
+<body>
+<h1>Đánh dấu</h1>
+<ul>
+<li>Tác giả: Noelia, Chris.</li>
+</ul>
+<p>This add-on is used for saving and searching specific text strings or
+placemarkers. It can be used on web pages or documents in NVDA's browse
+mode. It can also be used for saving or searching strings of text in
+multi-line controls; in this case, if it's not possible to update the caret,
+the corresponding string will be copied to the clipboard, so that it can be
+searched using other tools.  The plugin saves the specified strings and
+placemarkers to files whose name is based on the title and URL of the
+current document.  This add-on is based on SpecificSearch and
+Bookmark&amp;Search, developed by the same author. You should uninstall them to
+use this one, since they have common keystrokes and features.</p>
+<h2>Các phím lệnh:</h2>
+<ul>
+<li>control+shift+NVDA+f: mở hộp thoại với ô nhập liệu hiển thị tìm kiếm cuối
+  cùng được lưu; trong hộp thoại này, bạn cũng có thể chọn các tìm kiếm đã
+  được lưu trước đó  từ một hộp xổ hay xóa chuỗi văn bản được chọn khỏi lịch
+  sử bằng một hộp kiểm. Bạn có thể chọn để lưu văn bản hiện tại trong ô nhập
+  liệu vào lịch sử lưu văn bản của bạn. Cuối cùng, chọn một hoạt động từ
+  nhóm radio buttons (tìm tiếp, tìm trước hay không tìm kiếm), và thiết lập
+  nếu muốn NVDA tìm kiếm phân biệt chữ hoa  thường. Khi bạn bấm okay, NVDA
+  sẽ tìm kiếm chuỗi văn bản.</li>
+<li>control+shift+NVDA+y: Saves the current position as a placemarker. If you
+  want to provide a name for this placemarker, select some text from this
+  position before saving it.</li>
+<li>control+shift+NVDA+delete: Deletes the placemarker corresponding to this
+  position.</li>
+<li>NVDA+y: Moves to the next placemarker.</li>
+<li>shift+NVDA+y: Moves to the previous placemarker.</li>
+<li>Not assigned: Shows the file name where the placemarkers data will be
+  saved in browse mode, without an extension.</li>
+<li>alt+NVDA+y: Opens a dialog with the placemarkers saved for this
+  document. You can write a note for each placemarker; press Save note to
+  save changes. Pressing Delete you can remove the selected
+  placemarker. Pressing OK you can move to the selected position.</li>
+<li>Not assigned: Saves a position as a temporary placemarker.</li>
+<li>Not assigned: Moves to the temporary placemarker for the current document.</li>
+<li>Chưa gán lệnh: tìm văn bản tiếp theo có chứa nội dugn tìm kiếm gần nhất
+  cho mọi tài liệu cụ thể.</li>
+<li>Chưa gán lệnh: tìm văn bản trước đó có chứa nội dugn tìm kiếm gần nhất cho
+  mọi tài liệu cụ thể.</li>
+</ul>
+<h2>PlaceMarkers Submenu (NVDA+N)</h2>
+<p>Using the PlaceMarkers submenu under NVDA's Preferences menu, you can
+access:</p>
+<ul>
+<li>Specific search folder: Opens a folder of specific searches previously
+  saved.</li>
+<li>Bookmarks folder: Opens a folder of the saved placemarkers.</li>
+<li>Copy placeMarkers folder: You can save a copy of the placeMarkers folder.</li>
+<li>Restore placeMarkers: You can restore your placeMarkers from a previously
+  saved placeMarkers folder.</li>
+</ul>
+<p>Note: The placemarker position is based on the number of characters; and
+therefore in dynamic pages it is better to use the specific search, not
+placemarkers.</p>
+<h2>Changes for 24.0</h2>
+<ul>
+<li>Y is used instead of k in gestures such as NVDA+k, NVDA+shift+k,
+  NVDA+alt+k and NVDA+control+shift+k.</li>
+<li>Compatible with NVDA 2023.1.</li>
+</ul>
+<h2>Changes for 23.0</h2>
+<ul>
+<li>The add-on works again with Microsoft Word.</li>
+</ul>
+<h2>Changes for 22.0</h2>
+<ul>
+<li>We can move to bookmarks and delete them with UIA enabled, thanks to
+  Abdel.</li>
+</ul>
+<h2>Changes for 21.0</h2>
+<ul>
+<li>Bookmarks can be saved with UIA enabled in browsers based on Chromium,
+  thanks to Abdel.</li>
+</ul>
+<h2>Changes for 20.0</h2>
+<ul>
+<li>Requires NVDA 2022.1 or later.</li>
+</ul>
+<h2>Changes for 19.0</h2>
+<ul>
+<li>The add-on cannot be run on secure screens.</li>
+</ul>
+<h2>Changes for 18.0</h2>
+<ul>
+<li>The command to see the path for placeMarkers shows if there are permanent
+  bookmarks, text for specific search or a temporary bookmark for the
+  current document.</li>
+</ul>
+<h2>Changes for 17.0</h2>
+<ul>
+<li>Fixed a bug which didn't allow to save place markers in some documents.</li>
+<li>Fixed translated strings making translations to work properly.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 16.0</h2>
+<ul>
+<li>Compatible with NVDA 2021.1 or later (required).</li>
+<li>Đã hỗ trợ thay đổi vị trí đọc khi di chuyển đến dấu trang tạm thời.</li>
+<li>If needed, you can download <a href="https://github.com/nvdaes/placeMarkers/releases">other
+  versions</a>.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 15.0</h2>
+<ul>
+<li>Khi đọc với chế độ đọc tất cả trong chế độ duyệt, các lệnh tìm trước và
+  tìm tiếp không còn làm cho dừng đọc nữa nếu tùy chọn cho phép thay đổi vị
+  trí khi đọc dược bật, dựa theo các lệnh tìm tiếp và tìm trước của NVDA
+  2020.4.</li>
+<li>Nếu hộp thoại tìm kiếm cụ thể được mở sau khi gọi lệnh tìm trước, tùy chọn
+  tìm kiếm trước sẽ được chọn.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 14.0</h2>
+<ul>
+<li>Lệnh chép tên của tập tin sẽ lưu dữ liệu của các điểm đánh dấu đã được
+  thay thế bởi một lệnh để hiển thị tên này trong chế độ duyệt. Lệnh này
+  không được gán thao tác.</li>
+<li>Ô "Văn bản cần tìm" không còn bị tràn qua ô "Các văn bản đã lưu" nữa. (cảm
+  ơn Cyrille Bougot).</li>
+<li>Yêu cầu NVDA 2019.3 trở lên.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 13.0</h2>
+<ul>
+<li>Thêm các lệnh tìm kiếm văn bản kế và văn bản trước có chứa nội dugn tìm
+  kiếm gần nhất cho mọi tài liệu cụ thể.</li>
+<li>Tính năng tìm kiếm cụ thể hoạt động khi hộp thoại giới thiệu NVDA được mở.</li>
+<li>Trong hộp thoại tìm kiếm cụ thể, hộp kiểm phân biệt chữ hoa thường sẽ được
+  chọn nếu nó đã được chọn cho tìm kiếm trước đó.</li>
+<li>Khi cập nhật add-on, các dấu trang và chuỗi tìm kiếm cụ thể đã lưu trong
+  phiên bản trước đây sẽ được tự sao chép qua phiên bản mới, trừ khi bạn
+  chọn nạp các dấu trang đã lưu trong thư mục cấu hình chính của NVDA.</li>
+<li>Khi dùng hộp thoại để sao chép các dấu trang, nếu thư mục đã chọn không
+  được đặt tên là placeMarkersBackup, một thư mục con với tên này sẽ được
+  tạo để ngăn chạn việc xóa những thư mục chứa các dữ liệu quan trọng như
+  Documents hay Downloads.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 12.0</h2>
+<ul>
+<li>Sửa một lỗi nghiêm trọng làm cho NVDA bị treo khi nỗ lực mở hộp thoại các
+  ghi chú, nếu các kí tự tiếng Trung Quốc được chọn trước khi lưu các dấu
+  trang.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 11.0</h2>
+<ul>
+<li>Tương thích với NVDA 2018.3 trở lên (yêu cầu).</li>
+<li>Nếu cần, bạn có thể tải về <a href="https://www.nvaccess.org/addonStore/legacy?file=pm-o">phiên bản cuối cùng tương thích với NVDA
+  2017.3</a>.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 10.0</h2>
+<ul>
+<li>Trong Edge, các thao tác liên quan đến chọn dấu trang như NVDA+k,
+  NVDA+shift+k hay NVDA+alt+k sẽ gửi tới ứng dụng thay vì cố gắng chuyển con
+  trỏ đến các dấu trang, nhằm tránh gây ra lỗi, đặc biệt là trong các tài
+  liệu dài.</li>
+<li>Giờ đây đã hỗ trợ tìm kiếm cụ thể trong Edge.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 9.0</h2>
+<ul>
+<li>Khi chuyển đến một dấu trang từ hộp thoại ghi chú, con trỏ duyệt đi theo
+  con trỏ hệ thống.</li>
+<li>Phím lệnh chọn dấu trang trước đã hoạt động trở lại như mong muốn.</li>
+<li>Có thể xóa các dấu trang thông qua hộp thoại ghi chú.</li>
+<li>Giờ đây bạn có thể gán lệnh để lưu và di chuyển đến một dấu trang tạm thời
+  cho mỗi tài liệu.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 8.0</h2>
+<ul>
+<li>Gỡ bỏ số nhận dạng phân đoạn từ tập tin các dấu trang, nhằm tránh gây ra
+  lỗi trong VitalSource Bookshelf ePUB reader.</li>
+<li>Đã thêm hộp thoại ghi chú để tích hợp chú thích cho các dấu trang đã lưu
+  và di chuyển đến vị trí được chọn.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 7.0</h2>
+<ul>
+<li>Hộp thoại lưu chuỗi văn bản cho tìm kiếm cụ thể đã được gỡ bỏ. Tính năng
+  này giờ đây được tích hợp trong hộp thoại tìm kiếm cụ thể, đã được thiết
+  kế lại để cho phép thực hiện các hoạt động khác nhau khi bấm OK.</li>
+<li>Trình bày trực quan của các hộp thoại đã được cải thiện, giống như cách
+  xuất hiện các hộp thoại của NVDA.</li>
+<li>Thực hiện lệnh tìm tiếp hay tìm trước trong chế độ duyệt giờ đây sẽ tìm
+  kiếm phân biệt chữ hoa / thường một cách chính xác nếu tìm kiếm gốc là
+  phân biệt chữ hoa / thường.</li>
+<li>Yêu cầu NVDA 2016.4 trở lên.</li>
+<li>Giờ bạn có thể  gán các thao tác để mở các hộp thoại sao chép và khôi phục
+  các điểm đánh dấu.</li>
+<li>NVDA sẽ phát một thông điệp để thông báo khi các điểm đánh dấu được sao
+  chép hay khôi phục ở các hộp thoại tương ứng.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 6.0</h2>
+<ul>
+<li>Khi không dùng được tính năng của add-on, các thao tác sẽ được gửi đến các
+  ứng dụng tương ứng.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 5.0</h2>
+<ul>
+<li>Thêm tính năng tìm kiếm phân biệt chữ hoa / thường.</li>
+<li>Gỡ bỏ tùy chọn mở tài liệu từ trình đơn đánh dấu.</li>
+<li>Thêm các phím lệnh trực quan.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 4.0</h2>
+<ul>
+<li>Gỡ bỏ  số nhận dạng phân đoạn từ tên tập tin dấu trang nhằm tránh gây ra
+  lỗi trong ePUBREADER Firefox add-on.</li>
+<li>Thông tin giúp đỡ cho add-on đã hiển thị trong phần quản lý add-on.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 3.1</h2>
+<ul>
+<li>Cập nhất các bản dịch và ngôn ngữ mới.</li>
+<li>Vị trí dấu trang không được thông báo trong chế độ thay đổi vị trí đọc.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 3.0</h2>
+<ul>
+<li>Thêm hỗ trợ cho thay đổi vị trí đọc.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 2.0</h2>
+<ul>
+<li>Thêm các tùy chọn để lưu và xóa các tìm kiếm khác nhau cho mỗi tập tin.</li>
+<li>Sửa lỗi bị treo khi đường dẫn chứa các kí tự không phải chữ latin.</li>
+<li>Các phím tắt giờ đây có thể gán lại bằng hộp thoại quản lý thao tác của
+  NVDA.</li>
+</ul>
+<h2>Các thay đổi cho phiên bản 1.0</h2>
+<ul>
+<li>Phiên bản đầu tiên.</li>
+<li>Đã dịch sang các ngôn ngữ: Bồ Đào Nha brazi, Farsi, Phần Lan, Pháp,
+  Galicia, Đức, Ý, Nhật, Hàn Quốc, Nepal, Bồ Đào Nha, Tây Ban Nha, Slovak,
+  Slovenia, Nam Ấn Độ.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

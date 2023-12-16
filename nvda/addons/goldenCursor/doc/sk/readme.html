@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Golden Cursor 6.2.1</title>
+</head>
+<body>
+<h1>Pokročilý kurzor myši</h1>
+<ul>
+<li>Autori: salah atair, Joseph Lee</li>
+<li>Stiahnuť <a href="https://www.nvaccess.org/addonStore/legacy?file=goldenCursor">stabilnú verziu</a></li>
+<li>NVDA compatibility: 2022.4 and beyond</li>
+</ul>
+<p>Umožňuje pohybovať kurzorom myši z klávesnice a uložiť pozície myši pre
+klikanie v aplikáciách.</p>
+<h2>Klávesové skratky</h2>
+<ul>
+<li>Control+NVDA+L: view saved mouse positions for an application, if any. You
+  can also assign gestures to these positions from this dialog. When
+  pressing the assigned gesture, a left click will be performed in the saved
+  position.</li>
+<li>Nvda+shift+L: Zapamätaj si pozíciu myši pre otvorenú aplikáciu.</li>
+<li>nvda+windows+c: Zmeň jednotku pohybu kurzora myši.</li>
+<li>Nvda+windows+R: Zapni alebo vypni obmedzenie pohybu kurzora myši na
+  aktuálne okno.</li>
+<li>Nvda+windows+S: zapni alebo vypni oznamovanie pozície kurzora myši v
+  pixeloch.</li>
+<li>NVDA+windows+j: Presuň kurzor myši na zadané súradnice.</li>
+<li>NVDA+windows+P: Oznám súradnice kurzora myši.</li>
+<li>NVDA+windows+m: Zapni alebo vypni pohybovanie kurzorom myši pomocou
+  kurzorových kláves (šípky hore, dole, doľava a doprava).</li>
+<li>Windows+nvda+šípky: Presuň kurzor myšy (ak je aktivované pohybovanie
+  kurzorom myši pomocou kurzorových kláves, stačí použiť len šípky).</li>
+</ul>
+<p>Klávesové skratky môžete zmeniť v dialógu klávesové skratky.</p>
+<h2>Poznámky</h2>
+<ul>
+<li>Ak posielate uložené pozície kurzora myši na použitie niekomu ďalšiemu,
+  obaja musíte používať rovnaké rozlíšenie obrazovky.</li>
+<li>Takisto odporúčame vždy maximalizovať aktuálne okno skratkou Windows+šípka
+  hore.</li>
+<li>Ak zdieľate pozície, odporúčame vám skontrolovať ich názvy a prípadne ich
+  premenovať.</li>
+<li>Uložené pozície z verzie doplnku 1.X nie sú kompatibilné s novými verziami
+  doplnku.</li>
+<li>Ak chcete používať šípky na štandardné príkazy, najprv vypnite ovládanie
+  myši pomocou kurzorových kláves.</li>
+<li>Ak vymažete poslednú zapamätanú pozíciu pre aktuálnu aplikáciu, zmaže sa
+  celý súbor s dátami pre aktuálnu aplikáciu.</li>
+</ul>
+<h2>Version 6.2</h2>
+<ul>
+<li>Requires NVDA 2022.4 or later.</li>
+<li>Compatible with NVDA 2023.1.</li>
+</ul>
+<h2>Version 6.1</h2>
+<ul>
+<li>Requires NVDA 2021.3 or later.</li>
+<li>Now, you can assign shortcuts for saved positions from the positions
+  list. When pressing a shortcut, a left click will be performed for the
+  position.</li>
+</ul>
+<h2>Version 5.0</h2>
+<ul>
+<li>Modernized add-on source code to make it compatible with NVDA 2021.1.</li>
+<li>Resolved many coding style issues and potential bugs with Flake8.</li>
+</ul>
+<h2>Verzia 4.0</h2>
+<ul>
+<li>Vyžaduje NVDA od verzie 2019.3.</li>
+<li>Panel nastavení zmenený na dialóg.</li>
+</ul>
+<h2>Verzia 3.3</h2>
+<ul>
+<li>Kód upravený pre podporu budúcich vydaní NVDA..</li>
+</ul>
+<h2>Verzia 3.2</h2>
+<ul>
+<li>Upravené pre NVDA 2018.3 (wxPython 4).</li>
+</ul>
+<h2>Verzia 3.0</h2>
+<ul>
+<li>Dialóg s nastaveniami bol presunutý do stromu nastavení pre NVDA od verzie
+  2018.2.</li>
+</ul>
+<h2>Verzia 2.1</h2>
+<ul>
+<li>Opravená chyba unicode decode error pri mazaní uložených pozícií.</li>
+<li>Odteraz nie je možné mať otvorených viacero okien doplnku súčasne.</li>
+<li>Opravená odozva dialógov a okien.</li>
+</ul>
+<h2>Verzia 2.0</h2>
+<ul>
+<li>Vyžaduje NVDA od verzie 2017.3.</li>
+<li>Zmenil sa formát uložených súradníc. Staré súradnice sa prevedú do nového
+  formátu po inštalácii doplnku.</li>
+<li>Pridaný dialóg s nastaveniami, kde je možné nastaviť oznamovanie pozície
+  kurzora myši a jednotku pohybu kurzora.</li>
+<li>Upravené správy.</li>
+<li>Pri prepínaní nastavení sa neprehráva zvuk.</li>
+<li>Odteraz je možné pohybovať kurzorom len za použitia kurzorových kláves (po
+  zapnutí príslušného režimu).</li>
+<li>Upravený dialóg na ukladanie. Odteraz obsahuje zapamätané súradnice a
+  názov aplikácie.</li>
+<li>Kláves enter v zozname uložených súradníc automaticky presunie myš na
+  požadované miesto.</li>
+<li>Pri premenovaní názvu NVDA skontroluje, či neexistuje uložená pozícia s
+  rovnakým menom a ak áno, zobrazí chybu.</li>
+<li>Odstránenie súradníc je potrebné odteraz potvrdiť.</li>
+<li>Zmenený dialóg na presun kurzora myšy. Zmenil sa názov okna a súradnice je
+  možné zadať alebo nastaviť šípkami.</li>
+<li>Dialóg pri ukladaní obsahuje aktuálnu pozíciu kurzora myši.</li>
+<li>When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.</li>
+</ul>
+<h2>Verzia 1.4</h2>
+<ul>
+<li>Odstránená knižnica win32api, ktorá nie je podporovaná v novších verziách
+  NVDA.</li>
+</ul>
+<h2>Verzia 1.0</h2>
+<ul>
+<li>Prvé vydanie.</li>
+</ul>
+<p>[[!tag stable dev]]</p>
+</body>
+</html>

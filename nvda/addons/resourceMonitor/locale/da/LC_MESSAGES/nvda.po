@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: resourceMonitor 2.3\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-07-09 12:29-0700\n"
+"PO-Revision-Date: 2023-09-25 12:11+0200\n"
+"Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
+"Language-Team: Dansk NVDA <dansk@nvda.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#. Resource Monitor requires Windows 10 21H2 or later.
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+msgid "Unsupported Windows release"
+msgstr "Ikke-understøttet Windows-version"
+
+#. Translators: Dialog text shown when trying to install the add-on on
+#. releases earlier than minimum supported release.
+#, python-brace-format
+msgid ""
+"You are using {releaseName} ({build}), a Windows release not supported by "
+"this add-on.\n"
+"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
+msgstr ""
+"Du bruger {releaseName} ({build}), en Windows-version, der ikke understøttes "
+"af denne tilføjelse.\n"
+"Denne tilføjelse kræver {supportedReleaseName} ({supportedBuild}) eller "
+"nyere."
+
+msgid "No authentication (Open)"
+msgstr "Ingen godkendelse (åben)"
+
+msgid "Connected to {}"
+msgstr "Forbundet til {}"
+
+msgid "Disconnected from {}"
+msgstr "Afbrudt forbindelse til {}"
+
+msgid "A wireless device has been enabled"
+msgstr "En trådløs enhed er blevet aktiveret"
+
+msgid "A wireless device has been disabled"
+msgstr "En trådløs enhed er blevet deaktiveret"
+
+#. Translators: Message reported when there is no battery on the system,
+#. mostly laptops with battery pack removed and running on AC power.
+msgid "This computer does not have a battery connected."
+msgstr "Intet batteri sluttet til denne computer."
+
+#. Translators: message presented when AC is connected and battery is charging,
+#. also show current battery percentage.
+#, python-brace-format
+msgid "{percent}%, battery charging."
+msgstr "{percent}%, batteri oplader."
+
+#. Translators: message presented when computer is running on battery power,
+#. showing percentage remaining yet battery time is unknown.
+#, python-brace-format
+msgid "{percent}% battery remaining, battery time unknown."
+msgstr "{percent}% resterende batteri, batteritid ukendt."
+
+#. Translators: battery and system uptime in hours.
+#. Translators: system uptime in hours.
+msgid "1 hour"
+msgstr "1 time"
+
+#. Translators: battery and system uptime in hours.
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} hours"
+msgstr "{0} timer"
+
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
+msgid "1 minute"
+msgstr "1 minut"
+
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
+#, python-brace-format
+msgid "{0} minutes"
+msgstr "{0} minutter"
+
+#. Translators: message presented when computer is running on battery power,
+#. showing percentage remaining and estimated remaining time.
+#, python-brace-format
+msgid "{percent}% battery remaining, about {time}."
+msgstr "{percent}% resterende batteri, omkring {time}."
+
+#. Translators: Message reported when battery level is low.
+msgid " Warning: low battery."
+msgstr "Advarsel: Batteriniveau lavt."
+
+#. Translators: Message reported when battery level is critical.
+msgid " Warning: critically low battery."
+msgstr "Advarsel: Batteriniveau meget lavt."
+
+#. Translators: Presents Windows version
+#. (example output: "Windows 10 (32-bit)").
+#, python-brace-format
+msgid "{winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit})"
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "Ressourcemonitor"
+
+#. Translators: Input help message about battery info command in Resource Monitor.
+msgid ""
+"Presents battery percentage, charging status, remaining time (if not "
+"charging), and a warning if the battery is low or critical."
+msgstr ""
+"Oplyser batteriets opladestatus i procent, om batteriet oplader, resterende "
+"tid (hvis batteriet ikke oplader,samt giver en advarsel, hvis "
+"batteriniveauet er lavt eller meget lavt."
+
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Oplyser brugt og samlet plads på faste og flytbare drev på denne computer."
+
+#. Translators: Shows drive letter, type of drive (fixed or removable),
+#. used capacity and total capacity of a drive
+#. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr ""
+"{driveName} ({driveType}): {usedSpace} af {totalSpace} brugt {percent}%."
+
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr ""
+"Oplyser den gennemsnitlige processorbelastning og belastning af hver kerne."
+
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
+msgid "Core {coreNumber}: {corePercent}%"
+msgstr "Kerne {coreNumber}: {corePercent}%"
+
+#. Translators: Shows average load of the processor on single-core systems.
+#, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "Gennemsnitlig CPU-belastning {avgLoad}%"
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#, python-brace-format
+msgid "Average CPU load {avgLoad}%, {cores}."
+msgstr "Gennemsnitlig CPU-belastning {avgLoad}%, {cores}"
+
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr "Giver brugt og samlet plads i både fysisk og virtuel hukommelse."
+
+#. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
+msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
+msgstr "Fysisk: {physicalUsed} af {physicalTotal} brugt ({physicalPercent}%). "
+
+#. Translators: Shows virtual memory usage.
+#, python-brace-format
+msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
+msgstr "Virtuel: {virtualUsed} af {virtualTotal} brugt ({virtualPercent}%)."
+
+#. Translators: Input help mode message about Windows version command in Resource Monitor.
+msgid "Announces the version of Windows you are using."
+msgstr "Oplyser hvilken version af Windows du bruger."
+
+#. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+msgid "Announces the system's wireless network ssid name, and its strength."
+msgstr "Annoncerer systemets trådløse netværks ssid-navn og dets styrke."
+
+msgid "No wireless devices"
+msgstr "Ingen trådløse enheder"
+
+msgid "No wireless connections"
+msgstr "Ingen trådløse forbindelser"
+
+msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
+msgstr "Forbundet trådløst netværk: {}. Signalstyrke: {}%. Sikkerhedstype: {}"
+
+#. Translators: system uptime in days.
+msgid "1 day"
+msgstr "1 dag"
+
+#. Translators: system uptime in days.
+#, python-brace-format
+msgid "{0} days"
+msgstr "{0} dage"
+
+#. Translators: system uptime in seconds.
+msgid "1 second"
+msgstr "1 sekund"
+
+#. Translators: system uptime in seconds.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr "{0} sekunder"
+
+#. Translators: Input help mode message about obtaining the system's uptime
+msgid "Announces the system's uptime."
+msgstr "Annoncerer systemets oppetid."
+
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Kunne ikke finde systemets oppetid."
+
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr ""
+"Oplyser hukommelse i brug, processorbelastning og batteriinformation (hvis "
+"denne er tilgængelig)."
+
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent}% hukommelse brugt, CPU {cpuPercent}%."
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
+msgstr ""
+"En smart lille ressourcemonitor, som fortææler status for "
+"processorbelastning, hukommelsesforbrug, batteri, diskforbrug m.m."

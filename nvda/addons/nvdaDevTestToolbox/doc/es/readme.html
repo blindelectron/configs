@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>NVDA Dev & Test Toolbox 6.0</title>
+</head>
+<body>
+<h1>Caja de herramientas de desarrollo y pruebas para NVDA</h1>
+<ul>
+<li>Autor: Cyrille Bougot</li>
+<li>Compatibilidad con NVDA: de 2019.2 en adelante</li>
+<li>Descargar <a href="https://www.nvaccess.org/addonStore/legacy?file=nvdaDevTestToolbox">versión estable</a></li>
+</ul>
+<p>Este complemento reúne diversas funciones para depuración y pruebas en NVDA.</p>
+<h2>Características</h2>
+<ul>
+<li>Un diálogo mejorado para reiniciar que permite indicar algunas opciones
+  extra cuando se reinicia NVDA.</li>
+<li>Diversas funciones relacionadas con errores registrados.</li>
+<li>Un explorador de propiedades de los objetos.</li>
+<li>Un modo de descripción extendida para los scripts: cuando está activado,
+  el modo ayuda de entrada anuncia información de los scripts que no tienen
+  descripción.</li>
+<li>Órdenes para ayudar con la lectura y el análisis del registro.</li>
+<li>Copias de seguridad de registros antiguos</li>
+<li>En el espacio de trabajo de la consola Python, una función para abrir el
+  código fuente de un objeto.</li>
+<li>Un script personalizado de inicio para la consola Python</li>
+<li>Una orden para registrar la pila de llamadas de la función speech.speak.</li>
+</ul>
+<h2>Diálogo reiniciar mejorado</h2>
+<p>La orden NVDA+shift+q abre un diálogo para indicar algunas opciones extra
+antes de reiniciar NVDA. Las opciones que pueden especificarse corresponden
+a las <a href="https://www.nvaccess.org/files/nvda/documentation/userGuide.html#CommandLineOptions">opciones de línea de órdenes</a> que se pueden usar con <code>nvda.exe</code>,
+como <code>-c</code> para la ruta de configuración, <code>--disable-addons</code> para
+deshabilitar los complementos, etc.</p>
+<h2>Funciones relacionadas con errores registrados</h2>
+<h3>Anunciar último error registrado</h3>
+<p>Pulsar NVDA+shift+alt+E permite anunciar el último error registrado sin
+necesidad de abrir el registro. Una segunda pulsación elimina el último
+error memorizado.</p>
+<h3>Reproducir un sonido para los errores registrados</h3>
+<p>La <a href="https://www.nvaccess.org/files/nvda/documentation/userGuide.html#PlayErrorSound">opción "Reproducir un sonido para los errores registrados"</a> se
+introdujo en NVDA 2021.3 y permite especificar si NVDA reproducirá un sonido
+de error en caso de que se registre un error.</p>
+<p>Este complemento proporciona una orden adicional (NVDA+control+alt+e) para
+conmutar este ajuste. Puedes elegir:</p>
+<ul>
+<li>"Sólo en versiones de prueba de NVDA" (por defecto) para que NVDA
+  reproduzca sonidos de error sólo si la versión actual de NVDA es una
+  versión de prueba (alfa, beta o ejecutada desde el código fuente).</li>
+<li>"Sí" para habilitar los sonidos de error sea cual sea tu versión de NVDA.</li>
+</ul>
+<p>En versiones de NVDA anteriores a la 2021.3, este complemento proporciona el
+backport de esta característica y la posibilidad de controlarla con la orden
+de teclado. La casilla de verificación del panel de opciones avanzadas, sin
+embargo, no se incluye.</p>
+<h2>Explorador de propiedades de los objetos</h2>
+<p>Esta función permite anunciar algunas propiedades del objeto actual en el
+navegador de objetos sin abrir el visualizador del registro.</p>
+<p>Para enumerar las propiedades de un objeto, mueve el navegador de objetos
+hacia él y usa las siguientes órdenes:</p>
+<ul>
+<li>Selecciona la propiedad anterior y la anuncia para el navegador de
+  objetos.</li>
+<li>Selecciona la siguiente propiedad y la anuncia para el navegador de
+  objetos.</li>
+<li>Anuncia la propiedad seleccionada actualmente para el navegador de
+  objetos; al pulsar dos veces rápidamente, muestra esta información en un
+  mensaje explorable.</li>
+</ul>
+<p>Estas tres órdenes vienen sin asignar por defecto; tendrás que asignarlas
+desde el diálogo Gestos de entrada para poder usarlas.</p>
+<p>La lista de propiedades soportadas es la siguiente: nombre, rol, estado,
+valor, nombre de clase de la ventana, id de control de la ventana, manejador
+de la ventana, ubicación, clase Python, orden de resolución de métodos de la
+clase Python.</p>
+<p>Esta función es una mejora de un ejemplo de la <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#toc22">guía de desarrollo de
+NVDA</a>.</p>
+<h2>Modo de descripción extendida de scripts</h2>
+<p>Cuando el modo de descripción extendida de scripts está activado, el modo de
+ayuda de entrada (NVDA+1) se modifica de la siguiente manera. Si un script
+no tiene descripción, se anuncian su nombre y su clase. Si un script tiene
+descripción, esta se anuncia como siempre. El gesto para activar o
+desactivar esta función es NVDA+control+alt+d.</p>
+<p>Ejecutar un gesto asociado a un script sin descripción en el modo ayuda de
+entrada también crea una entrada para este script en el diálogo de
+administración de gestos. Esta entrada se ubica en una categoría dedicada
+llamada "Scripts sin descripción (¡Modifica bajo tu responsabilidad!)". Esto
+permite añadir, eliminar o cambiar fácilmente los gestos nativos de NVDA
+para estos scripts. Ten en cuenta, sin embargo, que el script puede no tener
+una descripción intencionadamente para que el usuario no pueda
+modificarlo. El script puede estar pensado para coincidir con un atajo de
+una aplicación concreta. Por ejemplo, el script script_toggleItalic en
+NVDAObjects.window.winword.WordDocument está asignado a control+k, y no
+debería modificarse, ya que el gesto se pasa a la aplicación para ejecutar
+realmente ese atajo de teclado.</p>
+<h3>Ejemplo de uso</h3>
+<p>Control+shift+k también conmuta la cursiva en Word, incluso si NVDA no lo
+anuncia de forma nativa. Para que el resultado de pulsar control+shift+k se
+anuncie como control+k, deberías seguir los siguientes pasos:</p>
+<ul>
+<li>Abre un documento de Word.</li>
+<li>Activa el modo de descripción extendida de scripts con NVDA+control+alt+d.</li>
+<li>Entra en el modo ayuda de entrada con NVDA+1.</li>
+<li>Pulsa control+K para anunciar el script de cursiva y añadirlo al diálogo
+  de gestos.</li>
+<li>Sal del modo ayuda de entrada con NVDA+1.</li>
+<li>Abre el diálogo Gestos de entrada.</li>
+<li>En la categoría "Scripts sin descripción (¡Modifícalos bajo tu
+  responsabilidad!)", selecciona la orden "toggleItalic en
+  NVDAObjects.window.winword.WordDocument".</li>
+<li>Añade el atajo control+shift+k y valida.</li>
+<li>Si quieres, sal del modo de descripción extendida de scripts con
+  NVDA+control+alt+d.</li>
+</ul>
+<p>Fallo conocido: Un script añadido para una clase concreta es visible incluso
+si el administrador de gestos se abre en otro contexto.</p>
+<h2>Funciones de lectura y análisis del registro</h2>
+<p><a id="logPlaceMarkers"></a></p>
+<h3>Marcadores de posición en el registro</h3>
+<p>Al trabajar o hacer pruebas, puedes querer marcar un momento concreto en el registro, de tal manera que puedas regresar a él después al leer el registro.
+Para añadir un mensaje de marcador al registro, pulsa NVDA+control+k.
+Se registrará un mensaje como el siguiente en el nivel info:
+<code>-- NDTT marker 0 --</code><br />
+Puedes añadir tantos marcadores como quieras en el registro. El número del
+marcador se incrementará cada vez que sitúes un marcador en el registro;
+sólo se restablecerá al reiniciar NVDA.</p>
+<h3>Modo lector del registro</h3>
+<p>El modo lector del registro proporciona órdenes facilitar la lectura y el
+análisis del registro. En la ventana del visualizador del registro, el
+lector del registro está habilitado por defecto, por lo que los comandos de
+lectura del registro están disponibles de inmediato. En otras áreas de
+lectura de texto, tales como un editor (por ejemplo, Notepad++) o una página
+web (por ejemplo, una incidencia de GitHub), es necesario pulsar
+NVDA+control+alt+l para activar el modo de lectura del registro y usar sus
+órdenes. Cuando acabes con las tareas de análisis y lectura del registro,
+puedes desactivar de nuevo el modo lector del registro con
+NVDA+control+alt+l.</p>
+<p>Las órdenes disponibles en el modo de lectura del registro se describen a
+continuación.</p>
+<p><a id="logReaderQuickNavigationCommands"></a></p>
+<h4>Órdenes de navegación rápida</h4>
+<p>Existen órdenes de navegación de una sola letra, similares a las usadas en
+modo exploración, que permiten moverse por distintos tipos de mensajes en el
+registro:</p>
+<ul>
+<li>m: cualquier mensaje</li>
+<li>e: mensajes de error (<code>ERROR</code> y <code>CRITICAL</code>)</li>
+<li>w: mensajes de advertencia (<code>WARNING</code>)</li>
+<li>f: mensajes informativos (<code>INFO</code>)</li>
+<li>k: marcadores previamente <a href="#logPlaceMarkers">situados en el registro</a></li>
+<li>g: mensajes de aviso de depuración (<code>DEBUGWARNING</code>)</li>
+<li>i: mensajes de entrada/salida (<code>IO</code>)</li>
+<li>n: mensajes entrantes</li>
+<li>s: mensajes hablados</li>
+<li>d: mensajes de depuración (<code>DEBUG</code>)</li>
+</ul>
+<p>Pulsando la letra te moverás a la siguiente coincidencia de ese mensaje. Al
+combinar la letra con la tecla shift, te desplazarás a la coincidencia
+anterior.</p>
+<h4>Traducción de mensajes hablados</h4>
+<p>A veces, puedes tener que mirar un registro tomado en un sistema con un
+idioma extranjero que no entiendes. Por ejemplo, el registro se tomó en un
+sistema / NVDA en chino, pero sólo entiendes francés. Si tienes instalado el
+complemento <a href="https://addons.nvda-project.org/addons/instantTranslate.en.html">Instant Translate</a>, puedes usarlo junto con las <a href="#logReaderQuickNavigationCommands">órdenes de
+navegación rápida por el registro</a> para
+traducir los mensajes hablados.</p>
+<ul>
+<li>Primero, configura los idiomas de Instant Translate. El idioma de origen
+  debería ser el idioma del sistema del que se tomó el registro (por
+  ejemplo, chino). El idioma de destino debería ser tu idioma (por ejemplo,
+  francés).</li>
+<li>Abre el registro</li>
+<li>Pulsa la T para activar la traducción automática del habla en el registro</li>
+<li>Usa las órdenes de navegación rápida en el registro, por ejemplo S, I,
+  etc. Cada vez que se encuentre un mensaje hablado, se verbalizará en
+  nuestro idioma (francés en el ejemplo anterior)</li>
+</ul>
+<p>Si quieres desactivar la traducción del habla, pulsa la T de nuevo.</p>
+<p><a id="logReaderOpenSourceFile"></a></p>
+<h4>Abrir el archivo del código fuente en tu editor</h4>
+<p>En el registro, alguna línea puede hacer referencia al código fuente:</p>
+<ul>
+<li>Una línea relacionada con una traza contiene la ruta y la línea en el
+  archivo, por ejemplo:
+  <code>File "virtualBuffers\__init__.pyc", line 226, in _getStoryLength</code></li>
+<li>La línea de cabecera de un mensaje registrado contiene la función que ha
+  registrado el mensaje, p.ej.:
+  <code>INFO - config.ConfigManager._loadConfig (22:45:26.145) - MainThread (16580):</code></li>
+</ul>
+<p>Puedes querer que se abra el archivo que contiene el código para comprender
+el contexto de la traza o el mensaje registrado. Pulsa la C para abrir el
+archivo.</p>
+<p>Para que esta característica funcione, necesitas configurar el <a href="#settingsOpenCommand">comando de
+tu editor favorito</a> en las opciones del
+complemento. Si no estás ejecutando NVDA desde el código fuente, la
+<a href="#settingsNvdaSourcePath">ubicación del código fuente de NVDA</a> también
+debería estar configurada.</p>
+<p><a id="oldLogsBackup"></a></p>
+<h2>Copia de seguridad de registros antiguos</h2>
+<p>NVDA ya proporciona una copia de seguridad del registro de la sesión
+anterior de NVDA; el archivo se llama <code>nvda-old.log</code>. A veces, sin embargo,
+puedes querer acceder a registros más antiguos, por ejemplo porque tuviste
+que reiniciar NVDA otra vez antes de mirar <code>nvda-old.log</code>. Este complemento
+permite configurar si quieres hacer copia de seguridad de los registros
+antiguos y cuántos se guardan; esto se hace en las <a href="#settingsLogsBackup">opciones del
+complemento</a>.</p>
+<p>Un diálogo del gestor de registros permite visualizar los registros respaldados.
+Se puede abrir yendo al menú NVDA -&gt; Herramientas -&gt; Gestor de registros.
+En este diálogo, se puede ver la lista con los registros respaldados, abrirlos y borrarlos.
+Para poder abrir un registro, deberías haber configurado primero el <a href="#settingsOpenCommand">comando para abrir un archivo en tu editor favorito</a>.</p>
+<h2>Extensión de la consola Python</h2>
+<p><a id="pythonConsoleOpenCodeFile"></a></p>
+<h3>Función <code>openCodeFile</code></h3>
+<p>En la consola, puedes llamar a la siguiente función para ver el código fuente que define la variable <code>myVar</code>:
+<code>openCodeFile(myVar)</code>  </p>
+<p>Para que esta característica funcione, necesitas configurar el <a href="#settingsOpenCommand">comando de
+tu editor favorito</a> en las opciones del
+complemento. Si no estás ejecutando NVDA desde el código fuente, la
+<a href="#settingsNvdaSourcePath">ubicación del código fuente de NVDA</a> también
+debería estar configurada.</p>
+<p>Se puede llamar a la función <code>openCodeFile</code> en objetos definidos en el
+código de NVDA o en objetos definidos por los complementos. No se puede
+llamar en objetos cuyo código fuente no está disponible, tales como los
+incorporados en Python.</p>
+<p>Si todavía no has importado el objeto en la consola, también puedes pasar su
+nombre como parámetro a la función <code>openCodeFile</code>.</p>
+<p>A continuación hay ejemplos de llamadas al código de NVDA:</p>
+<ul>
+<li>Ver la definición de la función <code>speech.speech.speak</code>:
+  <code>openCodeFile(speech.speech.speak)</code><br />
+  o con el nombre pasado como parámetro:<br />
+<code>openCodeFile("speech.speech.speak")</code>  </li>
+<li>Ver la definición de la clase <code>TextInfo</code>:
+  <code>openCodeFile(textInfos.TextInfo)</code>  </li>
+<li>Ver la definición del método <code>copyToClipboard</code> de la clase <code>TextInfo</code>:
+  <code>openCodeFile(textInfos.TextInfo.copyToClipboard)</code>  </li>
+<li>Ver la definición de la clase del objeto con el foco:
+  <code>openCodeFile(focus)</code>  </li>
+<li>Abrir el archivo <code>api.py</code> que define el módulo <code>api</code>:
+  <code>openCodeFile(api)</code></li>
+</ul>
+<h3>Script de inicio de la consola Python</h3>
+<p>Puedes definir un script personalizado, que se ejecutará en el espacio de
+nombres de la consola Python al abrirla por primera vez, o si se recarga el
+complemento (NVDA+control+f3) después de haber abierto ya la consola.</p>
+<p>Por ejemplo, el script te permite ejecutar importaciones y definir alias que podrás usar directamente en la consola, como se muestra a continuación:</p>
+<pre><code># Various import that I want in the console.
+import globalVars as gv
+import core
+import ui
+# Aliases
+ocf = openCodeFile
+</code></pre>
+<p>El script de la consola Python debería encontrarse en la siguiente ubicación: <code>RutaConfiguraciónNVDA\ndtt\consoleStartup.py</code><br />
+Por ejemplo:
+<code>C:\Users\myUserName\AppData\Roaming\nvda\ndtt\consoleStartup.py</code></p>
+<h2>Registrar la pila de llamadas de la función de voz</h2>
+<p>A veces, puedes querer saber qué parte del código es responsable de
+verbalizar algo. Para ello, puedes habilitar el registro de traza de pila de
+la función de voz pulsando NVDA+control+alt+s. Cada vez que NVDA hable, se
+grabará una traza de pila en el registro.</p>
+<p>Nota: puedes modificar directamente el archivo del script para parchear otra
+función. Consulta las instrucciones en el propio archivo para más detalles.</p>
+<p><a id="settings"></a></p>
+<h2>Opciones</h2>
+<p>Algunas características de este complemento pueden requerir una configuración concreta.
+Un panel de opciones permite habilitarlas o controlar cómo funcionan.
+Para ver y modificar estas opciones, ve al menú NVDA -&gt; Preferencias y selecciona la categoría Caja de herramientas de desarrollo y pruebas de NVDA.</p>
+<p>Se puede acceder también a este diálogo de opciones desde el diálogo del gestor de registros.</p>
+<p>Estas opciones son globales y sólo se pueden configurar cuando está activado
+el perfil predeterminado.</p>
+<p><a id="settingsOpenCommand"></a></p>
+<h3>Comando para abrir un archivo en tu editor favorito</h3>
+<p>Algunas funciones permiten visualizar contenido en tu editor favorito. Esto
+incluye los comandos para ver el archivo de código fuente <a href="#logReaderOpenSourceFile">desde un
+registro</a> o <a href="#pythonConsoleOpenCodeFile">desde un objeto en la
+consola</a>, así como el botón abrir del <a href="#oldLogsBackup">gestor de
+registros</a>.</p>
+<p>Para usarlas, primero debes configurar el comando que se ejecutará para abrir el archivo en tu editor favorito.
+Dicho comando debería seguir el formato:
+<code>"C:
+uta\a\mi\editor\editor.exe" "{path}":{line}</code><br />
+Por supuesto, deberías modificar esta línea en función del nombre real y ubicación del editor, y la sintaxis usada por él para abrir archivos.
+<code>{path}</code> se sustituirá por por la ruta completa del archivo a abrir, y <code>{line}</code> por el número de línea donde quieres que se encuentre el cursor.
+Por ejemplo, para Notepad++, el comando a escribir en la consola sería:
+<code>"C:\Program Files\Notepad++\notepad++.exe" "{path}" -n{line}</code></p>
+<p><a id="settingsNvdaSourcePath"></a></p>
+<h3>Ruta al código fuente de NVDA</h3>
+<p>Al usar un comando para <a href="#logReaderOpenSourceFile">ver el archivo de código fuente desde un registro</a> o <a href="#pythonConsoleOpenCodeFile">desde un objeto en la consola</a>, el archivo debe pertenecer al propio NVDA.
+Si no ejecutas NVDA desde el código fuente, tu copia de NVDA sólo contiene archivos compilados.
+Por tanto, puedes configurar aquí una ubicación específica donde se encontrará el archivo de código fuente correspondiente, por ejemplo, el lugar donde has clonado los archivos de código fuente de NVDA, de tal forma que se pueda abrir un archivo de código fuente.
+La ruta podría ser como:
+<code>C:\EjemploRuta\GIT\nvda\source</code><br />
+Por supuesto, reemplaza la ruta del código fuente de NVDA con la correcta.</p>
+<p>Asegúrate, no obstante, de que la versión de tu archivo fuente (por ejemplo,
+commit de Git) es la misma que la de la instancia de NVDA en ejecución.</p>
+<p><a id="settingsLogsBackup"></a></p>
+<h3>Copia de seguridad de registros antiguos</h3>
+<p>El cuadro combinado de copia de seguridad de registros antiguos permite
+activar o desactivar la <a href="#oldLogsBackup">característica</a>.  Si está activada,
+se puede indicar debajo en "limitar la cantidad de copias de seguridad" la
+cantidad máxima de copias de seguridad que quieres conservar. Estas opciones
+sólo tienen efecto la próxima vez que se inicia NVDA al hacer la copia de
+seguridad.</p>
+<h2>Registro de cambios</h2>
+<h3>Versión 5.0</h3>
+<ul>
+<li>Si el complemento Instant Translate está instalado, ahora es posible tener
+  los mensajes hablados traducidos al vuelo al utilizar las órdenes de
+  lectura del registro.</li>
+<li>Mientras estás en el modo de lectura del registro, pulsar E y shift+E
+  ahora salta a mensajes de error críticos, tal y como hacía con los
+  mensajes de error normales.</li>
+<li>Se han añadido nuevas órdenes de navegación rápida por el registro para
+  saltar a los mensajes de entrada y hablados.</li>
+<li>
+<p>Una nueva orden permite situar un marcador en el registro; y otras órdenes
+  concretas de navegación rápida permiten saltar a marcadores en el
+  registro.
+  Créditos: la idea inicial de esta función viene del complemento Debug Helper de Luke Davis.</p>
+</li>
+<li>
+<p>Corrección de fallo: la memorización del último error ya no falla en
+  algunos casos.</p>
+</li>
+<li>Corrección de fallo: el complemento se inicializa de nuevo en NVDA
+  2019.2.1.</li>
+<li>Corrección de fallo: la función de guardar el registro ya no fallará en
+  registros no ASCII.</li>
+</ul>
+<h3>Versión 4.2</h3>
+<ul>
+<li>Corregido un error con versiones de NVDA anteriores a la 2021.3.</li>
+<li>Corregido el formateado del registro de pila de trazas.</li>
+<li>Primeras traducciones.</li>
+</ul>
+<h3>Versión 4.1</h3>
+<ul>
+<li>Corregido un fallo que ocurría en algunas situaciones al registrar un
+  error.</li>
+<li>Ahora sólo pueden modificarse las opciones del complemento sólo cuando el
+  perfil normal está activo para evitar problemas de configuración.</li>
+</ul>
+<h3>Versión 4.0</h3>
+<ul>
+<li>Posibilidad de hacer copia de seguridad de registros antiguos e
+  introducción de un gestor de registros.</li>
+<li>Se ha añadido un script para anunciar el último error registrado.</li>
+<li>Corregido un error que impedía leer el último mensaje del registro en
+  versiones antiguas de NVDA.</li>
+</ul>
+<h3>Versión 3.2</h3>
+<ul>
+<li>Compatibilidad con NVDA 2023.1.</li>
+</ul>
+<h3>Versión 3.1</h3>
+<ul>
+<li>Corregido un error que ocurría al solicitar información no disponible en
+  un objeto.</li>
+</ul>
+<h3>Versión 3.0</h3>
+<ul>
+<li>En un registro, ahora se puede pulsar la C en una línea de cabecera de
+  mensaje para abrir el módulo o función que lo emitió.</li>
+<li>En la consola, la función <code>openCodeFile</code> puede recibir como parámetro el
+  objeto o una cadena que contenga su nombre.</li>
+<li>Nueva función: archivo de inicio de la consola de NVDA: si existe, el
+  archivo tuCarpetaDeConfiguraciónDeNVDA\ndtt\consoleStartup.py se ejecutará
+  al abrir la consola Python por primera vez o cuando se recarguen los
+  complementos.</li>
+<li>Diversas correcciones menores para la función de la consola Python
+  <code>openCodeFile</code> y la orden para abrir el archivo de código fuente
+  correspondiente a una línea del registro.</li>
+<li>Corregido un problema al intentar anunciar roles y estados en el
+  explorador de objetos en versiones antiguas de NVDA.</li>
+<li>El complemento ya no causa problemas con el interceptor de árbol al usar
+  UIA en Edge.</li>
+</ul>
+<h3>Versión 2.1</h3>
+<ul>
+<li>Diversas correcciones de fallos y refactorización y limpieza del código
+  para tener en cuenta todos los casos de uso: todas las versiones
+  soportadas, instalado vs. ejecutado desde el código fuente,
+  etc. (colaboración de Łukasz Golonka)</li>
+<li>Reescritura del módulo compa (colaboración de Łukasz Golonka)</li>
+<li>Ahora, el diálogo para reiniciar se puede abrir sólo una vez.</li>
+<li>Los atajos del explorador de objetos ahora vienen por defecto sin asignar
+  y deben ser asignados por el usuario.</li>
+<li>En el explorador de objetos, una pulsación doble para llamar al script que
+  indica la propiedad del objeto ahora muestra la información indicada en un
+  mensaje explorable.</li>
+</ul>
+<h3>Versión 2.0</h3>
+<ul>
+<li>Nueva función: diálogo de reiniciar mejorado para indicar algunas opciones
+  extra al reiniciar NVDA.</li>
+<li>Nueva función: modo de descripción extendida.</li>
+<li>Función para reproducir sonidos de error armonizada entre las versiones
+  anterior y posterior a la 2021.3 de NVDA.</li>
+<li>Nueva función: las órdenes del lector del registro ahora están disponibles
+  en el visualizador del registro y, opcionalmente, en cualquier cuadro de
+  edición y en páginas web.</li>
+<li>Nueva función: en la consola Python, está disponible una función
+  <code>openCodeFile</code> para ver el código fuente de un objeto.</li>
+<li>Algunas funciones están ahora deshabilitadas en modo seguro por motivos de
+  seguridad.</li>
+<li>Se ha extendido el rango de compatibilidad del complemento (de 2019.2 a
+  2021.1).</li>
+<li>Las liberaciones ahora se llevan a cabo con una acción de GitHub en lugar
+  de AppVeyor.</li>
+</ul>
+<h3>Versión 1.0</h3>
+<ul>
+<li>Versión inicial.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

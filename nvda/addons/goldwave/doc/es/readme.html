@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>GoldWave 23.04</title>
+</head>
+<body>
+<h1>GoldWave</h1>
+<ul>
+<li>Autores: Joseph Lee, colaboradores de NVDA.</li>
+<li>Descargar <a href="https://addons.nvda-project.org/files/get.php?file=goldwave">Versión estable</a></li>
+<li>Compatibilidad con NVDA: de 2022.4 en adelante</li>
+</ul>
+<p>Este módulo de aplicación mejora el acceso y el uso del editor  de audio
+Goldwave.</p>
+<h2>Atajos de teclado</h2>
+<ul>
+<li>NVDA+Shift+C: Conmuta la verbalización de órdenes durante la edición de
+  audio.</li>
+<li>Control+Shift+P: Anuncia la posición de la pista actual.</li>
+<li>NVDA+Shift+R: Anuncia el tiempo restante para la pista actualmente en
+  edición.</li>
+<li>Control+NVDA+1: Anuncia el canal que estás editando.</li>
+<li>Control+NVDA+2: Anuncia la longitud total del archivo de audio.</li>
+<li>Control+NVDA+3: anuncia un resumen de la información de selección de
+  audio.</li>
+<li>Control+NVDA+4: Anuncia el nivel de zoom.</li>
+</ul>
+<p>Para obtener más información acerca de Goldwave y de las órdenes de teclado,
+remítete al manual de Goldwave.</p>
+<p>Nota: se requiere GoldWave 6 o posterior.</p>
+<h2>Versión 23.02</h2>
+<ul>
+<li>Se requiere NVDA 2022.4 o posterior.</li>
+<li>Se requiere Windows 10 21H2 (actualización de noviembre de 2021 /
+  compilación 19044) o posterior.</li>
+</ul>
+<h2>Versión 23.01</h2>
+<ul>
+<li>Se requiere NVDA 2022.3 o posterior.</li>
+<li>Se requiere Windows 10 o posterior, ya que Microsoft no soporta Windows 7,
+  8 y 8.1 a partir de enero de 2023.</li>
+</ul>
+<h2>Versión 22.03</h2>
+<ul>
+<li>Se requiere NVDA 2021.3 o posterior.</li>
+<li>Se mostrará un mensaje de aviso al intentar instalar el complemento en
+  Windows 7, 8 y 8.1.</li>
+</ul>
+<h2>Versión 21.10</h2>
+<ul>
+<li>Se requiere NVDA 2021.2 o posterior a causa de cambios en NVDA que afectan
+  a este complemento.</li>
+<li>En GoldWave 6.57 y posterior, NVDA ya no repetirá el nombre del archivo
+  cargado al pulsar las teclas de reproducir/pausar/rebobinar.</li>
+</ul>
+<h2>Versión 21.06</h2>
+<ul>
+<li>Se han resuelto problemas adicionales de estilo del código y fallos
+  potenciales con Flake8.</li>
+</ul>
+<h2>Versión 20.06</h2>
+<ul>
+<li>Se han resuelto muchos problemas de estilo del código y fallos potenciales
+  con Flake8.</li>
+</ul>
+<h2>Versión 20.04</h2>
+<ul>
+<li>Se han añadido mensajes de ayuda de entrada para la orden de tiempo
+  restante (NVDA+shift+r).</li>
+<li>La orden para conmutar la verbalización de órdenes (NVDA+shift+c) ahora se
+  mostrará bajo la categoría "GoldWave" en el diálogo Gestos de entrada de
+  NVDA.</li>
+</ul>
+<h2>Versión 20.01</h2>
+<ul>
+<li>Se requiere NVDA 2019.3 o posterior.</li>
+</ul>
+<h2>Versión 19.11</h2>
+<ul>
+<li>Son necesarios Windows 7 SP1, GoldWave 6.x, y NVDA 2019.1 o posterior.</li>
+<li>Se ha añadido un mensaje de ayuda para la ventana de sonido (accesible si
+  está instalado Control Usage Assistant).</li>
+</ul>
+<h2>Versión 18.12</h2>
+<ul>
+<li>NVDA ya no parecerá no hacer nada o reproducirá tonos de error al realizar
+  ciertas órdenes de GoldWave con el anuncio de órdenes desactivado (podría
+  causar un comportamiento defectuoso en ciertos casos).</li>
+<li>Cambios internos para dar soporte a versiones futuras de NVDA.</li>
+</ul>
+<h2>Versión 18.07</h2>
+<ul>
+<li>Solucionado un error por el que los ceros a la izquierda no se mostraban
+  al intentar obtener el tiempo restante para una pista.</li>
+</ul>
+<h2>Versión 17.05</h2>
+<ul>
+<li>Añadida la capacidad de proporcionar información de depuración cuando NVDA
+  está en ejecución con el registro de depuración habilitado (NVDA 2017.1 o
+  posterior).</li>
+<li>Traducciones actualizadas.</li>
+</ul>
+<h2>Versión 16.12</h2>
+<ul>
+<li>El esquema de la versión ahora es año.mes en lugar de mayor.menor.</li>
+</ul>
+<h2>Cambios para 4.0</h2>
+<ul>
+<li>El repositorio del complemento se ha movido a GitHub (ahora localizado en
+  https://github.com/josephsl/goldwave).</li>
+<li>Mejoras de rendimiento al buscar información tal como nombre de canal y
+  otra información de estado.</li>
+</ul>
+<h2>Cambios para 3.0</h2>
+<ul>
+<li>Añadida una orden para anunciar el tiempo restante para la pista actual
+  (NVDA+Shift+R).</li>
+<li>Ligeras mejoras al anunciar información de estado tal como la información
+  de canal.</li>
+</ul>
+<h2>Cambios para  2.0</h2>
+<ul>
+<li>Soporte para GoldWave 6, incluyendo la versión de 64 bits de GoldWave
+  (mira la nota arriba).</li>
+<li>Ahora se puede acceder a la ayuda del complemento desde el Administrador
+  de complementos (NVDA 2014.3 y posterior).</li>
+<li>NVDA ahora anuncia canal seleccionado si pulsas órdenes de selección de
+  canal, tales como Control + Shift + L para el canal izquierdo .</li>
+<li>Se han solucionado varios problemas con campos de edición numéricos como
+  el campo censor y el selector de tiempo en el diálogo de mezcla,
+  incluyendo la selección de texto , los valores de la actualización y así
+  sucesivamente .</li>
+<li>La opción de la orden de anunciado se recordará al cambiar a otros
+  programas.</li>
+</ul>
+<h2>Cambios para 1.2</h2>
+<ul>
+<li>Se ha solucionado un problema por el que NVDA tenía dificultades
+  anunciando algunos campos de edición.</li>
+<li>Traducciones nuevas y actualizadas.</li>
+<li>Por favor ten en cuenta que debido a cambios recientes en NVDA, la
+  selección de audio y otras órdenes de estado podrían no funcionar como se
+  esperaba en algunos sistemas.</li>
+</ul>
+<h2>Cambios para 1.1</h2>
+<ul>
+<li>Soporte para anunciado de mensajes en braille.</li>
+<li>El resumen de la selección del audio se  presenta en más idiomas que el
+  inglés.</li>
+<li>Añadido más anunciado de órdenes incluyendo posición del movimiento del
+  indicador y operaciones de borrado/recorte.</li>
+<li>Solucionado un problema en los campos de edición numéricos tales como
+  diversos cuadros de diálogo de efectos , donde no se anunciaba nada o
+  nombres de campo equivocados.</li>
+<li>Traducciones nuevas y actualizadas.</li>
+</ul>
+<h2>Cambios para 1.0</h2>
+<ul>
+<li>Versión inicial.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Golden Cursor 6.2.1</title>
+</head>
+<body>
+<h1>Golden Cursor</h1>
+<ul>
+<li>Autori: salah atair, Joseph Lee</li>
+<li>Descarcă <a href="https://www.nvaccess.org/addonStore/legacy?file=goldenCursor">versiunea stabilă</a></li>
+<li>NVDA compatibility: 2022.4 and beyond</li>
+</ul>
+<p>Acest supliment îți permite să muți mausul folosind tastatura și să salvezi
+pozițiile mausului pentru aplicații.</p>
+<h2>Combinații de taste</h2>
+<ul>
+<li>Control+NVDA+L: view saved mouse positions for an application, if any. You
+  can also assign gestures to these positions from this dialog. When
+  pressing the assigned gesture, a left click will be performed in the saved
+  position.</li>
+<li>Shift+NVDA+l: salveaza o etichetă pentru poziția actuală a mausului în
+  aplicația activă.</li>
+<li>Windows+NVDA+C: schimbă unitatea de mișcare a mausului.</li>
+<li>NVDA+Win+R: Comută restricționarea mausului.</li>
+<li>NVDA+Win+S: Comută raportarea pixelilor.</li>
+<li>Windows+NVDA+J: mișca mausul la o poziție x,y specifică.</li>
+<li>Windows+NVDA+P: anunță poziția mausului.</li>
+<li>NVDA+Win+M: Comută între activarea și dezactivarea mișcării mausului prin
+  apăsarea săgeților.</li>
+<li>Windows+NVDA+săgeți (sau doar săgeți daca săgețile maus sunt activate):
+  mișcă mausul.</li>
+</ul>
+<p>Notă: Aceste gesturi pot fi re-definite din dialogul Gesturi de intrare în
+meniul NVDA, preferințe.</p>
+<h2>Note</h2>
+<ul>
+<li>Când distribui poziții, toată echipa trebuie să utilizeze aceiași
+  rezoluție.</li>
+<li>Pentru o compatibilitate maximă, trebuie să maximizezi fereastra apăsând
+  Windows+Săgeată sus.</li>
+<li>Când distribui poziții, eticheta poziției existente trebuie să fie
+  redenumită.</li>
+<li>Formaturile pozițiilor maus 1.x și 2.x sunt incompatibile.</li>
+<li>Pentru a efectua funcții care necesită utilizarea tastelor săgeți in mod
+  standard, dezactivați mai întâi săgețile maus.</li>
+<li>Atunci când ștergeți ultima poziție salvată, pozițiile aplicației vor fi
+  curățate .</li>
+</ul>
+<h2>Version 6.2</h2>
+<ul>
+<li>Requires NVDA 2022.4 or later.</li>
+<li>Compatible with NVDA 2023.1.</li>
+</ul>
+<h2>Version 6.1</h2>
+<ul>
+<li>Requires NVDA 2021.3 or later.</li>
+<li>Now, you can assign shortcuts for saved positions from the positions
+  list. When pressing a shortcut, a left click will be performed for the
+  position.</li>
+</ul>
+<h2>Version 5.0</h2>
+<ul>
+<li>Modernized add-on source code to make it compatible with NVDA 2021.1.</li>
+<li>Resolved many coding style issues and potential bugs with Flake8.</li>
+</ul>
+<h2>Versiunea 4.0</h2>
+<ul>
+<li>Necesită NVDA 2019.3 sau mai nou.</li>
+<li>Dialogul de setări Golden Cursor a fost înlocuit cu un panou de setări.</li>
+</ul>
+<h2>Versiunea 3.3</h2>
+<ul>
+<li>Au fost făcute modificări interne pentru ca viitoarele versiuni de NVDA să
+  fie suportate.</li>
+</ul>
+<h2>Versiunea 3.2</h2>
+<ul>
+<li>Suplimentul este compatibil cu NVDA 2018.3 (wxPython 4).</li>
+</ul>
+<h2>Versiunea 3.0</h2>
+<ul>
+<li>Dacă se utilizează NVDA 2018.2, setările suplimentului vor fi găsite în
+  noul ecran al multicategoriei de setări, sub categoria „Golden Cursor”.</li>
+</ul>
+<h2>Versiunea 2.1</h2>
+<ul>
+<li>A fost rezolvată o Eroare de decodare unicode cand numele pozițiilor
+  incercau sa fie șterse.</li>
+<li>Previne instanțe multiple la deschiderea diverselor dialoguri.</li>
+<li>Aparițiea listei de poziții maus și a dialogurilor de sărire a fost
+  îmbunătățită.</li>
+</ul>
+<h2>Versiunea 2.0</h2>
+<ul>
+<li>Necesită NVDA 2017.3 sau mai nou.</li>
+<li>Formatul fișierului de poziții este incompatibil cu versiunile 1.x. Dacă
+  se găsește un format de poziție 1.x, pozițiile vechi vor fi migrate la
+  noul format în timpul instalării.</li>
+<li>A fost adăugat un nou dialog de setări pentru Golden Cursor în meniul
+  Preferințe al NVDA. Acesta face posibilă configurarea unității de mișcare
+  a mausului și anunțării pozițiilor mausului in timp ce mausul se mișcă.</li>
+<li>S-au făcut schimbări la diferite mesaje ale acestui supliment.</li>
+<li>Când comutați între diferite setări, tonul de comutare nu va mai fi redat.</li>
+<li>Acum puteți folosi modul săgeți care va permite să deplasați mausul
+  apăsând doar tastele săgeată.</li>
+<li>Modificări la  dialogul lista poziții, inclusiv noul nume (pozițiile
+  maus). Acum vor fi afișate in titlul dialogului atât coordonatele mausului
+  pentru o poziție, cat și numele aplicației active.</li>
+<li>Din dialogul "Pozițiile maus", apăsând pe o poziție salvată va deplasa
+  mausul în locația salvată.</li>
+<li>La redenumirea unei poziții maus, se va afișa un dialog de eroare dacă
+  există o poziție cu același nume.</li>
+<li>Când ștergeți sau goliți pozițiile maus, trebuie să confirmați cu Da
+  înainte ca pozițiile să fie șterse.</li>
+<li>Modificări la funcțiea de săritura mausului, inclusiv un nume nou (denumit
+  acum poziția maus nouă). De asemenea, s/a adaugat capacitatea de a
+  introduce coordonatele X și Y separat sau prin utilizarea săgeților sus și
+  jos.</li>
+<li>Dialogul afișat atunci când salvați poziția actuală a mouse-ului afișează
+  acum coordonatele pentru locația actuală a mouse-ului.</li>
+<li>When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.</li>
+</ul>
+<h2>Versiunea 1.4</h2>
+<ul>
+<li>A fost eliminată dependența win32api pentru a fi compatibil cu versiunile
+  anterioare și viitoare ale NVDA.</li>
+</ul>
+<h2>Versiunea 1.0</h2>
+<ul>
+<li>Versiunea inițială.</li>
+</ul>
+<p>[[!tag stable dev]]</p>
+</body>
+</html>

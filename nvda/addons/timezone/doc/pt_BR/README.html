@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Time Zoner 3.02</title>
+</head>
+<body>
+<h1>Anúncio de horas em diferentes fusos horários</h1>
+<h2>Informações</h2>
+<ul>
+<li>Autor: "Munawar"</li>
+<li>Descarregar a <a href="https://github.com/munawarb/NVDA-Time-Zoner/releases/latest">versão estável: </a></li>
+<li>Compatibilidade: NVDA versão 2019.2 até 2020.1</li>
+</ul>
+<h2>Introdução</h2>
+<p>Um extra para o NVDA para anunciar a hora e data em fusos horários seleccionados.</p>
+<p>Desde há muito tempo que o Windows permite visualizar relógios para diferentes fusos horários. Quando os utilizadores configuram estes relógios, eles ficam imediatamente visíveis.
+Infelizmente, para utilizadores de leitores de ecrã, como o NVDA] (https://www.nvaccess.org/) ou o <a href="http://www.freedomscientific.com">Jaws</a>, não há uma maneira simples de ler essa informação.
+Os leitores de ecrã não suportam relógios adicionais, pelo que os utilizadores de leitores de ecrã têm de utilizar outras soluções, algumas delas pagas.</p>
+<p>Uma parte do trabalho que eu faço implica trabalhar em vários fusos horários, e, eventualmente, canso-me de calcular manualmente os horários na minha cabeça, eespecialmente nos casos em que as diferenças incluem meia-hora, como a Índia, que tem uma diferença de +5:30 em relação ao UTC.</p>
+<p>Por isso, criei este extra para o NVDA.
+O extra permite ouvir as horas nos diferentes fusos horários seleccionados através do "Anel de fusos horários".</p>
+<h2>Uso</h2>
+<p>Após instalar o extra, abra o menu do NVDA, vá para ""Preferências", depois para "Anúncio de horas em diferentes fusos horários", e por fim pressione Enter em "Configurar o anel de fusos horários...".</p>
+<p>Será aberta a janela para configurar os fusos horários que quer ouvir.
+Marque os itens na lista de fusos horários para os adicionar ao seu "Anel de fusos horários". Desmarque, ou pressione o botão "Remover" para remover um fuso horário adicionado.
+Também pode reordenar os vários fusos horários no anel com os botões "Mover para cima" ou "Mover para baixo".
+Use o campo "Filtrar" para restringir a pesquisa.
+Marque a caixa de verificação "Anunciar fusos horários abreviados" para ouvir a designação abreviada dos fusos horários, como IST or GMT, ou desmarque para ouvir o nome completo, como "Asia/Kolkata" ou "Europe/London".
+Para terminar a configuração, pressione o botão "Guardar".</p>
+<p>Agora, pode pressionar "NVDA+Alt+t" para ouvir a hora e data nos fusos horários configurados no anel.</p>
+<p>Quando o extra é instalado, é definido como padrão o seu fuso horário, se possível.</p>
+<h2>Histórico de versões</h2>
+<h3>Versão 1.01, lançada em 12/03/2020</h3>
+<ul>
+<li>A hora e data passam a ser anunciadas na configuração regional do utilizador, sendo assim respeitada a configuração de 12 ou 24 horas.</li>
+<li>O NVDA anunciará o fuso horário abreviadamente, ou não, dependendo da marcação da respectiva caixa de verificação na janela "Configurar o anel de fusos horários". Por exemplo, anunciará "Europe/London," ou "GMT" ou BST.</li>
+<li>O extra passa a incluir comentários para os tradutores. (@ruifontes.)</li>
+<li>O extra já inclui no código os cabeçalhos. (@ruifontes.)</li>
+<li>A tecla "Escape" fecha a janela "Configurar o anel de fusos horários". (@ruifontes.)</li>
+<li>O item de menu para abrir a janela "Configurar o anel de fusos horários" é nomeado apropriadamente. (@ruifontes.)</li>
+<li>O extra passa a assumir como padrão o fuso horário local, se disponível.</li>
+<li>Suporte para múltiplos fusos horários através do "Anel de fusos horários".</li>
+<li>O comando passa a ser "NVDA+Alt+t", para não haver conflitos com o extra "Relógio".</li>
+<li>O diálogo "Selector de fuso horário" passa a ter um campo para filtrar os resultados, e o NVDA vai anunciando o número de resultados enquanto se escreve.</li>
+<li>Suporte ao Python 3</li>
+<li>O anúncio da hora e data é agora feito numa sequência separada para prevenir problemas no NVDA, caso o processamento demore muito tempo. .</li>
+<li>O diálogo "Selector de fuso horário" passa a ter um botão "Cancelar" e já não impede o NVDA de fechar.</li>
+</ul>
+</body>
+</html>

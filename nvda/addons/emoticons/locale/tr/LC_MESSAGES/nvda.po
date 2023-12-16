@@ -1,0 +1,939 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: emoticons' '5.3\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2020-12-01 17:47+0300\n"
+"PO-Revision-Date: 2023-05-01 21:04+0300\n"
+"Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Language-Team: Translators <cagrid@hotmail.com>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../../globalPlugins\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#. Translators: the label of a message box dialog.
+msgid ""
+"You seem to have previous settings saved for this add-on. Do you want to "
+"import them, removing deprecated files?"
+msgstr ""
+"Bu eklenti için önceden kaydedilmiş ayarlarınız var gibi görünüyor. "
+"Kullanımdan kaldırılmış dosyaları silerek bunları içe aktarmak ister misiniz?"
+
+#. Translators: the title of a message box dialog.
+msgid "Import Emoticons add-on settings"
+msgstr "İfadeler eklenti ayarlarını içe aktar"
+
+#. Translators: A prefix to each emoticon name, added to the temporary speech dictionary,
+#. visible in temporary speech dictionary dialog when the addon is active, to explain an entry.
+msgid "Emoji"
+msgstr "Emoji"
+
+#. Translators: A prefix to each emoticon name, added to the temporary speech dictionary,
+#. visible in temporary speech dictionary dialog when the addon is active, to explain an entry.
+msgid "Emoticon"
+msgstr "İfade"
+
+#. Translators: the name of a submenu.
+msgid "&Emoticons"
+msgstr "İ&fadeler"
+
+#. Translators: the name for a menu item.
+msgid "&Insert emoticon..."
+msgstr "İf&ade ekle..."
+
+#. Translators: the tooltip text for a menu item.
+msgid "Shows a dialog to insert a smiley"
+msgstr "Yazı alanındayken ifade eklemeniz için bir iletişim kutusu açar"
+
+#. Translators: the name for a menu item.
+msgid "In&sert symbol..."
+msgstr "&Sembol ekle..."
+
+#. Translators: the tooltip text for a menu item.
+msgid "Shows a dialog to insert a symbol"
+msgstr "Sembol eklemeniz için bir iletişim kutusu açar"
+
+#. Translators: the name for a menu item.
+msgid "&Emoticons dictionary..."
+msgstr "&İfadeler sözlüğü..."
+
+#. Translators: the tooltip text for a menu item.
+msgid "Shows a dictionary dialog to customize emoticons"
+msgstr "Ifade özelleştirmeniz için bir sözlük iletişim kutusu gösterir"
+
+#. Translators: Message presented in input help mode.
+msgid "Toggles on and off the announcement of emoticons."
+msgstr ""
+"İfadelerin konuşma sözlüğü kullanılarak okunmasıyla ilgili ayarı açıp "
+"kapatır."
+
+#. Translators: message presented when the dictionary for emoticons is unloaded.
+msgid "Emoticons off."
+msgstr "İfadeler kapalı."
+
+#. Translators: message presented when the dictionary for emoticons is loaded.
+msgid "Emoticons on."
+msgstr "İfadeler açık."
+
+#. Translators: Message presented in input help mode.
+msgid "Shows a dialog to select a smiley you want to paste."
+msgstr ""
+"Yapıştırmak istediğiniz ifadeyi seçmeniz için bir iletişim kutusu açar."
+
+#. Translators: Message presented in input help mode.
+msgid "Shows a dialog to select a symbol you want to paste."
+msgstr ""
+"Yapıştırmak istediğiniz ifadeyi seçmeniz için bir iletişim kutusu açar."
+
+#. Translators: Message presented in input help mode.
+msgid "Shows the Emoticons dictionary dialog."
+msgstr "İfadeler sözlüğünü gösterir."
+
+#. Translators: Message presented in input help mode.
+msgid "Shows the Emoticons settings."
+msgstr "İfadeler ayarlarını gösterir."
+
+#. Translators: Message presented in input help mode.
+msgid "Shows the symbol positioned where the review cursor is located."
+msgstr "İnceleme imlecinin bulunduğu konumdaki sembolü gösterir."
+
+#. Translators: Reported when there is no replacement for the symbol at the position of the review cursor.
+#. Translators: Reported when there is no replacement for the symbol at the position of the caret.
+msgid "No symbol replacement"
+msgstr "Sembol değişimi yok"
+
+#. Translators: Character and its replacement used from the "Review current Symbol" command.
+#. Example: "Character: ? Replacement: question"
+msgid ""
+"Character: {}\n"
+"Replacement: {}"
+msgstr ""
+"Karakter: {}\n"
+"Yerine konan: {}"
+
+#. Translators: title for expanded symbol dialog. Example: "Expanded symbol (English)"
+msgid "Symbol at the review cursor position ({})"
+msgstr "İnceleme imleci konumundaki sembol ({})"
+
+#. Translators: Message presented in input help mode.
+msgid "Shows the symbol positioned where the caret is located."
+msgstr "Düzenleme imlecinin bulunduğu konumdaki sembolü gösterir."
+
+#. Translators: title for expanded symbol dialog. Example: "Expanded symbol (English)"
+msgid "Symbol at the caret position ({})"
+msgstr "Düzenleme imleci konumundaki sembol ({})"
+
+#. Translators: Title of the dialog.
+msgid "Insert emoticon"
+msgstr "Ifade ekle"
+
+#. Filter panel.
+#. Translators: A text field to filter emoticons.
+#. Translators: The label of a text field to search for symbols in the Insert Symbol dialog.
+msgid "&Filter:"
+msgstr "&Süz:"
+
+#. Translators: A radio button to choose all types of emoticons.
+msgid "&All"
+msgstr "&Tümü"
+
+#. Translators: A radio button to choose only standard emoticons.
+msgid "&Standard"
+msgstr "&Standart"
+
+#. Translators: A radio button to choose only emojis.
+msgid "Emoj&is"
+msgstr "Emoj&iler"
+
+#. Translators: Label for the smileys list.
+msgid "&List of smilies"
+msgstr "&İfadeler listesi"
+
+#. Translators: Column which specifies the name  of emoticon.
+msgid "Name"
+msgstr "Ad"
+
+#. Translators: Column which specifies the type of emoticon (standard or emoji).
+msgid "Type"
+msgstr "Tür"
+
+#. Translators: The column which contains the characters of the emoticon.
+msgid "Characters"
+msgstr "Karakterler"
+
+#. Translators: Label for standard emoticons in the list.
+msgid "Standard"
+msgstr "Standart"
+
+#. Translators: Error message when none emoticon is selected or the list is empty, and title of dialog.
+msgid "There is not any emoticon selected."
+msgstr "Seçilen herhangi bir ifade yok."
+
+#. Translators: This is the message when smiley has been copied to the clipboard.
+msgid "Smiley copied to clipboard, ready for you to paste."
+msgstr "İfade bulunduğunuz alana yapıştırabilmeniz için panoya kopyalandı."
+
+#. Translators: Message when the emoticon couldn't be copied.
+msgid "Cannot copy smiley."
+msgstr "İfade kopyalanamıyor."
+
+#. Translators: Title for Emoticons dictionary dialog.
+#, python-format
+msgid "Emoticons dictionary (%s)"
+msgstr "İfadeler sözlüğü (%s)"
+
+#. Translators: The label for a button in the Emoticons dictionary dialog.
+msgid "Rese&t"
+msgstr "Sı&fırla"
+
+#. Translators: The label for a button in the Emoticons dictionary dialog.
+msgid "Save and e&xport dictionary"
+msgstr "S&özlüğü kaydet ve dışa aktar"
+
+#. Translators: This is the label for the Insert Symbol dialog.
+#. %s is replaced by the language for which symbol pronunciation is being edited.
+#, python-format
+msgid "Insert Symbol (%s)"
+msgstr "Sembol Ekle (%s)"
+
+#. Translators: The label for a button in the Insert symbol dialog.
+msgid "&Add"
+msgstr "&Ekle"
+
+#. Translators: The label of a text field to copy symbols in the Insert Symbol dialog.
+msgid "Symbols to &copy:"
+msgstr "Kopyalana&cak semboller:"
+
+#. Translators: This is the message when symbol has been copied to the clipboard.
+msgid "Symbol copied to clipboard, ready for you to paste."
+msgstr "İfade bulunduğunuz alana yapıştırabilmeniz için panoya kopyalandı."
+
+#. Translators: Message when the symbol couldn't be copied.
+msgid "Cannot copy symbol."
+msgstr "Sembol kopyalanamıyor."
+
+#. Translators: The label for a setting in Emoticons panel.
+msgid "&Activate speaking of emoticons:"
+msgstr "İfadelerin seslendirilmesini &etkinleştir:"
+
+#. Translators: The label for a setting in Emoticons panel.
+msgid "Speak add-on emojis"
+msgstr "Eklenti emojilerini seslendir"
+
+#. Translators: The label for a setting in Emoticons panel.
+msgid "&Remove not used dictionaries"
+msgstr "Kullanılmayan sözlükle&ri sil"
+
+#. Translators: (emoji) Grinning face, an happy face with normal eyes.
+msgid "Grinning face"
+msgstr "Sırıtan yüz"
+
+#. Translators: (emoji) Happy face with open mouth and squinting eyes.
+msgid "Happy face with open mouth and squinting eyes"
+msgstr "Kısık gözlerle açık ağızlı mutlu yüz"
+
+#. Translators: (emoji) happy face with open mouth.
+msgid "Happy face with open mouth"
+msgstr "Ağzı açık mutlu yüz"
+
+#. Translators: (emoji) A smiling face with smiling eyes and rosy cheeks.
+msgid "Smiling Face With Smiling Eyes"
+msgstr "Gülümseyen gözlerle güler yüz"
+
+#. Translators: (emoji) smirking face.
+msgid "Smirking face"
+msgstr "Sırıtan yüz"
+
+#. Translators: (emoji) Slightly Smiling Face: a face that is a little bit happy, with a slight smile and neutral eyes.
+msgid "Slightly smiling face"
+msgstr "Hafif güler yüz"
+
+#. Translators: (emoji) white smiling face.
+msgid "white smiling face"
+msgstr "beyaz gülen yüz"
+
+#. Translators: (emoji) happy face with halo.
+msgid "Happy face with halo"
+msgstr "Haleli mutlu yüz"
+
+#. Translators: (emoji) white frowning face.
+msgid "White frowning face"
+msgstr "Beyaz kızgın yüz"
+
+#. Translators: (emoji) winking face.
+msgid "Winking face"
+msgstr "Göz kırpan yüz"
+
+#. Translators: (emoji) smiling face with heart shaped eyes.
+msgid "Smiling face with heart shaped eyes"
+msgstr "Kalp şeklinde gözlerle güler yüz"
+
+#. Translators: (emoji)  Rose: a single red rose.
+msgid "Rose"
+msgstr "Gül"
+
+#. Translators: (emoji) Expressionless face: a face with straight lined eyes and mouth. A deliberate display of no comment...
+msgid "Expressionless face"
+msgstr "İfadesiz yüz"
+
+#. Translators: (emoji) neutral face.
+msgid "Neutral face"
+msgstr "Nötr yüz"
+
+#. Translators: (emoji) face without mouth.
+msgid "Face without mouth"
+msgstr "Ağzı olmayan yüz"
+
+#. Translators: (emoji) face throwing a kiss.
+msgid "Face throwing a kiss"
+msgstr "Öpücük gönderen yüz"
+
+#. Translators: (emoji) kissing face with closed eyes.
+msgid "Kissing face with closed eyes"
+msgstr "Kapalı gözlerle öpen yüz"
+
+#. Translators: (emoji) Kissing face.
+msgid "Kissing face"
+msgstr "Öpücük atan yüz"
+
+#. Translators: (emoji) kissing face with arched eyes.
+msgid "Kissing face with arched eyes"
+msgstr "Kemerli gözlerle öpen yüz"
+
+#. Translators: (emoji) winking face with stuck out tongue.
+msgid "Winking face with stuck out tongue"
+msgstr "Göz kırpan ve dil çıkaran yüz"
+
+#. Translators: (emoji) face with stuck out tongue and eyes tightly closed.
+msgid "Face with stuck out tongue and eyes tightly closed"
+msgstr "Gözü kapalı dil çıkaran yüz"
+
+#. Translators: (emoji) A cheeky face with stuck out tongue.
+msgid "Face with stuck out tongue"
+msgstr "Dil çıkaran yüz"
+
+#. Translators: (emoji) Hugging Face: a face displayed with an open hands gesture, offering a hug.
+msgid "Hugging face"
+msgstr "Sarılan yüz"
+
+#. Translators: (emoji) flushed face.
+msgid "Flushed face"
+msgstr "Kızarmış yüz"
+
+#. Translators: (emoji) Grinning face showing smiling eyes.
+msgid "Grinning Face With Smiling Eyes"
+msgstr "Gülümseyen gözlerle sırıtan yüz"
+
+#. Translators: (emoji) A pensive, remorseful and saddened face. Quietly considering where things all went wrong.
+msgid "Pensive Face"
+msgstr "Dalgın yüz"
+
+#. Translators: (emoji) devil with evil smile.
+msgid "Devil with evil smile"
+msgstr "Şeytani bir gülümseme ile şeytan"
+
+#. Translators: (emoji) devil.
+msgid "Devil"
+msgstr "Şeytan"
+
+#. Translators: (emoji) relieved face.
+msgid "Relieved face"
+msgstr "Rahatlamış yüz"
+
+#. Translators: (emoji) unamused face.
+msgid "Unamused face"
+msgstr "Eğlencesiz yüz"
+
+#. Translators: (emoji) A face with scrunched up and closed eyes, frowning. Used to show helplessness in a situation.
+msgid "Persevering Face"
+msgstr "Azimli yüz"
+
+#. Translators: (emoji) crying face.
+msgid "Crying face"
+msgstr "Ağlayan yüz"
+
+#. Translators: (emoji) face with tears of joy.
+msgid "Face with tears of joy"
+msgstr "Sevinç gözyaşları"
+
+#. Translators: (emoji) loudly crying face.
+msgid "Loudly crying face"
+msgstr "Bağıra çağıra ağlayan yüz"
+
+#. Translators: (emoji) sleepy face.
+msgid "Sleepy face"
+msgstr "Uykulu yüz"
+
+#. Translators: (emoji) Shrugging: A person shrugging their shoulders to indicate a lack of knowledge about a particular topic, or a lack of care about the result of a situation.
+msgid "Shrugging emoji"
+msgstr "Silkme emoji"
+
+#. Translators: (emoji) disappointed face.
+msgid "Disappointed face"
+msgstr "Hayal kırıklığına uğramış yüz"
+
+#. Translators: (emoji) disappointed but relieved face.
+msgid "Disappointed but relieved face"
+msgstr "Hayal kırıklığına uğramış ama rahatlamış yüz"
+
+#. Translators: (emoji) Face with a look of concern, with a blue forehead and sweat dripping down the cheek.
+msgid "Face With Open Mouth & Cold Sweat"
+msgstr "Ağzı açık soğuk terler döken yüz"
+
+#. Translators: (emoji) Happy face with a single drop of sweat on one side of the face.
+msgid "Smiling Face With Open Mouth & Cold Sweat"
+msgstr "Ağzı açık soğuk terler döken ve gülümseyen yüz"
+
+#. Translators: (emoji) face with cold sweat.
+msgid "Face with cold sweat"
+msgstr "Soğuk terli yüz"
+
+#. Translators: (emoji) A distraught-looking face with  an open mouth and crescent shaped eyes.
+msgid "Weary Face"
+msgstr "Yorgun Yüz"
+
+#. Translators: (emoji) An exhausted-looking face with an open mouth and tightly closed eyes.
+msgid "Tired Face"
+msgstr "Yorgun Yüz"
+
+#. Translators: (emoji) fearful face.
+msgid "Fearful face"
+msgstr "Korkunç yüz"
+
+#. Translators: (emoji) face screaming in fear.
+msgid "Face screaming in fear"
+msgstr "Korkuyla bağıran yüz"
+
+#. Translators: (emoji) angry face.
+#. Translators: :@ angry face.
+msgid "Angry face"
+msgstr "Kızgın yüz"
+
+#. Translators: (emoji) pouting face.
+msgid "Pouting face"
+msgstr "Somurtan yüz"
+
+#. Translators: (emoji) A face with air coming out of its nose, huffing with anger face.
+msgid "Face With Steam From Nose"
+msgstr "Burnundan soluyan yüz"
+
+#. Translators: (emoji) confounded face.
+msgid "Confounded face"
+msgstr "Kafası karışık yüz"
+
+#. Translators: (emoji) Smiling Face With Open Mouth and Tightly-Closed Eyes.
+msgid "Smiling Face With Open Mouth and Tightly-Closed Eyes"
+msgstr "Ağzı açık gözleri kapalı güler yüz"
+
+#. Translators: (emoji) happy face licking lips.
+msgid "Happy face licking lips"
+msgstr "Dudaklarını yalayan mutlu yüz"
+
+#. Translators: (emoji) happy face with sunglasses.
+msgid "Happy face with sunglasses"
+msgstr "Güneş gözlüklü mutlu yüz"
+
+#. Translators: (emoji) sleeping face.
+msgid "Sleeping face"
+msgstr "Uyuyan yüz"
+
+#. Translators: (emoji) A dizzy face, looking sick or confused from being spun around in circles too many times.
+msgid "Dizzy Face"
+msgstr "Şaşırmış yüz"
+
+#. Translators: (emoji) astonished face.
+msgid "Astonished face"
+msgstr "Şok olmuş yüz"
+
+#. Translators: (emoji) worried face.
+msgid "Worried face"
+msgstr "Endişeli yüz"
+
+#. Translators: (emoji) Dismayed face with open eyes and open mouth, appear closer to  a frowning face.
+msgid "Frowning Face With Open Mouth"
+msgstr "Çatık kaşlı açık ağızlı yüz"
+
+#. Translators: (emoji) anguished face.
+msgid "Anguished face"
+msgstr "Acılı yüz"
+
+#. Translators: (emoji) A face with Open Mouth, generally used to represent an element of surprise.
+msgid "Face with Open Mouth"
+msgstr "Açık ağızlı yüz"
+
+#. Translators: (emoji) grimacing face.
+msgid "Grimacing face"
+msgstr "Buruşmuş yüz"
+
+#. Translators: (emoji) confused face.
+msgid "Confused face"
+msgstr "Şaşkın yüz"
+
+#. Translators: (emoji) A face with high eyebrows and an open mouth, it looks more surprised than hushed.
+msgid "Hushed Face"
+msgstr "Dingin Yüz"
+
+#. Translators: (emoji) broken heart.
+msgid "Broken heart"
+msgstr "Kırık kalp"
+
+#. Translators: (emoji) pulsating heart.
+msgid "Pulsating heart"
+msgstr "Titreşimli kalp"
+
+#. Translators: (emoji) beating heart.
+msgid "Beating heart"
+msgstr "Atan kalp"
+
+#. Translators: (emoji) two hearts.
+msgid "Two hearts"
+msgstr "İki kalp"
+
+#. Translators: (emoji) heart with arrow.
+msgid "Heart with arrow"
+msgstr "Ok ve kalp"
+
+#. Translators: (emoji) purple heart.
+msgid "Purple heart"
+msgstr "Mor kalp"
+
+#. Translators: (emoji) red heart.
+msgid "Red heart"
+msgstr "Kırmızı kalp"
+
+#. Translators: (emoji) yellow heart.
+msgid "Yellow heart"
+msgstr "Sarı kalp"
+
+#. Translators: (emoji) green heart.
+msgid "Green heart"
+msgstr "Yeşil kalp"
+
+#. Translators: (emoji) blue heart.
+msgid "Blue heart"
+msgstr "Mavi kalp"
+
+#. Translators: (emoji) This emoji is the version of the phrase ROFL. A person lying on the floor due to an extreme amount of laughter.
+msgid "Rolling on the Floor Laughing"
+msgstr "GÜlmekten yerlere yatan yüz"
+
+#. Translators: (emoji) A face that is a little bit sad, with a slight frown and neutral eyes.
+msgid "Slightly Frowning Face"
+msgstr "Hafif kızgın yüz"
+
+#. Translators: (emoji) A face that is upside-down.
+msgid "Upside-down Face"
+msgstr "Ters döndürülmüş yüz"
+
+#. Translators: (emoji) A face displaying eyes glancing upward.
+msgid "Face With Rolling Eyes"
+msgstr "Yuvarlanan gözler"
+
+#. Translators: (emoji) A person with arms forming an X to indicate no or no good.
+msgid "Person Gesturing No"
+msgstr "Hayır diyen yüz"
+
+#. Translators: (emoji) A person with arms above his head, making an OK sign with the whole body.
+msgid "Person Gesturing OK"
+msgstr "Onaylayan yüz"
+
+#. Translators: (emoji) A person bowing deeply, express a sincere apology or to request a favour.
+msgid "Person bowing"
+msgstr "Selamlayan yüz"
+
+#. Translators: (emoji) An upset person frowning with dismay.
+msgid "Person Frowning"
+msgstr "Kızgın yüz"
+
+#. Translators: (emoji) Two hands placed firmly together.
+msgid "Folded Hands"
+msgstr "Katlanmış eller"
+
+#. Translators: (emoji) A person with a surgical mask on their face.
+msgid "Face with medical mask"
+msgstr "Tıbbi maskeli yüz"
+
+#. Translators: (emoji) A black version of white smiling face.
+msgid "Black Smiling Face"
+msgstr "Kara güler yüz"
+
+#. Translators: (emoji) happy cat face with heart shaped eyes.
+msgid "Happy cat face with heart shaped eyes"
+msgstr "Gözlerinde kalplerle mutlu kedi yüzü"
+
+#. Translators: (emoji) ok hand sign.
+msgid "Ok hand sign"
+msgstr "Tamam el işareti"
+
+#. Translators: (emoji) thumbs up symbol.
+msgid "Thumbs up symbol"
+msgstr "Başparmak Yukarı simgesi"
+
+#. Translators: (emoji) thumbs down symbol.
+msgid "Thumbs down symbol"
+msgstr "Başparmak aşağı simgesi"
+
+#. Translators: (emoji) Victory Hand.
+msgid "Victory Hand"
+msgstr "Zafer işareti"
+
+#. Translators: :) Smile
+msgid "smiling smiley"
+msgstr "gülümseyen yüz"
+
+#. Translators: :( Sad face.
+msgid "Sad face"
+msgstr "Üzgün yüz"
+
+#. Translators: :D Laugh
+msgid "Laughing smiley"
+msgstr "Kahkaha atan yüz"
+
+#. Translators: :O Surprised
+msgid "surprised smiley"
+msgstr "şaşırmış yüz"
+
+#. Translators: ;) Wink;
+msgid "winking smiley"
+msgstr "göz kırpan yüz"
+
+#. Translators: ;( Crying
+msgid "crying smiley"
+msgstr "ağlayan yüz"
+
+#. Translators: :s :-S :-Q Confused face:
+msgid "Confused Face"
+msgstr "Kafası karışık yüz"
+
+#. Translators: (:| Sweating
+msgid "sweating smiley"
+msgstr "terlemiş yüz"
+
+#. Translators: :|] Robot (a robot head)
+msgid "Robot Smiley"
+msgstr "Robot Smiley"
+
+#. Translators: :| Speechless
+msgid "speechless smiley"
+msgstr "nutku tutulmuş yüz"
+
+#. Translators: :* Kiss
+msgid "kiss smiley"
+msgstr "öpücük atan yüz"
+
+#. Translators: :P Cheeky
+msgid "cheeky smiley"
+msgstr "dil çıkaran yüz"
+
+#. Translators: :$ Blushing
+msgid "blushing smiley"
+msgstr "utangaç yüz"
+
+#. Translators: :^) Wondering
+msgid "wondering smiley"
+msgstr "meraklı yüz"
+
+#. Translators: |-) Sleepy
+msgid "sleepy smiley"
+msgstr "uykulu yüz"
+
+#. Translators: |-( Dull
+msgid "dull smiley"
+msgstr "donuk yüz"
+
+#. Translators: :x My lips are sealed
+msgid "my lips are sealed smiley"
+msgstr "ağzım mühürlü"
+
+#. Translators: \o/ Dancing
+msgid "dancing smiley"
+msgstr "danseden yüz"
+
+#. Translators: :'( crying a lot smiley
+msgid "crying a lot smiley"
+msgstr "çok ağlamış yüz"
+
+#. Translators: >:( Angry
+#. Translators: (angry) Angry
+msgid "angry smiley"
+msgstr "kızgın yüz"
+
+#. Translators: :/ Worried
+#. Translators: (worry) Worried
+msgid "worried smiley"
+msgstr "endişeli yüz"
+
+#. Translators: <3 Heart
+#. Translators: (heart) Heart
+msgid "heart smiley"
+msgstr "kalp"
+
+#. Translators:  O:)  O:-) Angel
+msgid "Angel Smiley"
+msgstr "Melek"
+
+#. Translators:  O.o  o.O  Confused
+msgid "Confused Smiley"
+msgstr "Kafası karışık yüz"
+
+#. Translators:   3:-) Devil
+msgid "Devil Smiley"
+msgstr "Şeytani sırıtan yüz"
+
+#. Translators:  ^_^ Keke (This smiley is inspired by the Asian style, which is a happy face.)
+msgid "Keke Smiley"
+msgstr "Keke"
+
+#. Translators: -_- Bored (This smiley face has its eyes closed and is sporting a very small grin.)
+msgid "Bored smiley"
+msgstr "Sıkkın yüz"
+
+#. Translators:  >:O  Upset, angry or shouting...
+msgid "Angry Smiley"
+msgstr "Sinirli yüz"
+
+#. Translators:  :3  Cat (Cat faced smiley with curly lips)
+msgid "Cat Smiley"
+msgstr "Kedi"
+
+#. Translators: (-.-)ZZZ Iӭ Sleepy
+msgid "I am Sleepy smiley"
+msgstr "Uykulu yüz"
+
+#. Translators: 8-) Glasses
+msgid "glasses smiley"
+msgstr "gözlüklü yüz"
+
+#. Translators: (^^^) shark
+msgid "shark smiley"
+msgstr "köpekbalığı smiley"
+
+#. Translators:  (cash) Cash
+msgid "cash smiley"
+msgstr "nakit"
+
+#. Translators: (flex) Muscle
+msgid "muscle smiley"
+msgstr "kas"
+
+#. Translators: (beer) Beer
+msgid "beer smiley"
+msgstr "bira"
+
+#. Translators: (d) Drink
+msgid "drink smiley"
+msgstr "içki"
+
+#. Translators: (ninja) Ninja
+msgid "ninja smiley"
+msgstr "ninja smiley"
+
+#. Translators: (cool) Cool
+msgid "cool smiley"
+msgstr "havalı gülen yüz"
+
+#. Translators: (inlove) In Love
+msgid "in love smiley"
+msgstr "aşık yüz"
+
+#. Translators: (yn) Fingers crossed
+msgid "fingers crossed smiley"
+msgstr "fingers crossed smiley"
+
+#. Translators: (yawn) Yawn
+msgid "yawning smiley"
+msgstr "esneyen yüz"
+
+#. Translators: (puke) Puking
+msgid "puking smiley"
+msgstr "küsmüş yüz"
+
+#. Translators: (doh) Doh!
+msgid "doh! smiley"
+msgstr "yap! gülümseme"
+
+#. Translators: (wasntme) It wasn't me!
+msgid "it wasn't me! smiley"
+msgstr "ben değildim"
+
+#. Translators: (party) Party
+msgid "party smiley"
+msgstr "parti"
+
+#. Translators: (mm) Mmmm...
+msgid "mmmmmm... smiley"
+msgstr "mmmmmm... smiley"
+
+#. Translators: (nerd) Nerdy
+msgid "nerdy smiley"
+msgstr "entel yüz"
+
+#. Translators: (wave) Hi
+msgid "hi smiley"
+msgstr "selam"
+
+#. Translators: (facepalm) Facepalm
+msgid "facepalm smiley"
+msgstr "facepalm smiley"
+
+#. Translators: (devil) Devil
+msgid "devil smiley"
+msgstr "şeytan"
+
+#. Translators: (angel) Angel
+msgid "angel smiley"
+msgstr "melek"
+
+#. Translators: (envy) Envy
+msgid "envy smiley"
+msgstr "kıskanç yüz"
+
+#. Translators: (wait) Wait
+msgid "wait smiley"
+msgstr "bekleyen yüz"
+
+#. Translators: (hug) Hug
+msgid "hug smiley"
+msgstr "kucak"
+
+#. Translators: (makeup) Make-up
+msgid "make-up smiley"
+msgstr "makyaj yapmış yüz"
+
+#. Translators: (chuckle) Giggle
+msgid "giggle smiley"
+msgstr "kıkırdayan yüz"
+
+#. Translators: (clap) Clapping
+msgid "clapping smiley"
+msgstr "alkış"
+
+#. Translators: (think) Thinking
+msgid "thinking smiley"
+msgstr "düşünceli yüz"
+
+#. Translators: (bow) Bowing
+msgid "bowing smiley"
+msgstr "eğilmiş yüz"
+
+#. Translators: (rofl) Rolling on the floor laughing
+msgid "rolling on the floor laughing! smiley"
+msgstr "gÜlmekten yerlere yattım"
+
+#. Translators: (whew) Relieved
+msgid "relieved smiley"
+msgstr "rahatlamış yüz"
+
+#. Translators: (happy) Happy
+msgid "happy smiley"
+msgstr "mutlu yüz"
+
+#. Translators: (smirk) Smirking
+msgid "smirking smiley"
+msgstr "sırıtan yüz"
+
+#. Translators: (nod) Nodding
+msgid "nodding smiley"
+msgstr "olur"
+
+#. Translators: (shake) Shake
+msgid "shakeing smiley"
+msgstr "olmaz"
+
+#. Translators: (waiting) Waiting
+msgid "waiting smiley"
+msgstr "bekliyor"
+
+#. Translators: (emo) Emo;
+msgid "Emo smiley"
+msgstr "Emo smiley"
+
+#. Translators: (y) Yes
+msgid "yes smiley"
+msgstr "evet"
+
+#. Translators: (n) no;
+msgid "no smiley"
+msgstr "hayır"
+
+#. Translators: (handshake) Handshake
+msgid "handshake smiley"
+msgstr "el sıkışma"
+
+#. Translators: (highfive) High five
+msgid "high five smiley"
+msgstr "high five smiley"
+
+#. Translators: (lalala) Lalala;
+msgid "lalala smiley"
+msgstr "lalala smiley"
+
+#. Translators: (heidy) Heidy;
+msgid "heidy smiley"
+msgstr "heidy"
+
+#. Translators: (F) Flower
+msgid "flower smiley"
+msgstr "çiçek"
+
+#. Translators: (rain) Raining
+msgid "raining smiley"
+msgstr "yağmurlu"
+
+#. Translators: (sun) Sun
+msgid "sunny smiley"
+msgstr "güneşli"
+
+#. Translators: (tumbleweed) Tumbleweed
+msgid "tumbleweed smiley"
+msgstr "yabani çiçekler"
+
+#. Translators: (music) Music
+msgid "music smiley"
+msgstr "müzik smiley"
+
+#. Translators: (bandit) Bandit
+msgid "bandit smiley"
+msgstr "haydut"
+
+#. Translators: (tmi) Too much information
+msgid "too much information smiley"
+msgstr "çok fazla bilgi"
+
+#. Translators: (coffee) Coffee
+msgid "coffee smiley"
+msgstr "kahve smiley"
+
+#. Translators: (pi) Pizza
+msgid "pizza smiley"
+msgstr "gülen pizza"
+
+#. Translators: (^) Cake
+msgid "cake smiley"
+msgstr "kek smiley"
+
+#. Translators: (*) Star
+msgid "star smiley"
+msgstr "yıldız smiley"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Emoticons"
+msgstr "İfadeler"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Enables the announcement of emoticon names instead of the character "
+"Representation."
+msgstr ""
+"Temsil eden karakterler yerine ifade adlarının duyurulmasını etkinleştirir."

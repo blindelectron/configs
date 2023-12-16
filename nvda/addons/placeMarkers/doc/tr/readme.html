@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Place markers 34.0.0</title>
+</head>
+<body>
+<h1>yerİmleri</h1>
+<ul>
+<li>Yazarlar: Noelia, Chris.</li>
+</ul>
+<p>Bu eklenti, belirli metin dizelerini veya yerimlerini kaydetmek ve aramak
+için kullanılır. NVDA'nın göz atma modunda web sayfalarında veya belgelerde
+kullanılabilir. Çok satırlı kontrollerde metin dizelerini kaydetmek veya
+aramak için de kullanılabilir; bu durumda, yerimini güncellemek mümkün
+değilse, ilgili dize panoya kopyalanır, böylece diğer araçlar kullanılarak
+aranabilir.  Eklenti, belirtilen dizeleri ve yer imlerini, adı geçerli
+belgenin başlığına ve URL'sine dayanan dosyalara kaydeder.  Bu eklenti aynı
+yazar tarafından geliştirilen SpecificSearch ve Bookmark&amp;Search'e
+dayanmaktadır. Ortak tuş vuruşlarına ve özelliklere sahip olduklarından,
+bunu kullanmak için onları kaldırmalısınız.</p>
+<h2>Tuş Komutları:</h2>
+<ul>
+<li>kontrol+shift+NVDA+f: Son kaydedilen aramayı gösteren düzenleme kutusu
+  içeren bir iletişim kutusu açar; bu iletişim kutusunda ayrıca bir açılan
+  kutudan önceden kaydedilmiş aramaları seçebilir veya bir onay kutusu
+  kullanarak seçilen dizeyi geçmişten kaldırabilirsiniz. Düzenleme kutusunda
+  yer alan metnin kayıtlı metinlerinizin geçmişine eklenip eklenmeyeceğini
+  seçebilirsiniz. Son olarak, bir sonraki radyo düğmesi grubundan (Sonrakini
+  ara, Öncekini ara veya Arama yapma arasında) bir eylem seçin ve NVDA'nın
+  büyük/küçük harfe duyarlı bir arama yapıp yapmayacağını belirtin. Tamam
+  düğmesine bastığınızda, NVDA bu dizeyi arayacaktır.</li>
+<li>kontrol+shift+NVDA+y: Geçerli konumu yerimi olarak kaydeder. Bu yerimi
+  için bir ad vermek istiyorsanız, kaydetmeden önce bu konumdan bir miktar
+  metin seçin.</li>
+<li>kontrol+shift+NVDA+sil: Bu konuma karşılık gelen yer imini siler.</li>
+<li>NVDA+y: Sonraki yerimine gider.</li>
+<li>shift+NVDA+y: Önceki yerimine gider.</li>
+<li>Atanmamış: Tarama modunda yerimleri verilerinin kaydedileceği dosya adını
+  uzantısız olarak gösterir.</li>
+<li>alt+NVDA+y: Bu belge için kaydedilen yerimlerini içeren bir iletişim
+  kutusu açar. Her yer imi için bir not yazabilirsiniz; Değişiklikleri
+  kaydetmek için Notu kaydet'e basın. Sil'e basarak seçili yer imini
+  kaldırabilirsiniz. Tamam'a basarak seçilen konuma geçebilirsiniz.</li>
+<li>Atanmamış: Bir konumu geçici yer imi olarak kaydeder.</li>
+<li>Atanmamış: Geçerli belge için geçici yerimine gider.</li>
+<li>Atanmadı: Belirli bir belge için aranan son metinde sonrakini bulur.</li>
+<li>Atanmadı: Belirli bir belge için aranan son metinde öncekini bulur.</li>
+</ul>
+<h2>Yerimleri Alt menüsü (NVDA + N)</h2>
+<p>NVDA'nın Tercihler menüsü altındaki Yerimleri alt menüsünü kullanarak
+şunlara erişebilirsiniz:</p>
+<ul>
+<li>Özel arama klasörü: Önceden kaydedilen özel aramalar klasörü açılır.</li>
+<li>Yerimleri klasörü: Kaydedilen yerimlerinin bulunduğu bir klasörü açar.</li>
+<li>Yerimleri klasörünü kopyala: Yerimleri klasörünün bir kopyasını
+  kaydedebilirsiniz.</li>
+<li>Yerimlerini Geri Yükle: yerimlerinizi önceden kaydedilmiş bir Yerimleri
+  klasöründen geri yükleyebilirsiniz.</li>
+</ul>
+<p>Not: Yerimi konumu, karakter sayısına bağlıdır; ve bu nedenle dinamik
+sayfalarda, yer imlerini değil, belirli aramayı kullanmak daha iyidir.</p>
+<h2>24.0 için değişiklikler</h2>
+<ul>
+<li>NVDA+k, NVDA+shift+k, NVDA+alt+k ve NVDA+control+shift+k gibi hareketlerde
+  k yerine y kullanılır.</li>
+<li>NVDA 2023.1 ile uyumludur.</li>
+</ul>
+<h2>23.0 için değişiklikler</h2>
+<ul>
+<li>Eklenti, Microsoft Word ile yeniden çalışır duruma getirildi.</li>
+</ul>
+<h2>22.0 için değişiklikler</h2>
+<ul>
+<li>Abdel sayesinde yerimlerine gidebilir ve UIA etkinken silebiliriz.</li>
+</ul>
+<h2>21.0 için değişiklikler</h2>
+<ul>
+<li>Yerimleri, Abdel sayesinde Chromium tabanlı tarayıcılarda UIA
+  etkinleştirilerek kaydedilebilir.</li>
+</ul>
+<h2>20.0 için değişiklikler</h2>
+<ul>
+<li>NVDA 2022.1 veya sonraki sürümünü gerektirir.</li>
+</ul>
+<h2>19.0 için değişiklikler</h2>
+<ul>
+<li>Eklenti, güvenli ekranlarda çalıştırılamaz.</li>
+</ul>
+<h2>18.0 için değişiklikler</h2>
+<ul>
+<li>Yerimlerinin yolunu görme komutu, geçerli belge için kalıcı yer imleri,
+  belirli arama için metin veya geçici bir yer imi olup olmadığını gösterir.</li>
+</ul>
+<h2>17.0 için değişiklikler</h2>
+<ul>
+<li>Bazı belgelerde yerimlerinin kaydedilmesine izin vermeyen bir hata
+  düzeltildi.</li>
+<li>Tercümelerin düzgün çalışmasını sağlayan çevrilmiş dizeler düzeltildi.</li>
+</ul>
+<h2>16.0 için değişiklikler</h2>
+<ul>
+<li>NVDA 2021.1 veya üstü ile uyumludur (gerekli).</li>
+<li>Geçici yerimlerine taşınırken hızlı okuma desteklenir.</li>
+<li>Gerekirse <a href="https://github.com/nvdaes/placeMarkers/releases">diğer
+  sürümleri</a>
+  indirebilirsiniz.</li>
+</ul>
+<h2>15.0 için değişiklikler</h2>
+<ul>
+<li>Gözatma modunda tümünü söyle ile okurken, NVDA 2020.4'teki sonrakini bul
+  ve öncekini bul komutlarına göre, göz gezdirerek okumaya izin ver seçeneği
+  etkinleştirilmişse belirli sonrakini bul ve belirli öncekini bul komutları
+  artık okumayı durdurmaz.</li>
+<li>Belirli öncekini bul komutunu çalıştırdıktan sonra Belirli arama iletişim
+  kutusu açıldığında, Öncekini ara seçeneği seçilecektir.</li>
+</ul>
+<h2>14.0 için değişiklikler</h2>
+<ul>
+<li>Yerimleri verilerinin kaydedileceği dosyanın adını kopyalama komutu, bu
+  dosya adını Tarama modunda gösteren bir komutla değiştirilmiştir. Bu, bir
+  harekete atanmamış.</li>
+<li>"Aranacak metin" alanı artık "Kayıtlı metin" alanıyla örtüşmüyor. (Cyrille
+  Bougot'ya teşekkürler).</li>
+<li>NVDA 2019.3 veya sonraki sürümünü gerektirir.</li>
+</ul>
+<h2>13.0 için değişiklikler</h2>
+<ul>
+<li>Belirli bir belge için aranan son metnin sonraki ve önceki oluşumlarını
+  bulmak için atanmamış komutlar eklendi.</li>
+<li>Spesifik arama özelliği, NVDA'nın Hakkında iletişim kutusu açıkken
+  çalışır.</li>
+<li>Belirli arama iletişim kutusunda, bu seçenek son arama için seçilmişse,
+  büyük/küçük harfe duyarlı onay kutusu işaretlenecektir.</li>
+<li>Eklenti güncellendiğinde, NVDA'nın ana yapılandırma klasörüne kaydedilen
+  yerimlerini içe aktarmayı tercih etmediğiniz sürece, eklentinin önceki
+  sürümünde kaydedilen belirli arama için yer işaretleri ve dizeler otomatik
+  olarak yeni sürüme kopyalanacaktır.</li>
+<li>Yerimlerini kopyalamak için iletişim kutusunu kullanırken, seçilen
+  klasörün adı placeMarkersBackup değilse, Documents veya Downloads gibi
+  önemli verileri içeren dizinlerin silinmesini önlemek için bu ada sahip
+  bir alt klasör oluşturulur.</li>
+</ul>
+<h2>12.0 için değişiklikler</h2>
+<ul>
+<li>Yerimleri kaydedilmeden önce Çince karakterler seçilirse, Notlar iletişim
+  kutusunu açmaya çalışırken NVDA'nın çökmesine neden olan kritik bir hata
+  düzeltildi.</li>
+</ul>
+<h2>11.0 için değişiklikler</h2>
+<ul>
+<li>NVDA 2018.3 veya sonrası ile uyumludur (gerekli).</li>
+<li>Gerekirse [NVDA 2017.3] ile uyumlu son sürümü<a href="https://www.nvaccess.org/addonStore/legacy?file=pm-o">3</a> indirebilirsiniz.</li>
+</ul>
+<h2>10.0 için değişiklikler</h2>
+<ul>
+<li>Edge'de, NVDA+k, NVDA+shift+k veya NVDA+alt+k gibi yer imleri seçimiyle
+  ilişkili hareketler, özellikle uzun belgelerde hataları önlemek için
+  imleci yer imlerine taşımaya çalışmak yerine uygulamaya gönderilir.</li>
+<li>Artık Edge'de özel arama desteklenmektedir.</li>
+</ul>
+<h2>9.0 için değişiklikler</h2>
+<ul>
+<li>Notlar iletişim kutusundan bir yerimine taşınırken, inceleme imleci sistem
+  imlecini takip eder.</li>
+<li>Önceki yerimini seçme komutu tekrar düzgün çalışıyor.</li>
+<li>Yer işaretleri, Notlar iletişim kutusundan silinebilir.</li>
+<li>Artık kaydetmek ve her belge için geçici bir Yerimine taşımak için
+  hareketler atayabilirsiniz.</li>
+</ul>
+<h2>8.0 için değişiklikler</h2>
+<ul>
+<li>Yerimleri dosya adlarından, VitalSource Bookshelf ePUB okuyucusundaki
+  sorunları önleyebilen parça tanımlayıcıları kaldırıldı.</li>
+<li>Kayıtlı Yerimleri için yorumları ilişkilendirmek ve seçilen konuma taşımak
+  için bir Notlar iletişim kutusu eklendi.</li>
+</ul>
+<h2>7.0 için değişiklikler</h2>
+<ul>
+<li>Belirli bir arama için bir metin dizesini kaydetme iletişim kutusu
+  kaldırıldı. Bu işlev artık, Tamam düğmesine basıldığında farklı eylemlere
+  izin verecek şekilde yeniden tasarlanan Özel arama iletişim kutusuna dahil
+  edilmiştir.</li>
+<li>Diyalogların görsel sunumu, NVDA'da gösterilen diyalogların görünümüne
+  bağlı kalınarak geliştirildi.</li>
+<li>Tarama Modunda Sonrakini Bul veya Öncekini Bul komutunun
+  gerçekleştirilmesi, orijinal Bul büyük/küçük harfe duyarlıysa artık doğru
+  şekilde büyük/küçük harfe duyarlı bir arama yapacaktır.</li>
+<li>NVDA 2016.4 veya sonraki sürümünü gerektirir.</li>
+<li>Artık yerimlerini kopyala ve geri yükle iletişim kutularını açmak için
+  hareketler atayabilirsiniz.</li>
+<li>NVDA, yerimleri kopyalandığında veya geri yüklendiğinde ilgili iletişim
+  kutularıyla bildirimde bulunmak için bir mesaj sunar.</li>
+</ul>
+<h2>6.0 için değişiklikler</h2>
+<ul>
+<li>Eklenti özellikleri kullanılamadığında, ilgili uygulamaya hareketler
+  gönderilir.</li>
+</ul>
+<h2>5.0 için değişiklikler</h2>
+<ul>
+<li>Büyük/küçük harfe duyarlı arama eklendi.</li>
+<li>Yerimleri menüsünden belgeleri açma seçeneği kaldırıldı.</li>
+<li>Daha sezgisel tuş komutları.</li>
+</ul>
+<h2>4.0 için değişiklikler</h2>
+<ul>
+<li>EPUBREADER Firefox eklentisindeki sorunları önleyebilecek yerimi dosya
+  adlarından parça tanımlayıcıları kaldırıldı.</li>
+<li>Eklenti yardımına Eklenti Yöneticisinden ulaşılabilir.</li>
+</ul>
+<h2>3.1 için değişiklikler</h2>
+<ul>
+<li>Var olan diller güncellendi ve yeni diller eklendi.</li>
+<li>Göz atma modu okumasında yerimi konumu bildirilmez.</li>
+</ul>
+<h2>3.0 için Değişiklikler</h2>
+<ul>
+<li>Tarama modunda okuma desteği eklendi.</li>
+</ul>
+<h2>2.0 için değişiklikler</h2>
+<ul>
+<li>Her dosya için farklı aramaları kaydetmek ve silmek için seçenekler
+  eklendi.</li>
+<li>Yollar latin olmayan karakterler içerdiğinde bozulan hata düzeltildi.</li>
+<li>Kısayollar şimdi NVDA girdi hareketleri iletişim kutusu kullanılarak
+  yeniden atanabilir.</li>
+</ul>
+<h2>1.0 için değişiklikler</h2>
+<ul>
+<li>İlk sürümü.</li>
+<li>Tercüme:, Japonca, Korece, Nepal, Portekizce, İspanyolca, Slovakça,
+  Slovence Tamil, İtalyanca, Almanca, Galiçyaca, Fransızca, Brezilya
+  Portekizcesi, Farsça, Fince.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

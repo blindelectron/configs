@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Place markers 34.0.0</title>
+</head>
+<body>
+<h1>placeMarkers</h1>
+<ul>
+<li>作者: Noelia, Chris.</li>
+</ul>
+<p>This add-on is used for saving and searching specific text strings or
+placemarkers. It can be used on web pages or documents in NVDA's browse
+mode. It can also be used for saving or searching strings of text in
+multi-line controls; in this case, if it's not possible to update the caret,
+the corresponding string will be copied to the clipboard, so that it can be
+searched using other tools.  The plugin saves the specified strings and
+placemarkers to files whose name is based on the title and URL of the
+current document.  This add-on is based on SpecificSearch and
+Bookmark&amp;Search, developed by the same author. You should uninstall them to
+use this one, since they have common keystrokes and features.</p>
+<h2>キーコマンド:</h2>
+<ul>
+<li>control+shift+NVDA+f:
+  最後に保存された検索のエディットボックスのあるダイアログを開きます。このダイアログでは以前に保存した検索をコンボボックスから選択したり、選択した文字列をチェックボックスを使用して履歴から削除したり出来ます。エディットボックスに含まれる文字列を、保存した文字列の履歴に追加するかどうかを選択出来ます。最後に、次の組のラジオボタンから、動作を選択します（次を検索、前を検索、または検索しない）。OKを押すと、NVDAはその文字列を探します。</li>
+<li>control+shift+NVDA+y: Saves the current position as a placemarker. If you
+  want to provide a name for this placemarker, select some text from this
+  position before saving it.</li>
+<li>control+shift+NVDA+delete: Deletes the placemarker corresponding to this
+  position.</li>
+<li>NVDA+y: Moves to the next placemarker.</li>
+<li>shift+NVDA+y: Moves to the previous placemarker.</li>
+<li>Not assigned: Shows the file name where the placemarkers data will be
+  saved in browse mode, without an extension.</li>
+<li>alt+NVDA+y: Opens a dialog with the placemarkers saved for this
+  document. You can write a note for each placemarker; press Save note to
+  save changes. Pressing Delete you can remove the selected
+  placemarker. Pressing OK you can move to the selected position.</li>
+<li>Not assigned: Saves a position as a temporary placemarker.</li>
+<li>Not assigned: Moves to the temporary placemarker for the current document.</li>
+<li>アサインなし: 特定のドキュメントで最後に検索された文字列について、次の物を見つけます。</li>
+<li>アサインなし: 特定のドキュメントで最後に検索された文字列について、前の物を見つけます。</li>
+</ul>
+<h2>PlaceMarkers Submenu (NVDA+N)</h2>
+<p>Using the PlaceMarkers submenu under NVDA's Preferences menu, you can
+access:</p>
+<ul>
+<li>Specific search folder: Opens a folder of specific searches previously
+  saved.</li>
+<li>Bookmarks folder: Opens a folder of the saved placemarkers.</li>
+<li>Copy placeMarkers folder: You can save a copy of the placeMarkers folder.</li>
+<li>Restore placeMarkers: You can restore your placeMarkers from a previously
+  saved placeMarkers folder.</li>
+</ul>
+<p>Note: The placemarker position is based on the number of characters; and
+therefore in dynamic pages it is better to use the specific search, not
+placemarkers.</p>
+<h2>Changes for 24.0</h2>
+<ul>
+<li>Y is used instead of k in gestures such as NVDA+k, NVDA+shift+k,
+  NVDA+alt+k and NVDA+control+shift+k.</li>
+<li>Compatible with NVDA 2023.1.</li>
+</ul>
+<h2>23.0の変更点</h2>
+<ul>
+<li>このアドオンが再びMicrosoft Wordで動作するようになりました。</li>
+</ul>
+<h2>22.0の変更点</h2>
+<ul>
+<li>ブックマークに移動し、有効化されたUIAから削除出来るようになりました。Abdelのおかげです。</li>
+</ul>
+<h2>21.0の変更点</h2>
+<ul>
+<li>Chromiumベースのブラウザで有効化されたUIAで、ブックマークを保存出来るようになりました。Abdelのおかげです。</li>
+</ul>
+<h2>20.0の変更点</h2>
+<ul>
+<li>NVDA 2022.1以降が必要です。</li>
+</ul>
+<h2>19.0の変更点</h2>
+<ul>
+<li>アドオンがセキュア画面で動作不能になりました。</li>
+</ul>
+<h2>18.0の変更点</h2>
+<ul>
+<li>placeMakerのパスを見るコマンドが、永久的なブックマークか、特定の検索の単語か、現在のドキュメントの一時的なブックマークかを表示するようになりました。</li>
+</ul>
+<h2>バージョン 17.0</h2>
+<ul>
+<li>一部のドキュメントでplace markerを保存出来ないバグを修正しました。</li>
+<li>翻訳が適切に動作するように、翻訳された文字列を修正しました。</li>
+</ul>
+<h2>バージョン 16.0</h2>
+<ul>
+<li>Compatible with NVDA 2021.1 or later (required).</li>
+<li>一時的なブックマークに移動する時に、流し読みをサポートするようになりました。</li>
+<li>If needed, you can download <a href="https://github.com/nvdaes/placeMarkers/releases">other
+  versions</a>.</li>
+</ul>
+<h2>15.0の変更点</h2>
+<ul>
+<li>NVDA
+  2020.4からの次を検索および前を検索コマンドに従い、ブラウズモードで全て読み上げで読み上げている時、流し読みの選択肢が有効化されていると、特定の次を検索および特定の前を検索コマンドにより、読み上げが停止しなくなりました。</li>
+<li>特定の前を検索コマンドを実行後に特定の検索ダイアログが開いている時、前の選択肢を検索が選択されるようになりました。</li>
+</ul>
+<h2>14.0の変更点</h2>
+<ul>
+<li>place
+  markersのデータが保存されるファイル名のコピーのコマンドが、ブラウズモードでそのファイル名を表示するコマンドに変更されました。これはジェスチャーに割り当てされていません。</li>
+<li>「検索文字列」フィールドが「保存された文字列」フィールドに重ならなくなりました（Cyrille Bougotのおかげです）。</li>
+<li>NVDA2019.3以降が必要です。</li>
+</ul>
+<h2>13.0の変更点</h2>
+<ul>
+<li>特定のドキュメントで最後に検索した文字列の次または前の物を見つける、アサインなしのコマンドを追加しました。</li>
+<li>特定の検索機能は、NVDAのAboutダイアログが開いている時に動作します。</li>
+<li>特定の検索のダイアログでは、最後に行った検索でチェックされていた場合、大文字と小文字の区別のチェックボックスはチェックされます。</li>
+<li>アドオンがアップデートされた場合、アドオンの前のバージョンで保存されていたブックマークと特定の検索の文字列は、自動的に新しいバージョンにコピーされます。ただし、Place
+  MarkersをNVDAのメインの設定フォルダに保存するようにしている場合を除きます。</li>
+<li>Place
+  Markersをコピーするダイアログを使用する時、選択されたフォルダの名前が、placeMarkersBackupでない場合は、この名前のサブフォルダが作られ、ドキュメントやダウンロードなどの重要なデータを含むディレクトリが消去されてしまうのを防ぎます。</li>
+</ul>
+<h2>12.0の変更点</h2>
+<ul>
+<li>ノートダイアログを開こうとした時に、ブックマークの保存前に、中国の文字が選択されていると、NVDAのクラッシュの原因となる重大なバグを修正しました。</li>
+</ul>
+<h2>11.0の変更点</h2>
+<ul>
+<li>NVDA 2018.3以降に互換します。（2018.3以降が必要）</li>
+<li>必要な場合は、<a href="https://www.nvaccess.org/addonStore/legacy?file=pm-o">NVDA 2017.3に互換する最後のバージョン</a>もダウンロード出来ます。</li>
+</ul>
+<h2>10.0の変更点</h2>
+<ul>
+<li>Edgeでは、ブックマーク選択に関するジェスチャー、NVDA+k、NVDA+shift+kまたはNVDA+alt+kは、カーソルをブックマークに移動する代わりに、アプリケーションに送られます。これは、特に長いドキュメントにおいて、エラーを避けるためです。</li>
+<li>現時点では、Edgeでは、特定の検索がサポートされています。</li>
+</ul>
+<h2>9.0の変更点</h2>
+<ul>
+<li>ノートダイアログからブックマークに移動する時に、レビューカーソルがシステムカーソルを追随します。</li>
+<li>前のブックマークを選択するコマンドが、適切に動作するようになりました。</li>
+<li>ブックマークをノートダイアログから削除出来ます。</li>
+<li>それぞれのドキュメントに対して一時的なブックマークを保存したり移動したりするジェスチャーを保存出来ます。</li>
+</ul>
+<h2>8.0の変更点</h2>
+<ul>
+<li>部分識別子をブックマークのファイル名から削除しました。これにより、VitalSource Bookshelf ePub
+  Readerでの問題を回避出来ます。</li>
+<li>ノートダイアログを追加して、保存されたブックマークにコメントを付けられるようにし、選択された位置に移動出来るようになりました。</li>
+</ul>
+<h2>7.0の変更点</h2>
+<ul>
+<li>特定の検索の文字列を保存するダイアログが除かれました。この機能は現在、特定の検索のダイアログに含まれ、OKボタンを押した時に別の動作となるように再設計されました。</li>
+<li>ダイアログの見た目が拡張され、NVDAで見られるダイアログの外見に似るようになりました。</li>
+<li>元々の見つけるでの検索が、大文字と小文字を区別する物だった場合に、ブラウズモードでの、次を見つける、前を見つけるコマンドの実行が、正確に大文字と小文字を区別して行われるようになりました。</li>
+<li>NVDA2016.4以降が必要です。</li>
+<li>Place markersのコピーと復元ダイアログを開くジェスチャーを設定出来るようになりました。</li>
+<li>Place markersがコピーまたは復元されると、NVDAは、対応するダイアログでメッセージを表示します。</li>
+</ul>
+<h2>6.0の変更点</h2>
+<ul>
+<li>ジェスチャーに対応するアドオンの機能が使用出来ない場合、そのジェスチャーは対応するアプリケーションに送られるようになりました。</li>
+</ul>
+<h2>5.0の変更点</h2>
+<ul>
+<li>大文字と小文字を区別した検索が追加されました。</li>
+<li>プレイスマーカーのメニューから、説明を開く項目を削除しました。</li>
+<li>より直観的なキーコマンドになりました。</li>
+</ul>
+<h2>4.0の変更点</h2>
+<ul>
+<li>FirefoxのePUBREADERアドオンでの問題を避けるため、ブックマークのファイル名から、部分識別子を削除しました。</li>
+<li>アドオンヘルプはアドオンマネージャーから使用可能になりました。</li>
+</ul>
+<h2>3.1の変更点</h2>
+<ul>
+<li>翻訳の更新と新しい言語。</li>
+<li>流し読みでブックマーク位置が通知されないようになりました。</li>
+</ul>
+<h2>3.0の変更点</h2>
+<ul>
+<li>流し読みのサポートが追加されました。</li>
+</ul>
+<h2>2.0の変更点</h2>
+<ul>
+<li>それぞれの検索を、別々のファイルに保存と削除をする選択肢が追加されました。</li>
+<li>ラテン文字以外の文字がパスに入っている場合に起きる不具合が修正されました。</li>
+<li>NVDAジェスチャー入力ダイアログを使用して、ショートカットを再設定できるようになりました。</li>
+</ul>
+<h2>1.0の変更点</h2>
+<ul>
+<li>最初のバージョン。</li>
+<li>次の言語に翻訳されました:
+  ブラジルポルトガル語、ファルシ(ペルシア)語、フィンランド語、フランス語、ガリシア語、ドイツ語、イタリア語、日本語、韓国語、ネパール語、ポルトガル語、スペイン語、スロバキア語、スロベニア語、タミル語。</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

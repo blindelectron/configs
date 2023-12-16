@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Golden Cursor 6.2.1</title>
+</head>
+<body>
+<h1>Goldener Cursor</h1>
+<ul>
+<li>Autor: Salah Atair, Joseph Lee</li>
+<li><a href="https://www.nvaccess.org/addonStore/legacy?file=goldenCursor">Stabile Version herunterladen</a></li>
+<li>NVDA-Kompatibilität: 2022.4 oder neuer</li>
+</ul>
+<p>Diese Erweiterung ermöglicht das Ziehen der Maus mit der Tastatur und das
+Speichern der gewünschten Mauspositionen für die jeweilige Anwendung.</p>
+<h2>Tastenkombinationen</h2>
+<ul>
+<li>Strg+NVDA+L: Zeigt die gespeicherte Maus-Positionen für eine Anwendung an,
+  falls vorhanden. Sie können diese Positionen im Dialogfeld auch
+  Tastenbefehle zuweisen. Wenn Sie den zugewiesenen Tastenbefehl drücken,
+  wird ein Linksklick an der gespeicherten Position ausgeführt.</li>
+<li>Umschalt+NVDA+l: Speichern eines Tags oder einer Bezeichnung für die
+  aktuelle Mausposition in der aktuell fokussierten Anwendung.</li>
+<li>Windows+NVDA+C: ändert die Maus-Bewegungseinheit.</li>
+<li>NVDA+Windows+R: Beschränkung der Maus ein- oder ausschalten.</li>
+<li>Windows+NVDA+S: Neue Maus-Koordinaten in Pixel ansagen.</li>
+<li>Windows+NVDA+J: bewegt die Maus zu einer bestimmten X- und Y-Position.</li>
+<li>NVDA+Windows+P: Maus-Position ausgeben.</li>
+<li>Windows+NVDA+M: Mauszeiger ein- oder ausschalten.</li>
+<li>Windows+NVDA+Pfeiltasten (oder nur Pfeiltasten, wenn die Bewegung des
+  Mauszeigers durch pfeiltasten eingeschaltet ist): Maus bewegen.</li>
+</ul>
+<p>Anmerkung: Diese Tastenkombinationen können im NVDA-Menü unter Einstellungen
+im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.</p>
+<h2>Hinweise</h2>
+<ul>
+<li>Wenn die Positionen geteilt werden, sollte jeder Teilnehmer die gleiche
+  Bildschirmauflösung eingestellt haben.</li>
+<li>Für beste Kompatibilität sollten Sie mit der Tastenkombination
+  Windows+Pfeiltaste nach oben das Fenster maximieren.</li>
+<li>Wenn Sie die Positionen teilen, sollten Sie die bereits vorhandenen
+  Positionsbeschreibungen umbenennen.</li>
+<li>Die Versionen 1.x und 2.x der Mauspositions-Formate sind zueinander nicht
+  kompatibel.</li>
+<li>Um Funktionen auszuführen, die die Verwendung von Pfeiltasten erfordern,
+  schalten Sie zuerst die Bewegung des Mauszeigers durch Pfeiltasten aus.</li>
+<li>Wenn beim Löschen gespeicherter Positionen keine gespeicherten Positionen
+  mehr vorhanden sind, werden die Positionen für die Anwendung gelöscht.</li>
+</ul>
+<h2>Version 6.2</h2>
+<ul>
+<li>NVDA 2022.4 oder neuer wird benötigt.</li>
+<li>Kompatibel mit NVDA 2023.1.</li>
+</ul>
+<h2>Version 6.1</h2>
+<ul>
+<li>Benötigt NVDA 2021.3 oder neuer.</li>
+<li>Sie können nun Tastenkombinationen für gespeicherte Positionen aus der
+  Positionsliste zuweisen. Wenn Sie eine Tastenkombination drücken, wird ein
+  Linksklick auf die Position ausgeführt.</li>
+</ul>
+<h2>Version 5.0</h2>
+<ul>
+<li>Modernisierter Quellcode der Erweiterung, um ihn mit NVDA 2021.1
+  kompatibel zu machen.</li>
+<li>Viele Probleme mit dem Code-Stil und potenzielle Fehler mit Flake8
+  behoben.</li>
+</ul>
+<h2>Version 4.0</h2>
+<ul>
+<li>Erfordert NVDA 2019.3 oder höher.</li>
+<li>Das Dialogfeld "GoldenCursor-Einstellungen" wurde durch das
+  Einstellungsfenster "GoldenCursor" ersetzt.</li>
+</ul>
+<h2>Version 3.3</h2>
+<ul>
+<li>Interne Änderungen zur Unterstützung zukünftiger NVDA-Versionen.</li>
+</ul>
+<h2>Version 3.2</h2>
+<ul>
+<li>Die Erweiterung ist kompatibel mit NVDA 2018.3 (wxPython 4).</li>
+</ul>
+<h2>Version 3.0</h2>
+<ul>
+<li>Bei Verwendung von NVDA 2018.2 werden die Einstellungen für die
+  Erweiterung in der neuen Multikategorie-Einstellungsseite unter der
+  Kategorie "Goldener Cursor" angezeigt.</li>
+</ul>
+<h2>Version 2.1</h2>
+<ul>
+<li>Es wurde ein Unicode-Dekodierungsfehler beim Löschen des Tag-Namens
+  behoben.</li>
+<li>Das öffnen mehrerer Instanzen verschiedener Erweiterungsdialoge ist nun
+  nicht mehr möglich.</li>
+<li>Die Darstellung der Liste der Mauspositionen und des Dialogs für das
+  Springen zu  bestimmten Positionen wurde verbessert.</li>
+</ul>
+<h2>Version 2.0</h2>
+<ul>
+<li>Benötigt NVDA 2017.3 oder neuer.</li>
+<li>Das neue Dateiformat ist inkompatibel zu 1.x-Versionen. Wenn Dateien der
+  alten Version gefunden werden, werden diese während der Installation in
+  das neue Format umgewandelt.</li>
+<li>Es wurde ein neuer Goldener-Cursor-Einstellungsdialog im
+  NVDA-Menü/Einstellungen hinzugefügt, um die Mausbewegungseinheit und die
+  Anzeige der Mauspositionen bei Mausbewegungen zu konfigurieren.</li>
+<li>Mehrere Meldungen dieser Erweiterung haben sich geändert.</li>
+<li>Beim Umschalten verschiedener Einstellungen ertönt kein Umschaltton mehr.</li>
+<li>Sie können nun den Mauszeiger einfach mit den Pfeiltasten in Regionen
+  bewegen, in welchen die Maus durch Drücken der Pfeiltasten standardmäßig
+  bewegt werden kann.</li>
+<li>Änderungen im Positionslistendialog, einschließlich des neuen Namens
+  (jetzt Mauspositionen genannt) und des Layouts. Die Anzeige der
+  Mauskoordinaten für eine Bezeichnung und die Anzeige des Namens der
+  aktiven Anwendung sind nun Teil des Titels.</li>
+<li>Wenn Sie im Dialogfeld "Mauspositionen" die Eingabetaste auf einer
+  gespeicherten Bezeichnung drücken, wird die Maus an die gespeicherte
+  Position bewegt.</li>
+<li>Beim Umbenennen einer Mausposition wird ein Fehlerdialog angezeigt, wenn
+  eine Bezeichnung mit dem gleichen Namen wie der neue Name bereits
+  existiert.</li>
+<li>Beim Löschen von Mauspositionen müssen Sie jetzt mit Ja antworten, bevor
+  Positionen gelöscht werden.</li>
+<li>Änderungen an der Maussprungfunktion, einschließlich eines neuen Namens
+  (jetzt Neue Mausposition genannt). X- und Y-Koordinaten können jetzt
+  getrennt oder mit den Pfeiltasten nach oben und unten eingegeben werden.</li>
+<li>Der Dialog, der beim Speichern der aktuellen Mausposition angezeigt wird,
+  zeigt nun die Koordinaten der aktuellen Mausposition an.</li>
+<li>Beim Speichern von Positionen wurde ein Problem behoben, bei dem NVDA
+  möglicherweise Fehlertöne ausgibt, wenn der Positionsordner nicht
+  existiert.</li>
+</ul>
+<h2>Version 1.4</h2>
+<ul>
+<li>Die Abhängigkeit von der win32api  wurde aufgehoben, sodass die
+  Erweiterung mit älteren und zukünftigen Versionen von NVDA funktioniert.</li>
+</ul>
+<h2>Version 1.0</h2>
+<ul>
+<li>Erste Veröffentlichung.</li>
+</ul>
+<p>[[!tag stable dev]]</p>
+</body>
+</html>

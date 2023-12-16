@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Place markers 34.0.0</title>
+</head>
+<body>
+<h1>Záložky</h1>
+<ul>
+<li>Autori): Noelia, Chris.</li>
+</ul>
+<p>This add-on is used for saving and searching specific text strings or
+placemarkers. It can be used on web pages or documents in NVDA's browse
+mode. It can also be used for saving or searching strings of text in
+multi-line controls; in this case, if it's not possible to update the caret,
+the corresponding string will be copied to the clipboard, so that it can be
+searched using other tools.  The plugin saves the specified strings and
+placemarkers to files whose name is based on the title and URL of the
+current document.  This add-on is based on SpecificSearch and
+Bookmark&amp;Search, developed by the same author. You should uninstall them to
+use this one, since they have common keystrokes and features.</p>
+<h2>Klávesové skratky:</h2>
+<ul>
+<li>ctrl+shift+NVDA+f: Otvorí dialóg hľadania a zobrazí naposledy hľadané
+  reťazce. Zo zoznamu môžete vybrať reťazce, ktoré ste už hľadali. Takisto
+  môžete vybraté reťazce odstrániťz histórie začiarknutím príslušného
+  políčka. Takisto môžete určiť, či aktuálny reťazec hľadania chcete uložiť
+  na neskoršie použitie. V tomto okne môžete tiež určiť smer hľadania
+  (hľadať predchádzajúce, hľadať nasledujúce), prípadne nehľadať
+  vôbec. Takisto môžete začiarknuť rozlišovanie malých a veľkých
+  písmen. Hľadanie spustíte tlačidlom OK.</li>
+<li>control+shift+NVDA+y: Saves the current position as a placemarker. If you
+  want to provide a name for this placemarker, select some text from this
+  position before saving it.</li>
+<li>control+shift+NVDA+delete: Deletes the placemarker corresponding to this
+  position.</li>
+<li>NVDA+y: Moves to the next placemarker.</li>
+<li>shift+NVDA+y: Moves to the previous placemarker.</li>
+<li>Not assigned: Shows the file name where the placemarkers data will be
+  saved in browse mode, without an extension.</li>
+<li>alt+NVDA+y: Opens a dialog with the placemarkers saved for this
+  document. You can write a note for each placemarker; press Save note to
+  save changes. Pressing Delete you can remove the selected
+  placemarker. Pressing OK you can move to the selected position.</li>
+<li>Not assigned: Saves a position as a temporary placemarker.</li>
+<li>Not assigned: Moves to the temporary placemarker for the current document.</li>
+<li>Nedefinované: Nájde nasledujúci výskyt posledného hľadaného reťazca v
+  dokumente.</li>
+<li>Nedefinované: Nájde predchádzajúci výskyt posledného hľadaného reťazca v
+  dokumente.</li>
+</ul>
+<h2>PlaceMarkers Submenu (NVDA+N)</h2>
+<p>Using the PlaceMarkers submenu under NVDA's Preferences menu, you can
+access:</p>
+<ul>
+<li>Specific search folder: Opens a folder of specific searches previously
+  saved.</li>
+<li>Bookmarks folder: Opens a folder of the saved placemarkers.</li>
+<li>Copy placeMarkers folder: You can save a copy of the placeMarkers folder.</li>
+<li>Restore placeMarkers: You can restore your placeMarkers from a previously
+  saved placeMarkers folder.</li>
+</ul>
+<p>Note: The placemarker position is based on the number of characters; and
+therefore in dynamic pages it is better to use the specific search, not
+placemarkers.</p>
+<h2>Changes for 24.0</h2>
+<ul>
+<li>Y is used instead of k in gestures such as NVDA+k, NVDA+shift+k,
+  NVDA+alt+k and NVDA+control+shift+k.</li>
+<li>Compatible with NVDA 2023.1.</li>
+</ul>
+<h2>Changes for 23.0</h2>
+<ul>
+<li>The add-on works again with Microsoft Word.</li>
+</ul>
+<h2>Changes for 22.0</h2>
+<ul>
+<li>We can move to bookmarks and delete them with UIA enabled, thanks to
+  Abdel.</li>
+</ul>
+<h2>Changes for 21.0</h2>
+<ul>
+<li>Bookmarks can be saved with UIA enabled in browsers based on Chromium,
+  thanks to Abdel.</li>
+</ul>
+<h2>Changes for 20.0</h2>
+<ul>
+<li>Requires NVDA 2022.1 or later.</li>
+</ul>
+<h2>Changes for 19.0</h2>
+<ul>
+<li>The add-on cannot be run on secure screens.</li>
+</ul>
+<h2>Changes for 18.0</h2>
+<ul>
+<li>The command to see the path for placeMarkers shows if there are permanent
+  bookmarks, text for specific search or a temporary bookmark for the
+  current document.</li>
+</ul>
+<h2>Changes for 17.0</h2>
+<ul>
+<li>Fixed a bug which didn't allow to save place markers in some documents.</li>
+<li>Fixed translated strings making translations to work properly.</li>
+</ul>
+<h2>Changes for 16.0</h2>
+<ul>
+<li>Compatible with NVDA 2021.1 or later (required).</li>
+<li>Skim reading is supported when moving to temporary bookmarks.</li>
+<li>If needed, you can download <a href="https://github.com/nvdaes/placeMarkers/releases">other
+  versions</a>.</li>
+</ul>
+<h2>Changes for 15.0</h2>
+<ul>
+<li>When reading with say all in browse mode, the specific find next and
+  specific find previous commands do not stop reading anymore if Allow skim
+  reading option is enabled, according to find next and find previous
+  commands from NVDA 2020.4.</li>
+<li>When the Specific search dialog is opened after running the Specific find
+  previous command, the Search previous option will be selected.</li>
+</ul>
+<h2>Zmeny vo verzii 14.0</h2>
+<ul>
+<li>Namiesto kopírovania názvu súboru do schránky sa teraz názov zobrazí v
+  režime prehliadania. Funkcia nemá priradenú klávesovú skratku.</li>
+<li>Políčka hľadanie a história sa viac neprekrývajú (opravil Cyrille Bougot).</li>
+<li>Vyžaduje NVDA od verzie 2019.3.</li>
+</ul>
+<h2>Zmeny vo verzii 13.0</h2>
+<ul>
+<li>Pridané funkcie na vyhľadanie predchádzajúceho a nasledujúceho výskytu
+  hľadaného reťazca. Skratky je potrebné nastaviť ručne.</li>
+<li>Vyhľadávanie funguje aj vtedy, ak je otvorený dialóg O NVDA.</li>
+<li>Políčko rozlišovať malé a veľké písmená sa začiarkne, ak bolo začiarknuté
+  pri poslednom hľadaní.</li>
+<li>Pri aktualizácii sa aktualizujú a presunú aj adresáre so záložkami, pričom
+  stále je možné ponechať súbory aj v hlavnom adresári NVDA.</li>
+<li>Pri zálohovaní sa vytvorí priečinok placeMarkersBackup a do neho sa
+  skopírujú príslušné súbory, abysa zabránilo nechcenému odstráneniu súborov
+  a priečinkou s dátami. Toto sa deje len v prípade, ak už vybratý priečinok
+  nemá  názov placeMarkersBackup.</li>
+</ul>
+<h2>Zmeny vo verzii 12.0</h2>
+<ul>
+<li>NVDA viac nepadá pri vybratí čínskych znakov a následnom pokuse napísať
+  poznámku k záložke.</li>
+</ul>
+<h2>Zmeny vo verzii 11.0</h2>
+<ul>
+<li>Vyžaduje NVDA od verzie 2018.3.</li>
+<li>Môžete si stiahnuť <a href="https://www.nvaccess.org/addonStore/legacy?file=pm-o">Verziu pre NVDA 2017.3</a>.</li>
+</ul>
+<h2>Zmeny vo verzii 10.0</h2>
+<ul>
+<li>V aplikácii MS edge sú skratky NVDA+k, NVDA+shift+k alebo NVDA+alt+k
+  odosielané aj do aplikácie, aby nedochádzalo k chybám, hlavne pri dlhých
+  dokumentoch.</li>
+<li>Špecifické hľadanie funguje aj v aplikácii Edge.</li>
+</ul>
+<h2>Zmeny vo verzii 9.0</h2>
+<ul>
+<li>Prezerací kurzor sleduje systémový kurzor pri aktivovaní záložky z
+  dialógu.</li>
+<li>Opravené fungovanie prechodu na predchádzajúcu záložku.</li>
+<li>Záložky je možné odstrániť z dialógu s poznámkami.</li>
+<li>Odteraz je možné nastaviť skratky pre uloženie a aktivovanie dočasnej
+  záložky.</li>
+</ul>
+<h2>Zmeny vo verzii 8.0</h2>
+<ul>
+<li>odstránená identifikácia fragmentov z názvov súborov pre záložky, keďže
+  toto spôsobovalo problémy v programe VitalSource Bookshelf ePUB reader.</li>
+<li>Pridaný dialóg, v ktorom je možné k záložkám písať poznámky a tiež
+  presunúť kurzor na vybratú záložku.</li>
+</ul>
+<h2>Zmeny vo verzii 7.0</h2>
+<ul>
+<li>Dialóg s uložením špecifického textu hľadania bol nahradený novým. Tu je
+  možné určiť presné parametre hľadania.</li>
+<li>Upravený vzhľad dialógov.</li>
+<li>Vyhľadanie predchádzajúceho alebo nasledujúceho výskytu rešpektuje
+  nastavenie rozlišovania malých a veľkých písmen.</li>
+<li>Vyžaduje NVDA od verzie 2016.4.</li>
+<li>Pridaná možnosť nastaviť skratky na zálohu a obnovenie záložiek.</li>
+<li>NVDA upozorní po dokončení obnovi alebo zálohy záložiek.</li>
+</ul>
+<h2>Zmeny vo verzii 6.0</h2>
+<ul>
+<li>Ak nie sú dostupné funkcie doplnku, doplnok odošle skratky do aktuálneho
+  otvoreného okna príslušnej aplikácie.</li>
+</ul>
+<h2>Zmeny vo verzii 5.0</h2>
+<ul>
+<li>pridané hľadanie s rozlišovaním malých a veľkých písmen.</li>
+<li>odstránená položka na otvorenie návodu z menu doplnku.</li>
+<li>Prepracované klávesové skratky.</li>
+</ul>
+<h2>Zmeny vo verzii 4.0</h2>
+<ul>
+<li>odstránená identifikácia fragmentov z názvov súborov pre záložky, keďže
+  toto spôsobovalo problémy v doplnku ePUBREADER pre Firefox.</li>
+<li>Návod k doplnku nájdete v správcovi doplnkov.</li>
+</ul>
+<h2>Zmeny vo verzii 3.1</h2>
+<ul>
+<li>aktualizované a doplnené preklady.</li>
+<li>Pozícia záložky nie je oznamovaná počas rýchleho čítania.</li>
+</ul>
+<h2>Zmeny vo verzii 3.0</h2>
+<ul>
+<li>pridaná podpora pre rýchle čítanie</li>
+</ul>
+<h2>Zmeny vo verzii 2.0</h2>
+<ul>
+<li>pridaná možnosť uložiť rôzne reťazce hľadania pre rôzne dokumenty.</li>
+<li>opravená chyba, ktorá sa vyskytovala, ak cesta neobsahovala len ascii
+  znaky.</li>
+<li>Skratky môžete zmeniť v nastaveniach klávesových skratiek NVDA.</li>
+</ul>
+<h2>Zmeny vo verzii 1.0</h2>
+<ul>
+<li>prvé vydanie</li>
+<li>Pridané jazyky: Brazílska portugalčina, fínčina, francúzština,
+  galícijčina, nemčina, taliančina, japončina, kórejčina, nepálčina,
+  Perzština, Portugalčina, španielčina, slovenčina, slovinčina, Tamilčina.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

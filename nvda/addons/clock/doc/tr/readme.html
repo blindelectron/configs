@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Clock 24.04.0</title>
+</head>
+<body>
+<h1>NVDA için saat ve takvim Eklentisi</h1>
+<ul>
+<li>Yazarlar: Hrvoje Katić, Abdel ve NVDA'ya katkıda bulunanlar</li>
+<li><a href="https://addons.nvda-project.org/files/get.php?file=cac">Kararlı Sürüm</a>ü indir</li>
+<li><a href="https://addons.nvda-project.org/files/get.php?file=cac-dev">geliştirici sürümü</a>.nü indir</li>
+<li>NVDA uyumluluğu: 2019.3 ve üstü</li>
+</ul>
+<p>Bu eklenti, NVDA için gelişmiş saat, alarm zamanlayıcı ve takvim
+işlevselliğini etkinleştirir.</p>
+<p>NVDA'yı, Windows'un varsayılan olarak sağladığından farklı biçimlerde saat
+ve tarihi duyuracak şekilde yapılandırabilirsiniz. Ayrıca içinde bulunulan
+gün, hafta numarası ve içinde bulunulan yılın bitmesine kalan gün sayısı
+bilgisini alabilir, ayrıca belirtilen aralıkta otomatik saat duyurusu
+ayarlayabilirsiniz. Eklentide yerleşik olarak bulunan ve dosya kopyalama,
+program yükleme veya yemek pişirme gibi görevlerinizi zamanlamanıza olanak
+tanıyan bir kronometre ve Alarm zamanlayıcı özellikleri de vardır.</p>
+<p>Notlar:</p>
+<ul>
+<li>Eklentiyi güncelleme olarak yüklerseniz, yükleme işlemi sırasında sihirbaz
+  eski konfigürasyonun yenisiyle uyumlu olup olmadığını algılar ve
+  yüklemeden önce düzeltmeyi önerir, ardından onaylamak için tamam düğmesini
+  seçmeniz yeterlidir.</li>
+<li>Windows 10 ve sonraki sürümlerde, kronometreyi ve zamanlayıcıları yönetmek
+  için Alarmlar ve Saat uygulamasını kullanabilirsiniz.</li>
+</ul>
+<h2>Tuş komutları</h2>
+<ul>
+<li>NVDA+F12, şimdiki zamanı al;</li>
+<li>NVDA+F12'ye iki kez hızlıca basıldığında güncel tarihi alın;</li>
+<li>NVDA+F12'ye hızlı bir şekilde üç kez basıldığında içinde bulunulan günü,
+  hafta numarasını, içinde bulunulan yılı ve yılın bitmesi için kalan
+  günleri bildirir.</li>
+<li>NVDA+Shift+F12: saat komut katmanına girin</li>
+</ul>
+<h2>Atanmamış komutlar</h2>
+<p>Aşağıdaki komutlar varsayılan olarak atanmamıştır; bunları atamak
+istiyorsanız, özel komutlar eklemek için Girdi Hareketleri iletişim kutusunu
+kullanın. Bunu yapmak için NVDA menüsünü, Tercihler'i ve ardından Girdi
+Hareketlerini açın. Saat kategorisini genişletin, ardından aşağıdaki
+listeden atanmamış komutları bulun ve "Ekle"yi seçin, ardından kullanmak
+istediğiniz hareketi girin.</p>
+<ul>
+<li>Bir sonraki alarmdan önce geçen ve kalan süre. bu harekete hızlıca iki kez
+  basmak bir sonraki alarmı iptal edecektir.</li>
+<li>Çalmakta olan alarm sesini durdurun.</li>
+<li>Alarm ayarı iletişim kutusunu aç.</li>
+</ul>
+<h2>Katman komutları</h2>
+<p>Katman komutlarını kullanmak için NVDA+Shift+F12 tuşlarına ve ardından
+aşağıdaki tuşlardan birine basın:</p>
+<ul>
+<li>S: Kronometreyi başlatır, sıfırlar veya durdurur</li>
+<li>R: Kronometreyi yeniden başlatmadan sıfırlar</li>
+<li>A: bir sonraki alarmdan önce kalan ve geçen süreyi verir</li>
+<li>T: Alarm ayarı iletişim kutusunu açar.</li>
+<li>C: Sonraki alarmı iptal eder</li>
+<li>Boşluk: Geçerli kronometreyi veya geri sayım sayacını söyler</li>
+<li>p: Bir alarm çok uzunsa, onu durdurmaya olanak tanır</li>
+<li>H: Tüm katman komutlarını listeler. (Yardım)</li>
+</ul>
+<h2>Yapılandırma ve kullanım</h2>
+<p>Saat işlevini yapılandırmak için NvDA menüsünü, Tercihler'i ve ardından
+Ayarlar'ı açın ve Saat panelinden aşağıdaki seçenekleri yapılandırın:</p>
+<ul>
+<li>Saat ve tarih görüntüleme formatı: NVDA+F12'ye sırasıyla bir veya iki kez
+  hızlıca bastığınızda NVDA'nın saat ve tarihi nasıl duyuracağını
+  yapılandırmak için bu seçim kutularını kullanın.</li>
+<li>Aralık: bu seçim kutusundan saat anons aralığını seçin (kapalı, her 10
+  dakikada bir, her 15 dakikada bir, her 30 dakikada bir veya her saat
+  başı).</li>
+<li>Saat anonsu (aralık kapalı değilse etkinleştirilir): konuşma ve ses,
+  yalnızca ses veya yalnızca konuşma arasında seçim yapın.</li>
+<li>Saat zil sesi (aralık kapalı değilse etkinleştirilir): saat zil sesini
+  seçin.</li>
+<li>Sessiz saatler (aralık kapalı değilse etkinleştirilir): Otomatik saat
+  anonsunun yapılmaması gerektiğinde sessiz saatler aralığını yapılandırmak
+  için bu onay kutusunu işaretleyin.</li>
+<li>Sessiz saat biçimi (sessiz saatler etkinse etkinleştirilir): sessiz saat
+  seçeneklerinin nasıl sunulacağını seçin (12 saatlik veya 24 saatlik
+  biçim).</li>
+<li>Sessiz saatler başlangıçv e bitiş saatleri: Saat ve dakika seçim
+  kutularından sessiz saatler için saat ve dakika aralığını seçin.</li>
+</ul>
+<p>Alarm programlamak için, NVDA menüsü, Araçlar'ı açın ve ardından Alarm
+ayarla'yı seçin. İletişim kutusu şunları içerir:</p>
+<ul>
+<li>Alarm süre birimi: saat, dakika ve saniye arasında alarm/zamanlayıcı
+  süresini seçin.</li>
+<li>Süre: yukarıda belirtilen birimde alarm süresini girin.</li>
+<li>Alarm sesi: çalınacak alarm sesini seçin.</li>
+<li>Durdur ve duraklat düğmeleri: uzun bir alarm sesini durdurun veya
+  duraklatın.</li>
+</ul>
+<p>Tamam'a bastığınızda şu anda seçilen alarm süresi  bildirilecektir.</p>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

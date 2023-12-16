@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Clock 24.04.0</title>
+</head>
+<body>
+<h1>Ur og kalender for NVDA</h1>
+<ul>
+<li>Forfattere: Hrvoje Katić, Abdel og NVDA-bidragydere</li>
+<li>Download <a href="https://addons.nvda-project.org/files/get.php?file=cac">stabil version</a></li>
+<li>Download <a href="https://addons.nvda-project.org/files/get.php?file=cac-dev">udviklingsversion</a></li>
+<li>NVDA-kompatibilitet: 2019.3 og nyere</li>
+</ul>
+<p>Denne tilføjelse tilføjer avancerede ur, alarm, tidtagning  og
+kalenderfunktionalitet til NVDA.</p>
+<p>Du kan konfigurere NvDA til at annoncere klokkeslæt og dato i andre
+formater, end hvad Windows leverer som standard. Derudover kan du få den
+aktuelle dag, ugenummer samt de resterende dage inden udgangen af det
+aktuelle år, og du kan også indstille automatiske tidsannoncering for et
+angivet interval. Der er også et stopur og tidtagningsfunktioner indbygget i
+tilføjelsen, der lader dig time dine opgaver, såsom kopiering af filer,
+installation af programmer eller tilberedning af måltider.</p>
+<p>Bemærkninger:</p>
+<ul>
+<li>Hvis du installerer tilføjelsen som en opdatering, opdager guiden under
+  installationsprocessen, om den gamle konfiguration er kompatibel med den
+  nye, og tilbyder at rette den før installation. Tryk på "ok" for at
+  bekræfte.</li>
+<li>I Windows 10 og nyere kan du bruge appen Alarmer og ur til at administrere
+  stopur og timere.</li>
+</ul>
+<h2>Tastaturkommandoer</h2>
+<ul>
+<li>NVDA+F12: Få den aktuelle tid oplyst.</li>
+<li>NVDA+F12 trykket hurtigt to gange: få aktuel dato</li>
+<li>NVDA+F12 trykket tre gange hurtigt: Oplyser den aktuelle dag, ugenummeret,
+  det aktuelle år og de resterende dage før årets udgang.</li>
+<li>NVDA+Shift+F12: indtast urlag</li>
+</ul>
+<h2>Ikke-tildelte kommandoer</h2>
+<p>Følgende kommandoer er ikke tildelt som standard. Hvis du ønsker at
+tilknytte dem, skal du bruge dialogboksen "Håndter kommandoer" til at
+tilføje brugerdefinerede kommandoer. For at gøre det skal du åbne
+NVDA-menuen, Opsætning og derefter Håndter kommandoer. Udvid kategorien Ur,
+find derefter ikke-tildelte kommandoer fra listen nedenfor, og vælg
+"Tilføj", og indtast derefter den kommando, du ønsker at bruge.</p>
+<ul>
+<li>Forløbet og resterende tid før næste alarm. Hvis du trykker denne kommando
+  to gange hurtigt, annulleres den næste alarm.</li>
+<li>Stop afspilning af den aktuelle alarmlyd</li>
+<li>Vis dialog til indstilling af alarmer</li>
+</ul>
+<h2>Lagrede kommandoer</h2>
+<p>For at bruge lagrede kommandoer skal du trykke på NVDA+Skift+F12 efterfulgt
+af en af følgende taster:</p>
+<ul>
+<li>S: Starter, nulstiller eller stopper stopuret</li>
+<li>R: Nulstiller stopuret til 0 uden at genstarte det</li>
+<li>A: Giver den resterende og forløbet tid før den næste alarm</li>
+<li>T: Åbner dialogen til indstilling af alarmer.</li>
+<li>C: Annuller den næste alarm</li>
+<li>Mellemrum: Udtaler nuværende stopur eller nedtælling</li>
+<li>P: Hvis en alarm er for lang, kan du stoppe den via dette tastetryk.</li>
+<li>H: Liste over alle lagdelte kommandoer (Hjælp)</li>
+</ul>
+<h2>Konfiguration og brug</h2>
+<p>For at konfigurere urfunktionaliteten skal du åbne NvDA-menuen, Opsætning og
+derefter Indstillinger og konfigurere følgende muligheder fra
+indstillingskategorien Ur:</p>
+<ul>
+<li>Visningsformat for klokkeslæt og dato: Brug disse kombinationsbokse til at
+  konfigurere, hvordan NVDA vil annoncere klokkeslæt og dato, når du trykker
+  på NVDA+F12 en eller to gange hurtigt.</li>
+<li>Interval: Vælg tidsmeddelelsesintervallet fra denne combo box( fra, hvert</li>
+<li>minut, 15. minut, 30. minut eller hver time).</li>
+<li>Tidsannoncering (aktiveret, hvis interval ikke er slået fra): vælg mellem
+  tale og lyd, kun lyd eller kun tale.</li>
+<li>Urets ringelyd  (aktiveret, hvis interval ikke er slået fra): vælg lyden
+  for uret.</li>
+<li>Checkboxe "Stilletimer" (kun synlig, hvis muligheden "Fra" ikke er valgt i
+  boksen) giver dig mulighed for at konfigurere tidsintervallet, hvor den
+  automatiske tidsannoncering ikke skal forekomme.</li>
+<li>Tidsformat for stilletimer (aktiveret, hvis stilletimer er aktiveret):
+  vælg, hvordan indstillingerne for stilletimer præsenteres (12-timers eller
+  24-timers format).</li>
+<li>Stilletimers start- og sluttidspunkter: Vælg time- og minutinterval for
+  stilletimer fra combo boxe for timer og minutter.</li>
+</ul>
+<p>For at planlægge alarmer skal du åbne NVDA-menuen, Værktøjer, og derefter
+vælge Indstil alarmer. Dialogen indeholder følgende indstillinger:</p>
+<ul>
+<li>Alarmens varighed i: Vælg alarm/timer-varighed mellem timer, minutter og
+  sekunder.</li>
+<li>Varighed: Indtast alarmvarigheden som anvist ovenfor.</li>
+<li>Alarmlyd: Vælg den alarmlyd, der skal afspilles.</li>
+<li>Knapper til pause og stop giver dig mulighed for at sætte alarmen på pause
+  og genoptage lange alarmer.</li>
+</ul>
+<p>Klik på OK, og en meddelelse vil informere dig om den aktuelt valgte
+alarmvarighed.</p>
+<p>[[!tag dev stable]]
+[[!tag dev]]</p>
+</body>
+</html>

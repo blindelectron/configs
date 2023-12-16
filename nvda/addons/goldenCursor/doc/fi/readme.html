@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Golden Cursor 6.2.1</title>
+</head>
+<body>
+<h1>Golden Cursor</h1>
+<ul>
+<li>Tekijät: Salah Atair ja Joseph Lee</li>
+<li>Lataa <a href="https://www.nvaccess.org/addonStore/legacy?file=goldenCursor">vakaa versio</a></li>
+<li>Yhteensopivuus: NVDA 2022.4 ja uudemmat</li>
+</ul>
+<p>Tämän lisäosan avulla voit siirtää hiirtä näppäimistöä käyttäen sekä
+tallentaa hiiren sijainteja sovelluksille.</p>
+<h2>Näppäinkomennot</h2>
+<ul>
+<li>Ctrl+NVDA+L: Näytä sovellukselle tallennetut hiiren sijainnit, jos niitä
+  on. Tästä valintaikkunasta voit myös määrittää näppäinkomennot kullekin
+  sijainnille. Kun määritettyä näppäinkomentoa painetaan, tallennetussa
+  sijainnissa suoritetaan hiiren vasemman painikkeen napsautus.</li>
+<li>Vaihto+NVDA+L: tallenna tunniste tai selite nykyiselle hiiren sijainnille
+  aktiivisessa sovelluksessa.</li>
+<li>Win+NVDA+C: muuta hiiren siirtämisen yksikköä.</li>
+<li>Win+NVDA+R: Ota hiiren rajoittaminen käyttöön tai poista se käytöstä.</li>
+<li>Win+NVDA+S: Ota hiiren sijainnin puhuminen pikseleinä käyttöön tai poista
+  se käytöstä.</li>
+<li>Win+NVDA+J: siirrä hiiri tiettyyn x- ja y-sijaintiin.</li>
+<li>Win+NVDA+P: ilmoita hiiren sijainti.</li>
+<li>Win+NVDA+M: ota hiirinuolet käyttöön tai poista ne käytöstä.</li>
+<li>Win+NVDA+Nuolinäppäimet (tai pelkät nuolinäppäimet, mikäli hiirinuolet
+  ovat käytössä): siirrä hiirtä.</li>
+</ul>
+<p>Huom: Näiden komentojen uudelleenmäärittäminen on mahdollista
+Näppäinkomennot-valintaikkunasta Golden Cursor -kategorian alta.</p>
+<h2>Huomautuksia</h2>
+<ul>
+<li>Käyttäjien tulisi sijainteja (tunnisteita) jakaessaan käyttää samaa näytön
+  tarkkuutta.</li>
+<li>Ikkunat tulisi suurentaa parhaimman yhteensopivuuden varmistamiseksi
+  painamallla Win+Nuoli ylös.</li>
+<li>Olemassa olevat sijainnit tulisi nimetä uudelleen sijainteja jaettaessa.</li>
+<li>Versio 1.x ja 2.x:n hiirisijaintien muodot eivät ole yhteensopivia
+  keskenään.</li>
+<li>Suorita nuolinäppäinten käyttöä edellyttäviä toimintoja poistamalla ensin
+  hiirinuolet käytöstä.</li>
+<li>Mikäli tallennettuja sijainteja ei ole jäljellä niitä poistettaessa,
+  sovelluksen sijainnit tyhjennetään.</li>
+</ul>
+<h2>Versio 6.2</h2>
+<ul>
+<li>Edellyttää NVDA 2022.4:ää tai uudempaa.</li>
+<li>Yhteensopiva NVDA 2023.1:n kanssa.</li>
+</ul>
+<h2>Versio 6.1</h2>
+<ul>
+<li>Vaatii NVDA 2021.3:n tai uudemman.</li>
+<li>Sijainnit-luettelosta voit nyt määrittää pikanäppäimen kullekin
+  sijainnille. Kun määritettyä pikanäppäintä painetaan, sijainnille
+  suoritetaan hiiren vasemman painikkeen napsautus.</li>
+</ul>
+<h2>Versio 5.0</h2>
+<ul>
+<li>Lisäosa tehty yhteensopivaksi NVDA 2021.1:n kanssa lähdekoodia
+  uudistamalla.</li>
+<li>Ratkaistu useita koodaustyylin ongelmia ja mahdollisia bugeja Flake8:lla.</li>
+</ul>
+<h2>Versio 4.0</h2>
+<ul>
+<li>Vaatii NVDA 2019.3:n tai uudemman.</li>
+<li>Lisäosan asetusvalintaikkuna on korvattu asetuspaneelilla.</li>
+</ul>
+<h2>Versio 3.3</h2>
+<ul>
+<li>Sisäisiä muutoksia tulevien NVDA-versioiden tukemiseksi.</li>
+</ul>
+<h2>Versio 3.2</h2>
+<ul>
+<li>Lisäosa on NVDA 2018.3 (wxPython 4) -yhteensopiva.</li>
+</ul>
+<h2>Versio 3.0</h2>
+<ul>
+<li>NVDA 2018.2:ta käytettäessä lisäosan asetukset löytyvät uudesta
+  monikategoriaisesta asetusruudusta kohdasta "Golden Cursor".</li>
+</ul>
+<h2>Versio 2.1</h2>
+<ul>
+<li>Korjattu Unicode-dekoodausvirhe yritettäessä poistaa tunnisteen nimeä.</li>
+<li>Estetty lisäosan valintaikkunoiden avaaminen useaan kertaan.</li>
+<li>Paranneltu hiiren sijaintiluettelo- sekä sijaintiin siirtymisen
+  valintaikkunoiden ulkoasua.</li>
+</ul>
+<h2>Versio 2.0</h2>
+<ul>
+<li>Edellyttää NVDA 2017.3:a tai uudempaa.</li>
+<li>Sijaintitiedoston muoto ei ole yhteensopiva 1.x-versioiden kanssa. Mikäli
+  vanhoja sijainteja löytyy, ne päivitetään uuteen muotoon lisäosan
+  asennuksen aikana.</li>
+<li>Lisätty NVDA:n Asetukset-valikkoon uusi Golden Cursorin
+  asetusvalintaikkuna, josta on mahdollista määrittää hiiren siirtämisen
+  yksikkö sekä sijainnin puhuminen hiirtä siirrettäessä.</li>
+<li>Useat tämän lisäosan ilmoituksista ovat muuttuneet.</li>
+<li>Äänimerkkiä ei enää kuulu eri asetuksia muutettaessa.</li>
+<li>Voit nyt siirtyä hiirinuolet-tilaan, jossa hiirtä on mahdollista siirtää
+  pelkkiä nuolinäppäimiä käyttäen.</li>
+<li>Muutoksia Sijainnit-valintaikkunaan, mukaan lukien uusi nimi (Hiiren
+  sijainnit), ulkoasu, hiiren koordinaattien näyttäminen selitteelle sekä
+  aktiivisen sovelluksen nimen näyttäminen osana ikkunan nimeä.</li>
+<li>Enterin painaminen tallennetun selitteen kohdalla Hiiren sijainnit
+  -valintaikkunassa siirtää hiiren tallennettuun sijaintiin.</li>
+<li>Hiiren sijaintia uudelleennimettäessä näytetään virhevalintaikkuna, mikäli
+  samanniminen selite on jo olemassa.</li>
+<li>Hiiren sijainteja poistettaessa tai tyhjennettäessä on vastattava Kyllä,
+  ennen kuin sijainnit poistetaan ja/tai tyhjennetään.</li>
+<li>Muutoksia Siirry sijaintiin -valintaikkunaan, mukaan lukien uusi nimi
+  (Uusi hiiren sijainti) sekä mahdollisuus syöttää X- ja Y-koordinaatit
+  erikseen tai Nuoli ylös/alas-näppäimiä käyttäen.</li>
+<li>Nykyistä hiiren sijaintia tallennettaessa näytettävä valintaikkuna näyttää
+  nyt sijainnin koordinaatit.</li>
+<li>Ratkaistu ongelma, jossa NVDA saattaa toistaa virheääniä sijainteja
+  tallennettaessa, mikäli sijaintien kansiota ei ole olemassa.</li>
+</ul>
+<h2>Versio 1.4</h2>
+<ul>
+<li>Lisäosa tehty yhteensopivaksi vanhempien ja tulevien NVDA-versioiden
+  kanssa poistamalla win32api-riippuvuus.</li>
+</ul>
+<h2>Versio 1.0</h2>
+<ul>
+<li>Ensimmäinen versio.</li>
+</ul>
+<p>[[!tag stable dev]]</p>
+</body>
+</html>

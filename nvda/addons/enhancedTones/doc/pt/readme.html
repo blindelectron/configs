@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced tones 2.2</title>
+</head>
+<body>
+<h1>Extra de tons aprimorados para o NVDA.</h1>
+<p>Este extra muda a maneira como  os tons no NVDA são gerados.
+Para estar em contexto. Quando o NVDA emite um tom, ele faz o seguinte:</p>
+<ol>
+<li>abre o player.</li>
+<li>gera o tom.</li>
+<li>envia o tom gerado para o player.</li>
+<li>fecha o player.</li>
+</ol>
+<p>Isso pode ser problemático em algumas placas de som, apresentando alta latência ao reproduzir os tons ou não reproduzindo os primeiros tons.
+Eu tive esse problema no passado com um dos meus computadores. E essa foi a razão para criar este extra.</p>
+<p>Se usar este extra, mesmo que não tenha problemas com a forma original, poderá ver que os tons são mais fluidos, especialmente em tons que se repetem rapidamente.</p>
+<p>Este extra usa uma thread para enviar os tons para o player, e o player nunca fecha.
+Além disso, este extra implementa um gerador de tom personalizado, que é definido por padrão. Mas pode trocá-lo pelo gerador de tons do NVDA.
+O meu gerador de tons personalizado é escrito puramente em Python. Portanto, é menos eficiente que o gerador de tons do NVDA, mas a diferença não é perceptível.</p>
+<p>Decidi manter meu gerador de tons porque algumas pessoas gostaram, inclusive eu. Um utilizador com perda auditiva relatou que estava mais confortável com meu gerador de tons.</p>
+<p>Nota. A geração de tons não é o mesmo que a função para emitir os tons. Portanto, mesmo se usar o gerador de tons nativo do NVDA, poderá observar as melhorias.</p>
+<h2>Faça o download.</h2>
+<p>\tA versão mais recente está disponível em
+[este link] (https://davidacm.github.io/getlatest/gh/davidacm/EnhancedTones)</p>
+<h2>Requisitos</h2>
+<p>Precisa do NVDA 2018.3 ou posterior.</p>
+<h2>Instalação</h2>
+<p>Basta instalá-lo como um extra do NVDA.</p>
+<h2>Utilização</h2>
+<p>A funcionalidade do extra será activada assim que o instalar.<br />
+  Para activá-la ou desactivá-la, acesse as configurações do NVDA e seleccione "tons aprimorados". Nessa categoria, pode definir os seguintes parâmetros:</p>
+<ul>
+<li>Activar o extra. Se desactivado, a função original será usada em seu lugar.</li>
+<li>Biblioteca para geração de tons.</li>
+</ul>
+<h2>contribuições, relatórios e doações</h2>
+<p>Se gosta do meu projecto ou este softWare é útil na sua vida diária e quer contribuir de alguma forma, pode doar através dos seguintes métodos:</p>
+<ul>
+<li>[PayPal.] (https://paypal.me/davicm)</li>
+<li>[Ko-fi.] (https://ko-fi.com/davidacm)</li>
+<li>[criptomoedas e outros métodos.] (https://davidacm.github.io/donations/)</li>
+</ul>
+<p>Se quiser corrigir bugs, relatar problemas ou novos recursos, entre em contato comigo em: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>.</p>
+<p>Ou no repositório github deste projeto:
+  <a href="https://github.com/davidacm/enhancedtones">Enhanced tones no GitHub</a></p>
+<pre><code>Pode obter a versão mais recente deste extra nesse repositório.
+</code></pre>
+<h2>Tradução:</h2>
+<p>Equipa Portuguesa do NVDA: Ângelo Abrantes <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#109;&#112;&#97;&#52;&#51;&#55;&#52;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#97;&#109;&#112;&#97;&#52;&#51;&#55;&#52;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> e Rui Fontes &lt;Rui Fontes <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#117;&#105;&#46;&#102;&#111;&#110;&#116;&#101;&#115;&#64;&#116;&#105;&#102;&#108;&#111;&#116;&#101;&#99;&#110;&#105;&#97;&#46;&#99;&#111;&#109;">&#114;&#117;&#105;&#46;&#102;&#111;&#110;&#116;&#101;&#115;&#64;&#116;&#105;&#102;&#108;&#111;&#116;&#101;&#99;&#110;&#105;&#97;&#46;&#99;&#111;&#109;</a>
+  Cascais, 6 de Agosto de 2022</p>
+</body>
+</html>

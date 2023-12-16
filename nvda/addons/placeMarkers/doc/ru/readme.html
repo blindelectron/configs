@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Place markers 34.0.0</title>
+</head>
+<body>
+<h1>placeMarkers</h1>
+<ul>
+<li>Авторы: Noelia, Chris.</li>
+<li>download <a href="https://addons.nvda-project.org/files/get.php?file=pm">stable version</a> (compatible with NVDA 2022.1 and beyond)</li>
+<li>download <a href="https://addons.nvda-project.org/files/get.php?file=pm-dev">development version</a> (compatible with NVDA 2022.1 and beyond)</li>
+</ul>
+<p>Это дополнение используется для сохранения и поиска определенных строк
+текста или закладок. Оно может быть использовано на веб-страницах или
+документах в режиме обзора NVDA. также оно может быть использовано для
+сохранения или поиска строк текста в многострочных элементах управления, в
+случае невозможности обновить курсор, соответствующая строка будет
+скопирована в буфер обмена, так что она может быть найдена с помощью других
+инструментов. Дополнение сохраняет указанные строки и закладки в файлах, чье
+имя основано на названии и URL-адресе текущего документа. Это дополнение
+основано на SpecificSearch и Bookmark&amp;Search, разработанных тем же
+автором. Вы должны удалить их, чтобы использовать его, поскольку они имеют
+общие функции и комбинации клавиш.</p>
+<h2>Клавиатурные Команды:</h2>
+<ul>
+<li>control+shift+NVDA+f: Opens a dialog with an edit box that shows the last
+  saved search; in this dialog you can also select the previously saved
+  searches from a combo box or remove the selected string from the history
+  using a checkbox. You can choose if the text contained in the edit box
+  will be added to the history of your saved texts. Finally, choose an
+  action from the next group of radio buttons (between Search next, Search
+  previous or Don't search), and specify if NVDA will make a case sensitive
+  search. When you press okay, NVDA will search for this string.</li>
+<li>control+shift+NVDA+k: Saves the current position as a bookmark. If you
+  want to provide a name for this bookmark, select some text from this
+  position before saving it.</li>
+<li>control+shift+NVDA+delete: Deletes the bookmark corresponding to this
+  position.</li>
+<li>NVDA+k: Moves to the next bookmark.</li>
+<li>shift+NVDA+k: Moves to the previous bookmark.</li>
+<li>Not assigned: Shows the file name where the place markers data will be
+  saved in browse mode, without an extension.</li>
+<li>alt+NVDA+k: Opens a dialog with the bookmarks saved for this document. You
+  can write a note for each bookmark; press Save note to save
+  changes. Pressing Delete you can remove the selected bookmark. Pressing OK
+  you can move to the selected position.</li>
+<li>Not assigned: Saves a position as a temporary bookmark.</li>
+<li>Not assigned: Moves to the temporary bookmark for the current document.</li>
+<li>Not assigned: Finds the next occurrence of the last text searched for any
+  specific document.</li>
+<li>Not assigned: Finds the previous occurrence of the last text searched for
+  any specific document.</li>
+</ul>
+<h2>Подменю Закладки (NVDA+N)</h2>
+<p>Используя подменю Закладки в меню Параметры NVDA, вы можете получить доступ
+к следующим элементам:</p>
+<ul>
+<li>Папка поисковых запросов; открывает папку сохранённых ранее поисковых
+  запросов.</li>
+<li>Папка закладок: открывает папку сохранённых закладок.</li>
+<li>Копировать папку закладок: вы можете сохранить копию папки закладок.</li>
+<li>Восстановить папку закладок: вы можете востановить ваши закладки из ранее
+  сохранённой копии закладок.</li>
+</ul>
+<p>Примечание: Положение закладки основано на количестве символов; и поэтому на
+страницах с динамическим содержимым лучше использовать конкретный поиск, а
+не закладки которые сохраняют чёткую позицию.</p>
+<h2>Changes for 20.0</h2>
+<ul>
+<li>Requires NVDA 2022.1 or later.</li>
+</ul>
+<h2>Changes for 19.0</h2>
+<ul>
+<li>The add-on cannot be run on secure screens.</li>
+</ul>
+<h2>Changes for 18.0</h2>
+<ul>
+<li>The command to see the path for placeMarkers shows if there are permanent
+  bookmarks, text for specific search or a temporary bookmark for the
+  current document.</li>
+</ul>
+<h2>Changes for 17.0</h2>
+<ul>
+<li>Fixed a bug which didn't allow to save place markers in some documents.</li>
+<li>Fixed translated strings making translations to work properly.</li>
+</ul>
+<h2>Changes for 16.0</h2>
+<ul>
+<li>Compatible with NVDA 2021.1 or later (required).</li>
+<li>Skim reading is supported when moving to temporary bookmarks.</li>
+<li>If needed, you can download <a href="https://github.com/nvdaes/placeMarkers/releases">other versions</a>.</li>
+</ul>
+<h2>Changes for 15.0</h2>
+<ul>
+<li>When reading with say all in browse mode, the specific find next and
+  specific find previous commands do not stop reading anymore if Allow skim
+  reading option is enabled, according to find next and find previous
+  commands from NVDA 2020.4.</li>
+<li>When the Specific search dialog is opened after running the Specific find
+  previous command, the Search previous option will be selected.</li>
+</ul>
+<h2>Changes for 14.0</h2>
+<ul>
+<li>The command to copy the name of the file where place markers data will be
+  saved has been replaced by a command which shows this file name in browse
+  mode. This is not assigned to a gesture.</li>
+<li>The "Text to search" field does not overlap the "Saved text" field
+  anymore. (Thanks to Cyrille Bougot).</li>
+<li>Requires NVDA 2019.3 or later.</li>
+</ul>
+<h2>Changes for 13.0</h2>
+<ul>
+<li>Added not assigned commands to find the next and previous occurrences of
+  the last text searched for any specific document.</li>
+<li>The specific search feature works when the NVDA's About dialog is open.</li>
+<li>In the Specific search dialog, the case sensitive checkbox will be checked
+  if this option was selected for the last search.</li>
+<li>When the add-on is updated, bookmarks and strings for specific search
+  saved in the previous version of the add-on will be automatically copied
+  to the new version, unless you prefer to import place markers saved in the
+  main configuration folder of NVDA.</li>
+<li>When using the dialog to copy place markers, if the chosen folder is not
+  named placeMarkersBackup, a subfolder with this name will be created to
+  prevent the deletion of directories containing important data, such as
+  Documents or Downloads.</li>
+</ul>
+<h2>Changes for 12.0</h2>
+<ul>
+<li>Fixed a critical bug which caused NVDA to crash when trying to open the
+  Notes dialog, if chinese characters were selected before saving bookmarks.</li>
+</ul>
+<h2>Changes for 11.0</h2>
+<ul>
+<li>Compatible with NVDA 2018.3 or later (required).</li>
+<li>If needed, you can download the <a href="https://addons.nvda-project.org/files/get.php?file=pm-o">last version compatible with NVDA
+  2017.3</a>.</li>
+</ul>
+<h2>Changes for 10.0</h2>
+<ul>
+<li>In Edge, gestures associated with bookmarks selection, such as NVDA+k,
+  NVDA+shift+k or NVDA+alt+k, will be sent to the application instead of
+  trying to move the cursor to bookmarks, to avoid errors, especially in
+  long documents.</li>
+<li>Now specific search is supported in Edge.</li>
+</ul>
+<h2>Changes for 9.0</h2>
+<ul>
+<li>When moving to a bookmark from the Notes dialog, the review cursor follows
+  the system cursor.</li>
+<li>The command to select the previous bookmark works properly again.</li>
+<li>Bookmarks can be deleted from the Notes dialog.</li>
+<li>Now you can assign gestures to save and move to a temporary bookmark for
+  each document.</li>
+</ul>
+<h2>Изменения для 8.0</h2>
+<ul>
+<li>Removed fragment identifiers from bookmark filenames, which can avoid
+  issues in the VitalSource Bookshelf ePUB reader.</li>
+<li>Added a Notes dialog, to associate comments for saved bookmarks and move
+  to the selected position.</li>
+</ul>
+<h2>Изменения для 7.0</h2>
+<ul>
+<li>The dialog to save a string of text for specific search has been
+  removed. This functionality is now included in the Specific search dialog,
+  which has been redesigned to allow different actions when pressing the OK
+  button.</li>
+<li>Визуальное представление диалогов было модифицировано, придерживаясь
+  внешнего вида диалогов, отображаемых в NVDA.</li>
+<li>Performing a Find Next or Find Previous command in Browse Mode will now
+  correctly do a case sensitive search if the original Find was case
+  sensitive.</li>
+<li>Требуется NVDA 2016.4 или позднее.</li>
+<li>Now you can assign gestures to open the Copy and Restore place markers
+  dialogs.</li>
+<li>NVDA will present a message to notify when place markers have been copied
+  or restored with the corresponding dialogs.</li>
+</ul>
+<h2>Изменения для 6.0</h2>
+<ul>
+<li>Когда дополнительные функции не могут использоваться, жесты посылаются в
+  соответствующее приложение.</li>
+</ul>
+<h2>Изменения для 5.0</h2>
+<ul>
+<li>Добавлен поиск с учётом регистра.</li>
+<li>Удалена возможность открыть документацию из меню Закладки.</li>
+<li>Более интуитивные комбинации клавиш.</li>
+</ul>
+<h2>Изменения для 4.0</h2>
+<ul>
+<li>Удалены идентификаторы фрагментов из имён файлов закладок, что позволяет
+  избежать проблем в EPUBReader - дополнении для FireFox.</li>
+<li>Справка по дополнению теперь доступна из менеджера дополнений.</li>
+</ul>
+<h2>Изменения для 3.1</h2>
+<ul>
+<li>Обновлены переводы и новые языки.</li>
+<li>Позиция закладки теперь не сообщается при беглом чтении.</li>
+</ul>
+<h2>Изменения для 3.0</h2>
+<ul>
+<li>Добавлена поддержка беглого чтения.</li>
+</ul>
+<h2>Изменения для 2.0</h2>
+<ul>
+<li>Добавлены опции для сохранения и удаления различных поисков для каждого
+  файла.</li>
+<li>Исправлена ошибка, вызывающая крах, когда пути содержат не латинские
+  буквы.</li>
+<li>Горячие клавиши теперь могут быть переназначены в диалоге жестов ввода
+  NVDA.</li>
+</ul>
+<h2>Изменения для 1.0</h2>
+<ul>
+<li>Первый публичный релиз.</li>
+<li>Переведено на: бразильский португальский, фарси, финский, французский,
+  галисийский, немецкий, итальянский, японский, корейский, непальский,
+  португальский, испанский, словацкий, словенский, тамильский.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

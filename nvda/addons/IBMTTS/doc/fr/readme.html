@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>IBMTTS driver 23.6.1</title>
+</head>
+<body>
+<h1>Pilote IBMTTS, extension pour NVDA</h1>
+<p>Cette extension implémente la compatibilité NVDA avec le synthétiseur IBMTTS.<br />
+  Nous ne pouvons pas distribuer les bibliothèques IBMTTS. Donc, c'est juste le pilote.<br />
+  Si vous souhaitez améliorer ce pilote, n'hésitez pas à envoyer librement vos pull requests via GitHub !  </p>
+<p>Bien que ce pilote soit compatible avec les bibliothèques d'Eloquence puisque Eloquence a la même API que IBMTTS), il n'est pas recommandé d'utiliser Eloquence avec ce pilote en raison de problèmes de licence. Avant d'utiliser des bibliothèques de synthèse avec ce pilote, il est recommandé d'obtenir d'abord les droits d'utilisation des licences.</p>
+<p>Ce pilote a été développé avec la documentation disponible pour IBMTTS, accessible au public sur le Web. Voir la section Références pour plus de détails.</p>
+<h2>Télécharger.</h2>
+<p>La dernière version est disponible <a href="https://davidacm.github.io/getlatest/gh/davidacm/NVDA-IBMTTS-Driver">en téléchargement sur ce lien</a></p>
+<h2>Qu'est-ce que le synthétiseur IBMTTS ?</h2>
+<p>ViaVoice TTS est un moteur de texte à parole développé par IBM, qui synthétise la représentation textuelle du langage humain en voix.</p>
+<h2>Caractéristiques et paramètres.</h2>
+<ul>
+<li>Prise en charge des  paramètres de voix, variante, débit, hauteur, inflexion et volume.</li>
+<li>Prise en charge des  paramètres supplémentaire taille de la tête, enrouement , respiration.  Créez votre propre voix !</li>
+<li>Activer ou désactiver les balises de changement de voix. Désactivez-les pour vous protéger contre les codes malveillants des  farceurs, activez-les pour permettre de faire beaucoup de choses amusantes avec le synthétiseur. Nécessite une modification supplémentaire avec NVDA cependant pour le faire fonctionner correctement.</li>
+<li>Voix turbo. Si le synthétiseur ne vous parle pas assez vite, activez  la voix turbo et obtenez la vitesse maximale !</li>
+<li>Changement automatique de langue. Laissez le synthétiseur vous lire du texte dans la bonne langue lorsqu'il est coché.</li>
+<li>Filtrage extensible. Ce pilote comprend un large ensemble de filtres pour résoudre les chocs et autres comportements étranges du synthétiseur.</li>
+<li>Prise en charge du dictionnaire. Ce pilote prend en charge l'intégration de mots spéciaux, dictionnaires racines et dictionnaires d'abréviation des utilisateurs pour chaque langue. Les ensembles de dictionnaires prêts à l'emploi peuvent être obtenus à partir du <a href="https://github.com/thunderdrop/IBMTTSDictionaries">dépôt du dictionnaire de la communauté</a> ou à partir du <a href="https://github.com/mohamed00/AltIBMTTSDictionaries">dépôt alternatif  de mohamed00 (avec des dictionnaires du synthétiseur IBM)</a></li>
+</ul>
+<h3>Paramètres supplémentaires:</h3>
+<ul>
+<li>Activer l'expansion des abréviations: Bascule l'expansion des abréviations. Notez que la désactivation de cette option désactivera également l'expansion de toute abréviation spécifiée dans les dictionnaires des abréviations fournis par l'utilisateur.</li>
+<li>Activer la prédiction de phrase: Si cette option est activée, le synthétiseur essaiera de prédire où des pauses se produiraient en phrases en fonction de leur structure, par exemple, en utilisant des mots comme "et" ou "le" comme limites de phrase. Si cette option est désactivée, elle ne fera que faire une pause que si des virgules ou d'autres ponctuations sont rencontrées.</li>
+<li>Réduire les pauses: Activez cette option pour des pauses de ponctuation plus courtes, comme celles vues dans d'autres lecteurs d'écran.</li>
+<li>Toujours envoyer les paramètres vocaux: Il y a actuellement un bug dans le synthétiseur qui entraînera parfois les paramètres vocaux  et hauteur à être brièvement réinitialisé à leurs valeurs par défaut. La cause de ce problème est actuellement inconnue, mais une solution de contournement consiste à envoyer en permanence les paramètres vocaux de débit actuelle et de hauteur. Cette option doit généralement être activée. Cependant, il doit être désactivé si la lecture du texte contient des balises de changement de voix.</li>
+<li>Taux d'échantillonnage: Modifie la qualité sonore du synthétiseur. Utile pour IBMTTS, où il est possible de définir le taux d'échantillonnage à 8 kHz permettant d'accéder à un nouvel ensemble de voix.</li>
+</ul>
+<h3>Paramètres de la catégorie IBMTTS.</h3>
+<p>Cette extension a sa propre catégorie de paramètres dans les options de NVDA, pour gérer certaines fonctionnalités internes non liées à la synthèse vocale.</p>
+<ul>
+<li>Rechercher automatiquement les mises à jour pour IBMTTS: Si cette option est cochée, l'extension recherchera quotidiennement les nouvelles versions disponibles.</li>
+<li>Le bouton Rechercher une mise à jour: Recherche manuellement les nouvelles mises à jour de l'extension.</li>
+<li>Adresse du dossier IBMTTS: Le chemin pour charger la bibliothèque IBMTTS. Il peut être absolu ou relatif.</li>
+<li>Nom de la bibliothèque IBMTTS (dll): Le nom de la bibliothèque (dll). N'inclue pas les chemins, seulement le nom avec l'extension, généralement ".dll".</li>
+<li>Rechercher une bibliothèque IBMTTS... Ouvre une boîte de dialogue Explorateur de fichiers pour rechercher la bibliothèque IBMTTS sur le système. Il sera enregistré comme un chemin absolu.</li>
+<li>Copier les fichiers IBMTTS dans une extension. (Cela ne fonctionne peut-être pas pour certaines distributions IBMTTS): Si le chemin de la bibliothèque pour IBMTTS a été défini, il copiera tous les fichiers du dossier dans une nouvel extension appelée eciLibraries et mettra à jour le chemin actuel vers un chemin relatif. Il est très utile dans les versions portables de  NVDA. Il ne fonctionne que pour les bibliothèques qui utilisent des fichiers "eci.ini" pour les informations sur la langue de la voix. Si la bibliothèque utilise le registre de Windows, cette option ne fonctionnera pas.</li>
+</ul>
+<p>Remarque: La fonctionnalité de mise à jour automatique ou manuelle ne supprime pas les fichiers internes de l'extension. Si vous utilisez vos bibliothèques à cet endroit, vous pouvez utiliser cette fonction en toute sécurité. Vos bibliothèques seront en sécurité.</p>
+<h2>Exigences.</h2>
+<h3>NVDA.</h3>
+<p>Vous avez besoin de NVDA 2019.3 ou une version ultérieure.</p>
+<h3>Bibliothèques du synthétiseur IBMTTS.</h3>
+<p>Ce n'est que le pilote, vous devez vous procurer les bibliothèques ailleurs.<br />
+  Ce pilote prend en charge  les bibliothèques légèrement plus récentes qui ajoutent un support de langue est-asiatique et disposent de corrections spécifiques pour le codage approprié du texte. Cependant, les bibliothèques les plus anciennes sans cela devraient fonctionner.<br />
+  À partir de la version 21.03A1, le pilote travaille également avec les bibliothèques encore plus récentes d'IBM, au lieu de seulement les SpeechWorks. Un ensemble de correctifs indépendants pour ces bibliothèques est inclus, et les langues supplémentaires et d'autres différences sont prises en compte. Seules les voix concaténatives sont prises en charge et sont accessibles en définissant le taux d'échantillonnage sur 8 kHz après l'installation de la voix. Pour des meilleurs résultats, utilisez la build de Juin 2005 de ibmeci.dll version 7.0.0.0, car les versions plus anciennes peuvent être instables lors de la réception du texte rapidement, par exemple, en faisant rapidement défiler les éléments dans une liste. Notez également que si vous utilisez des bibliothèques IBMTTS cantonaises ou chinoises de Hong Kong, vous voudrez peut-être désactiver la fonction d'épellation si elle est supportée, pour éviter que certains caractères de ces langues ne soient épelés en utilisant le pinyin quand ils sont convertis en interne.</p>
+<h2>Installation.</h2>
+<p>Installez-le simplement comme n'importe quel extension NVDA. Ouvrez ensuite les paramètres du dialogue NVDA et dans la catégorie IBMTTS définissez le chemin des fichiers IBMTTS.
+  Également dans cette catégorie, vous pouvez copier les fichiers externes IBMTTS dans l'extension pour l'utiliser localement, utile pour les versions portables de NVDA.</p>
+<h2>Contribuant à la traduction.</h2>
+<p>Afin de faciliter votre travail, j'ai laissé un 
+<a href="https://raw.githubusercontent.com/davidacm/NVDA-IBMTTS-Driver/master/IBMTTS.pot">modèle de traduction dans la branche master.</a></p>
+<p>Pour la documentation, j'ai créé un fichier appelé <a href="https://raw.githubusercontent.com/davidacm/NVDA-IBMTTS-Driver/master/docChangelog-for-translators.md">"docChangelog-for-translators.md".</a>
+Vous pouvez utiliser ce fichier pour voir ce qui a été modifié dans la documentation et mettre à jour la documentation de votre langue.</p>
+<p>Si vous souhaitez traduire cette extension dans une autre langue et que vous ne souhaitez pas ouvrir un compte GitHub ou installer Python et d'autres outils nécessaires pour la traduction, effectuez les étapes suivantes:</p>
+<ol>
+<li>Utilisez
+<a href="https://raw.githubusercontent.com/davidacm/NVDA-IBMTTS-Driver/master/IBMTTS.pot">ce modèle</a>,
+comme base pour la langue cible.</li>
+<li>Téléchargez
+<a href="https://poedit.net/">"poedit"</a>,
+ce logiciel vous aidera à gérer les chaînes de traduction.</li>
+<li>Si vous souhaitez également traduire la documentation, vous pouvez voir les nouveaux changements de la documentation
+<a href="https://raw.githubusercontent.com/davidacm/NVDA-IBMTTS-Driver/master/docChangelog-for-translators.md">sur ce lien.</a> Vous pouvez voir la <a href="https://raw.githubusercontent.com/davidacm/NVDA-IBMTTS-Driver/master/readme.md">documentation en anglais complète ici.</a></li>
+<li>Une fois que vous avez terminé la traduction, vous pouvez m'envoyer à: "dhf360@gmail.com".</li>
+</ol>
+<p>Vous n'aurez pas besoin de compiler les fichiers source. Je le ferai lors du lancement d'une nouvelle version de l'extension. Je mentionnerai votre nom dans le commit respectif. Si vous ne voulez pas être mentionné, faites-le moi savoir par e-mail.</p>
+<p>Remarque: assurez-vous que vous avez utilisé le dernier modèle de chaînes de traduction.</p>
+<p>Il s'agit d'une méthode alternative. Si vous le souhaitez, vous pouvez toujours passer de la manière habituelle. Faire une duplication (Fork) de ce dépôt, mettez à jour la traduction de votre langue, et envoyez-moi un PR. Mais de cette façon, cela ajoutera plus de complexité pour vous.</p>
+<h2>Empaquetage de l'extension pour sa distribution.</h2>
+<ol>
+<li>Installez Python, actuellement Python 3.7 est utilisé, mais vous pouvez utiliser une version plus récente.</li>
+<li>Installez GetText, vous pouvez télécharger une distribution pour Windows sur <a href="https://mlocati.github.io/articles/gettext-iconv-windows.html">ce lien.</a> Si vous utilisez Windows 64 bits, je recommande <a href="https://github.com/mlocati/gettext-iconv-windows/releases/download/v0.21-v1.16/gettext0.21-iconv1.16-shared-64.exe">cette version.</a></li>
+<li>(étape facultative mais recommandée) Créez un environnement virtuel Python à utiliser pour gérer les extensions NVDA. Dans la console, utilisez "python -m venv PAT_TO_FOLDER". Où  PAT_TO_FOLDER est le chemin de votre chemin souhaité pour l'environnement virtuel.</li>
+<li>Si vous avez fait l'étape 2, accédez à PAT_TO_FOLDER et à l'intérieur du dossier des scripts, exécutez "activate". Le nom de l'environnement doit être montré dans l'invite de la console.</li>
+<li>Clonez ce dépôt dans votre chemin souhaité: "git clone https://github.com/davidacm/NVDA-IBMTTS-Driver.git".</li>
+<li>Dans la même instance de la console, accédez au dossier de ce dépôt.</li>
+<li>Installez les exigences: "pip install -r requirements.txt".</li>
+<li>Exécutez la commande scons. L'extension créée, s'il n'y a pas d'erreur, sera placée dans le répertoire racine de ce dépôt.</li>
+</ol>
+<p>Une fois que vous fermez la console, l'environnement virtuel est désactivé.</p>
+<h3>Empaquetage des bibliothèques comme extension indépendante.</h3>
+<p>N'est pas recommandé d'inclure les bibliothèques avec ce pilote. C'est parce que si l'utilisateur met à jour le pilote à partir du
+<a href="https://github.com/davidacm/NVDA-IBMTTS-Driver">dépôt officiel</a>,
+à l'aide de l'installateur de l'extension de NVDA, l'ancienne version sera supprimée, y compris les bibliothèques. Une solution pour cela consiste à installer les bibliothèques dans une extension séparée.
+<a href="https://github.com/davidacm/ECILibrariesTemplate">Suivez ce lien</a>
+pour savoir comment empaqueter les bibliothèques dans une extension séparée.</p>
+<h3>Notes:</h3>
+<ul>
+<li>Si vous utilisez la fonctionnalité de mise à jour interne (manuel ou automatique), les bibliothèques ne seront pas supprimées même si elles se trouvent à l'intérieur de l'extension.</li>
+<li>Si le synthétiseur est dans cette extension ou dans l'extension
+<a href="https://github.com/davidacm/ECILibrariesTemplate">"eciLibraries"</a>,
+le pilote mettra à jour automatiquement les chemins  de la bibliothèque ini. Vous pouvez donc l'utiliser sur les versions portables de NVDA.</li>
+<li>Lorsque vous utilisez le bouton "Copier les fichiers IBMTTS dans une extension", il créera une nouvelle extension dans NVDA. Par conséquent, si vous souhaitez désinstaller IBMTTS, vous devez désinstaller deux extensions: "Pilote IBMTTS" et "Eci libraries".</li>
+<li>Les outils scons et gettext sur ce projet sont uniquement compatibles avec  Python 3. Ils ne fonctionnent pas avec Python 2.7.</li>
+<li>Vous pouvez ajouter les fichiers supplémentaires requis de IBMTTS dans l'extension (pour un usage personnel uniquement). Copiez-les simplement dans  le dossier "addon\synthDrivers\ibmtts". Définissez le nom de la bibliothèque par défaut dans  "settingsDB.py" si nécessaire.</li>
+<li>Si le chemin de la bibliothèque configuré n'est pas relatif, cette extension ne metra pas à jour les chemins dans le fichier "eci.ini". Le pilote suppose que lors de l'utilisation de chemins absolus, les chemins sont corrects dans "eci.ini" et éviteront de faire des mises à jour. Gardez cela à l'esprit lorsque vous définissez le chemin de vos bibliothèques. S'ils n'étaient pas corrects, cela pourrait entraîner des erreurs qui rendront NVDA sans parole lorsque vous utilisez ce synthétiseur.</li>
+</ul>
+<h2>Signalant des problèmes:</h2>
+<p>Si vous trouvez un problème de sécurité avec certaines des bibliothèques compatibles avec ce pilote, veuillez ne pas ouvrir une  incidence (issue) en GitHub ni le commenter sur les forums avant que le problème ne soit résolu. Veuillez signaler le problème sur <a href="https://docs.google.com/forms/d/123gSqayOAsIQLx1NiI98fEqr46oiJRZ9nNq0_KIF9WU/edit">ce formulaire.</a></p>
+<p>Si le problème ne plante pas le pilote ou le lecteur d'écran, ouvrez une  <a href="https://github.com/davidacm/NVDA-IBMTTS-Driver/issues">incidence (issue) en GitHub par ici.</a></p>
+<h2>Références.</h2>
+<p>Ce pilote est basé sur le SDK de Viavoice de IBM (IBMTTS), la documentation est disponible sur
+<a href="http://web.archive.org/web/20191125091344/http://www.wizzardsoftware.com/docs/tts.pdf">ce lien</a></p>
+<p>également à l'Université de Columbia sur
+<a href="http://www1.cs.columbia.edu/~hgs/research/projects/simvoice/simvoice/docs/tts.pdf">ce lien</a></p>
+<p>Ou vous pouvez obtenir une copie sur <a href="https://github.com/david-acm/NVDA-IBMTTS-Driver">ce déppôt</a></p>
+<p><a href="https://sourceforge.net/projects/ibmtts-sdk/">pyibmtts: Python wrapper pour IBM TTS développé par Peter Parente</a></p>
+<p>Voir les fichiers de sauvegarde ici:</p>
+<p><a href="https://cdn.jsdelivr.net/gh/davidacm/NVDA-IBMTTS-Driver/apiReference/tts.pdf">tts.pdf</a></p>
+<p>ou <a href="https://cdn.jsdelivr.net/gh/davidacm/NVDA-IBMTTS-Driver/apiReference/tts.txt">tts.txt.</a></p>
+</body>
+</html>

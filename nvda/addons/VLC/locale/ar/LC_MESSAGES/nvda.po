@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the VLC package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VLC 2.12\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-06-01 09:36+0200\n"
+"PO-Revision-Date: 2021-06-01 19:01+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.8\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Language: ar\n"
+
+#. TRANSLATORS: category for VLC input gestures
+#. TRANSLATORS: Settings panel title
+#: addon\appModules\vlc.py:53 addon\appModules\vlc.py:226
+#: addon\appModules\vlc.py:627
+msgid "VLC"
+msgstr "مشغل الوسائط VLC"
+
+#. TRANSLATORS: Window or panel that contains the playlist when it is inside main window
+#. TRANSLATORS: Title of the panel that contains the playlist when it is inside main window
+#: addon\appModules\vlc.py:61 addon\appModules\vlc.py:97
+msgid "Playlist"
+msgstr "قائمة التشغيل"
+
+#. TRANSLATORS: The configuration option in NVDA Preferences menu
+#: addon\appModules\vlc.py:68
+msgid "Change VLC appModule settings"
+msgstr "تغيير إعدادات تطبيق VLC"
+
+#. TRANSLATORS: message shown in Input gestures dialog for this script
+#: addon\appModules\vlc.py:174
+msgid ""
+"Use it in the main window if tabulating between playback controls stopped "
+"working. It'll tries to bring the focus to the playback control pane to get "
+"it to work again."
+msgstr ""
+"استخدمه في الإطار الرئيسي إذا توقفت الجدولة بين عناصر التحكم في التشغيل عن "
+"العمل. سيحاول جلب التركيز إلى جزء التحكم في التشغيل للحصول عليه للعمل مرة "
+"أخرى."
+
+#. TRANSLATORS: message shown in Input gestures dialog for this script
+#: addon\appModules\vlc.py:182
+msgid ""
+"Toggle verbosity: if enabled, it will announce the elapsed time and volume"
+msgstr "تبديل الإسهاب: إذا تم تمكينه ، فسيعلن عن الوقت والحجم المنقضي"
+
+#. TRANSLATORS: Expressing time, several hours, in plural. Maintain the space at the end to separate the next message that will be added.
+#: addon\appModules\vlc.py:291
+#, python-format
+msgid "%d hours "
+msgstr "%d ساعات"
+
+#. TRANSLATORS: Expressing time, one hour, in singular. Maintain the space at the end to separate the next message that will be added.
+#: addon\appModules\vlc.py:294
+#, python-format
+msgid "%d hour "
+msgstr "%d ساعة"
+
+#. TRANSLATORS: Expressing time, several minutes, in plural. Maintain the space at the end to separate the next message that will be added.
+#: addon\appModules\vlc.py:306
+#, python-format
+msgid "%s%d minutes "
+msgstr "%s%d دقائق"
+
+#. TRANSLATORS: Expressing time, one minute, in singular. Maintain the space at the end to separate the next message that will be added.
+#: addon\appModules\vlc.py:309
+#, python-format
+msgid "%s%d minute "
+msgstr "%s%d دقيقة"
+
+#. TRANSLATORS: Expressing time, several seconds, in plural.
+#: addon\appModules\vlc.py:312
+#, python-format
+msgid "%s %d seconds"
+msgstr "%s %d ثواني"
+
+#. TRANSLATORS: Expressing time, one second, in singular.
+#: addon\appModules\vlc.py:315
+#, python-format
+msgid "%s %d second"
+msgstr "%s %d ثانية"
+
+#. Translators: As seen in the button Play/Pause of the interface
+#: addon\appModules\vlc.py:321
+msgid "Pause"
+msgstr "إيقاف مؤقت"
+
+#. TRANSLATORS: Message when there are no playback controls visible on screen, or the addon can't find them.
+#: addon\appModules\vlc.py:343
+msgid "There are no controls available"
+msgstr "لا توجد ضوابط متاحة"
+
+#. TRANSLATORS: Message when the playlist is empty and there is no track to play
+#: addon\appModules\vlc.py:376
+msgid "Empty"
+msgstr "فارغ"
+
+#. TRANSLATORS: elapsed time of total time
+#: addon\appModules\vlc.py:383
+#, python-format
+msgid "%s of %s"
+msgstr "%s من %s"
+
+#. TRANSLATORS: When announces that a track is playing
+#: addon\appModules\vlc.py:386
+msgid " playing"
+msgstr "قيد التشغيل"
+
+#. TRANSLATORS: message shown in Input gestures dialog for this script
+#: addon\appModules\vlc.py:394
+msgid "Reads the information of the current playback."
+msgstr "قراءة معلومات التشغيل الحالي."
+
+#: addon\appModules\vlc.py:406 addon\appModules\vlc.py:453
+#: addon\appModules\vlc.py:462
+msgid "unchecked"
+msgstr "غير محدد"
+
+#: addon\appModules\vlc.py:447
+msgid "Repeat mode"
+msgstr "تكرار الوضع"
+
+#: addon\appModules\vlc.py:456
+msgid "Shuffle mode"
+msgstr "الوضع العشوائي"
+
+#: addon\appModules\vlc.py:466
+#, python-format
+msgid "Volume %s"
+msgstr "مستوى الصوت %s"
+
+#. TRANSLATORS: message shown in Input gestures dialog for this script
+#: addon\appModules\vlc.py:475
+msgid ""
+"Brings panels or dialogs that are displayed on the screen, but NVDA is "
+"unable to focus automatically to the fore."
+msgstr ""
+"يجلب اللوحات أو الحوارات المعروضة على الشاشة ، لكن NVDA غير قادر على "
+"التركيز تلقائيًا في المقدمة."
+
+#. TRANSLATORS: To successfully synchronize the cursor when it is moved by words, it is necessary to distinguish the alphanumeric characters of the punctuation signs.
+#. TRANSLATORS: This string should not be translated literally. Should be a list of the special characters that are considered to be alphanumeric in your local alphabet, for example the ñ in Spanish.
+#: addon\appModules\vlc.py:607
+msgid "SpecialAlphanumericCharactersInYourLanguage"
+msgstr "أحرف أبجدية رقمية خاصة بلغتك"
+
+#. TRANSLATORS: Settings dialog title
+#: addon\appModules\vlc.py:611
+msgid "VLC appModule settings"
+msgstr "إعدادات الوحدة النمطية لتطبيق VLC"
+
+#. TRANSLATORS: Report time checkbox
+#: addon\appModules\vlc.py:614 addon\appModules\vlc.py:630
+msgid "Announce elapsed time and volume"
+msgstr "الإعلان عن الوقت والحجم المنقضي"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#: buildVars.py:17
+msgid "VLC Media Player"
+msgstr "مشغل الميديا ​​VLC"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:20
+msgid ""
+"Provides some accessibility features for VLC Media Player, as improve "
+"navigation  or read status bar"
+msgstr ""
+"توفر بعض ميزات إمكانية الوصول لبرنامج VLC Media Player ، مثل تحسين التنقل "
+"أو قراءة شريط الحالة"

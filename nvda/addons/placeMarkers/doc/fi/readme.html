@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Place markers 34.0.0</title>
+</head>
+<body>
+<h1>Paikkamerkit</h1>
+<ul>
+<li>Tekijät: Noelia, Chris</li>
+</ul>
+<p>Tätä lisäosaa käytetään NVDA:n selaustilassa määrättyjen merkkijonojen tai
+paikkamerkkien tallentamiseen ja etsimiseen verkkosivuilta tai
+asiakirjoista. Sitä voidaan käyttää myös merkkijonojen tallentamiseen tai
+etsimiseen monirivisistä säätimistä. Mikäli järjestelmäkohdistimen
+siirtäminen ei ole tällöin mahdollista, hakua vastaava merkkijono kopioidaan
+leikepöydälle, jotta sitä voidaan etsiä muilla tavoilla.  Merkkijonot ja
+paikkamerkit tallennetaan tiedostoihin, joiden nimet perustuvat nykyisen
+asiakirjan nimeen ja URLiin.  Tämä lisäosa perustuu saman tekijän
+SpecificSearch- ja Bookmark&amp;Search-lisäosiin. Sinun tulisi poistaa ne tämän
+version käyttämiseksi, sillä niissä on samoja näppäinkomentoja ja
+ominaisuuksia.</p>
+<h2>Näppäinkomennot:</h2>
+<ul>
+<li>Ctrl+Vaihto+NVDA+F: Avaa muokkausruudun sisältävän valintaikkunan, joka
+  näyttää viimeksi tallennetun haun. Tässä ikkunassa voit myös valita
+  yhdistelmäruudusta aiemmin tallennettuja hakuja  tai poistaa valitun
+  merkkijonon hakuhistoriasta valintaruutua käyttäen. Voit lisäksi valita,
+  lisätäänkö muokkausruudun sisältämä teksti hakuhistoriaasi. Valitse
+  lopuksi toiminto seuraavasta valintapainikeryhmästä (Etsi seuraava, Etsi
+  edellinen tai Ei hakua) ja määritä, suorittaako NVDA kirjainkoon
+  huomioivan haun. Kun painat OK, NVDA etsii antamaasi merkkijonoa.</li>
+<li>Ctrl+Vaihto+NVDA+Y: Tallentaa nykyisen sijainnin paikkamerkiksi. Jos
+  haluat antaa sille nimen, valitse sijainnista lyhyt tekstipätkä ennen
+  paikkamerkin tallentamista.</li>
+<li>Ctrl+Vaihto+NVDA+Delete: Poistaa paikkamerkin nykyisestä sijainnista.</li>
+<li>NVDA+Y: Siirtää seuraavaan paikkamerkkiin.</li>
+<li>Vaihto+NVDA+Y: Siirtää edelliseen paikkamerkkiin.</li>
+<li>Ei määritetty: Näyttää paikkamerkkitiedoston nimen selaustilassa ilman
+  tarkennetta.</li>
+<li>Alt+NVDA+Y: Avaa valintaikkunan, jossa näkyvät nykyiselle asiakirjalle
+  tallennetut paikkamerkit. Voit kirjoittaa kullekin paikkamerkille
+  muistiinpanon. Tallenna muutokset painamalla Tallenna muistiinpano
+  -painiketta. Voit poistaa valitun paikkamerkin painamalla
+  Delete-näppäintä. Siirry valittuun sijaintiin painamalla OK.</li>
+<li>Ei määritetty: Tallentaa nykyisen sijainnin tilapäiseksi paikkamerkiksi.</li>
+<li>Ei määritetty: Siirtää tilapäiseen paikkamerkkiin nykyisessä asiakirjassa.</li>
+<li>Ei määritetty: Etsii viimeksi haetun tekstin seuraavan esiintymän mistä
+  tahansa määrätystä asiakirjasta.</li>
+<li>Ei määritetty: Etsii viimeksi haetun tekstin edellisen esiintymän mistä
+  tahansa määrätystä asiakirjasta.</li>
+</ul>
+<h2>Paikkamerkit-alivalikko (NVDA+N)</h2>
+<p>Asetukset-valikosta löytyvästä Paikkamerkit-alivalikosta pääset käyttämään
+seuraavia toimintoja:</p>
+<ul>
+<li>Sivukohtaisen haun kansio: avaa tallennettujen sivukohtaisten hakujen
+  kansion.</li>
+<li>Paikkamerkkien kansio: Avaa tallennettujen paikkamerkkien kansion.</li>
+<li>Kopioi paikkamerkkien kansio: Tallentaa kopion paikkamerkkien kansiosta.</li>
+<li>Palauta paikkamerkit: Palauttaa paikkamerkit aiemmin tallennetusta
+  paikkamerkkien kansiosta.</li>
+</ul>
+<p>Huom: Paikkamerkin sijainti perustuu merkkien lukumäärään, joten muuttuvan
+sisällön sivuilla kannattaa käyttää tarkan sijainnin tallentavien
+paikkamerkkien asemesta sivukohtaista hakua.</p>
+<h2>Muutokset versiossa 24.0</h2>
+<ul>
+<li>Sellaisissa näppäinkomennoissa kuin NVDA+K, NVDA+Vaihto+K, NVDA+Alt+K ja
+  NVDA+Ctrl+Vaihto+K käytetään K:n sijaan Y:tä.</li>
+<li>Yhteensopiva NVDA 2023.1:n kanssa.</li>
+</ul>
+<h2>Muutokset versiossa 23.0</h2>
+<ul>
+<li>Lisäosa toimii jälleen Microsoft Wordin kanssa.</li>
+</ul>
+<h2>Muutokset versiossa 22.0</h2>
+<ul>
+<li>Paikkamerkkeihin on mahdollista siirtyä ja niitä voidaan poistaa, kun UIA
+  on käytössä (kiitos Abdelille).</li>
+</ul>
+<h2>Muutokset versiossa 21.0</h2>
+<ul>
+<li>Paikkamerkkejä voidaan tallentaa Chromium-pohjaisissa selaimissa, joissa
+  on käytössä UIA (kiitos Abdelille).</li>
+</ul>
+<h2>Muutokset versiossa 20.0</h2>
+<ul>
+<li>Edellyttää NVDA 2022.1:tä tai uudempaa.</li>
+</ul>
+<h2>Muutokset versiossa 19.0</h2>
+<ul>
+<li>Lisäosaa ei voi käyttää suojatuissa ruuduissa.</li>
+</ul>
+<h2>Muutokset versiossa 18.0</h2>
+<ul>
+<li>Paikkamerkkien polun ilmoittava komento näyttää, mikäli nykyisellä
+  asiakirjalla on pysyviä paikkamerkkejä, sivukohtainen haku tai tilapäinen
+  paikkamerkki.</li>
+</ul>
+<h2>Muutokset versiossa 17.0</h2>
+<ul>
+<li>Korjattu bugi, joka ei sallinut paikkamerkkien tallentamista joissakin
+  asiakirjoissa.</li>
+<li>Käännettävät merkkijonot korjattu, mikä saa käännökset toimimaan oikein.</li>
+</ul>
+<h2>Muutokset versiossa 16.0</h2>
+<ul>
+<li>Yhteensopiva NVDA 2021.1:n tai uudemman kanssa (vaaditaan).</li>
+<li>Pikalukua tuetaan tilapäisiin paikkamerkkeihin siirryttäessä.</li>
+<li>Tarvittaessa voit ladata <a href="https://github.com/nvdaes/placeMarkers/releases">muita
+  versioita</a>.</li>
+</ul>
+<h2>Muutokset versiossa 15.0</h2>
+<ul>
+<li>Sivukohtaiset Etsi seuraava ja Etsi edellinen -komennot eivät enää pysäytä
+  lukemista selaustilassa jatkuvaa lukua käytettäessä, mikäli Salli pikaluku
+  jatkuvassa luvussa -asetus on käytössä NVDA 2020.4:n Etsi seuraava- ja
+  Etsi edellinen -komentojen mukaisesti.</li>
+<li>Etsi edellinen -vaihtoehto valitaan, kun Sivukohtainen haku -valintaikkuna
+  avataan sivukohtaisen Etsi edellinen -komennon suorittamisen jälkeen.</li>
+</ul>
+<h2>Muutokset versiossa 14.0</h2>
+<ul>
+<li>Paikkamerkkitiedoston nimen kopioiva komento on korvattu komennolla, joka
+  näyttää tiedostonimen selaustilassa. Näppäinkomentoa ei ole määritetty.</li>
+<li>"Etsittävä teksti" -kenttä ei enää ole "Tallennettu teksti" -kentän
+  päällä. (Kiitos Cyrille Bougotille).</li>
+<li>Edellyttää NVDA 2019.3:a tai uudempaa.</li>
+</ul>
+<h2>Muutokset versiossa 13.0</h2>
+<ul>
+<li>Lisätty komennot ilman näppäinkomentoa viimeksi haetun tekstin seuraavan
+  ja edellisen esiintymän etsimiseen mistä tahansa  määrätystä asiakirjasta.</li>
+<li>Sivukohtainen haku toimii, kun NVDA:n Tietoja-valintaikkuna on avoimena.</li>
+<li>Sama kirjainkoko -valintaruutu valitaan sivukohtaisen haun
+  valintaikkunassa, jos se oli valittuna edellistä hakua suoritettaessa.</li>
+<li>Kun lisäosa päivitetään, aiemmassa versiossa tallennetut paikkamerkit ja
+  sivukohtaisen haun merkkijonot kopioidaan automaattisesti uuteen versioon,
+  paitsi jos haluat tuoda paikkamerkit NVDA-asetusten pääkansiosta.</li>
+<li>Jos valitulle kansiolle ei ole paikkamerkkien kopiointivalintaikkunassa
+  annettu nimeksi placeMarkersBackup, sen niminen alikansio luodaan, jotta
+  estetään tärkeää dataa sisältävien hakemistojen, kuten Tiedostot tai
+  Ladatut tiedostot, poistaminen.</li>
+</ul>
+<h2>Muutokset versiossa 12.0</h2>
+<ul>
+<li>Korjattu kriittinen bugi, joka kaatoi NVDA:n yritettäessä avata
+  Muistiinpanot-valintaikkunaa, mikäli kiinalaisia merkkejä oli valittuna
+  ennen paikkamerkkien tallentamista.</li>
+</ul>
+<h2>Muutokset versiossa 11.0</h2>
+<ul>
+<li>Yhteensopiva NVDA 2018.3:n tai uudemman kanssa (vaaditaan).</li>
+<li>Viimeisen NVDA 2017.3:n kanssa yhteensopivan version voi ladata
+  <a href="https://www.nvaccess.org/addonStore/legacy?file=pm-o">tästä.</a></li>
+</ul>
+<h2>Muutokset versiossa 10.0</h2>
+<ul>
+<li>Virheiden välttämiseksi (erityisesti pitkissä asiakirjoissa)
+  paikkamerkkien valintaan liittyvät näppäinkomennot, kuten NVDA+K,
+  NVDA+Vaihto+K tai NVDA+Alt+K, lähetetään Edgessä sovellukselle sen sijaan,
+  että yritettäisiin siirtää kohdistinta paikkamerkkeihin.</li>
+<li>Sivukohtaista hakua tuetaan nyt Edgessä.</li>
+</ul>
+<h2>Muutokset versiossa 9.0</h2>
+<ul>
+<li>Tarkastelukohdistin seuraa järjestelmän kohdistinta siirryttäessä
+  paikkamerkkiin Muistiinpanot-valintaikkunasta.</li>
+<li>Edellisen paikkamerkin valitseva komento toimii jälleen asianmukaisesti.</li>
+<li>Paikkamerkkejä on mahdollista poistaa Muistiinpanot-valintaikkunasta.</li>
+<li>Voit nyt määrittää kullekin asiakirjalle näppäinkomennot paikkamerkkien
+  tallentamista ja niihin siirtymistä varten.</li>
+</ul>
+<h2>Muutokset versiossa 8.0</h2>
+<ul>
+<li>Osatunnisteet poistettu paikkamerkkitiedostojen nimistä VitalSource
+  Bookshelf -ePub-lukijaan liittyvien ongelmien välttämiseksi.</li>
+<li>Lisätty Muistiinpanot-valintaikkuna, jossa on mahdollista liittää
+  tallennettuihin paikkamerkkeihin muistiinpanoja sekä siirtyä valittuun
+  sijaintiin.</li>
+</ul>
+<h2>Muutokset versiossa 7.0</h2>
+<ul>
+<li>Merkkijonon sivukohtaiseen hakuun tallentava valintaikkuna on
+  poistettu. Tämä toiminnallisuus on sisällytetty Sivukohtainen haku
+  -valintaikkunaan, joka on uudelleensuunniteltu mahdollistamaan eri
+  toimintoja OK-painiketta painettaessa.</li>
+<li>Valintaikkunoiden visuaalista esitystä on parannettu noudattamaan NVDA:n
+  ikkunoiden ulkoasua.</li>
+<li>Etsi seuraava- tai Etsi edellinen -komento suorittaa nyt selaustilassa
+  kirjainkoon huomioivan haun, mikäli alkuperäinen haku oli sellainen.</li>
+<li>Edellyttää NVDA 2016.4:ää tai uudempaa.</li>
+<li>Paikkamerkkien kopiointi- ja palautusvalintaikkunoille on nyt mahdollista
+  määrittää näppäinkomennot.</li>
+<li>NVDA ilmoittaa, kun paikkamerkkejä on kopioitu tai palautettu omilla
+  valintaikkunoillaan.</li>
+</ul>
+<h2>Muutokset versiossa 6.0</h2>
+<ul>
+<li>Kun lisäosan toiminnot eivät ole käytettävissä, komennot lähetetään
+  suoraan aktiiviselle sovellukselle.</li>
+</ul>
+<h2>Muutokset versiossa 5.0</h2>
+<ul>
+<li>Lisätty kirjainkoon huomioiva haku.</li>
+<li>Poistettu vaihtoehto ohjeen avaamiseen Paikkamerkit-valikosta.</li>
+<li>Intuitiivisemmat näppäinkomennot.</li>
+</ul>
+<h2>Muutokset versiossa 4.0</h2>
+<ul>
+<li>Poistettu osatunnisteet kirjanmerkkitiedostojen nimistä, mikä saattaa
+  välttää ongelmia Firefoxin ePUBREADER-lisäosan kanssa.</li>
+<li>Ohje on käytettävissä Lisäosien hallinnasta.</li>
+</ul>
+<h2>Muutokset versiossa 3.1</h2>
+<ul>
+<li>Käännöksiä päivitetty ja lisätty uusi kieli.</li>
+<li>Kirjanmerkin sijaintia ei ilmoiteta pikaluvun aikana.</li>
+</ul>
+<h2>Muutokset versiossa 3.0</h2>
+<ul>
+<li>Lisätty tuki pikaluvulle.</li>
+</ul>
+<h2>Muutokset versiossa 2.0</h2>
+<ul>
+<li>Lisätty vaihtoehdot eri hakujen tallentamiseksi ja poistamiseksi kullekin
+  tiedostolle.</li>
+<li>Korjattu ohjelmavirhe, joka rikkoi lisäosan toiminnan, kun polut
+  sisälsivät muita kuin latinalaisia merkkejä.</li>
+<li>Pikanäppäimien uudelleenmäärittely on nyt mahdollista NVDA:n
+  Näppäinkomennot-valintaikkunaa käyttäen.</li>
+</ul>
+<h2>Muutokset versiossa 1.0</h2>
+<ul>
+<li>Ensimmäinen versio.</li>
+<li>Käännetty kielille: brasilianportugali, espanja, farsi, galego, italia,
+  japani, korea, nepali, portugali, ranska, saksa, slovakki, slovenia, suomi
+  ja tamili.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

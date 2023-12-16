@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Golden Cursor 6.2.1</title>
+</head>
+<body>
+<h1>Golden Cursor</h1>
+<ul>
+<li>Auteur : salah atair, Joseph Lee</li>
+<li>Télécharger <a href="https://www.nvaccess.org/addonStore/legacy?file=goldenCursor">version stable</a></li>
+<li>Compatibilité NVDA : 2022.4 et au-delà</li>
+</ul>
+<p>Cette extension vous permet de déplacer la souris à l'aide du clavier et de
+sauvegarder la position de la souris pour les applications.</p>
+<h2>Touche de commandes</h2>
+<ul>
+<li>Contrôle+NVDA+L : afficher les positions de souris enregistrées pour une
+  application, le cas échéant. Vous pouvez également attribuer des gestes à
+  ces positions à partir de cette boîte de dialogue. Lorsque vous appuyez
+  sur le geste attribué, un clic gauche sera effectué dans la position
+  enregistrée.</li>
+<li>Maj+NVDA+l : sauvegarde un tag ou une étiquette pour la position actuelle
+  de la souris dans l'application ayant actuellement le focus.</li>
+<li>Windows+NVDA+C : changer l'unité de mouvement de la souris.</li>
+<li>Windows+NVDA+R : basculer entre activer/désactiver la restriction de la
+  souris.</li>
+<li>Windows+NVDA+S : basculer entre activer/désactiver l'annonce de la
+  position de la souris en pixels.</li>
+<li>Windows+NVDA+J : déplacez la souris vers une position spécifique x et y.</li>
+<li>Windows+NVDA+P : annoncer la position de la souris.</li>
+<li>Windows+NVDA+M : basculer les flèches de souris entre activer ou
+  désactiver.</li>
+<li>Windows+NVDA+touches fléchées (ou simplement les touches fléchées si les
+  flèches de la souris sont activées) : déplacez la souris.</li>
+</ul>
+<p>Remarque : ces gestes peuvent être réassignées via le dialogue Gestes de
+commandes de NVDA sous la catégorie Golden Cursor.</p>
+<h2>Notes</h2>
+<ul>
+<li>Lors du partage des positions (tags), chaque partie doit utiliser la même
+  résolution d'affichage.</li>
+<li>Pour une compatibilité maximale, vous devriez maximiser les fenêtres en
+  appuyant sur Windows+flècheHaut.</li>
+<li>Lors du partage des positions, les étiquettes des positions existantes
+  doivent être renommées.</li>
+<li>Les formats de position de la souris version 1.x et 2.x sont
+  incompatibles.</li>
+<li>Pour exécuter les fonctions nécessitant l'utilisation des touches
+  fléchées, désactivez d'abord les flèches de la souris.</li>
+<li>Lorsque vous supprimez des positions sauvegardées, s'il n'y a plus de
+  positions sauvegardées, les positions de l'application seront effacées.</li>
+</ul>
+<h2>Version 6.2</h2>
+<ul>
+<li>Nécessite NVDA 2022.4 ou ultérieures.</li>
+<li>Compatible avec NVDA 2023.1.</li>
+</ul>
+<h2>Version 6.1</h2>
+<ul>
+<li>Nécessite NVDA 2021.3 ou ultérieures.</li>
+<li>Désormais, vous pouvez attribuer des raccourcis pour les positions
+  enregistrées à partir de la liste des positions. Lorsque vous appuyez sur
+  un raccourci, un clic gauche sera effectué pour la position.</li>
+</ul>
+<h2>Version 5.0</h2>
+<ul>
+<li>Code source de l'extension modernisé pour le rendre compatible avec NVDA
+  2021.1.</li>
+<li>Résolution de nombreux problèmes de style de code et de bugs potentiels
+  avec Flake8.</li>
+</ul>
+<h2>Version 4.0</h2>
+<ul>
+<li>Nécessite NVDA 2019.3 ou ultérieure.</li>
+<li>Le dialogue des paramètres Golden Cursor a été remplacée par le panneau de
+  paramètres Golden Cursor.</li>
+</ul>
+<h2>Version 3.3</h2>
+<ul>
+<li>Modifications internes pour prendre en charge les futures versions de
+  NVDA.</li>
+</ul>
+<h2>Version 3.2</h2>
+<ul>
+<li>Cette extension est compatible avec NVDA 2018.3 (wxPython 4).</li>
+</ul>
+<h2>Version 3.0</h2>
+<ul>
+<li>Si vous utilisez NVDA 2018.2, les paramètres de l'extension seront trouvés
+  dans le nouvel écran de paramètres multi-catégories sous la catégorie
+  "Golden Cursor".</li>
+</ul>
+<h2>Version 2.1</h2>
+<ul>
+<li>Correction d'une erreur de décodage Unicode lors de la tentative de
+  suppression du nom du tag.</li>
+<li>Empêcher plusieurs instances lors de l'ouverture de diverses boîtes de
+  dialogue de l'extension.</li>
+<li>Amélioration de l'apparence de la liste des positions de la souris et des
+  dialogues Sauter à la position.</li>
+</ul>
+<h2>Version 2.0</h2>
+<ul>
+<li>Nécessite NVDA 2017.3 et versions ultérieures.</li>
+<li>Le format de fichier de position est incompatible avec les versions
+  1.x. Si le format de position 1.x est trouvé, les anciennes positions
+  seront migrées vers le nouveau format lors de l'installation.</li>
+<li>Ajout d'une nouvelle boîte de dialogue dans les paramètres Golden Cursor
+  dans le menu Préférences de NVDA pour configurer l'unité de mouvement de
+  la souris et l'annonce des positions de la souris lors de ses
+  déplacements.</li>
+<li>Divers messages de cette extension ont changé.</li>
+<li>Lorsque vous basculez entre différents paramètres, la tonalité de
+  basculement ne sera plus entendue.</li>
+<li>Vous pouvez maintenant entrer dans le mode flèches de la souris où vous
+  pouvez déplacer la souris en appuyant simplement sur les touches fléchées.</li>
+<li>Changements pour le dialogue de la liste des positions, y compris le
+  nouveau nom (maintenant appelé Positions de la souris) et la disposition,
+  affichant les coordonnées de la souris pour une étiquette et affichant le
+  nom de l'application active dans le titre.</li>
+<li>À partir du dialogue Positions de la souris, appuyez sur Entrée sur une
+  étiquette sauvegardée pour déplacer la souris vers l'emplacement
+  sauvegardé.</li>
+<li>Lorsque vous renommez une position de la souris, un dialogue d'erreur
+  s'affiche si une étiquette portant le même nom que le nouveau nom existe.</li>
+<li>Lorsque vous supprimez ou effacez les positions de la souris, vous devez
+  maintenant répondre Oui avant que les positions ne soient supprimées et/ou
+  effacées.</li>
+<li>Changements pour la fonction de saut de la souris, y compris un nouveau
+  nom (maintenant appelé Nouvelle position de la souris) et sa capacité à
+  entrer les coordonnées X et Y séparément ou en utilisant les touches
+  flèche haut ou bas.</li>
+<li>Le dialogue affichée lors de la sauvegarde de la position actuelle de la
+  souris affiche maintenant les coordonnées de l'emplacement actuel de la
+  souris.</li>
+<li>Lors de l'enregistrement des positions, résolution d'un problème où NVDA
+  peut émettre un son d'erreur si le dossier des positions n'existe pas.</li>
+</ul>
+<h2>Version 1.4</h2>
+<ul>
+<li>Suppression de la dépendance win32api pour le rendre compatible avec les
+  versions passées et futures de NVDA.</li>
+</ul>
+<h2>Version 1.0</h2>
+<ul>
+<li>Première version.</li>
+</ul>
+<p>[[!tag stable dev]]</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Speech Logger 23.3.09</title>
+</head>
+<body>
+<h3>Complemento NVDA Speech Logger</h3>
+<p>Autor: Luke Davis, com contribuições de James Scholes</p>
+<p>Um complemento do <a href="https://nvaccess.org/">NVDA</a> para registrar a fala em um arquivo ou arquivos.
+Ele pode registrar a fala gerada na máquina local em um arquivo de texto.
+Ele também pode registrar a fala de uma máquina remota recebida por meio do complemento <a href="https://nvdaremote.com/">NVDA Remote</a>, no mesmo arquivo ou em um arquivo diferente.</p>
+<h3>Configuração</h3>
+<p>Para configurar este add-on, abra o menu do NVDA, vá para Preferências, depois Configurações, depois Speech Logger (NVDA+N, P, Ç, depois pressione S até chegar lá).</p>
+<p>Nota: o add-on só pode ser configurado enquanto estiver no perfil de Configuração Normal do NVDA. O complemento não reconhece o perfil. Se você conseguir pensar em algum caso de uso que exija que ele opere de maneira diferente em diferentes perfis, entre em contato com o autor ou registre um problema no <a href="https://github.com/opensourcesys/speechLogger/issues/">repositório do GitHub</a>.</p>
+<p>As seguintes configurações estão disponíveis:
+* O diretório de registro. Você pode inserir ou procurar o diretório de destino desejado, que já deve existir. Variáveis ​​de sistema como %temp%, %userprofile%, etc., podem ser usadas neste campo.
+* Nome do arquivo de registro local. O arquivo criado será colocado no diretório acima. Isso conterá a fala registrada enquanto o modo de registro local estiver ativado. Isso pode ser o mesmo que o arquivo de log remoto. Deixe em branco para desativar completamente esse tipo de registro.
+* Nome do arquivo de registro remoto. O arquivo criado será colocado no diretório acima. Isso conterá a fala registrada enquanto o modo de registro remoto estiver ativado. Pode ser o mesmo que o arquivo de log local. Deixe em branco para desativar completamente esse tipo de registro.
+* Separador. Esta caixa de combinação permite escolher um dos separadores de enunciados disponíveis. Veja abaixo para mais informações.
+* Separador personalizado. Este campo permite que você insira um separador de elocução personalizado (veja abaixo), que é usado se "personalizado" for escolhido na caixa de combinação.</p>
+<h4>Separador de enunciados</h4>
+<p>Quando o NVDA fala algo como "<code>lixeira 1 de 55</code>" enquanto está lendo sua área de trabalho, isso é considerado duas declarações separadas. O primeiro é o nome do item ("<code>Lixeira</code>", neste exemplo), e o segundo é a informação da posição do objeto ("<code>1 de 55</code>", neste exemplo).</p>
+<p>Dependendo do que você está lendo, e como você configurou o NVDA, pode haver vários enunciados separados que acontecem durante uma única sequência de fala.</p>
+<p>No log normal do NVDA no nível de depuração, cada expressão individual é separada com dois espaços, como está escrito no exemplo acima.</p>
+<p>O Speech Logger permite separar enunciados da mesma forma que o NVDA faz (com dois espaços), ou por uma das poucas alternativas razoáveis ​​(uma nova linha, uma vírgula e um espaço, dois sublinhados), ou por uma sequência personalizada de sua própria criação .</p>
+<p>Se, por exemplo, você quiser que seu separador de elocução seja dois cifrões (<code>$$</code>), defina a caixa de combinação como "custom" e digite "<code>$$</code>" (sem as aspas), no separador personalizado campo. Se você quiser que seja uma guia, você pode inserir "<code>\t</code>".</p>
+<h3>Iniciando e parando os logs</h3>
+<p>Este complemento tem dois gestos definidos por padrão. Você pode alterá-los na opção definir comandos do NVDA.
+Procure "Alterna o registro da fala local" e "Alterna o registro da fala remota".
+* NVDA+Alt+L: inicia/interrompe o registro da fala local.
+* NVDA+Shift+Alt+L: iniciar/parar registro de fala remota.</p>
+<h3>Uma observação sobre o registro remoto de fala</h3>
+<p>Este add-on destina-se a funcionar com o add-on NVDA Remote, para registro de fala remota.</p>
+<p>É importante saber que não é possível iniciar o registro de sessões remotas até que você realmente inicie uma.
+Não há como, por exemplo, iniciar o log e esperar, em stand-by, até que uma sessão remota seja iniciada e iniciar o log nesse momento.</p>
+<p>No entanto, uma vez iniciado, o registro continuará habilitado para sessões remotas.</p>
+<h3>Comentários e solicitações de recursos</h3>
+<p>Se você gostaria de sugerir um recurso ou relatar um bug, entre em contato por e-mail ou registre um <a href="https://github.com/opensourcesys/speechLogger/issues/">problema</a>.</p>
+<p>Como sempre, gosto de saber que meus complementos são úteis e para que as pessoas os estão usando.</p>
+</body>
+</html>

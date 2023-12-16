@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: NoBeepsSpeechMode 1.2\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2013-08-13 22:00+0200\n"
+"PO-Revision-Date: 2018-08-09 05:36+0330\n"
+"Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
+"Language-Team: NVDA Translation team <nvda-translations@groups.io>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+
+#. Translators: Message presented in input help mode,
+#. this string is partially present in .po localization file of NVDA for the various languages.
+msgid ""
+"Toggles between the speech modes of off and talk. When set to off NVDA will "
+"not speak anything. If talk then NVDA wil just speak normally."
+msgstr ""
+"حالتِ سخنگویی را از خاموش به گفتار و برعکس تغییر میدهد. اگر در حالت خاموش "
+"باشد NVDA هیچ چیز نخواهد خواند. اگر در حالت گفتار باشد NVDA بطور عادی کار "
+"میکند."
+
+#. Translators: the label of a message box dialog.
+msgid ""
+"You have installed an old and incompatible version of this add-on. Do you "
+"want to uninstall the old version?"
+msgstr ""
+"شما یک نسخه‌ی قدیمی و ناسازگار از این افزونه را نصب کرده‌اید. آیا میخواهید "
+"نسخه‌ی قدیمی را حذف کنید؟"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall old add-on"
+msgstr "حذفِ افزونه‌ی قدیمی"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "NoBeepsSpeechMode"
+msgstr "بدونِ حالتِ گفتاریِ بوق"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid "Add-on to exclude Beeps from possible speech modes pressing NVDA+s"
+msgstr ""
+"افزونه‌ای برای خارج کردنِ حالتِ بوق از حالت‌های گفتاریِ موجود هنگامِ فِشُردنِ NVDA+S"
+
+#~ msgid "Opens documentation for %s"
+#~ msgstr "سند را برای %s باز میکند"

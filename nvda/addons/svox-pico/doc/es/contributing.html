@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>SVOX Pico TTS Voices 3.3-dev</title>
+</head>
+<body>
+<h1>Colaborando a este proyecto.</h1>
+<h2>Donaciones.</h2>
+<p>Si te gusta mi proyecto o este software es útil para  ti en tu vida diaria y te gustaría contribuir de alguna manera, puede donar a través de paypal en el
+  <a href="https://paypal.me/davicm">enlace donar.</a></p>
+<p>déjame saber si deseas escribir un mensaje o promover un enlace en la sección colaboración.</p>
+<h2>Aviso importante.</h2>
+<p>Este controlador se bifurcó desde una versión anterior desarrollada por los autores de NVDA. Lamentablemente, no pude obtener el repositorio oficial.</p>
+<h2>Corrección de errores y nuevas características.</h2>
+<p>Si deseas solucionar un error o agregar una nueva característica, deberás   hacer un fork de este repositorio.</p>
+<p>### Bifurcando el repositorio.
+  Si esta es tu primera contribución, primero deberás hacer un "fork" del repositorio "PicoTTS-NVDA" en GitHub:</p>
+<ol>
+<li>Hacer un fork de este repositorio en tu cuenta de GitHub.</li>
+<li>Clona el repositorio una vez que has hecho  la bifurcación localmente: "git clone yourRepoUrl".</li>
+<li>Añade este repositorio en tu repositorio bifurcado desde una línea de comandos:<br />
+  "git remote add davidacm https://github.com/davidacm/PicoTTS-NVDA.git".</li>
+<li>fetch para recuperar mis ramas:<br />
+  "git fetch davidacm".</li>
+<li>Saltar a la rama master   local: "git checkout master".</li>
+<li>Ajustar  el master local para usar el  master davidacm como su upstream:<br />
+  "git branch -u davidacm/master".  </li>
+</ol>
+<h3>Pasos antes de la codificación.</h3>
+<p>Debes usar una rama "tema" por separado para cada incidencia o característica. Todo el código generalmente debe basarse en el último commit en la rama master oficial en el momento en que comienzas el trabajo.
+  Entonces, antes de comenzar a trabajar, haz lo siguiente:</p>
+<ol>
+<li>Recuerda los pasos de la sección "Bifurcando el repositorio".</li>
+<li>Checkout para saltar a la rama master: "git checkout master".</li>
+<li>Actualizar el master local: "git pull".</li>
+<li>Crear una nueva rama basada en la   rama master actualizada: "git checkout -b TuNuevaRama".</li>
+<li>Escribe tu código.</li>
+<li>Añade tu trabajo  para tu próxima confirmación (commited) (limpiar archivos no deseados primero): git "add ."</li>
+<li>Crear una confirmación (commit): "git commit" y escribe el mensaje del commit.</li>
+<li>Enviar (push) tu rama en tu repositorio: "git push". Si la rama no existe, Git te dirá cómo lidiar con esto.</li>
+<li>Solicitud de integración (Pull Request) en mi repositorio.</li>
+</ol>
+</body>
+</html>

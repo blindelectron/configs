@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Clock 24.04.0</title>
+</head>
+<body>
+<h1>Clock and calendar Add-on for NVDA</h1>
+<ul>
+<li>Autorzy: Hrvoje Katić, Abdel i współpracownicy NVDA</li>
+<li>Pobierz <a href="https://addons.nvda-project.org/files/get.php?file=cac">wersja stabilna</a></li>
+<li>Pobierz <a href="https://addons.nvda-project.org/files/get.php?file=cac-dev">Wersja rozwojowa</a></li>
+<li>Zgodność z NVDA: 2019.3 i nowsze</li>
+</ul>
+<p>Ten dodatek umożliwia zaawansowane funkcje zegara, timera alarmowego i
+kalendarza dla NVDA.</p>
+<p>NvDA można skonfigurować tak, aby ogłaszała godzinę i datę w formatach
+innych niż domyślnie dostępne w systemie Windows. Dodatkowo można uzyskać
+bieżący dzień, numer tygodnia, a także pozostałe dni przed końcem bieżącego
+roku, a także ustawić automatyczne ogłaszanie czasu w określonym
+interwale. W dodatku wbudowane są również funkcje stopera i timera alarmów,
+które pozwalają zaplanować zadania, takie jak kopiowanie plików,
+instalowanie programów lub gotowanie posiłków.</p>
+<p>Uwagi:</p>
+<ul>
+<li>jeśli zainstalujesz dodatek jako aktualizację, podczas procesu instalacji
+  kreator wykryje, czy stara konfiguracja jest zgodna z nową i zaoferuje jej
+  poprawienie przed instalacją, musisz tylko sprawdzić poprawność przycisku
+  OK, aby to potwierdzić.</li>
+<li>W systemie Windows 10 lub nowszym możesz używać aplikacji Alarmy i zegar
+  do zarządzania stoperami i timerami.</li>
+</ul>
+<h2>Skróty klawiszowe</h2>
+<ul>
+<li>NVDA+F12: pobierz aktualny czas</li>
+<li>NVDA+F12 dwukrotnie szybko wciśnięty: pobierz bieżącą datę</li>
+<li>NVDA+F12 naciskana trzy razy szybko: raportuje bieżący dzień, numer
+  tygodnia, bieżący rok i pozostałe dni przed końcem roku</li>
+<li>NVDA+Shift+F12: wejdź w warstwę zegara</li>
+</ul>
+<h2>Nieprzypisane polecenia</h2>
+<p>Następujące polecenia nie są domyślnie przypisywane; Jeśli chcesz je
+przypisać, użyj okna dialogowego Gesty wprowadzania, aby dodać
+niestandardowe polecenia. Aby to zrobić, otwórz menu NVDA, Preferencje, a
+następnie Gesty wprowadzania. Rozwiń kategorię Zegar, a następnie znajdź
+nieprzypisane polecenia z poniższej listy i wybierz "Dodaj", a następnie
+wprowadź gest, którego chcesz użyć.</p>
+<ul>
+<li>Upłynął i pozostały czas przed kolejnym alarmem. dwukrotne naciśnięcie
+  tego gestu spowoduje anulowanie następnego alarmu.</li>
+<li>Zatrzymaj aktualnie odtwarzanie dźwięku alarmu.</li>
+<li>Wyświetl okno dialogowe Zaplanuj alarmy.</li>
+</ul>
+<h2>Polecenia warstwowe</h2>
+<p>Aby używać poleceń warstwowych, naciśnij NVDA+Shift+F12, a następnie 1 z
+poniższych klawiszy:</p>
+<ul>
+<li>S: Uruchamia, resetuje lub zatrzymuje stoper</li>
+<li>R: Resetuje stoper do 0 bez ponownego uruchamiania</li>
+<li>Odp .: podaje czas, który upłynął i pozostały do następnego alarmu</li>
+<li>T: otwiera okno dialogowe zaplanuj alarmy.</li>
+<li>C: Anuluj następny alarm</li>
+<li>Spacja: Wypowiada bieżący stoper lub minutnik</li>
+<li>p: Jeśli alarm jest zbyt długi, pozwala go zatrzymać</li>
+<li>H: Lista wszystkich poleceń warstwowych (Pomoc)</li>
+</ul>
+<h2>Konfiguracja i użytkowanie</h2>
+<p>Aby skonfigurować funkcjonalność zegara, otwórz menu NvDA, Preferencje, a
+następnie Ustawienia i skonfiguruj następujące opcje z panelu Zegar:</p>
+<ul>
+<li>Format wyświetlania godziny i daty: użyj tych pól kombi, aby skonfigurować
+  sposób, w jaki NVDA będzie ogłaszać godzinę i datę po naciśnięciu NVDA +
+  F12 odpowiednio raz lub dwa razy.</li>
+<li>Interwał: wybierz interwał ogłaszania czasu z tego pola kombi (wyłączone,
+  co 10 minut, 15 minut, 30 minut lub co godzinę).</li>
+<li>Zapowiedź czasu (włączona, jeśli interwał nie jest wyłączony): wybierz
+  między mową a dźwiękiem, tylko dźwiękiem lub tylko mową.</li>
+<li>Dźwięk dzwonka zegara (włączony, jeśli interwał nie jest wyłączony):
+  wybierz dźwięk dzwonka zegara.</li>
+<li>Godziny ciszy (włączone, jeśli interwał nie jest wyłączony): zaznacz to
+  pole wyboru, aby skonfigurować zakres godzin ciszy, w których automatyczne
+  ogłaszanie czasu nie powinno mieć miejsca.</li>
+<li>Format czasu ciszy w godzinach pracy (włączony, jeśli włączone są godziny
+  ciszy): wybierz sposób wyświetlania opcji godzin ciszy (format 12-godzinny
+  lub 24-godzinny).</li>
+<li>Godziny ciszy rozpoczynają i kończą: wybierz zakres godzin i minut dla pól
+  kombi godziny i minut ciszy z godzin i minut.</li>
+</ul>
+<p>Aby zaplanować alarmy, otwórz menu NVDA, Narzędzia, a następnie wybierz
+Zaplanuj alarmy. Zawartość okna dialogowego obejmuje:</p>
+<ul>
+<li>Czas trwania alarmu w: wybierz czas trwania alarmu/timera między
+  godzinami, minutami i sekundami.</li>
+<li>Czas trwania: wprowadź czas trwania alarmu w urządzeniu określonym
+  powyżej.</li>
+<li>Dźwięk alarmu: wybierz dźwięk alarmu, który ma być odtwarzany.</li>
+<li>Przyciski zatrzymania i wstrzymania: zatrzymaj lub wstrzymaj długi dźwięk
+  alarmu.</li>
+</ul>
+<p>Kliknij przycisk OK, a pojawi się komunikat informujący o wybranym czasie
+trwania alarmu.</p>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

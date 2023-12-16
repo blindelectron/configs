@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced tones 2.2</title>
+</head>
+<body>
+<h1>Complemento Enhanced tones para NVDA.</h1>
+<p>Este complemento cambia la forma de gestionar los tonos en NVDA para hacer el proceso más eficiente.</p>
+<p>Además, este complemento implementa varios generadores de ondas para que el usuario pueda personalizar el sonido del pitido. Te permite implementar más generadores muy fácilmente.</p>
+<p>Si está interesado en crear su propio generador de ondas e integrarlo en este complemento, consulte la sección para desarrolladores.</p>
+<h2>Características:</h2>
+<ul>
+<li>Mejora el proceso de tonos al reproducir el tono en fragmentos hasta que se completa o se interrumpe con un nuevo tono.</li>
+<li>Implementa varios tipos de generadores de ondas, que suenan muy diferentes entre sí. Diviértete probando los diferentes generadores, ¡tal vez alguno te guste!</li>
+<li>Si un tono es interrumpido por otro de la misma frecuencia, la onda no se interrumpirá, solo prolongará su duración. Evitando así los molestos saltos cuando 2 o más tonos se reproducen  rápidamente. no siempre es posible evitar esta situación, debido a diferentes factores.</li>
+<li>Si un tono es interrumpido por otro de diferente frecuencia, se realizará un barrido de frecuencia para saltar a la nueva frecuencia. Esto también le permite evitar saltos entre tonos, cambiando de una frecuencia a otra suavemente para el oído.</li>
+</ul>
+<p>Las últimas dos funciones permiten un sonido más agradable cuando se usan funciones como el seguimiento del mouse con sonido.</p>
+<h2>Descarga.</h2>
+<p>El último release se puede <a href="https://davidacm.github.io/getlatest/gh/davidacm/enhancedTones">Descargar en este enlace.</a></p>
+<h2>Idea inicial de este complemento.</h2>
+<p>Este complemento se creó para resolver algunos problemas con tarjetas de sonido específicas, esos problemas son menos comunes ahora que tenemos mejores controladores de tarjetas de sonido. Pero algunas personas informaron que esos problemas aún están presentes, como alta latencia al reproducir los tonos, o no reproducir los primeros tonos en absoluto. Actualmente, este complemento posee más funcionalidades, por lo que puede ser útil incluso si no tiene problemas con la generación de tonos nativos. Intente esto usted mismo y vea si funciona para usted.</p>
+<h2>Descripción de la función original "beep" de NVDA.</h2>
+<p>Para estar en contexto. Cuando NVDA emite un tono, hace lo siguiente</p>
+<ol>
+<li>importa generateBeep.</li>
+<li>detiene el reproductor.</li>
+<li>genera la forma de onda para el tono.</li>
+<li>envía el tono generado al reproductor.</li>
+</ol>
+<p>Esto puede ser problemático en algunas tarjetas de sonido, como altos retrasos al reproducir los tonos, o no reproducir los primeros tonos en absoluto. Parece que el problema ocurre al detener el reproductor, especialmente cuando esto se repite rápidamente.</p>
+<p>Yo tuve este problema en el pasado con uno de mis ordenadores. Así que esa fue la razón para crear este complemento. Mi complemento no detiene el reproductor, y eso arregló el problema.</p>
+<h2>Descripción de la función "beep" del complemento.</h2>
+<ol>
+<li>Primero, se crea un hilo de fondo, este hilo se encargará de los pitidos y la comunicación con la salida del reproductor.</li>
+<li>El hilo se mantiene a la espera de datos para emitir un beep, utilizando un bloqueo de eventos.</li>
+<li>Cuando se llama a la función beep, la información se envía al hilo y se libera el bloqueo del hilo.</li>
+<li>El hilo llama a la función que inicia la generación de la onda para el tono, y bloquea la señal de evento de nuevo.</li>
+<li>Pide al generador la forma de onda en fragmentos y envía cada trozo al reproductor de salida. El generador puede generar la forma de onda en paralelo mientras se envía, o generar toda la forma de onda al principio.</li>
+<li>Si mientras se envía la onda  al reproductor se libera el bloqueo, significa que se recibió una petición de un nuevo beep, entonces este deja de enviar los datos y salta al paso número 3 para emitir el nuevo beep requerido.</li>
+<li>Si toda la forma de onda fue enviada al reproductor sin interrupción, salta al paso número 2 para esperar otra señal de beep. Recuerde que el bloqueo se bloqueó en el paso 4 así que el paso 2 quedará en espera nuevamente.</li>
+</ol>
+<p>De esta manera, el reproductor de salida nunca es detenido y el proceso es más eficiente.</p>
+<h2>Notas sobre este complemento.</h2>
+<p>Si pruebas este complemento, incluso si no tienes problemas con la forma original de generación de tonos, puedes ver que los tonos son más fluidos, especialmente en los tonos que se repiten rápidamente.</p>
+<p>Además, este complemento implementa varios generadores de tonos, el generador sinusoidal está habilitado de forma predeterminada. Pero puedes cambiarlo al generador de tonos de NVDA.
+Mis generadores de tonos personalizados están escritos puramente en Python. Por lo tanto, son menos eficientes que el generador de tonos NVDA, pero la diferencia no se nota debido a la mejor forma de gestionar el proceso de reproducción y a que la onda no es generada por completo desde el principio, si no que es generada al vuelo durante la reproducción.</p>
+<p>Decidí crear otros generadores de tonos para permitir a los usuarios personalizar el sonido del pitido y a algunas personas les gustó, incluyéndome a mí. Un usuario con pérdida auditiva informó que se sentía más cómodo con el generador de tonos sinusoidales.</p>
+<p>Nota: La generación de tonos no es lo mismo que la función de salida de los tonos a su tarjeta de sonido. Así que incluso si usas el generador de tonos nativo de NVDA, seguirás viendo mejoras.</p>
+<h2>Descarga.</h2>
+<pre><code>La última versión está disponible en
+</code></pre>
+<p><a href="https://davidacm.github.io/getlatest/gh/davidacm/EnhancedTones">este enlace</a></p>
+<h2>Requisitos</h2>
+<p>Necesitas NVDA 2018.3 o posterior.</p>
+<h2>Instalación</h2>
+<p>Sólo tienes que instalarlo como un complemento de NVDA.</p>
+<h2>Uso</h2>
+<p>La funcionalidad del complemento se habilitará una vez que lo instales.<br />
+  Para habilitarla o deshabilitarla, ve a la configuración de NVDA y selecciona "Tonos mejorados". En esa categoría puedes establecer los siguientes parámetros:</p>
+<ul>
+<li>Habilitar el complemento. Si se deshabilita, la función original será usada en su lugar.</li>
+<li>Generador productor de tonos: aquí puedes cambiar el generador de tonos. Seleccione uno y presione enter para guardar la configuración, luego pruebe el generador seleccionado.</li>
+</ul>
+<h2>Para desarrolladores.</h2>
+<p>Si desea implementar nuevas formas de onda de generación de tonos, simplemente haga una clase similar a los generadores de tonos disponibles en el código y regístrelo usando la función registerGenerator.</p>
+<p>Para cada clase de generador, debe proporcionar los métodos id, name, startGenerate y nextChunk.</p>
+<p>puede implementar la clase AbstractGenerator que implementa los métodos más importantes. Los pasos mínimos para extender esta clase correctamente son implementar la función sampleGenerator, y debe proporcionar una identificación y un nombre para crear un generador válido. Es más fácil que crear un generador desde cero.</p>
+<h2>contribuciones, reportes y donaciones</h2>
+<p>Si te gusta mi proyecto o este software te es útil en tu vida diaria y quieres contribuir de alguna manera, puedes donar a través de los siguientes métodos:</p>
+<ul>
+<li><a href="https://paypal.me/davicm">PayPal.</a></li>
+<li><a href="https://ko-fi.com/davidacm">Ko-fi.</a></li>
+<li><a href="https://davidacm.github.io/donations/">criptomonedas y otros métodos.</a></li>
+</ul>
+<p>Si quieres corregir errores, informar de problemas o nuevas características, puedes contactar conmigo en: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>.</p>
+<p>O en el repositorio de github de este proyecto:
+  <a href="https://github.com/davidacm/enhancedtones">enhanced tones en GitHub</a></p>
+<pre><code>Puedes obtener la última versión de este complemento en ese repositorio.
+</code></pre>
+</body>
+</html>

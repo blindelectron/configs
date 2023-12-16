@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Time Zoner 3.02</title>
+</head>
+<body>
+<h1>Time Zoner</h1>
+<p>An add-on for NVDA to announce the time in selected timezones.</p>
+<h2>Information</h2>
+<ul>
+<li>Author: Munawar Bijani</li>
+<li>Download <a href="https://github.com/munawarb/NVDA-Time-Zoner/releases/latest">stable version</a></li>
+<li>Compatibility: NVDA 2021.1 and later</li>
+</ul>
+<h2>Introduction</h2>
+<p>For a very long time now, Windows has had the ability to show multiple clocks from different timezones. Users can customize the clocks and they become instantly visible.</p>
+<p>Unfortunately, for users of screen readers such as <a href="https://www.nvaccess.org/">NVDA</a> or <a href="http://www.freedomscientific.com">JAWS</a>, there is no simple way to get this information. These screen readers don't support additional clocks, so blind computer users have to resort to other, third-party solutions, some of which are paid.</p>
+<p>A lot of the work I do involves working across timezones, and eventually I got tired of manually converting times in my head, especially for timezones that aren't aligned to the hour (such as India which is +5:30 UTC.)</p>
+<p>For these reasons, I've created this add-on for NVDA. The add-on lets you hear times in selected timezones through the use of the "timezone ring."</p>
+<h2>Usage</h2>
+<p>You can <a href="https://github.com/munawarb/NVDA-Time-Zoner/releases/latest">download the latest release here</a>. The add-on supports both the legacy and the Python 3 version of NVDA.</p>
+<p>Once the add-on is installed, you can configure it by activating NVDA's settings dialog and going down to the "Time Zoner" category.</p>
+<p>Select items in the timezone list to add them to your timezone ring. Deselect (or press the "Remove" button)  to remove them from the ring.</p>
+<p>You can also reorder the timezones in the ring by using the "Move Up" and "Move Down" buttons.</p>
+<p>Use the "Filter" box to search for specific timezones.</p>
+<p>Check the "Announce abbreviated timezones" box to hear abbreviated timezone names such as IST or GMT. Uncheck the box to hear the full timezone names such as Asia/Kolkata or Europe/London.</p>
+<p>You can configure what information you hear when querying the time in a timezone by checking/unchecking the boxes in the "Components" group:</p>
+<ul>
+<li>Continent: Announce the continent for the current timezone.</li>
+<li>Country: Announce the country for the current timezone.</li>
+<li>City: Announce the city for the current timezone.</li>
+<li>Time: Announce the time for the current timezone.</li>
+<li>Date: Announce the date for the current timezone.</li>
+<li>Announce timezone at (Beginning or End): Say the timezone first, or as the last thing you hear. For example, if you wish to hear "BST 9:42 AM", select the "Beginning" radio button. If you wish to hear 9:42 AM (BST)", select the "End" radio button.</li>
+</ul>
+<p>When you are finished configuring your preferences, press the "OK" button.</p>
+<p>From here on, you can press the following keys to announce times in your timezone ring:</p>
+<ul>
+<li>NVDA+ALT+UP ARROW: Announce the previous timezone.</li>
+<li>NVDA+ALT+DOWN ARROW: Announce the next timezone.</li>
+<li>NVDA+ALT+T: Announce the last timezone you were pointing at in your timezone ring. Pressing this key multiple times in rapid succession will move forward through your timezone ring but will not change the timezone at which you are pointing.</li>
+<li>To configure these keys, use the "Time Zoner" category in the "Input Gestures" dialog.</li>
+</ul>
+<p>When you first install the add-on, NVDA will default to your local timezone if it can get it.</p>
+<h2>Acknowledgements</h2>
+<p>Thanks to <a href="https://github.com/ruifontes">@ruifontes</a> for helping significantly to make this add-on compliant with NVAccess add-on code guidelines. Thanks to Myla for testing the add-on on NVDA 2019.2.</p>
+<h2>Change Log</h2>
+<h3>Version 3.01, released on 03/26/2022</h3>
+<ul>
+<li>Blocked scripts from running in NVDA Secure Mode.</li>
+</ul>
+<h3>Version 3.00, released on 03/24/2022</h3>
+<ul>
+<li>Now compatible with version 2022.1 of NVDA.</li>
+<li>Fixed an issue where two configuration categories would show up if the add-on was reloaded (<a href="https://github.com/munawarb/NVDA-Time-Zoner/issues/10">#10</a>)</li>
+</ul>
+<h3>Version 2.00, released on 07/14/2021</h3>
+<ul>
+<li>Now compatible with version 2021.1 of NVDA.</li>
+<li>BREAKING CHANGE: This add-on is no longer compatible with legacy versions of NVDA. Please use version 1.06 or earlier for legacy support.</li>
+</ul>
+<h3>Version 1.05, released on 07/26/2020</h3>
+<ul>
+<li>Fixed a crash when announcing general timezones such as UTC or EST (<a href="https://github.com/munawarb/NVDA-Time-Zoner/issues/7">#7</a>)</li>
+</ul>
+<h3>Version 1.04, released on 04/19/2020</h3>
+<ul>
+<li>Timezone announcements are now customizable. In addition, pressing NVDA+ALT+UP ARROW or NVDA+ALT+DOWN ARROW will cycle through the timezone ring, making the add-on user-friendly for configurations with many timezones set (<a href="https://github.com/munawarb/NVDA-Time-Zoner/issues/6">#6</a>)</li>
+<li>The "Input Gestures" dialog uses a new category, "Time Zoner", to make it easier to find gestures for the Time Zoner add-on (<a href="https://github.com/munawarb/NVDA-Time-Zoner/issues/5">#5</a>)</li>
+<li>Settings are configured using the NVDA Settings dialog instead of through a stand-alone dialog.</li>
+</ul>
+<h3>Version 1.03, released on 03/21/2020</h3>
+<ul>
+<li>The add-on no longer crashes if the default timezone can't be set.</li>
+<li>Fixed an issue with relative links in the documentation.</li>
+</ul>
+<h3>Version 1.02, released on 03/18/2020</h3>
+<ul>
+<li>When installing a new version of this add-on, the settings from a previous installation are no longer lost.</li>
+<li>Other changes to conform to NVDA add-on standard compliance.</li>
+</ul>
+<h3>Version 1.01, released on 03/12/2020</h3>
+<ul>
+<li>The time and date are announced in the user's locale, meaning that 24-hour time is honored if set.</li>
+<li>NVDA will announce either the abbreviated or full timezone depending on the user's setting in the Timezone Ring dialog. For example, it will either say Europe/London, or it will say GMT or BST. This setting is controlled by checking or unchecking the "Announce abbreviated timezones" checkbox.</li>
+<li>Add-on includes translator comments (@ruifontes.)</li>
+<li>Add-on now includes header comments (@ruifontes.)</li>
+<li>The Escape key closes the Timezone Ring Dialog (@ruifontes.)</li>
+<li>The menu item to open the Timezone Ring dialog is now named appropriately (@ruifontes.)</li>
+<li>NVDA now defaults to the local timezone on installation of this add-on, if the local timezone is available.</li>
+<li>Support for multiple timezones through the use of a timezone ring.</li>
+<li>This add-on now uses the key NVDA+ALT+T to prevent conflict with the Clock add-on.</li>
+<li>The timezone selector dialog now has a filter box. NVDA will announce the number of results as the user starts typing into the filter field.</li>
+<li>Python 2 support</li>
+<li>The date and time is now announced in a separate thread to prevent hanging the NVDA thread in case retrieval takes a little while.</li>
+<li>The timezone selector dialog now has a cancel button and no longer prevents NVDA from shutting down.</li>
+</ul>
+</body>
+</html>

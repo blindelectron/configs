@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Clock 24.04.0</title>
+</head>
+<body>
+<h1>Complemento de Reloxo e calendario para NVDA</h1>
+<ul>
+<li>Autores: Hrvoje Katić, Abdel e contribuíntes co NVDA</li>
+<li>Descargar  <a href="https://addons.nvda-project.org/files/get.php?file=cac">versión estable</a></li>
+<li>Descarga <a href="https://addons.nvda-project.org/files/get.php?file=cac-dev">versión de desenvolvemento</a></li>
+<li>Compatibilidade con NVDA: 2019.3 en diante</li>
+</ul>
+<p>Este complemento habilita a funcionalidade avanzada de reloxo, temporizador
+con alarma e calendario para NVDA.</p>
+<p>Podes configurar NVDA para anunciar hora e data en formatos distintos dos
+que fornece Windows por defecto. Adicionalmente, podes obter o día actual, o
+número de semana, así como os días restantes ata o final do ano actual, e
+tamén podes configurar o anuncio automático da hora no intervalo
+especificado. Tamén hai características de cronómetro e temporizador con
+alarma integradas no complemento que che permiten cronometrar as túas
+tarefas, como a copia de arquivos, a instlaación de programas ou o cociñado
+de alimentos.</p>
+<p>Notas:</p>
+<ul>
+<li>se instalas o complemento como unha actualización, durante o proceso de
+  instalación, o asistente detecta se a configuración vella é compatible coa
+  nova e ofrece corrixila antes da instalación, de forma que só tes que
+  validar o botón Aceptar para confirmalo.</li>
+<li>En Windows 10 e posterior, podes utilizar a aplicación Alarmas e Reloxo
+  para administrar cronómetro e temporizadores.</li>
+</ul>
+<h2>Teclas de ordes</h2>
+<ul>
+<li>NVDA+F12: obter hora actual</li>
+<li>NVDA+F12 pulsado dúas veces rapidamente: obter data actual</li>
+<li>NVDA+F12 premida tres veces rapidamente: obtén o número de día, o número
+  de semana, o ano actual e o número de días restante ata o final do ano</li>
+<li>NVDA+Shift+F12: entrar na capa do reloxo</li>
+</ul>
+<h2>Ordes non asignadas</h2>
+<p>As seguintes ordes están sen asignar por defecto; se desexas asignalas,
+utiliza o diálogo de Xestos de Entrada para engadir ordes
+persoalizadas. Para facelo, abre o menú NVDA, Preferencias, logo Xestos de
+Entrada. Expande a categoría Clock, despois localiza ordes sen asignar da
+lista inferior e selecciona "Engadir", logo escribe o xesto que queiras
+utilizar.</p>
+<ul>
+<li>Tempo transcorrido e restante antes da seguinte alarma. Premer este xesto
+  dúas veces rapidamente cancelará a seguinte alarma.</li>
+<li>Deter son de alarma en reprodución.</li>
+<li>Amosar a caixa de diálogo de programación de alarmas.</li>
+</ul>
+<h2>Ordes en capa</h2>
+<p>Para utilizar as ordes en capa, preme NVDA+Shift+F12 seguido dunha das
+seguintes teclas:</p>
+<ul>
+<li>S: Inicia, detén ou reinicia o cronómetro</li>
+<li>R: Restablece o cronómetro a 0 sen reinicialo</li>
+<li>A: Fornece o tempo transcorrido e restante ata a vindeira alarma</li>
+<li>T: abre o diálogo de programación de alarmas.</li>
+<li>C: Cancelar a vindeira alarma</li>
+<li>Espazo: Anuncia o temporizador actual do cronómetro ou da conta atrás</li>
+<li>p: Se unha alarma é demasiado longa, permite detela</li>
+<li>H: Listar tódolos comandos en capa (Help=Axuda)</li>
+</ul>
+<h2>Configuración e uso</h2>
+<p>Para configurar a funcionalidade de reloxo, abre o menú de NVDA,
+Preferencias, logo Opcions, e configura as seguintes opcións dende o panel
+de Clock:</p>
+<ul>
+<li>Formato de amosado de hora e data: utiliza estes cadros combinados para
+  configurar como anunciará NVDA a hora e a data cando premas NVDA+F12 unha
+  vez ou dúas veces rapidamente, respectivamente.</li>
+<li>Intervalo: escolle o intervalo de anunciado da hora neste cadro combinado
+  (desactivado, cada 10 minutos, 15 minutos, 30 minutos, ou cada hora).</li>
+<li>Anuncio da hora (dispoñible se o intervalo non está desactivado): escolle
+  entre fala e son, só son ou só fala.</li>
+<li>Son de campá do reloxo (dispoñible se intervalo non está desactivado):
+  selecciona o son da campá do reloxo.</li>
+<li>Horas caladas (dispoñible se o intervalo non está desactivado): selecciona
+  esta caixa de verificación para configurar un rango de horas caladas onde
+  non debería anunciarse a hora automaticamente.</li>
+<li>Formato de hora das horas caladas (dispoñible se as horas caladas están
+  activadas): selecciona como se presentan as opcións das horas caladas
+  (formato de 12 ou 24 horas).</li>
+<li>Horas de inicio e finalización das horas caladas: selecciona o rango de
+  hora e minuto para as horas caladas nos cadros combinados de horas e
+  minutos.</li>
+</ul>
+<p>Para programar alarmas, abre o menú de NVDA; Ferramentas, logo selecciona
+Programar alarmas. Os contidos do diálogo inclúen:</p>
+<ul>
+<li>Duración da alarma en: selecciona a duración da alarma/temporizador en
+  horas, minutos, e segundos.</li>
+<li>Duración: introduce a duración da alarma na unidade especificada
+  anteriormente.</li>
+<li>Son de alarma: selecciona o son de alarma a reproducir.</li>
+<li>Botóns deter e pausa: deter ou pausar un son de alarma longo.</li>
+</ul>
+<p>Faga click en OK, e un diálogo informarate da duración de alarma actualmente
+seleccionada.</p>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

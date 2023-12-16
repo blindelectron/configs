@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Place markers 34.0.0</title>
+</head>
+<body>
+<h1>Lesezeichen</h1>
+<ul>
+<li>Autoren: Noelia und Chris.</li>
+</ul>
+<p>Diese NVDA-Erweiterung dient zum Speichern und Suchen bestimmter
+Textzeichenfolgen oder Lesezeichen. Es kann auf Webseiten oder Dokumenten im
+Lesemodus in NVDA verwendet werden. Es kann auch zum Speichern oder
+Durchsuchen von Textstrings in mehrzeiligen Steuerelementen verwendet
+werden; wenn es in diesem Fall nicht möglich ist, den Cursor zu
+aktualisieren, wird der entsprechende String in die Zwischenablage kopiert,
+so dass er mit anderen Tools durchsucht werden kann.  Das Plugin speichert
+die angegebenen Strings und Lesezeichenin-Dateien, deren Name auf dem Titel
+und der URL des aktuellen Dokuments basiert.  Diese NVDA-Erweiterung basiert
+auf SpecificSearch und Bookmark&amp;Search, die vom gleichen Autor entwickelt
+wurden. Sie sollten diese deinstallieren, um dieses Plugin zu verwenden, da
+sie gemeinsame Tastenkombinationen und Funktionen haben.</p>
+<h2>Tastenkombinationen:</h2>
+<ul>
+<li>STRG+Umschalt+NVDA+f: Öffnet einen Dialog mit einem Eingabefeld, in dem
+  die zuletzt gespeicherte Suche angezeigt wird. In diesem Dialog können Sie
+  auch die zuvor gespeicherten Suchen aus einem Kombinationsfeld auswählen
+  oder die ausgewählte Zeichenkette über ein Kontrollkästchen aus dem
+  Verlauf entfernen. Sie können wählen, ob der im Eingabefeld enthaltene
+  Text im Verlauf Ihrer gespeicherten Texte aufgenommen werden soll. Wählen
+  Sie abschließend eine Aktion aus der nächsten Gruppe von Auswahlschaltern
+  aus (weiter suchen, Rückwärtssuche oder keine Suche) und geben Sie an, ob
+  NVDA die Groß- und Kleinschreibung berücksichtigen soll. Wenn Sie auf OK
+  drücken, sucht NVDA nach dieser Zeichenfolge.</li>
+<li>Strg+Umschalt+NVDA+Y: Speichert die aktuelle Position als
+  Lesezeichen. Wenn Sie dem einen Namen vergeben möchten, wählen Sie vor dem
+  Speichern einen Namen für den Text an dieser Position aus.</li>
+<li>STRG+Umschalt+NVDA+Entf: Löscht das Lesezeichen an der aktuellen Position.</li>
+<li>NVDA+Y: Wechselt zum nächsten Lesezeichen.</li>
+<li>Umschalt+NVDA+Y: Wechselt zum vorherigen Lesezeichen.</li>
+<li>Nicht zugewiesen: Zeigt die Datei, in welcher die Lesezeichen gespeichert
+  werden im Lesemodus, ohne deren Erweiterung an.</li>
+<li>Alt+NVDA+Y: Öffnet ein Dialogfeld mit den für dieses Dokument
+  gespeicherten Lesezeichen. Sie können zu jedem Lesezeichen eine Notiz
+  schreiben; Klicken Sie auf die Schaltfläche "Notiz speichern", um die
+  Änderungen zu speichern. Durch klicken auf die Schaltfläche "Löschen"
+  können Sie das ausgewählte Lesezeichen entfernen. Mit der Schaltfläche
+  "OK" können Sie zu der ausgewählten Position wechseln.</li>
+<li>Nicht zugewiesen: Speichert die Position als temporäres Lesezeichen.</li>
+<li>Nicht zugewiesen: springt zum temporären Lesezeichen im aktuellen
+  Dokument.</li>
+<li>Nicht zugeordnet: Findet das nächste Vorkommen des zuletzt gesuchten
+  Textes in einem bestimmten Dokument.</li>
+<li>Nicht zugeordnet: Findet das vorherige Vorkommen des zuletzt gesuchten
+  Textes in einem bestimmten Dokument.</li>
+</ul>
+<h2>Lesezeichen im Untermenü (NVDA+N)</h2>
+<p>Über das Untermenü Lesezeichen in NVDA-Einstellungen können Sie auf folgende
+Elemente zugreifen:</p>
+<ul>
+<li>Suchanfragen: Öffnet einen Ordner, in dem zuvor gespeicherte Suchanfragen
+  abgelegt sind.</li>
+<li>Lesezeichen-Ordner: Öffnet einen Ordner mit den gespeicherten Lesezeichen.</li>
+<li>Lesezeichen-Ordner kopieren: Speichert eine Kopie des Lesezeichen-Ordners.</li>
+<li>Lesezeichen wiederherstellen: Stellt die Lesezeichen aus einem zuvor
+  gespeicherten Lesezeichen-Ordner wieder her.</li>
+</ul>
+<p>Anmerkung: Die Lesezeichen basieren auf der Position im Dokument (welche in
+Zeichen vom Dokumentanfang gemessen wird). Bei dynamischen Webseiten
+empfielt sich daher stattdessen Suchanfragen zu verwenden.</p>
+<h2>Änderungen in 24.0</h2>
+<ul>
+<li>Der Buchstabe Y wird anstelle von K in Tastenbefehlen wie NVDA+K,
+  Umschalt+NVDA+K, Alt+NVDA+K und Strg+Umschalt+NVDA+K verwendet.</li>
+<li>Kompatibel mit NVDA 2023.1.</li>
+</ul>
+<h2>Änderungen in 23.0</h2>
+<ul>
+<li>Die Erweiterung funktioniert wieder mit Microsoft Word.</li>
+</ul>
+<h2>Änderungen in 22.0</h2>
+<ul>
+<li>Es können Lesezeichen verschoben und gelöscht werden, wenn UIA aktiviert
+  ist, dank Abdel.</li>
+</ul>
+<h2>Änderungen in 21.0</h2>
+<ul>
+<li>Dank Abdel können Lesezeichen mit aktivierter UIA in Browsern, die auf
+  Chromium basieren, gespeichert werden.</li>
+</ul>
+<h2>Änderungen in 20.0</h2>
+<ul>
+<li>Benötigt NVDA 2022.1 oder neuer.</li>
+</ul>
+<h2>Änderungen in 19.0</h2>
+<ul>
+<li>Diese Erweiterung kann nicht mehr im geschüttzen Modus verwendet werden.</li>
+</ul>
+<h2>Änderungen in 18.0</h2>
+<ul>
+<li>Der Befehl zum zeigen von Pfaden zu Lesezeichen gibt aus, ob gespeicherte
+  Lesezeichen, Text für die erweiterte Suche, temporäre Lesezeichen für das
+  aktuelle Dokument vorhanden sind.</li>
+</ul>
+<h2>Änderungen in 17.0</h2>
+<ul>
+<li>Fehler behoben, der das Setzen von Lesezeichen in einigen Dokumenten
+  verhinderte.</li>
+<li>Zeichenketten korrigiert, sodass die Übersetzungen nun richtig
+  funktionieren.</li>
+</ul>
+<h2>Änderungen in 16.0</h2>
+<ul>
+<li>Kompatibel mit NVDA 2021.1 oder neuer (erforderlich).</li>
+<li>Beim Wechsel zu temporären Lesezeichen wird das Überspringen unterstützt.</li>
+<li>Bei Bedarf können Sie <a href="https://github.com/nvdaes/placeMarkers/releases">andere Versionen
+  herunterladen</a>.</li>
+</ul>
+<h2>Änderungen in 15.0</h2>
+<ul>
+<li>Wenn Sie sich im Suchmodus mit "Alles Lesen" ansagen lassen, hören die
+  Befehle "Nächste Suche suchen" und "Vorherige Suche suchen" nicht mehr auf
+  zu lesen, wenn die Option "Überfliegen des Lesens zulassen" aktiviert ist.</li>
+<li>Wenn das Dialogfeld "Spezifische Suche" nach dem Ausführen des Befehls
+  "Vorherige Suche suchen" geöffnet wird, wird die Option "Vorherige Suche"
+  ausgewählt.</li>
+</ul>
+<h2>Änderungen für 14.0</h2>
+<ul>
+<li>Der Befehl zum Kopieren des Namens der Datei, in der Lesezeichen
+  gespeichert werden, wurde durch einen Befehl ersetzt, der diesen
+  Dateinamen im Lesemodus anzeigt. Dies ist keiner Geste zugewiesen.</li>
+<li>Das Feld "suchen" überlappt nun nicht mehr das Feld "gespeicherter
+  Text". (Danke an Cyrille Bougot).</li>
+<li>Erfordert NVDA 2019.3 oder höher.</li>
+</ul>
+<h2>Änderungen in 13.0</h2>
+<ul>
+<li>Es wurden nicht zugewiesene Befehle hinzugefügt, um das nächste und
+  vorherige Auftreten des zuletzt gesuchten Textes in einem bestimmten
+  Dokument zu finden.</li>
+<li>Die spezifische Suche funktioniert auch, wenn das Dialogfeld "Info" von
+  NVDA geöffnet ist.</li>
+<li>Im Dialogfeld Spezifische Suche wird das Kontrollkästchen für die
+  Berücksichtigung der Groß-/Kleinschreibung aktiviert, wenn diese Option
+  für die letzte Suche ausgewählt wurde.</li>
+<li>Bei der Aktualisierung dieser Erweiterung werden die in der vorherigen
+  Version gespeicherten Lesezeichen und Zeichenketten aus der spezifischen
+  Suche automatisch in die neue Version kopiert, es sei denn, Sie möchten
+  ausdrücklich, dass diese aus dem Hauptkonfigurationsordner von NVDA
+  importiert werden.</li>
+<li>Wenn Sie den Dialog zum Kopieren von Lesezeichen verwenden und der
+  ausgewählte Ordner nicht "placeMarkersBackup" heißt, wird ein Unterordner
+  mit diesem Namen erstellt, um das Löschen von Verzeichnissen mit wichtigen
+  Daten wie Dokumente oder Downloads zu verhindern.</li>
+</ul>
+<h2>Änderungen für 12.0</h2>
+<ul>
+<li>Es wurde ein kritischer Fehler behoben, der dazu führte, dass NVDA beim
+  Versuch, den Notizen-Dialog zu öffnen, abstürzte, wenn chinesische Zeichen
+  ausgewählt wurden bevor Lesezeichen gespeichert wurden.</li>
+</ul>
+<h2>Änderungen in 11.0</h2>
+<ul>
+<li>Kompatibel mit NVDA 2018.3 oder neuer (erforderlich).</li>
+<li>Bei Bedarf können Sie die <a href="https://www.nvaccess.org/addonStore/legacy?file=pm-o">letzte Version</a>, die mit NVDA 2017.3
+  kompatibel ist herunterladen.</li>
+</ul>
+<h2>Änderungen in 10.0</h2>
+<ul>
+<li>In Microsoft Edge, vor allem in langen Dokumenten, werden bestimmte
+  Tastenkombinationen zur Anwendung weitergereicht ohne den Cursor zu einem
+  Lesezeichen zu bewegen, um Fehlermeldungen zu vermeiden. Dies gilt für
+  Tastenkombinationen, die für das Auswählen von Lesezeichen zugewiesen
+  wurden (z.B. NVDA+k, NVDA+Umschalt+k oder NVDA+Alt+k).</li>
+<li>Die gezielte Suche nach Lesezeichen funktioniert jetzt auch in Microsoft
+  Edge.</li>
+</ul>
+<h2>Änderungen in 9.0</h2>
+<ul>
+<li>Der NVDA-Cursor folgt dem System-Cursor, wenn Sie aus dem Dialog für
+  Notizen zu einem Lesezeichen springen.</li>
+<li>Der Befehl zum Auswählen des vorherigen Lesezeichens funktioniert wieder
+  ordnungsgemäß.</li>
+<li>Lesezeichen können aus dem Dialog für Notizen gelöscht werden.</li>
+<li>Nun können dokumentspezifische Tastenkombinationen im NVDA Eingabendialog
+  zugewiesen werden, um temporäre Lesezeichen in einem bestimmten Dokument
+  anzusteuern und zu speichern.</li>
+</ul>
+<h2>Änderungen in 8.0</h2>
+<ul>
+<li>Fragment-Identifikatoren aus den Dateinamen der Lesezeichen
+  entfernt. Dadurch werden Fehler im  ePUBREADER VitalSource Bookshelf
+  vermieden.</li>
+<li>Ein Notizen-Dialog wurde hinzugefügt, um Kommentare für gespeicherte
+  Lesezeichen zuzuordnen und an die ausgewählte Position zu verschieben.</li>
+</ul>
+<h2>Änderungen in 7.0</h2>
+<ul>
+<li>Der Dialog zum Speichern einer Zeichenkette für die spezifische Suche
+  wurde entfernt. Diese Funktionalität ist nun auch im Dialog Spezifische
+  Suche enthalten, der neu gestaltet wurde, um verschiedene Aktionen beim
+  Drücken der Schaltfläche OK zu ermöglichen.</li>
+<li>Die visuelle Darstellung der Dialoge wurde verbessert und entspricht dem
+  Erscheinungsbild der Dialoge in NVDA.</li>
+<li>Wenn Sie im Lesemodus den Befehl"Weiter suchen" oder"Rückwärtssuche"
+  ausführen, wird nun korrekt nach Groß- und Kleinschreibung gesucht, sofern
+  bei der ursprünglichen Suche die Groß- und Kleinschreibung beachtet wurde.</li>
+<li>Benötigt NVDA 2016.4 oder höher.</li>
+<li>Nun können Tastenkombinationen im NVDA Eingabendialog unter Einstellungen
+  zugewiesen werden, um die Dialogfelder Lesezeichen Kopieren und
+  Wiederherstellen aufzurufen.</li>
+<li>NVDA zeigt eine Meldung an, wenn Lesezeichen kopiert oder mit den
+  entsprechenden Dialogen wiederhergestellt wurden.</li>
+</ul>
+<h2>Änderungen in 6.0</h2>
+<ul>
+<li>Wenn die Funktionen der Erweiterung nicht verfügbar sind, werden die
+  Tastenkombinationen an die aktuelle Anwendung weitergereicht.</li>
+</ul>
+<h2>Änderungen in 5.0</h2>
+<ul>
+<li>Die Groß- und Kleinschreibung kann nun bei der Suche berücksichtigt
+  werden.</li>
+<li>Der Menüpunkt Hilfe wurde aus dem Menü entfernt.</li>
+<li>Tastenkürzel sind nun intuitiver.</li>
+</ul>
+<h2>Änderungen in 4.0</h2>
+<ul>
+<li>Fragment-Identifikatoren aus den Dateinamen der Lesezeichen
+  entfernt. Dadurch werden Fehler in der Erweiterung ePUBREADER für Firefox
+  vermieden.</li>
+<li>Die Hilfe zur Erweiterung ist nun über den Erweiterungs-Manager verfügbar.</li>
+</ul>
+<h2>Änderungen in 3.1</h2>
+<ul>
+<li>Aktualisierte Übersetzungen und neue Sprache.</li>
+<li>Die Position von Lesezeichen wird nicht während der Navigation während
+  alles  lesen ausgegeben..</li>
+</ul>
+<h2>Änderungen in 3.0</h2>
+<ul>
+<li>Unterstützung für "Navigation während alles lesen" hinzugefügt.</li>
+</ul>
+<h2>Änderungen in 2.0</h2>
+<ul>
+<li>Option zum Speichern und Löschen verschiedener Suchbegriffe für jede Datei
+  wurde hinzugefügt.</li>
+<li>Fehler behoben, wenn Pfad-Angaben nichtlateinische Zeichen enthalten.</li>
+<li>Tastenkombinationen können nun mittels des Eingaben-Dialogs von NVDA
+  geändert werden.</li>
+</ul>
+<h2>Änderungen in 1.0</h2>
+<ul>
+<li>Erstveröffentlichung.</li>
+<li>Übersetzt in: brasilianisches Portugiesisch, Farsi, Finnisch, französisch,
+  Galizisch, deutsch, italienisch, japanisch, Koreanisch, Nepalesisch,
+  Portugiesisch, Spanisch, Slovakisch, Slovenisch, Tamil.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

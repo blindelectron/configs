@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Nao 2023.1.1-rc-0</title>
+</head>
+<body>
+<h1>Nao - NVDA Advanced OCR</h1>
+<ul>
+<li>Autori: Alessandro Albano, Davide De Carne, Simone Dal Maso</li>
+<li>Download <a href="https://nvda-nao.org/download">versione stabile</a></li>
+<li>Compatibilità NVDA: 2019.3 e successive</li>
+</ul>
+<p>Nao (NVDA Advanced OCR) è un addon che migliora le capacità OCR standard fornite da NVDA nelle versioni moderne di Windows.
+Mentre il comando standard NVDA utilizza l'OCR di Windows per riconoscere lo schermo, NAO è in grado di eseguire l'OCR sui file salvati sul disco rigido o sui dispositivi USB.
+Usa NVDA-Shift-R per riconoscere qualsiasi tipo di immagine e pdf!
+Porta semplicemente il focus / cursore sul file che desideri, non aprirlo, ma premi NVDA-Shift-r.
+Il documento verrà riconosciuto e apparirà una semplice casella di testo, che consentirà di leggere l'intero contenuto, salvarlo, copiarlo negli appunti o cercare del testo.
+Nao è in grado di gestire anche pdf multipagina, quindi se hai un documento non accessibile, non preoccuparti, l'OCR di Windows sarà in grado di fare tutto il lavoro.</p>
+<h2>Requisiti di sistema</h2>
+<p>L'addon lavora soltanto sui sistemi Windows 10 e Windows 11, poiché dispongono di funzionalità OCR integrate.
+Nao è compatibile dalla versione NVDA 2019.3, quindi non utilizzare versioni precedenti dello screen reader.
+Si noti che Nao funziona con Windows Explorer, sul desktop, con il file manager Total Commander o Xplorer; non utilizzare altri software come 7zip o Winrar, poiché non sono supportati.</p>
+<h2>Funzionalità e comandi</h2>
+<ul>
+<li>NVDA + Shift + R: riconosce qualsiasi tipo di immagine e pdf dal file system;</li>
+<li>PgUp / PgDown: sposta il cursore tra le pagine reali di un documento multipagina.</li>
+<li>Ctrl + S: salva il documento in formato nao-document. Puoi aprirlo di nuovo con NVDA + Shift + R.</li>
+<li>P: legge il numero di pagina relativo alla posizione del cursore, in un documento multipagina.</li>
+<li>L: legge il numero di riga alla posizione del cursore, relativo alla pagina corrente.</li>
+<li>Shift + L: legge il numero di riga alla posizione del cursore, relativo all'intero documento.</li>
+<li>G: va direttamente su una pagina specifica.</li>
+<li>C: copia l'intero documento negli appunti.</li>
+<li>S: Salva una copia del documento in formato testo.</li>
+<li>F: trova il testo e legge alcune parole prima e dopo la stringa.</li>
+<li>NVDA + Shift + Ctrl + R: Effettua lo screenshot dell'intera videata e la riconosce.</li>
+<li>Si tenga presente che è possibile utilizzare i comandi standard di NVDA per esplorare la finestra e portare il focus su un elemento. Ad esempio ci si può spostare con i tasti freccia e premere invio in un pulsante per attivarlo. Inoltre si può anche portare il mouse in quella posizione premendo la combinazione NVDA+barra del tastierino numerico e quindi fare clic con i tasti sinistro/destro.</li>
+<li>NVDA + Shift + Ctrl + W: Effettua lo screenshot della finestra corrente e la riconosce (stesse funzionalità di navigazione dello screenshot dell'intera videata).</li>
+</ul>
+<p>Inoltre, si possono personalizzare le scorciatoie di Nao semplicemente dalla finestra di dialogo Tasti e gesti di immissione di NVDA. Aprire il menu NVDA, andare su preferenze e da quel sottomenu selezionare la finestra di dialogo tasti e gesti di immissione. La cosa importante da tenere a mente è che questi gesti non sono globali; essi appariranno soltanto se ci si trova in un ambiente in cui Nao può funzionare: desktop, Esplora file, Total Commander o Xplorer.</p>
+<p>È possibile anche interrompere un processo di Ocr molto lungo semplicemente premendo "Annulla" dalla finestra della barra di avanzamento; questa finestra fornisce anche informazioni sullo stato dell'OCR, aggiornando l'utente ogni 5 secondi. È possibile configurare la modalità con cui si desidera ricevere messaggi informativi sulla barra di avanzamento con il comando standard NVDA-u.</p>
+<p>È stato aggiunto un sottomenu chiamato "Nao" al menu strumenti di NVDA. Per adesso consente di effettuare una donazione al progetto, ma verrà arricchito in futuro con nuove funzionalità!</p>
+<h2>Supporto e donazioni</h2>
+<p>Nao è completamente gratuito. Ad ogni modo, è bene non dimenticare che questo addon viene realizzato durante il tempo libero degli sviluppatori.
+Apprezzeremmo qualsiasi contributo tu potessi darci!
+Se pensi che il nostro lavoro sia buono e migliori la tua vita, a <a href="https://nvda-nao.org/donate">Considera di effettuare una donazione.</a></p>
+<p>Vuoi segnalare un bug, suggerire nuove funzionalità, tradurre l'addon nella tua lingua? Abbiamo l'e-mail per te! Scrivi a support@nvda-nao.org e saremo felici di aiutarti.</p>
+<h2>Cronologia</h2>
+<h3>2023.1.1</h3>
+<ul>
+<li>Ripristinata compatibilità con NVDA versione 2023.3</li>
+<li>Nuova hotkey NVDA + Ctrl + Shift + W effettua lo screenshot della finestra corrente e la riconosce</li>
+<li>Aggiunta traduzione in Portoghese Brasiliano</li>
+<li>Fix di sicurezza su Secure Screens</li>
+<li>Rimosso menu strumenti NAO su Secure Screens</li>
+<li>Rimossa cache documenti su Secure Screens</li>
+<li>Aggiunti link al sito web NAO e al repository Git nel menu strumenti NAO</li>
+</ul>
+<h3>2023.1</h3>
+<ul>
+<li>Compatibilità NVDA versione 2023.1</li>
+</ul>
+<h3>2022.1.3</h3>
+<ul>
+<li>Compatibilità NVDA versione 2022.1</li>
+<li>Traduzione in Cinese Semplificato e Francese aggiornate</li>
+<li>Documentazione in spagnolo aggiornata</li>
+</ul>
+<h3>2022.1.2</h3>
+<ul>
+<li>Salvataggio e caricamento di file formato nao-document.</li>
+<li>Una cache documenti conserva i riconoscimenti per velocizzarne l'apertura successivamente. Se un file viene trovato in cache non viene rieseguito il riconoscimento ma viene aperta la copia in cache (i parametri di riconoscimento devono essere uguali).</li>
+<li>Memorizza l'ultima posizione di lettura di un documento nei metadati della cache.</li>
+<li>Pulizia automatica della cache documenti.</li>
+<li>Cancellazione manuale della cache dal menù strumenti.</li>
+<li>Un file può essere adesso riconosciuto direttamente da una "cartella compressa" di esplora risorse.</li>
+<li>Migliore verifica di eventuali file invalidi.</li>
+<li>Migliorata compatibilità con esplora risorse utilizzando diverse alternative per la selezione del file: prova prima con Shell.Application in NVDA, quindi prova con Shell.Application in PowerShell ed infine visualizza una finestra di dialog di selezione file.</li>
+<li>Il motore OCR mantiene l'impostazione della lingua durante l'intero processo di riconoscimento anche se viene cambiata durante un riconoscimento multi pagina.</li>
+<li>Coda OCR per riconoscimento da sorgenti multiple.</li>
+<li>La hotkey PgDown nell'ultima pagina di un documento salta alla fine del documento comunicando il numero di linea.</li>
+<li>Utilizzo della cartella temporanea di Windows invece della cartella del plugin per gli strumenti di conversione file (miglioramento di prestazioni su NVDA portable).</li>
+<li>Traduzione in lingua rumena e aggiornamento della traduzione del cinese semplificato.</li>
+</ul>
+<h3>2022.1.1</h3>
+<ul>
+<li>Supporto file formato DjVu.</li>
+<li>Supporto file tiff multipagina.</li>
+<li>Risoluzione bug di encoding nel riconoscimento file PDF su sistemi operativi in lingua cinese.</li>
+<li>Update manuale dell'addon da menu strumenti di NVDA.</li>
+<li>Compatibilità a partire da NVDA 2019.3.</li>
+</ul>
+<h3>2022.1</h3>
+<ul>
+<li>Update automatico dell'addon.</li>
+<li>Aggiornate traduzioni in spagnolo e francese.</li>
+</ul>
+<h3>2021.2</h3>
+<ul>
+<li>L'OCR di pdf e immagini viene presentato in una nuova finestra di testo, con alcuni tasti di scelta rapida per semplici operazioni.</li>
+<li>Supporto per il gestore di file Xplorer.</li>
+<li>Le scorciatoie Nao sono personalizzabili dalla finestra di dialogo Input Gestures di NVDA.</li>
+<li>Nao funziona solo dove possibile, quindi se ti trovi in una finestra non supportata, il tasto di scelta rapida verrà ignorato dall'addon; questo ha risolto un problema importante per cui gli utenti di Excel e Word non potevano premere il tasto NVDA-Shift-r, poiché veniva erroneamente intercettato da Nao.</li>
+<li>Un lungo processo Ocr può essere interrotto semplicemente premendo il pulsante "Annulla" nella finestra della barra di avanzamento.</li>
+<li>Aggiunte traduzioni in turco, russo, spagnolo, cinese e francese.</li>
+<li>Gli utenti possono effettuare donazioni al progetto.</li>
+<li>Risolto un bug con alcuni caratteri sui nomi dei file che impediva all'Ocr di funzionare correttamente.</li>
+</ul>
+<h3>2021.1</h3>
+<ul>
+<li>Prima versione pubblica! </li>
+</ul>
+</body>
+</html>

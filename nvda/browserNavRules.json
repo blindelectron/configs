@@ -1,0 +1,541 @@
+{
+    "sites": [
+        {
+            "autoClickCategory": 5,
+            "autoClickContinuous": false,
+            "autoClickContinuousDelay": 500,
+            "autoClickOnFocus": false,
+            "autoClickOnFocusDelay": 500,
+            "autoSpeak": false,
+            "autoSpeakCategory": 9,
+            "bookmarks": [
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [],
+                    "category": 1,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 0,
+                    "pattern": "^\\d+ items? in cart$",
+                    "patternMatch": 3,
+                    "snippet": ""
+                },
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [],
+                    "category": 1,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 0,
+                    "pattern": "Your Orders",
+                    "patternMatch": 1,
+                    "snippet": ""
+                },
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [],
+                    "category": 1,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 0,
+                    "pattern": "^\\d+ orders? matching \"",
+                    "patternMatch": 3,
+                    "snippet": ""
+                },
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "LINK"
+                            },
+                            "invert": false
+                        }
+                    ],
+                    "category": 1,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 0,
+                    "pattern": "^[.\\d]+ out of 5 stars[,\\d]+ ratings?$",
+                    "patternMatch": 3,
+                    "snippet": ""
+                }
+            ],
+            "debugBeepMode": 0,
+            "domain": "amazon.com",
+            "focusMode": 0,
+            "liveRegionMode": 0,
+            "name": "Amazon",
+            "urlMatch": 2
+        },
+        {
+            "autoClickCategory": 5,
+            "autoClickContinuous": false,
+            "autoClickContinuousDelay": 500,
+            "autoClickOnFocus": false,
+            "autoClickOnFocusDelay": 500,
+            "autoSpeak": false,
+            "autoSpeakCategory": 9,
+            "bookmarks": [
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "LINK"
+                            },
+                            "invert": false
+                        }
+                    ],
+                    "category": 1,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 2,
+                    "pattern": "upvote",
+                    "patternMatch": 1,
+                    "snippet": ""
+                },
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "LINK"
+                            },
+                            "invert": false
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "LINK"
+                            },
+                            "invert": false
+                        }
+                    ],
+                    "category": 8,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 2,
+                    "pattern": "upvote",
+                    "patternMatch": 1,
+                    "snippet": ""
+                },
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "LINK"
+                            },
+                            "invert": false
+                        }
+                    ],
+                    "category": 4,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 0,
+                    "pattern": "downvote",
+                    "patternMatch": 1,
+                    "snippet": ""
+                }
+            ],
+            "debugBeepMode": 0,
+            "domain": "news.ycombinator.com",
+            "focusMode": 0,
+            "liveRegionMode": 0,
+            "name": "Hacker news",
+            "urlMatch": 2
+        },
+        {
+            "autoClickCategory": 5,
+            "autoClickContinuous": false,
+            "autoClickContinuousDelay": 500,
+            "autoClickOnFocus": false,
+            "autoClickOnFocusDelay": 500,
+            "autoSpeak": false,
+            "autoSpeakCategory": 9,
+            "bookmarks": [
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "LINK"
+                            },
+                            "invert": false
+                        }
+                    ],
+                    "category": 8,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 1,
+                    "pattern": "^\\[\u2013\\].* points\\d+ (hours?|minutes?|seconds?|days?|weeks?|months?|years?) ago",
+                    "patternMatch": 3,
+                    "snippet": ""
+                },
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "LINK"
+                            },
+                            "invert": false
+                        }
+                    ],
+                    "category": 1,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 0,
+                    "pattern": "load more comments\u00a0\\(\\d+ (reply|replies)\\)",
+                    "patternMatch": 3,
+                    "snippet": ""
+                }
+            ],
+            "debugBeepMode": 0,
+            "domain": "old.reddit.com",
+            "focusMode": 0,
+            "liveRegionMode": 0,
+            "name": "Reddit old",
+            "urlMatch": 2
+        },
+        {
+            "autoClickCategory": 5,
+            "autoClickContinuous": false,
+            "autoClickContinuousDelay": 500,
+            "autoClickOnFocus": false,
+            "autoClickOnFocusDelay": 500,
+            "autoSpeak": false,
+            "autoSpeakCategory": 9,
+            "bookmarks": [
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "BUTTON"
+                            },
+                            "invert": false
+                        }
+                    ],
+                    "category": 5,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 0,
+                    "pattern": "Play (k)",
+                    "patternMatch": 1,
+                    "snippet": ""
+                },
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "BUTTON"
+                            },
+                            "invert": false
+                        }
+                    ],
+                    "category": 5,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 0,
+                    "pattern": "Pause (k)",
+                    "patternMatch": 1,
+                    "snippet": ""
+                },
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "SLIDER"
+                            },
+                            "invert": false
+                        }
+                    ],
+                    "category": 1,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "",
+                    "offset": 0,
+                    "pattern": "Seconds$",
+                    "patternMatch": 3,
+                    "snippet": ""
+                }
+            ],
+            "debugBeepMode": 0,
+            "domain": "youtube.com",
+            "focusMode": 0,
+            "liveRegionMode": 0,
+            "name": "Youtube",
+            "urlMatch": 2
+        },
+        {
+            "autoClickCategory": 5,
+            "autoClickContinuous": false,
+            "autoClickContinuousDelay": 500,
+            "autoClickOnFocus": false,
+            "autoClickOnFocusDelay": 500,
+            "autoSpeak": false,
+            "autoSpeakCategory": 9,
+            "bookmarks": [
+                {
+                    "alsoUseDefaultQuickJump": false,
+                    "attributes": [
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "CHECKBOX"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "RADIOBUTTON"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "EDITABLETEXT"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "BUTTON"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "MENUBAR"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "MENUITEM"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "POPUPMENU"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "COMBOBOX"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "LINK"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "TREEVIEW"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "TREEVIEWITEM"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "TAB"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "TABCONTROL"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "SLIDER"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "PROGRESSBAR"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "CHECKMENUITEM"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "RADIOMENUITEM"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "EDITBAR"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "RICHEDIT"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "TOGGLEBUTTON"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "SPLITBUTTON"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "MENUBUTTON"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "MATH"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "HOTKEYFIELD"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "SPINBUTTON"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "TREEVIEWBUTTON"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "FILECHOOSER"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "MENU"
+                            },
+                            "invert": true
+                        },
+                        {
+                            "attribute": {
+                                "attribute": "role",
+                                "value": "PASSWORDEDIT"
+                            },
+                            "invert": true
+                        }
+                    ],
+                    "category": 4,
+                    "enabled": true,
+                    "keystroke": null,
+                    "message": "",
+                    "name": "Empty paragraph",
+                    "offset": 0,
+                    "pattern": "^\\s*$",
+                    "patternMatch": 3,
+                    "snippet": ""
+                }
+            ],
+            "debugBeepMode": 0,
+            "domain": "",
+            "focusMode": 0,
+            "liveRegionMode": 0,
+            "name": "All sites",
+            "urlMatch": 0
+        }
+    ]
+}

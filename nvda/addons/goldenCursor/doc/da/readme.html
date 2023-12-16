@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Golden Cursor 6.2.1</title>
+</head>
+<body>
+<h1>Golden Cursor</h1>
+<ul>
+<li>Forfatter: Salah Atair, Joseph Lee</li>
+<li>Download <a href="https://www.nvaccess.org/addonStore/legacy?file=goldenCursor">stabil version</a></li>
+<li>NVDA compatibility: 2022.4 and beyond</li>
+</ul>
+<p>Denne tilføjelse giver dig mulighed for at flytte musen ved hjælp af et
+tastatur og gemme musepositioner til applikationer.</p>
+<h2>Tastaturkommandoer:</h2>
+<ul>
+<li>Ctrl+NVDA+L: Få vist gemte musepositioner for en applikation, hvis
+  musepositioner eksisterer. Du kan også tildele tastetryk til disse
+  positioner fra denne dialog. Når du trykker på det tildelte tastetryk,
+  udføres et venstreklik ved den gemte position.</li>
+<li>Skift+NVDA+L: Gem et tag eller en etiket for den aktuelle museposition i
+  den aktuelt fokuserede applikation.</li>
+<li>Windows+NVDA+C: Skift musens bevægelsesenhed.</li>
+<li>Windows+NVDA+R: Skift tilstand for musebegrænsning.</li>
+<li>Windows+NVDA+S: Skifte rapportering af musens position i pixels.</li>
+<li>Windows+NVDA+J: Flyt musen til bestemte X og Y koordinater.</li>
+<li>Windows+NVDA+P: Rapportér musens aktuelle position.</li>
+<li>Windows+NVDA+M: Slå musepile til og fra.</li>
+<li>Windows+NVDA+Piletaster (eller blot piletasterne alene, hvis musepile er
+  slået til): Flyt mus.</li>
+</ul>
+<p>Bemærk: Disse kommandoer kan ændres ved brug af NVDA-dialogen
+"Inputbevægelser" under kategorien "Golden Cursor".</p>
+<h2>Bemærkninger</h2>
+<ul>
+<li>Når der deles positioner (tags), skal hver part anvende samme
+  skærmopløsning.</li>
+<li>For maksimal kompatibilitet bør du maksimere vinduer ved at trykke på
+  Windows+Pil op.</li>
+<li>Når man deler positioner, skal eksisterende positionetiketter omdøbes.</li>
+<li>Version 1.x og 2.x muspositionsformater er inkompatible.</li>
+<li>For at udføre funktioner, der kræver brug af piletasterne, skal du først
+  slå musepilene fra.</li>
+<li>Når der slettes gemte positioner, vil alle positioner for den aktuelle
+  applikation ryddes, hvis der ikke længere eksistere gemte positioner.</li>
+</ul>
+<h2>Version 6.2</h2>
+<ul>
+<li>Requires NVDA 2022.4 or later.</li>
+<li>Compatible with NVDA 2023.1.</li>
+</ul>
+<h2>Version 6.1</h2>
+<ul>
+<li>Kræver NVDA 2021.3 eller nyere.</li>
+<li>Nu kan du tildele genveje til gemte positioner fra positionslisten. Når du
+  trykker på en genvej, udføres et venstreklik for positionen.</li>
+</ul>
+<h2>Version 5.0</h2>
+<ul>
+<li>Moderniserede tilføjelsens kildekode for at gøre den kompatibel med NVDA
+  2021.1.</li>
+<li>Løst mange problemer med kodningstil og potentielle fejl med Flake8.</li>
+</ul>
+<h2>Version 4.0</h2>
+<ul>
+<li>Kræver NVDA 2019.3 eller nyere.</li>
+<li>Golden Cursor-indstillingsdialogen er blevet erstattet af Golden
+  Cursor-indstillingspanelet.</li>
+</ul>
+<h2>Version 3.3</h2>
+<ul>
+<li>Interne ændringer for at bedre kunne understøtte fremtidige versioner af
+  NVDA.</li>
+</ul>
+<h2>Version 3.2</h2>
+<ul>
+<li>Tilføjelse er kompatibel med NVDA 2018.3 (wxPython 4).</li>
+</ul>
+<h2>Version 3.0</h2>
+<ul>
+<li>Hvis du bruger NVDA 2018.2, findes yderligere indstillinger i det nye
+  indstillingspanel under kategorien "Golden Cursor".</li>
+</ul>
+<h2>Version 2.1</h2>
+<ul>
+<li>Rettede Unicode-afkodningsfejl, når du forsøger at slette tagnavne.</li>
+<li>Forhindre flere forekomster, når du åbner forskellige tilføjelsesdialoger.</li>
+<li>Forbedret udseende af muspositionsliste og hoppe til positionsdialoger.</li>
+</ul>
+<h2>Version 2.0</h2>
+<ul>
+<li>Kræver NVDA 2017.3 og senere.</li>
+<li>Positionfilformat er ukompatibelt med 1.x versioner. Hvis 1.x
+  positionsformat er fundet, vil gamle positioner blive migreret til det nye
+  format under installationen.</li>
+<li>Tilføjet en ny Golden Cursor-indstillingsdialog i NVDAs indstillingsmenu
+  for at konfigurere musens bevægelsesenhed og annoncering af museposition,
+  når musen bevæges.</li>
+<li>Forskellige meddelelser fra denne tilføjelse er ændret.</li>
+<li>Når du skifter forskellige indstillinger, bliver tonen ikke længere
+  afspillet.</li>
+<li>Du kan nu indtaste musepile-tilstanden, hvor du kan flytte musen ved blot
+  at trykke på piletasterne.</li>
+<li>Ændringer i positionslistedialog, herunder nyt navn (nu kaldet
+  Musepositioner) og layout, der viser musekoordinater for en etiket og
+  viser navnet på den aktive app som en del af titellinjen.</li>
+<li>Fra dialogboksen Musepositioner flyttes musen til den gemte placering ved
+  at trykke på Enter på en gemt etiket.</li>
+<li>Når du omdøber en museposition, vises en fejldialog, hvis der findes en
+  etiket med samme navn som det nye navn.</li>
+<li>Når du sletter eller rydder musepositioner, skal du nu svare Ja før
+  positioner slettes og/eller ryddes.</li>
+<li>Ændringer i musehopfunktionen, herunder et nyt navn (nu kaldet Ny
+  museposition) og evne til at indtaste X- og Y-koordinater hver for sig
+  eller ved hjælp af pilene op og ned.</li>
+<li>Dialogboksen, der vises, når du gemmer den aktuelle museposition, viser nu
+  koordinater for den aktuelle museplacering.</li>
+<li>Løst et problem der udløste en fejltone, når du gemmer positioner, hvis
+  positionsmappen ikke findes.</li>
+</ul>
+<h2>Version 1.4</h2>
+<ul>
+<li>Fjernet win32api afhængighed for at gøre den kompatibel med tidligere og
+  fremtidige versioner af NVDA.</li>
+</ul>
+<h2>Version 1.0</h2>
+<ul>
+<li>Første udgivelse.</li>
+</ul>
+<p>[[!tag stable dev]]</p>
+</body>
+</html>

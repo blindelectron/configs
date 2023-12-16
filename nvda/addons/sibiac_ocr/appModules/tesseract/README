@@ -1,0 +1,14 @@
+tesseract-3.dll was created using:
+* Ubuntu 16.04 with mingw cross compiling tools (gcc 5.3.1)
+* leptonica-1.74.1
+* tesseract-3.05
+
+tesseract training file from https://github.com/tesseract-ocr/tessdata
+
+DLL was compiled statically, to avoid dependencies. It contains runtime parts
+of glibc and stdlibc++.
+
+License files for tesseract and leptonica can be found in this directory.
+License conditions for tools used to build the DLL as well as runtime parts can be found on: https://gcc.gnu.org/
+
+The package creator: Alexey Zhelezov, 2017 www.azslow.com

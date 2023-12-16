@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>NVDA Dev & Test Toolbox 6.0</title>
+</head>
+<body>
+<h1>NVDA Dev &amp; Test Toolbox</h1>
+<ul>
+<li>Autor: Cyrille Bougot</li>
+<li>Compatibilitate NVDA: 2019.2 și versiunile ulterioare</li>
+<li>Descărcați <a href="https://www.nvaccess.org/addonStore/legacy?file=nvdaDevTestToolbox">versiunea stabilă</a></li>
+</ul>
+<p>Acest supliment adună diverse caracteristici pentru depanarea și testarea
+NVDA.</p>
+<h2>Funcţii</h2>
+<ul>
+<li>Un dialog de repornire îmbunătățit pentru a specifica unele opțiuni
+  suplimentare la repornirea NVDA.</li>
+<li>Various features related to logged errors.</li>
+<li>Un explorator de proprietăți obiect.</li>
+<li>Un mod extins de descriere a scriptului: când este activat, modul Ajutor
+  pentru intrări raportează informații despre scripturile care nu au
+  descriere.</li>
+<li>Comenzi care ajută la citirea și analiza log-urilor.</li>
+<li>Backup-uri ale log-urilor vechi</li>
+<li>În spațiul de lucru al consolei Python, o funcție cu ajutorul căreia se
+  poate deschide codul sursă al unui obiect.</li>
+<li>Un script de pornire personalizat pentru consola Python</li>
+<li>O comandă pentru a înregistra urmărirea seriei ordonată de date a funcției
+  speech.speak.</li>
+</ul>
+<h2>Dialog de repornire îmbunătățit</h2>
+<p>Comanda NVDA+shift+Q deschide un dialog pentru a specifica unele opțiuni
+suplimentare înainte de a reporni NVDA. Opțiunile care pot fi specificate
+corespund <a href="https://www.nvaccess.org/files/nvda/documentation/userGuide.html#CommandLineOptions">opțiunilor liniei de comandă</a> care pot fi utilizate cu
+<code>nvda.exe</code>, de ex. <code>-c</code> pentru calea de configurare,
+<code>--suplimente-dezactivate</code> pentru a dezactiva suplimentele, etc.</p>
+<h2>Features related to logged errors</h2>
+<h3>Report last logged error</h3>
+<p>Pressing NVDA+shift+alt+E allows to report the last error logged without
+needing to open the log. A second press clears the memorized last error.</p>
+<h3>Redați un sunet pentru erorile înregistrate</h3>
+<p>Setarea <a href="https://www.nvaccess.org/files/nvda/documentation/userGuide.html#PlayErrorSound">"Redați un sunet pentru erorile înregistrate"</a> a fost introdusă
+în NVDA 2021.3 și permite să specificați dacă NVDA va reda un sunet de
+eroare în cazul în care este înregistrată una.</p>
+<p>Acest supliment oferă o comandă suplimentară (NVDA+control+alt+E) pentru a
+comuta această setare. Puteţi alege:</p>
+<ul>
+<li>"Numai în versiunile de testare" (implicit) pentru ca eroarea de redare a
+  NVDA să redea un sunet doar dacă versiunea curentă a NVDA este o versiune
+  de testare (alfa, beta sau rulată de la sursă).</li>
+<li>"Yes" to enable error sounds no matter your current NVDA version.</li>
+</ul>
+<p>Pentru NVDA anterior versiunii 2021.3, acest add-on oferă portarea inversă a
+acestei funcționalități și posibilitatea de a o controla cu ajutorul
+comenzilor de la tastatură. Cu toate acestea, caseta de bifare din panoul de
+setări avansate nu este portată înapoi.</p>
+<h2>Explorator de proprietăți obiect</h2>
+<p>Această caracteristică permite raportarea unor proprietăți ale obiectului de
+navigare curent fără a deschide vizualizatorul de jurnal.</p>
+<p>Pentru a lista proprietățile unui obiect, mutați obiectul navigator la
+acesta și utilizați următoarele comenzi:</p>
+<ul>
+<li>Selectează proprietatea anterioară și o raportează pentru obiectul
+  navigator.</li>
+<li>Selectează următoarea proprietate și o raportează pentru obiectul
+  navigator.</li>
+<li>Raportează proprietatea selectată pentru obiectul navigator; două apăsări
+  afișează aceste informații într-un mesaj prin care se poate naviga.</li>
+</ul>
+<p>These three commands are unassigned by default; you will have to assign them
+a shortcut in the Input gesture dialog to use them.</p>
+<p>Lista proprietăților acceptate este următoarea: nume, rol, stare, valoare,
+windowClassName, windowControlID, windowHandle, locație, clasa Python, clasa
+Python mro.</p>
+<p>Această caracteristică este o îmbunătățire a unui exemplu din <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#toc22">Ghidul
+dezvoltatorului NVDA</a>.</p>
+<h2>Modul extins de descriere a scriptului</h2>
+<p>Când modul de descriere extinsă a scriptului este activ, modul de ajutor
+pentru intrare (NVDA+1) este modificat după cum urmează. Dacă un script nu
+are descriere, sunt raportate numele și clasa scriptului. Dacă un script are
+o descriere, descrierea acestuia este raportată ca de obicei. Gestul de
+activare sau dezactivare a acestei funcții este NVDA+control+alt+D.</p>
+<p>Executarea unui gest legat de un script fără descriere în modul de ajutor
+pentru intrări, creați și o intrare pentru acest script în dialogul de
+gestionare a gesturilor. Această intrare se află într-o categorie dedicată
+numită „Scripturi fără descriere (modificați pe propriul risc!)”. Acest
+lucru permite adăugarea, ștergerea sau modificarea cu ușurință a gesturilor
+NVDA native pentru aceste scripturi. Rețineți totuși că se intenționează
+adesea ca un astfel de script să nu aibă nicio descriere pentru a împiedica
+utilizatorul să modifice gestul asociat. Într-adevăr, gestul poate fi
+definit pentru a se potrivi cu o tastă de comandă rapidă a aplicației. De
+exemplu, scriptul script_toggleItalic de pe
+NVDAObjects.window.winword.WordDocument este obligat să controleze+I și
+acest lucru nu ar trebui modificat deoarece gestul este transmis aplicației
+pentru a executa efectiv tasta de comandă rapidă.</p>
+<h3>Exemplu de utilizare</h3>
+<p>Control+shift+I comută și în cursiv în Word, chiar dacă nu este raportat
+nativ de NVDA. Pentru ca rezultatul control+shift+I să fie raportat de NVDA
+ca control+I, ar trebui să efectuați următorii pași:</p>
+<ul>
+<li>Deschideți un document Word.</li>
+<li>Activați modul de descriere extinsă a scriptului cu NVDA+control+alt+D.</li>
+<li>Intrați în modul de ajutor pentru intrări cu NVDA+1.</li>
+<li>Apăsați control+I pentru a raporta scriptul italic pentru a fi adăugat în
+  dialogul Gesturi de intrare.</li>
+<li>Ieșiți din modul de ajutor pentru intrări cu NVDA+1.</li>
+<li>Deschideți dialogul pentru gesturi de intrare.</li>
+<li>În categoria "Scripturi fără descriere (modificați pe propriul risc!)",
+  selectați comanda "toggleItalic pe
+  NVDAObjects.window.winword.WordDocument".</li>
+<li>Adăugați comanda rapidă control+shift+I și validați.</li>
+<li>Dacă doriți, ieşiţi din modul de descriere extinsă a scriptului cu
+  NVDA+control+alt+D.</li>
+</ul>
+<p>Eroare cunoscută: un script adăugat pentru o anumită clasă este vizibil
+chiar dacă managerul de gesturi este deschis într-un alt context.</p>
+<h2>Log reading and analyzing features</h2>
+<p><a id="logPlaceMarkers"></a></p>
+<h3>Place markers in the log</h3>
+<p>While testing or working, you may want to mark a specific moment in the log, so that you can turn to it easily later when reading the log.
+To add a marker message in the log, press NVDA+control+K.
+A message as follows will be logged at INFO level:<br />
+<code>-- NDTT marker 0 --</code><br />
+You can add as many markers as you want in the log.  The marker's number
+will be incremented each time you place a marker in the log; it will only be
+reset when NVDA is restarted.</p>
+<h3>Log reader mode</h3>
+<p>Un mod de citire a jurnalelor oferă comenzi pentru a ușura citirea și
+analiza jurnalelor. În fereastra de vizualizare a jurnalelor, cititorul de
+jurnal este activat implicit, astfel că comenzile de citire a jurnalelor
+sunt disponibile imediat. Într-o altă zonă de citire a textului, cum ar fi
+un editor (de exemplu, Notepad++) sau o pagină web (de exemplu, problema
+GitHub), trebuie să apăsați pe NVDA+control+alt+L pentru a activa modul
+cititor de jurnal și a utiliza comenzile acestuia. Când ați terminat cu
+sarcinile de citire și analiză a jurnalelor, puteți dezactiva din nou
+NVDA+control+alt+L pentru a dezactiva modul de citire a jurnalelor.</p>
+<p>Comenzile disponibile în modul cititor de jurnal sunt descrise mai jos.</p>
+<p><a id="logReaderQuickNavigationCommands"></a></p>
+<h4>Comenzi de navigare rapidă</h4>
+<p>Comandă cu o singură literă similară cu tastele de navigare rapidă a modului
+de navigare permit trecerea la diferite tipuri de mesaje de jurnal:</p>
+<ul>
+<li>m: orice mesaj</li>
+<li>e: error messages (<code>ERROR</code> and <code>CRITICAL</code>)</li>
+<li>w: warning messages (<code>WARNING</code>)</li>
+<li>f: info messages (<code>INFO</code>)</li>
+<li>k: markers previously <a href="#logPlaceMarkers">placed in the log</a></li>
+<li>g: debug warning messages (<code>DEBUGWARNING</code>)</li>
+<li>i: input/output messages (<code>IO</code>)</li>
+<li>n: input messages</li>
+<li>s: speech messages</li>
+<li>d: debug messages (<code>DEBUG</code>)</li>
+</ul>
+<p>Apăsarea unei singure litere trece la următoarea apariție a acestui
+mesaj. Combinarea literei cu tasta Shift trece la apariția anterioară a
+acestui mesaj.</p>
+<h4>Translation of speech message</h4>
+<p>Sometimes, you may have to look at a log taken on a system in a foreignh
+language that you do not understand. E.g. the log was taken on a Chinese
+system / NVDA, whereas you only understand French.  If you have <a href="https://addons.nvda-project.org/addons/instantTranslate.en.html">Instant
+Translate</a> add-on installed, you may use it in conjonction with <a href="#logReaderQuickNavigationCommands">quick
+log navigation commands</a> to have speech
+messages translated.</p>
+<ul>
+<li>First configure Instant Translate's languages. The source language should
+  be the language of the system where the log has been taken
+  (e.g. Chinese). The target language should be your language (e.g. French).</li>
+<li>Open the log</li>
+<li>Press T to enable automatic speech translation in the log</li>
+<li>Use Quick navigation commands in the log, e.g. S, I, etc. Whenever a
+  speech message is encountered, it will be spoken in your language (French
+  in our previous example)</li>
+</ul>
+<p>If you want to disable speech translation, press T again.</p>
+<p><a id="cititorJurnalFișierCodSursa"></a></p>
+<h4>Deschideți fișierul codului sursă în editorul dvs</h4>
+<p>În jurnal, unele linii se pot referi la codul sursă:</p>
+<ul>
+<li>O linie aparținând unui traceback conține calea și linia într-un fișier,
+  de exemplu:
+  <code>File "virtualBuffers\__init__.pyc", line 226, in _getStoryLength</code>  </li>
+<li>The header line of a logged message contains the function which has logged
+  this message, e.g.:
+  <code>INFO - config.ConfigManager._loadConfig (22:45:26.145) - MainThread (16580):</code>  </li>
+</ul>
+<p>Poate doriți să deschideți fișierul care conține acest cod pentru a înțelege
+contextul urmăririi sau al mesajului înregistrat. Apăsați tasta C pentru a
+deschide acest fișier.</p>
+<p>Pentru ca această caracteristică să funcționeze, trebuie să fi configurat
+<a href="#settingsOpenCommand">comanda editorului preferat</a> în setările
+suplimentului. Dacă nu rulați NVDA din sursă, ar trebui configurat și
+<a href="#settingsNvdaSourcePath">locația codului sursă NVDA</a>.</p>
+<p><a id="backupJurnaleVechi"></a></p>
+<h2>Backup al jurnalelor vechi</h2>
+<p>NVDA oferă deja un backup a jurnalului sesiunii anterioare a NVDA; fișierul
+se numește <code>nvda-old.log</code>. Uneori, totuși, poate doriți să accesați
+jurnalele mai vechi, de ex. pentru că a trebuit să reporniți NVDA din nou
+înainte să vă uitați la <code>nvda-old.log</code>. Acest program de completare vă
+permite să configurați dacă doriți să faceți backup pentru jurnalele vechi
+și câte dintre ele; acest lucru se face în <a href="#settingsLogsBackup">setările
+suplimentului</a>.</p>
+<p>Un dialog de gestionare a jurnalelor permite vizualizarea jurnalelor de rezervă.
+Poate fi deschis accesând meniul NVDA -&gt; Instrumente -&gt; Manager jurnal
+În acest dialog, puteți vedea lista tuturor jurnalelor de rezervă, le puteți deschide sau șterge.
+Pentru a putea deschide un jurnal, ar trebui mai întâi să fi configurat <a href="#settingsOpenCommand">Comandă pentru a deschide un fișier în editorul tău preferat</a>.</p>
+<h2>Extensia consolei Python</h2>
+<p><a id="pythonConsoleDeschidețiFișierulSursă"></a></p>
+<h3>Funcția <code>openCodeFile</code></h3>
+<p>În consolă, puteți apela următoarea funcție pentru a vizualiza codul sursă care definește variabila <code>myVar</code>:
+<code>openCodeFile(myVar)</code>  </p>
+<p>Pentru ca această caracteristică să funcționeze, trebuie să fi configurat
+<a href="#settingsOpenCommand">comanda editorului preferat</a> în setările
+suplimentului. Dacă nu rulați NVDA din sursă, ar trebui configurat și
+<a href="#settingsNvdaSourcePath">locația codului sursă NVDA</a>.</p>
+<p>Funcțiile <code>openCodeFile</code> pot fi apelate pe obiecte definite în codul NVDA
+sau pe obiecte definite de suplimente. Nu poate fi apelat pe obiecte al
+căror cod sursă nu este disponibil, cum ar fi modulele integrate Python.</p>
+<p>Dacă nu ați importat încă obiectul în consolă, puteți, de asemenea, să
+transmiteți numele acestuia ca parametru funcției <code>openCodeFile</code>.</p>
+<p>Mai jos sunt exemple de apel în codul NVDA:</p>
+<ul>
+<li>Vedeți definiția funcției <code>speech.speech.speak</code>:
+  <code>openCodeFile(speech.speech.speak)</code><br />
+  sau cu numele trecut ca parametru:<br />
+<code>openCodeFile("speech.speech.speak")</code>  </li>
+<li>View the definition of the class <code>TextInfo</code>:
+  <code>openCodeFile(textInfos.TextInfo)</code>  </li>
+<li>View the definition of the method <code>copyToClipboard</code> of the class
+  <code>TextInfo</code>:
+  <code>openCodeFile(textInfos.TextInfo.copyToClipboard)</code>  </li>
+<li>View the definition of the class of the focused object:
+  <code>openCodeFile(focus)</code>  </li>
+<li>Open the file <code>api.py</code> defining the module <code>api</code>:
+  <code>openCodeFile(api)</code>  </li>
+</ul>
+<h3>Scriptul de pornire al consolei Python</h3>
+<p>Puteți defini un script personalizat care va fi executat în spațiul de nume
+al consolei Python atunci când este deschis pentru prima dată sau dacă
+suplimentul este reîncărcat (NVDA+F3) după ce consola a fost deja deschisă.</p>
+<p>De exemplu, scriptul vă permite să executați noi importuri și să definiți aliasuri pe care le veți putea folosi direct în consolă, după cum se arată mai jos:</p>
+<pre><code># Various import that I want in the console.
+import globalVars as gv
+import core
+import ui
+# Aliases
+ocf = openCodeFile
+</code></pre>
+<p>Scriptul consolei Python ar trebui să fie plasat în următoarea locație: <code>pathToNVDAConfig\ndtt\consoleStartup.py</code>
+De exemplu:
+<code>C:\Users\myUserName\AppData\Roaming\nvda\ndtt\consoleStartup.py</code></p>
+<h2>Înregistrează urmărirea seriei ordonate a funcţiei de vorbire</h2>
+<p>Uneori, este posibil să doriți să vedeți care parte a codului este
+responsabilă pentru vorbire. Pentru aceasta, puteţi activa înregistrarea
+urmăririi seriei ordonate a funcţiei de vorbire apăsând
+NVDA+control+alt+S. De fiecare dată când NVDA vorbește, o urmărire a seriei
+ordonate corespunzătoare va fi înregistrată în jurnal.</p>
+<p>Notă: Puteți modifica fișierul scriptului direct pentru a corecta o altă
+funcție. Consultați toate instrucțiunile din fișier pentru detalii despre
+utilizare.</p>
+<p>&lt;a id="setări</p>
+<h2>Setări</h2>
+<p>Unele caracteristici ale suplimentului pot necesita o configurație specifică.
+Un panou de setări vă permite să le activați sau să controlați modul în care funcționează.
+Pentru a vizualiza și modifica aceste setări, accesați meniul NVDA -&gt; Preferințe și selectați categoria NVDA Dev &amp; Test Toolbox.
+Acest dialog de setări poate fi accesat și direct din dialogul Manager jurnal.</p>
+<p>These settings are global and can only be configured when the default
+profile is active.</p>
+<p>&lt;a id="comandăDeschidereSetări</p>
+<h3>Comanda pentru a deschide un fișier în editorul tău preferat</h3>
+<p>Unele funcții vă permit să vedeți conținutul în editorul
+dvs. preferat. Aceasta include comenzile pentru vizualizarea fișierului
+sursă <a href="#logReaderOpenSourceFile">din jurnal</a> sau <a href="#pythonConsoleOpenCodeFile">dintr-un obiect din
+consolă</a>, precum și butonul Deschidere al <a href="#oldLogsBackup">log
+manager</a>.</p>
+<p>Pentru a le folosi, mai întâi trebuie să configurați comanda care va fi apelată pentru a deschide fișierul în editorul dvs. preferat.
+Comanda ar trebui să fie de forma:
+<code>"C:\path\to\my\editor\editor.exe" "{path}":{line}</code><br />
+Desigur, ar trebui să modificați această linie în funcție de numele real și locația editorului dvs. și de sintaxa folosită de acesta pentru a deschide fișierele.
+<code>{path}</code> va fi înlocuit cu calea completă a fișierului de deschis și <code>{line}</code> cu numărul liniei în care doriți să fie setat cursorul.
+Pentru Notepad++, de exemplu, comanda de tastat în consolă ar fi:
+<code>"C:\Program Files\Notepad++\notepad++.exe" "{path}" -n{line}</code></p>
+<p><a id="setăriNVDACodSursă"></a></p>
+<h3>Locaţia codului sursă NVDA</h3>
+<p>Când utilizați o comandă pentru a <a href="#logReaderOpenSourceFile">vizualiza fișierul sursă dintr-un jurnal</a> sau <a href="#pythonConsoleOpenCodeFile">dintr-un obiect din consolă</a>, fișierul poate aparține NVDA însuși.
+Dacă nu rulați NVDA din sursă, NVDA conține doar fișiere compilate.
+Astfel, puteți specifica aici o locație alternativă în care va fi găsit fișierul sursă corespunzător, de ex. locul în care ați clonat fișierele sursă NVDA, astfel încât un fișier sursă poate fi oricum deschis.
+Locaţia ar trebui să fie astfel:<br />
+<code>C:\pathExample\GIT\nvda\source</code><br />
+Desigur, înlocuiți locaţia sursei NVDA cu cea corectă.</p>
+<p>Asigurați-vă totuși că versiunea fișierului sursă (de exemplu, GIT commit)
+este aceeași cu cea a instanței care rulează NVDA.</p>
+<p><a id="setăriBackupJurnal"></a></p>
+<h3>Backup al jurnalelor vechi</h3>
+<p>Caseta combinată Backup jurnale vechi permite activarea sau dezactivarea
+<a href="#oldLogsBackup">funcției</a>. Dacă este activat, puteți specifica mai jos în
+"imitați numărul de back-up-uri numărul maxim de backup-uri de siguranţă pe
+care doriți să le păstrați. Aceste setări au efect numai la următoarea
+pornire a NVDA, când are loc backup-ul.</p>
+<h2>Noutăţi</h2>
+<h3>Version 5.0</h3>
+<ul>
+<li>If Instant Translate add-on is installed, it is now possible to have
+  speech messages translated on the fly when using log reading commands.</li>
+<li>While in log reading mode, pressing E or shift+E now jumps to CRITICAL
+  erorr messages as well as normal ERROR messages.</li>
+<li>New log quick navigation commands have been added to jump to input and to
+  speech messages.</li>
+<li>
+<p>A new command allow to place a marker in the log; and specific quick
+  navigation commands in log reading mode allow to jump to them.
+  Credit: the initial idea for this feature comes from Debug Helper add-on by Luke Davis.</p>
+</li>
+<li>
+<p>Bubfix: The memorization of the last error do not fail anymore in some
+  cases.</p>
+</li>
+<li>Bugfix: The add-on can initialize again with NVDA 2019.2.1.</li>
+<li>Bugfix: Log saving feature will not fail anymore with non-ASCII logs.</li>
+</ul>
+<h3>Version 4.2</h3>
+<ul>
+<li>Fixed an error with NVDA version below 2021.3.</li>
+<li>Fixed the stack trace log formatting.</li>
+<li>First localizations.</li>
+</ul>
+<h3>Version 4.1</h3>
+<ul>
+<li>Fixed a bug occurring in some situations while logging an error.</li>
+<li>The add-on's settings can now be modified only when the default profile is
+  active to avoid config issues.</li>
+</ul>
+<h3>Versiunea 4.0</h3>
+<ul>
+<li>Posibilitatea de a face backup-uri pentru jurnalele vechi și introducerea
+  unui manager de jurnale.</li>
+<li>S-a adăugat un script care raportează ultima eroare înregistrată.</li>
+<li>S-a remediat o eroare care împiedica citirea ultimului mesaj de jurnal în
+  versiunile NVDA mai vechi.</li>
+</ul>
+<h3>Versiunea 3.2</h3>
+<ul>
+<li>Compatibilitate cu NVDA 2023.1.</li>
+</ul>
+<h3>Versiunea3.1</h3>
+<ul>
+<li>S-a remediat o eroare care apărea la solicitarea informaţiilor
+  indisponibile despre un anume obiect.</li>
+</ul>
+<h3>Versiunea 3.0</h3>
+<ul>
+<li>Într-un jurnal, acum puteți apăsa C pe linia antetului unui mesaj pentru a
+  deschide funcția/modulul care l-a emis.</li>
+<li>În consolă, funcția <code>openCodeFile</code> poate primi acum ca parametru obiectul
+  sau un șir care conține numele acestuia.</li>
+<li>Caracteristică nouă: Fișierul de pornire al consolei NVDA: Dacă există,
+  fișierul YourNVDAConfigFolder\ndtt\consoleStartup.py va fi executat la
+  prima deschidere a consolei NVDA sau la reîncărcarea suplimentelor.</li>
+<li>Diverse remedieri minore pentru funcția consolei Python <code>openCodeFile</code> și
+  comanda de deschidere a fișierului sursă corespunzător unei linii din
+  jurnal.</li>
+<li>S-a rezolvat o problemă la încercarea de a raporta roluri/stări pentru
+  exploratorul de obiecte în versiunea mai veche a NVDA.</li>
+<li>Suplimentul nu mai provoacă o problemă cu interceptorul arborelui când
+  utilizați UIA în Edge.</li>
+</ul>
+<h3>Versiunea 2.1</h3>
+<ul>
+<li>Various bugfixes and code refactoring/cleaning to address all use cases:
+  all supported versions, installed vs. run from source, etc. (contribution
+  from Łukasz Golonka)</li>
+<li>Rewriting of the compa module (contribution from Łukasz Golonka)</li>
+<li>Acum dialogul de repornire poate fi deschis doar o singură dată.</li>
+<li>Comenzile rapide ale exploratorului de obiecte sunt acum nealocate în mod
+  implicit și trebuie să fie setate de utilizator.</li>
+<li>Cu exploratorul de obiecte, o apăsare dublă pentru a apela scriptul care
+  raportează proprietatea obiectului curent afișează acum informațiile
+  raportate într-un mesaj prin care se poate naviga.</li>
+</ul>
+<h3>Versiunea 2.0</h3>
+<ul>
+<li>Funcție nouă: Dialog de repornire îmbunătățit pentru a specifica unele
+  opțiuni suplimentare la repornirea NVDA.</li>
+<li>Funcție nouă: modul de descriere extinsă.</li>
+<li>Funcția de sunet de eroare de redare armonizată între versiunile NVDA
+  înainte și după 2021.3.</li>
+<li>Funcție nouă: comenzile cititorului de jurnal sunt acum disponibile în
+  vizualizatorul de jurnal și, opțional, în câmpurile de editare sau
+  paginile web.</li>
+<li>Funcție nouă: În consola Python, este disponibilă o funcție "openCodeFile"
+  pentru a vizualiza codul sursă al unui obiect.</li>
+<li>Unele funcții sunt acum dezactivate în modul securizat din motive de
+  securitate.</li>
+<li>Raza de compatibilitate a suplimentului a fost extinsă (de la 2019.2 la
+  2021.1).</li>
+<li>Lansările sunt acum efectuate cu acțiune GitHub în loc de appVeyor.</li>
+</ul>
+<h3>Versiunea 1.0</h3>
+<ul>
+<li>Lansare inițială.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

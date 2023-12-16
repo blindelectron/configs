@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Golden Cursor 6.2.1</title>
+</head>
+<body>
+<h1>Golden Cursor</h1>
+<ul>
+<li>Autores: salah atair, Joseph Lee</li>
+<li>Descargar <a href="https://www.nvaccess.org/addonStore/legacy?file=goldenCursor">versión estable</a></li>
+<li>Compatibilidad con NVDA: de 2022.4 en adelante</li>
+</ul>
+<p>Este complemento te permite mover el ratón utilizando un teclado y guardar
+las posiciones del ratón para las aplicaciones.</p>
+<h2>Teclas de Órdenes</h2>
+<ul>
+<li>Control+NVDA+L: ver posiciones del ratón guardadas para una aplicación, si
+  las hay. También se pueden asignar gestos para estas posiciones desde este
+  diálogo. Al pulsar un gesto asignado, se realizará un clic izquierdo en la
+  posición guardada.</li>
+<li>Shift+NVDA+l: guarda una marca o una etiqueta para la posición del ratón
+  actual en la aplicación enfocada actualmente.</li>
+<li>Windows+NVDA+C: cambiar la unidad de movimiento del ratón.</li>
+<li>Windows+NVDA+R: conmuta la restricción del ratón.</li>
+<li>Windows+NVDA+S: conmuta el anunciado del ratón en píxeles.</li>
+<li>Windows+NVDA+J: mover el ratón a una posición x e y específica.</li>
+<li>Windows+NVDA+P: anunciar la posición del ratón.</li>
+<li>Windows+NVDA+M: activar o desactivar flechas del ratón.</li>
+<li>Windows+NVDA+teclas de flechas (o solo teclas de flechas si flechas de
+  ratón está activado): mover ratón.</li>
+</ul>
+<p>Nota: estos gestos pueden reasignarse desde el diálogo Gestos de Entrada en
+el menú Preferencias de NVDA en la categoría  Golden Cursor.</p>
+<h2>Notas</h2>
+<ul>
+<li>Cuando se comparten posiciones(tags), cada parte debería utilizar la misma
+  resolución de pantalla.</li>
+<li>Para compatibilidad máxima, deberías maximizar windows pulsando
+  Windows+flecha arriba.</li>
+<li>Al compartir posiciones, las etiquetas de posiciones existentes deberían
+  renombrarse.</li>
+<li>Los formatos de las versiones 1.x y 2.x de posiciones del ratón son
+  incompatibles.</li>
+<li>Para realizar funciones que requieran utilizar teclas de flechas, primero
+  desactiva flechas del ratón.</li>
+<li>Al eliminar posiciones guardadas, si no quedan más posiciones guardadas,
+  se limpiarán las de la aplicación.</li>
+</ul>
+<h2>Versión 6.2</h2>
+<ul>
+<li>Se requiere NVDA 2022.4 o posterior.</li>
+<li>Compatible con NVDA 2023.1.</li>
+</ul>
+<h2>Versión 6.1</h2>
+<ul>
+<li>Se requiere NVDA 2021.3 o posterior.</li>
+<li>Ahora se pueden asignar atajos para las posiciones guardadas desde la
+  lista de posiciones. Al pulsar un atajo, se realizará un clic izquierdo en
+  la posición.</li>
+</ul>
+<h2>Versión 5.0</h2>
+<ul>
+<li>Se ha modernizado el código fuente del complemento para hacerlo compatible
+  con NVDA 2021.1.</li>
+<li>Se han resuelto muchos problemas de estilo del código y fallos potenciales
+  con Flake8.</li>
+</ul>
+<h2>Versión 4.0</h2>
+<ul>
+<li>Se requiere de NVDA 2019.3 o posterior.</li>
+<li>El diálogo de opciones de Golden Cursor se ha sustituido por el panel de
+  opciones de Golden Cursor.</li>
+</ul>
+<h2>Versión 3.3</h2>
+<ul>
+<li>Cambios internos para dar soporte a versiones futuras de NVDA.</li>
+</ul>
+<h2>Versión 3.2</h2>
+<ul>
+<li>El complemento es compatible con NVDA 2018.3 (WXPython 4).</li>
+</ul>
+<h2>Versión 3.0</h2>
+<ul>
+<li>Si se utiliza NVDA 2018.2, la configuración del complemento se encontrará
+  en la nueva pantalla multicategoría Opciones en la categoría "Golden
+  Cursor".</li>
+</ul>
+<h2>Versión 2.1</h2>
+<ul>
+<li>Corregido un error de decodificación unicode al teclear para eliminar el
+  nombre de tag.</li>
+<li>Se previenen instancias múltiples al abrir varios diálogos del
+  complemento.</li>
+<li>Mejorada la apariencia de los diálogos listar posiciones del ratón y
+  saltar a posición.</li>
+</ul>
+<h2>Versión 2.0</h2>
+<ul>
+<li>Se requiere de NVDA 2017.3 y posterior.</li>
+<li>El formato del fichero de posición es incompatible con el de las versiones
+  1.x. Si se encuentra un formato de posición 1.x, las posiciones antiguas
+  se migrarán al nuevo formato durante la instalación.</li>
+<li>Añadido un nuevo diálogo Opciones de Golden Cursor en el menú Preferencias
+  de NVDA para configurar la unidad de movimiento del ratón y el anunciado
+  de posiciones del ratón según éste se mueva.</li>
+<li>Se han cambiado varios mensajes de este complemento.</li>
+<li>Al conmutar varias opciones, el tono de conmutación ya no se escuchará.</li>
+<li>Ahora puedes entrar en el modo flechas del ratón donde puedes mover el
+  ratón pulsando sólo teclas de flechas.</li>
+<li>Cambios al diálogo listar posiciones, incluyendo nombre nuevo (ahora
+  llamado Posiciones del ratón) y diseño, mostrando coordenadas del ratón
+  para una etiqueta, y mostrando el nombre de la aplicación activa como
+  parte del título.</li>
+<li>Desde el diálogo posiciones del ratón, pulsando intro sobre una etiqueta
+  guardada se moverá el ratón a la localización guardada.</li>
+<li>Al renombrar una posición del ratón, se mostrará un diálogo de error si
+  existe una etiqueta con el mismo nombre  que el nombre nuevo.</li>
+<li>Al eliminar o limpiar posiciones del ratón, ahora debes responder sí antes
+  de que las posiciones se eliminen y/o se limpien.</li>
+<li>Cambios en la característica salto del ratón, incluyendo un nuevo nombre
+  (ahora llamada Nueva posición del ratón) y la capacidad de introducir
+  coordenadas X e Y separadamente o utilizando las teclas de flecha arriba o
+  abajo.</li>
+<li>El diálogo mostrado al guardar la posición actual del ratón ahora muestra
+  las coordenadas para la posición actual del ratón.</li>
+<li>Al guardar posiciones, se resolvió un problema donde NVDA podría
+  reproducir tonos de error si la carpeta de posiciones no existe.</li>
+</ul>
+<h2>Versión 1.4</h2>
+<ul>
+<li>Eliminada la dependencia win32api para hacerlo compatible con versiones
+  pasadas y futuras de NVDA.</li>
+</ul>
+<h2>Versión 1.0</h2>
+<ul>
+<li>Versión inicial.</li>
+</ul>
+<p>[[!tag stable dev]]</p>
+</body>
+</html>

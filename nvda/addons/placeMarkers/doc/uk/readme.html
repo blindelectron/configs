@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Place markers 34.0.0</title>
+</head>
+<body>
+<h1>placeMarkers (Маркери місць)</h1>
+<ul>
+<li>Автори: Noelia, Chris.</li>
+</ul>
+<p>This add-on is used for saving and searching specific text strings or
+placemarkers. It can be used on web pages or documents in NVDA's browse
+mode. It can also be used for saving or searching strings of text in
+multi-line controls; in this case, if it's not possible to update the caret,
+the corresponding string will be copied to the clipboard, so that it can be
+searched using other tools.  The plugin saves the specified strings and
+placemarkers to files whose name is based on the title and URL of the
+current document.  This add-on is based on SpecificSearch and
+Bookmark&amp;Search, developed by the same author. You should uninstall them to
+use this one, since they have common keystrokes and features.</p>
+<h2>Комбінації клавіш:</h2>
+<ul>
+<li>control+shift+NVDA+f: Відкриває діалог із полем редагування, в якому
+  відображається останній збережений пошук; в цьому діалозі ви також можете
+  вибрати раніше збережені пошуки з комбінованого списку або видалити
+  вибраний рядок з історії за допомогою прапорця. Ви можете вибрати, чи буде
+  текст, що міститься у вікні редагування, додано до історії ваших
+  збережених текстів. Нарешті, виберіть дію з наступної групи перемикачів
+  (між «Шукати далі», «Шукати попереднє» або «Не шукати») і вкажіть, чи буде
+  NVDA здійснювати пошук з урахуванням регістру. Коли ви натиснете кнопку
+  «Гаразд», NVDA здійснить пошук цього рядка.</li>
+<li>control+shift+NVDA+y: Saves the current position as a placemarker. If you
+  want to provide a name for this placemarker, select some text from this
+  position before saving it.</li>
+<li>control+shift+NVDA+delete: Deletes the placemarker corresponding to this
+  position.</li>
+<li>NVDA+y: Moves to the next placemarker.</li>
+<li>shift+NVDA+y: Moves to the previous placemarker.</li>
+<li>Not assigned: Shows the file name where the placemarkers data will be
+  saved in browse mode, without an extension.</li>
+<li>alt+NVDA+y: Opens a dialog with the placemarkers saved for this
+  document. You can write a note for each placemarker; press Save note to
+  save changes. Pressing Delete you can remove the selected
+  placemarker. Pressing OK you can move to the selected position.</li>
+<li>Not assigned: Saves a position as a temporary placemarker.</li>
+<li>Not assigned: Moves to the temporary placemarker for the current document.</li>
+<li>Не призначено: знаходить наступний фрагмент останнього шуканого тексту в
+  будь-якому конкретному документі.</li>
+<li>Не призначено: знаходить попередній фрагмент останнього шуканого тексту в
+  будь-якому конкретному документі.</li>
+</ul>
+<h2>PlaceMarkers Submenu (NVDA+N)</h2>
+<p>Using the PlaceMarkers submenu under NVDA's Preferences menu, you can
+access:</p>
+<ul>
+<li>Specific search folder: Opens a folder of specific searches previously
+  saved.</li>
+<li>Bookmarks folder: Opens a folder of the saved placemarkers.</li>
+<li>Copy placeMarkers folder: You can save a copy of the placeMarkers folder.</li>
+<li>Restore placeMarkers: You can restore your placeMarkers from a previously
+  saved placeMarkers folder.</li>
+</ul>
+<p>Note: The placemarker position is based on the number of characters; and
+therefore in dynamic pages it is better to use the specific search, not
+placemarkers.</p>
+<h2>Changes for 24.0</h2>
+<ul>
+<li>Y is used instead of k in gestures such as NVDA+k, NVDA+shift+k,
+  NVDA+alt+k and NVDA+control+shift+k.</li>
+<li>Compatible with NVDA 2023.1.</li>
+</ul>
+<h2>Зміни у версії 23.0</h2>
+<ul>
+<li>Додаток знову працює з Microsoft Word.</li>
+</ul>
+<h2>Зміни у версії 22.0</h2>
+<ul>
+<li>Завдяки Абделю ми можемо переходити до закладок та видаляти їх з
+  увімкненим UIA.</li>
+</ul>
+<h2>Зміни у версії 21.0</h2>
+<ul>
+<li>Завдяки Абделю можна зберігати закладки з увімкненою функцією UIA у
+  браузерах на базі Chromium.</li>
+</ul>
+<h2>Зміни у версії 20.0</h2>
+<ul>
+<li>Потребує NVDA 2022.1 чи пізнішу.</li>
+</ul>
+<h2>Зміни у версії 19.0</h2>
+<ul>
+<li>Додаток неможливо запустити на захищених екранах.</li>
+</ul>
+<h2>Зміни у версії 18.0</h2>
+<ul>
+<li>Команда подивитися шлях для placeMarkers показує, чи є постійні закладки,
+  текст для конкретного пошуку або тимчасова закладка для поточного
+  документа.</li>
+</ul>
+<h2>Зміни у версії 17.0</h2>
+<ul>
+<li>Виправлено помилку, яка не дозволяла зберігати маркери місць в деяких
+  документах.</li>
+<li>Виправлено перекладені рядки, завдяки чому переклади працюють коректно.</li>
+</ul>
+<h2>Зміни у версії 16.0</h2>
+<ul>
+<li>Compatible with NVDA 2021.1 or later (required).</li>
+<li>Підтримується неперервне читання при переході на тимчасові закладки.</li>
+<li>If needed, you can download <a href="https://github.com/nvdaes/placeMarkers/releases">other
+  versions</a>.</li>
+</ul>
+<h2>Зміни у версії 15.0</h2>
+<ul>
+<li>При читанні в режимі «Читати все» в режимі огляду, конкретні команди
+  «Знайти далі» та «Знайти попереднє» більше не зупиняють читання, якщо
+  увімкнено параметр «Дозволити неперервне читання», відповідно до команд
+  «Знайти далі» і «Знайти попереднє» з NVDA 2020.4.</li>
+<li>При відкритті Конкретного пошуку після виконання команди конкретного
+  пошуку «Знайти попереднє» буде вибрано параметр «Знайти попереднє».</li>
+</ul>
+<h2>Зміни у версії 14.0</h2>
+<ul>
+<li>Команду копіювання імені файлу, в якому будуть збережені дані про маркери
+  місць, замінено на команду, яка показує це ім’я файлу в режимі
+  огляду. Призначеного жесту немає..</li>
+<li>Поле «Текст для пошуку» більше не перекриває поле «Збережений
+  текст». (Подяка Cyrille Bougot).</li>
+<li>Вимагає NVDA 2019.3 або новішу.</li>
+</ul>
+<h2>Зміни у версії 13.0</h2>
+<ul>
+<li>Додано непризначені жести для знаходження наступного й попереднього
+  фрагменту останнього шуканого тексту для будь-якого конкретного документа.</li>
+<li>Функція конкретного пошуку працює, коли відкрито діалог Про NVDA.</li>
+<li>У діалозі «Конкретний пошук» буде позначено прапорець «Враховувати
+  регістр», якщо ця опція була обрана для останнього пошуку.</li>
+<li>При оновленні додатка закладки і рядки для конкретного пошуку, збережені в
+  попередній версії додатка, буде автоматично скопійовано в нову версію,
+  якщо тільки ви не віддасте перевагу імпорту маркерів місць, збережених в
+  основній конфігураційній папці NVDA.</li>
+<li>При використанні діалогу копіювання маркерів місць, якщо обрана папка не
+  має імені placeMarkersBackup, буде створено підпапку з цим ім'ям, щоб
+  запобігти видаленню каталогів, що містять важливі дані, такі як Документи
+  або Завантаження.</li>
+</ul>
+<h2>Зміни у версії 12.0</h2>
+<ul>
+<li>Виправлено критичну помилку, яка призводила до аварійного завершення
+  роботи NVDA при спробі відкрити діалог приміток, якщо перед збереженням
+  закладок було виділено китайські ієрогліфи.</li>
+</ul>
+<h2>Зміни у версії 11.0</h2>
+<ul>
+<li>Сумісність з NVDA 2018.3 та новіші (необхідно).</li>
+<li>За потреби ви можете завантажити <a href="https://www.nvaccess.org/addonStore/legacy?file=pm-o">останню версію, сумісну з NVDA
+  2017.3</a>.</li>
+</ul>
+<h2>Зміни у версії 10.0</h2>
+<ul>
+<li>В Edge жести, пов'язані з вибором закладок, такі як NVDA+k, NVDA+shift+k
+  або NVDA+alt+k, будуть відправлятися в додаток замість того, щоб
+  намагатися перемістити курсор на закладки, щоб уникнути помилок, особливо
+  в довгих документах.</li>
+<li>Тепер конкретний пошук підтримується й у Edge.</li>
+</ul>
+<h2>Зміни у версії 9.0</h2>
+<ul>
+<li>При переході на закладку з діалогу примітки переглядовий курсор слідує за
+  системним курсором.</li>
+<li>Команда вибору попередньої закладки знову працює коректно.</li>
+<li>Закладки можна видалити з діалогу приміток.</li>
+<li>Тепер для кожного документа можна призначити жести для збереження та
+  переміщення до тимчасової закладки.</li>
+</ul>
+<h2>Зміни у версії 8.0</h2>
+<ul>
+<li>Видалено ідентифікатори фрагментів з імен файлів закладок, що дозволяє
+  уникнути проблем у програмі VitalSource Bookshelf ePUB reader.</li>
+<li>Додано діалог приміток, щоб поєднати коментарі зі збереженими закладками й
+  переходом до виділеної позиції.</li>
+</ul>
+<h2>Зміни у версії 7.0</h2>
+<ul>
+<li>Вилучено діалог збереження рядка тексту для конкретного пошуку. Цю функцію
+  тепер включена в діалог «Конкретний пошук», який було перероблено таким
+  чином, щоб забезпечити різні дії при натисканні кнопки «Гаразд».</li>
+<li>Візуальне подання діалогів було покращено з дотриманням зовнішнього
+  вигляду діалогів, показаних в NVDA.</li>
+<li>Виконання команди «Знайти далі» або «Знайти попереднє» в режимі огляду
+  тепер коректно виконуватиме пошук з урахуванням регістру, якщо початкова
+  команда «Знайти» була з урахуванням регістру.</li>
+<li>Потребує версію NVDA 2016.4 або новішу.</li>
+<li>Тепер ви можете призначити жести для відкриття діалогів Копіювання й
+  Відновлення маркерів місць.</li>
+<li>NVDA надасть повідомлення, щоб сповістити, коли маркери місць були
+  скопійовані або відновлені з відповідними діалогами.</li>
+</ul>
+<h2>Зміни у версії 6.0</h2>
+<ul>
+<li>Коли функції додатка не використовуються, жести надсилаються до
+  відповідного застосунку.</li>
+</ul>
+<h2>Зміни у версії 5.0</h2>
+<ul>
+<li>Додано пошук, чутливий до регістру літер.</li>
+<li>Вилучено параметр відкриття документації з меню Place markers.</li>
+<li>Інтуїтивно зрозуміліші комбінації клавіш.</li>
+</ul>
+<h2>Зміни у версії 4.0</h2>
+<ul>
+<li>Видалено ідентифікатори фрагментів з імен файлів закладок, що дозволяє
+  уникнути проблем у роботі додатка ePUBREADER у Firefox.</li>
+<li>Довідка додатка доступна з менеджера додатків.</li>
+</ul>
+<h2>Зміни у версії 3.1</h2>
+<ul>
+<li>Оновлено переклади й додано нові мови.</li>
+<li>Позиція закладки при неперервному читанні не оголошується.</li>
+</ul>
+<h2>Зміни у версії 3.0</h2>
+<ul>
+<li>Додано підтримку неперервного читання.</li>
+</ul>
+<h2>Зміни у версії 2.0</h2>
+<ul>
+<li>Додано параметри для збереження й видалення різних варіантів пошуку для
+  кожного файлу.</li>
+<li>Виправлено помилку, яка виникала, коли шляхи містили нелатинські символи.</li>
+<li>Тепер комбінації можна перепризначити за допомогою діалогу жестів вводу
+  NVDA.</li>
+</ul>
+<h2>Зміни у версії 1.0</h2>
+<ul>
+<li>Перша версія.</li>
+<li>Перекладено  на: бразильську португальську, фарсі, фінську, французьку,
+  галісійську, німецьку, італійську, японську, корейську, непальську,
+  португальську, іспанську, словацьку, словенську, тамільську.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>zPortapapeles 0.5.1</title>
+</head>
+<body>
+<h1>Manual de zPortapapeles</h1>
+<p>Este complemento tiene la base del complemento Fake Clipboard Announcement.</p>
+<p>Con zPortapapeles tendremos el anuncio de las pulsaciones de copiar, pegar, deshacer, cortar y seleccionar todo.</p>
+<p>Se incluyo al complemento la posibilidad de activar y desactivar sonidos que refuercen los mensajes al igual que un historial con el que podremos copiar al foco.</p>
+<h2>Gestos de entrada...</h2>
+<p>En el apartado de Gestos de entrada... de NVDA si buscamos la categoría zPortapapeles podremos añadir una combinación de teclas que no viene asignada por defecto al historial para mostrar el dialogo.</p>
+<p>También tendremos un apartado donde poder modificar las teclas disparadoras referidas al portapapeles, este apartado solo modificarlo si nuestro lenguaje o sistema tiene otras teclas asignadas por defecto al portapapeles.</p>
+<h2>Opciones del complemento</h2>
+<p>En las opciones del NVDA en la categoría Opciones de zPortapapeles podremos activar y desactivar a través de casillas de verificación tanto si deseamos sonidos como si deseamos tener el historial activado, también se podrá elegir si se desean recibir mensajes hablados.</p>
+<p>Si la casilla del historial esta activada tendremos un cuadro combinado en el cual elegir el tiempo de monitoreo del portapapeles y una casilla para activar o desactivar si queremos un sonido cuando se agregue algo al historial.</p>
+<p>Si la casilla esta desactivada tanto el cuadro combinado como el poder elegir si queremos sonidos en el historial no aparecerán.</p>
+<p>Advertir que si empezamos a recibir errores del portapapeles es conveniente aumentar el tiempo de monitoreo del portapapeles.</p>
+<h2>Dialogo del Historial</h2>
+<p>Este dialogo tendremos que asignarle en gestos de entrada una combinación de teclas por defecto no viene asignada.</p>
+<p>El dialogo solo se abrirá cuando tenga una entrada guardada, mientras no tenga entradas no podremos abrirlo.</p>
+<p>Todo se nos informara con mensajes informativos al igual si ya tenemos el dialogo abierto.</p>
+<p>Una vez abierto el dialogo consta de la lista de entradas que tenga y 4 botones que son los siguientes:</p>
+<ul>
+<li>
+<p>Borrar o Alt+B: Si pulsamos este botón borrara la entrada que la lista tenga el foco.</p>
+</li>
+<li>
+<p>Borrar todo o Alt+T: Borrara todas las entradas del historial.</p>
+</li>
+<li>
+<p>Refrescar o Alt+R: Refrescara el historial con las nuevas entradas agregadas, esto va bien por si agregamos al historial mientras el dialogo esta abierto.</p>
+</li>
+<li>
+<p>Cerrar o Alt+C, Escape o Alt+F4: Cerrara el dialogo del historial.</p>
+</li>
+</ul>
+<p>Cuando estamos en la lista si pulsamos INTRO la entrada que tenga el foco se copiara a la aplicación que este detrás del dialogo de historial.</p>
+<p>Por ejemplo si tenemos abierto el bloc de notas y abrimos el historial y pulsamos INTRO en la primera entrada copiara al bloc de notas el item que tengamos seleccionado.</p>
+<h2>Limitaciones de zPortapapeles</h2>
+<p>zPortapapeles no es compatible con otros complementos que estén instalados y que hagan lo mismo, como Fake Clipboard Announcement o Clipspeak. Puede haber otros, y en este caso tendrá que desactivarlos si desea usar zPortapapeles.</p>
+<p>Apuntar que las entradas en el historial se borrarán cuando reiniciemos NVDA.</p>
+<p>El historial de portapapeles de Windows puede tener entradas duplicadas si usamos el historial de zPortapapeles. Tendremos que elegir cual deseamos usar.</p>
+<h2>Agradecimientos</h2>
+<ul>
+<li>Javi Domínguez: Por su ayuda desinteresada y por contribuir con la función de monitoreo del portapapeles.</li>
+<li>Portugués Brasil: pedro-hdias</li>
+<li>Ruso: Valentin Kupriyanov</li>
+<li>Turco: Umut KORKMAZ</li>
+<li>Italiano: Alessio Lenzi</li>
+<li>Francés: Rémy Ruiz</li>
+<li>Árabe: Wafiq Taher</li>
+</ul>
+<h1>Registro de cambios.</h1>
+<h2>Versión 0.5.1.</h2>
+<ul>
+<li>Actualizado idioma turco.</li>
+</ul>
+<h2>Versión 0.5.</h2>
+<ul>
+<li>Agregadas  estadísticas del texto seleccionado</li>
+</ul>
+<p>Para usar esta característica tendremos que asignar un gesto en el Gestor de entradas de NVDA en la categoría zPortapapeles y Estadísticas del texto seleccionado.</p>
+<p>Cuando tengamos un texto seleccionado si pulsamos la combinación que hayamos asignado nos informara de:</p>
+<ul>
+<li>Caracteres sin espacios de la selección.</li>
+<li>Caracteres con espacios de la selección.</li>
+<li>Número de palabras.</li>
+<li>Número de líneas.</li>
+<li>
+<p>Número de párrafos.</p>
+</li>
+<li>
+<p>Agregada la posibilidad de copiar partes de un texto seleccionado.</p>
+</li>
+</ul>
+<p>Para poder usar esta función tendremos que agregarle un gesto en el gestor de entradas.</p>
+<p>Tendremos que ir a la categoría zPortapapeles y agregar el gesto que deseemos a la opción Ejecuta el dialogo para copiar al portapapeles parte de un texto seleccionado.</p>
+<p>Bien cuando tengamos un texto seleccionado y lancemos esta opción se abrirá una ventana con una lista que contendrá todas las palabras del texto seleccionado.</p>
+<p>Dicha lista tiene casillas de selección por lo que tendremos que seleccionar aquellas palabras que deseemos para copiar al portapapeles.</p>
+<p>El texto que recibe este dialogo esta limpio de símbolos de puntuación por lo que tendremos que tener cuidado si alguna palabra viniera con puntuación por ejemplo esto hay que tener cuidado si seleccionamos un texto de programación y viene algo así:</p>
+<pre><code>    if event.GetUnicodeKey()
+</code></pre>
+<p>event.GetUnicodeKey() se mostrara en la lista así:</p>
+<p>eventGetUnicodeKey habiendo quitado el punto y los paréntesis.</p>
+<p>Esta opción principalmente esta enfocada a texto simple, pero si se solicita puedo agregar una opción que muestre el texto con símbolos de puntuación.</p>
+<p>El dialogo no podrá ser abierto si ya tenemos un dialogo de historial abierto y viceversa.</p>
+<p>El texto que se copia al portapapeles es en orden de la selección original indiferentemente en que orden hayamos elegido los elementos en el dialogo.</p>
+<p>Por ejemplo, la frase:</p>
+<p>Hola, como estás, el perro tiene hambre</p>
+<p>Si deseamos seleccionar Hola, perro y hambre da igual que seleccionemos primero, si marcamos las tres se copiará al portapapeles indiferentemente del orden que lo hayamos seleccionado, siendo lo siguiente lo que se copiará al portapapeles:</p>
+<p>Hola perro hambre</p>
+<p>Este dialogo necesita por lo menos una selección de dos palabras para ser llamado.</p>
+<p>Una vez en el dialogo es necesario al menos tener una palabra seleccionada para copiar al portapapeles.</p>
+<ul>
+<li>Añadida compatibilidad con NVDA 2023.1</li>
+</ul>
+<h2>Versión 0.4.2.</h2>
+<ul>
+<li>Agregado la posibilidad de leer el contenido de portapapeles incluido portapapeles de más de 1024 caracteres.</li>
+</ul>
+<h2>Versión 0.4.1.</h2>
+<ul>
+<li>Solucionado problema al guardar el tiempo de refresco del modo juego</li>
+</ul>
+<h2>Versión 0.4.</h2>
+<ul>
+<li>Agregado modo juego.</li>
+</ul>
+<p>Para activar dicho modo tendremos que asignarle un gesto en el gestor de entradas.</p>
+<p>Este modo ira bien para aquellos juegos que copian al portapapeles y necesitan de traducción.</p>
+<p>En opciones del complemento tendremos la posibilidad de aumentar el refresco de actualización del portapapeles y la posibilidad de elegir el idioma destino de la traducción.</p>
+<p>El idioma origen en este caso del juego se detectara automáticamente y se traducirá lo copiado al portapapeles al idioma que hayamos elegido.</p>
+<p>Mientras el modo juego esta activado todas las ordenes del resto de complemento quedan deshabilitadas incluido el historial del portapapeles.</p>
+<h2>Versión 0.3.1.</h2>
+<ul>
+<li>
+<p>Se reescribió la función de impedir la ejecución del complemento en pantallas seguras.</p>
+</li>
+<li>
+<p>Agregado idioma Árabe.</p>
+</li>
+</ul>
+<h2>Versión 0.3.</h2>
+<ul>
+<li>Agregado detección si hay texto seleccionado al copiar.</li>
+</ul>
+<p>Ahora el complemento cuando demos a copiar si no detecta texto nos informara con un mensaje.</p>
+<ul>
+<li>Agregado el poder desactivar y activar rápidamente las funciones del complemento respecto al portapapeles.</li>
+</ul>
+<p>En gestos de entrada podremos configurar una combinación para activar y desactivar rápidamente lo referido al portapapeles.</p>
+<p>Cuando lo desactivemos el portapapeles y los mensajes serán los nativos de Windows junto a los mensajes que NVDA tenga predefinidos para el portapapeles.</p>
+<p>Esto no afectara al historial que si esta activo seguirá activo.</p>
+<ul>
+<li>Agregado compatibilidad con teclados que usen caracteres cirílicos.</li>
+</ul>
+<p>Se soluciono un problema en distribuciones de teclado que usan caracteres cirílicos.</p>
+<ul>
+<li>Agregados idiomas Ruso, Turco, Italiano y Portugués Brasil.</li>
+</ul>
+<h2>Versión 0.2.</h2>
+<ul>
+<li>Cambiadas todas las funciones del portapapeles a cTypes</li>
+</ul>
+<p>Ahora el portapapeles se manejara directamente con funciones del sistema evitando usar las funciones de NVDA y wxpython.</p>
+<ul>
+<li>Preparado el complemento para ser traducido.</li>
+</ul>
+<h2>Versión 0.1.5.</h2>
+<ul>
+<li>Hablar lo copiado al portapapeles y agregado al Historial.</li>
+</ul>
+<p>Si tenemos activada la opción Activar o desactivar el historial del portapapeles en las opciones del complemento ahora tendremos esta nueva opción.</p>
+<p>Con esta opción lo copiado al historial o si ya se encuentra en el historial lo ultimo copiado al portapapeles se leerá con NVDA.</p>
+<p>Solo se mencionara lo ultimo copiado y una única vez para no saturar hasta que no vuelva a decir otra cadena copiada no se volverá a repetir la anterior.</p>
+<ul>
+<li>Se borrara el portapapeles cuando inicie el complemento por primera vez.</li>
+</ul>
+<p>Ahora ya no se copiara lo que tuviéramos en el portapapeles cuando iniciábamos NVDA, ahora el portapapeles empezara limpio.</p>
+<p>Esto no afecta al historial de portapapeles de Windows.</p>
+<p><strong><em> Advertencia: esto tenemos que tenerlo en cuenta ya que se puede borrar algo importante que tuviéramos en el portapapeles. </em></strong></p>
+<h2>Versión 0.1.4.</h2>
+<ul>
+<li>Cambiada la forma de obtener los datos del portapapeles.</li>
+</ul>
+<h2>Versión 0.1.3.</h2>
+<ul>
+<li>
+<p>Se subió el requisito del complemento a NVDA 2021.2 como versión mínima para poder ser usado.</p>
+</li>
+<li>
+<p>Se agregaron opciones para el historial.</p>
+</li>
+</ul>
+<p>Ahora podremos elegir el tiempo de monitoreo como si deseamos un sonido cuando algo se copie al historial.</p>
+<ul>
+<li>
+<p>Se agrego compatibilidad con Word y Excel para que no anuncie las teclas del portapapeles.</p>
+</li>
+<li>
+<p>Ahora se monitorea el portapapeles por lo que cualquier complemento que copie al portapapeles ya es compatible, incluso el copiado de NVDA al foco</p>
+</li>
+</ul>
+<h2>Versión 0.1.2.</h2>
+<ul>
+<li>Se agrego Activar o desactivar anuncios hablados del portapapeles en opciones</li>
+</ul>
+<p>En las aplicaciones permitidas nos omitirá los mensajes correspondientes a las teclas del portapapeles.</p>
+<h2>Versión 0.1.1.</h2>
+<ul>
+<li>
+<p>Se cambio la forma de gestionar las capturas del portapapeles y su gestión.</p>
+</li>
+<li>
+<p>Se arreglo el error que dejaba abierto el portapapeles.</p>
+</li>
+</ul>
+<h2>Versión 0.1.</h2>
+<ul>
+<li>Versión inicial.</li>
+</ul>
+</body>
+</html>
