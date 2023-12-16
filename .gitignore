@@ -15,3 +15,4 @@ nvda/translation-cache/
 nvda/updates/
 nvda/teleNVDA.ini
 __pycache__/
+terminal/state.json
