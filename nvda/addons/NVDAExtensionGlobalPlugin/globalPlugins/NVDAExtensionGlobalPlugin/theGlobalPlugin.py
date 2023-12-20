@@ -13,6 +13,7 @@ import api
 import ui
 import speech
 import braille
+from keyLabels import localizedKeyLabels 
 import time
 import gui
 import wx
@@ -189,7 +190,7 @@ class NVDAExtensionGlobalPlugin(ScriptsForVolume, globalPluginHandler.GlobalPlug
 	# a dictionnary to map main script to gestures and install feature option
 	_shellGestures = {}
 	_mainScriptToGestureAndfeatureOption = {
-		"test": (("kb:nvda+control+shift+f11",), None),
+		# "test": (("kb:nvda+control+shift+f11",), None),
 		"moduleLayer": (("kb:NVDA+j",), None),
 		"reportAppModuleInfoEx": (("kb:nvda+control+f1",), addonConfig.FCT_FocusedApplicationInformations),
 		"reportAppProductNameAndVersion": (("kb:nvda+shift+f1",), addonConfig.FCT_FocusedApplicationInformations),
@@ -879,7 +880,7 @@ class NVDAExtensionGlobalPlugin(ScriptsForVolume, globalPluginHandler.GlobalPlug
 			if ord(ch) < 32:
 				break
 			appVersion += ch
-		return(productName, appVersion)
+		return (productName, appVersion)
 
 	def script_reportAppProductNameAndVersion(self, gesture):
 		def callback(repeatCount):
@@ -908,12 +909,12 @@ class NVDAExtensionGlobalPlugin(ScriptsForVolume, globalPluginHandler.GlobalPlug
 		focus = api.getFocusObject()
 		mod = focus.appModule
 		if isinstance(mod, appModuleHandler.AppModule) and\
-			type(mod) != appModuleHandler.AppModule:
+			type(mod) is not appModuleHandler.AppModule:
 			addon = fetchAddon(focus.processID, focus.appModule.appName)
 			if addon is not None:
 				# Translators: indicate name and version of active addon
 				# for current focused application.
-				msg = _("add-on: {name}, version: {version}").format(
+				msg = _("Add-on: {name}, version: {version}").format(
 					name=addon.manifest["name"], version=addon.manifest["version"])
 				ui.message(msg)
 				return
@@ -972,7 +973,7 @@ class NVDAExtensionGlobalPlugin(ScriptsForVolume, globalPluginHandler.GlobalPlug
 		mod = focus.appModule
 		modName = NVDAString("none")
 		if isinstance(mod, appModuleHandler.AppModule) and\
-			type(mod) != appModuleHandler.AppModule:
+			type(mod) is not appModuleHandler.AppModule:
 			modName = mod.appModuleName.split(".")[0]
 		modPath = mod.__module__.replace(".", "\\")
 		addons = []
@@ -997,7 +998,7 @@ class NVDAExtensionGlobalPlugin(ScriptsForVolume, globalPluginHandler.GlobalPlug
 		text = _("Active add-on: %s") % info
 		textList.append(text)
 		# Translators: path of current add-on
-		text = _("add-on's path: %s") % path
+		text = _("Add-on's path: %s") % path
 		textList.append(text)
 		if len(addons) > 1:
 			# Translators: indicate that others add-ons are installed
@@ -1505,14 +1506,33 @@ class NVDAExtensionGlobalPlugin(ScriptsForVolume, globalPluginHandler.GlobalPlug
 			windowsList = getactiveWindows()
 			closeAllWindows(windowsList)
 		wx.CallAfter(closeAll)
-
-	def script_EmulateApplicationsKey(self, gesture):
+	@scriptHandler.script(
+		description=NVDAString("Emulate key press: {emulateGesture}").format(
+			emulateGesture=localizedKeyLabels ["applications"]),
+		category=inputCore.SCRCAT_KBEMU
+	)
+	def script_EmulateApplicationsCommand(self, gesture):
 		from keyboardHandler import KeyboardInputGesture
 		KeyboardInputGesture.fromName("Applications").send()
 		# Translators: Input help mode message for a keyboard command.
-	script_EmulateApplicationsKey.__doc__ = NVDAString("Emulate key press: {emulateGesture}").format(
-		emulateGesture="Applications")
-	script_EmulateApplicationsKey.category = inputCore.SCRCAT_KBEMU
+
+	@scriptHandler.script(
+		description=NVDAString("Emulate key press: {emulateGesture}").format(
+			emulateGesture=localizedKeyLabels ["shift"] + "+" + localizedKeyLabels ["applications"]),
+		category=inputCore.SCRCAT_KBEMU
+	)
+	def script_EmulateShiftPlusApplicationsCommand(self, gesture):
+		from keyboardHandler import KeyboardInputGesture
+		KeyboardInputGesture.fromName("shift+Applications").send()
+
+	@scriptHandler.script(
+		description=NVDAString("Emulate key press: {emulateGesture}").format(
+			emulateGesture=localizedKeyLabels ["shift"] + "+" + "F10"),
+		category=inputCore.SCRCAT_KBEMU
+	)
+	def script_EmulateShiftPlusF10Command(self, gesture):
+		from keyboardHandler import KeyboardInputGesture
+		KeyboardInputGesture.fromName("shift+f10").send()
 
 	def script_displayRunningAddonsList(self, gesture):
 		from locale import strxfrm

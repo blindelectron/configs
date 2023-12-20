@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <link rel="stylesheet" type="text/css" href="../style_t2t.css" media="screen"/>
-<title>Extensión de las órdenes básicas de NVDA 13.1.3</title>
+<title>Extensión de las órdenes básicas de NVDA 13.2.5</title>
 </head>
 <BODY BGCOLOR="white" TEXT="black">
 <P ALIGN="center"><CENTER><H1>Complemento Extensión de las órdenes básicas de NVDA - manual del usuario</H1>
@@ -20,7 +20,7 @@ URL: <A HREF="https://github.com/paulber19/NVDAExtensionGlobalPlugin.git">https:
 Descargar:
 </P>
 <UL>
-<LI><A HREF="https://github.com/paulber007/AllMyNVDAAddons/raw/master/NVDAExtensionGlobalPlugin/NVDAExtensionGlobalPlugin-13.1.3.nvda-addon">Versión estable: 13.1.3</A>
+<LI><A HREF="https://github.com/paulber007/AllMyNVDAAddons/raw/master/NVDAExtensionGlobalPlugin/NVDAExtensionGlobalPlugin-13.2.5.nvda-addon">Versión estable: 13.2.5</A>
 <LI><A HREF="https://github.com/paulber007/AllMyNVDAAddons/tree/master/NVDAExtensionGlobalPlugin/dev">Versiones de desarrollo</A>
 </UL>
 
@@ -29,7 +29,7 @@ Compatibilidad:
 </P>
 <UL>
 <LI>mínima de NVDA requerida: 2022.1
-<LI>última versión de NVDA probada: 2023.2
+<LI>última versión de NVDA probada: 2023.3
 </UL>
 
 <P>
@@ -2170,10 +2170,10 @@ Este se lanza mediante la órden "k" del intérprete de órden. No se le asigna 
 <A NAME="hdr27"></A>
 <H3>2.24. Listar los complementos en funcionamiento</H3>
 <P>
-El administrador de complementos presenta la lista de los complementos instalados y su estado: habilitado o deshabilitado.
+El administrador de complementos o la Tienda de complementos (Add-on Store) presenta la lista de los complementos instalados y su estado: habilitado o deshabilitado.
 </P>
 <P>
-Pero aunque habilitado, un complemento no puede ser cargado por NVDA. En principio, el registro de NVDA informa este hecho, pero nada en el  administrador de complementos.
+Pero aunque habilitado, un complemento no puede ser cargado por NVDA. En principio, el registro de NVDA informa este hecho, pero nada en el  administrador de complementos, ni en la Tienda de complementos (Add-on Store).
 </P>
 <P>
 Puede ser interesante en algún momento conocer los complementos que realmente están en funcionamiento.
@@ -2293,7 +2293,7 @@ Usar el botón "Actualizar el archivo manifest.ini" para esto.
 Cualquier modificación de la información "addon_summary" o "addon_description"  del archivo "buildVars.py" requiere la traducción de esta descripción en cada idioma admitido por el complemento (tomada en cuenta en el archivo nvda.po y la compilación de este archivo).
 </P>
 <P>
-Para que el administrador de complementos presente esta información al usuario para el idioma elegido para NVDA, debe crear o actualizar el archivo "manifest.ini" de localización para ese idioma.
+Para que el administrador de complementos o la Tienda de complementos (Add-on Store) presente esta información al usuario para el idioma elegido para NVDA, debe crear o actualizar el archivo "manifest.ini" de localización para ese idioma.
 </P>
 <P>
 El botón "Crear el archivo manifest.ini de localización" permite esto. Es posible actualizar el archivo para el idioma seleccionado o para todos los idiomas.
@@ -3173,13 +3173,13 @@ En el caso de que la modificación de esta función plantee un problema, es nece
 <A NAME="hdr35"></A>
 <H3>2.31. Activación o desactivación rápida de los complementos</H3>
 <P>
-Para habilitar o deshabilitar los complementos, NVDA propone nativamente el Administrador de Complementos.
+Para habilitar o deshabilitar los complementos, NVDA propone nativamente el Administrador de Complementos o, desde NVDA 2023.2, la Tienda de complementos (Add-on Store.
 </P>
 <P>
 Sin embargo, en algunos casos, puede ser necesario deshabilitar todo o parte de los complementos dejando solo algunos complementos activados.
 </P>
 <P>
-Con el Administrador de Complementos, es necesario revisar cada complemento para habilitarlo o deshabilitarlo.
+Con el Administrador de Complementos o la Tienda de complementos (Add-on Store), es necesario revisar cada complemento para habilitarlo o deshabilitarlo usando un botón o menú.
 </P>
 <P>
 Este complemento intenta que esta manipulación sea más rápida y para eso, trae un script para mostrar el cuadro de diálogo "Activación rápida de complementos".
@@ -3200,10 +3200,22 @@ Este diálogo presenta:
 </UL>
 
 <P>
-La lista presenta solo complementos habilitados o deshabilitados al mostrar el cuadro de diálogo. Los complementos incompatibles, para activarse o para desactivarse al próximo inicio, no forman parte de la lista.
+Si el complemento está instalado en una versión de NVDA anterior a  NVDA 2023.2, la lista solo muestra los complementos  compatibles.
+</P>
+<P>
+Solo se enumeran los complementos en estado estable. Se excluyen los complementos que se encuentran en un estado intermedio, es decir, en espera de activación o desactivación, o en espera de instalación o eliminación.
+</P>
+<P>
+Desde NVDA 2023.2, los complementos incompatibles también se incluyen en la lista y también se pueden habilitar o deshabilitar.
+</P>
+<P>
+Se indican con la mención "(incompatible)" después de su identificador.
 </P>
 <P>
 Al mostrar el cuadro de diálogo, los complementos activados son marcados.
+</P>
+<P>
+La lista se actualiza cada vez que se activa la ventana de diálogo para tener en cuenta cualquier posible cambio en el estado de los complementos.
 </P>
 <P>
 Para cambiar el estado de activación de un complemento, será suficiente, ya sea con marcarlo para activarlo, ya sea con desmarcarlo para desactivarlo.

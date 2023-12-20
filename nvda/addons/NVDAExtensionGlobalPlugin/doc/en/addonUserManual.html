@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <link rel="stylesheet" type="text/css" href="../style_t2t.css" media="screen"/>
-<title>NVDA global commands extension 13.1.3</title>
+<title>NVDA global commands extension 13.2.5</title>
 </head>
 <BODY BGCOLOR="white" TEXT="black">
 <P ALIGN="center"><CENTER><H1>NVDA global commands extension - user's manual</H1>
@@ -20,7 +20,7 @@ URL: <A HREF="https://github.com/paulber19/NVDAExtensionGlobalPlugin.git">https:
 Download:
 </P>
 <UL>
-<LI><A HREF="https://github.com/paulber007/AllMyNVDAAddons/raw/master/NVDAExtensionGlobalPlugin/NVDAExtensionGlobalPlugin-13.1.3.nvda-addon">stable version 13.1.3</A>
+<LI><A HREF="https://github.com/paulber007/AllMyNVDAAddons/raw/master/NVDAExtensionGlobalPlugin/NVDAExtensionGlobalPlugin-13.2.5.nvda-addon">stable version 13.2.5</A>
 <LI><A HREF="https://github.com/paulber007/AllMyNVDAAddons/tree/master/NVDAExtensionGlobalPlugin/dev">developpement's version</A>
 </UL>
 
@@ -29,14 +29,14 @@ Compatibility:
 </P>
 <UL>
 <LI>Nminimum supported NVDA version : 2022.1
-<LI>last tested NVDA version: 2023.2
+<LI>last tested NVDA version: 2023.3
 </UL>
 
 <P>
 Traductor (s): based on automatic translation from french language
 </P>
 <A NAME="toc"></A>
-<H2>Sommaire</H2>
+<H2>Table of content</H2>
   <UL>
 
   <LI><A HREF="#toc2">1. Introduction</A>
@@ -245,9 +245,6 @@ Traductor (s): based on automatic translation from french language
   </UL>
 
 <P></P>
-<P>
-on going redaction
-</P>
 <A NAME="toc2"></A>
 <H2>1. Introduction</H2>
 <A NAME="toc3"></A>
@@ -2151,10 +2148,10 @@ It is started with the command "k" from the command interpreter. No control gest
 <A NAME="hdr27"></A>
 <H3>2.22. List of running add-on</H3>
 <P>
-The add-on manager displays the list of installed add-on and their status: activated or deactivated.
+The add-on manager or Add-on store  displays the list of installed add-on and their status: activated or deactivated.
 </P>
 <P>
-But even though it is enabled, an add-on may not be loaded by NVDA. Usually the NVDA log reports this, but nothing in the Extensions Manager.
+But even though it is activated, an add-on may not be loaded by NVDA. In principle, the NVDA log reports this fact, but nothing in the add-ons manager, nor in the Add-on Store.
 </P>
 <P>
 It can be interesting at some point to know which add-on are actually running.
@@ -3093,9 +3090,11 @@ If modifying this function is a problem, you must both uncheck the "Allow gain m
 <A NAME="hdr35"></A>
 <H3>2.29. Quick activation or deactivation of extensions</H3>
 <P>
-To enable or disable extensions, NVDA natively offers the Extension Manager.
+To activate or deactivate extensions, NVDA natively offers the add-ons manager or, since NVDA 2023.2, the Add-on Store.
+</P>
+<P>
 However in some cases it may be necessary to deactivate some or all of the extensions leaving only a few extensions activated.
-With the extension manager, it is then necessary to review each extension to activate or deactivate it.
+With the add-ons manager or Add-on Store, it is then necessary to review each extension to activate or deactivate it.
 </P>
 <P>
 This extension tries to make this manipulation faster and for that, it provides a script to display the "Quick add-ons activation" dialog.
@@ -3116,12 +3115,20 @@ This dialogue presents:
 </UL>
 
 <P>
-The list shows only the add-ons enabled or disabled when the dialog is displayed. Incompatible add-ons, to be activated or deactivated at the next start-up, are not included in the list.
+If the add-on is installed under a version of NVDA prior to NVDA 2023.2, the list only shows the compatible add-ons. 
+</P>
+<P>
+Only add-ons in a stable state are listed. Add-ons which are in an intermediate state, i.e. either pending activation or deactivation, or pending installation or removal, are excluded.
+Since NVDA 2023.2, incompatible add-ons are also included in the list, and can be enabled or disabled as well.
+</P>
+<P>
+They are indicated by the words "(incompatible)" following their identifier.
 </P>
 <P>
 When the dialog is displayed, the activated add-ons are checked.
 </P>
 <P>
+The list is refreshed each time the dialog window is activated in order to take into account any possible change in the state of the add-ons.
 To change the activation status of an add-on, all you have to do is check it to activate it, or uncheck it to deactivate it.
 </P>
 <P>
