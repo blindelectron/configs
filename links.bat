@@ -6,3 +6,4 @@ mklink /J %userprofile%\Documents\PowerShell ps7
 mklink /J %localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState terminal
 mklink /J %userprofile%\portable\KeyOp\data keyop
 mklink /J %appdata%\nvda nvda
+mklink /J %appdata%\Notepad2.ini unsorted\Notepad2.ini 
