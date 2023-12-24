@@ -186,9 +186,9 @@ symbol = 'jobs'
 
 [memory_usage]
 disabled = false
-
 symbol = 'mem '
-[battery]
+
+[battery]				
 full_symbol = ''
 charging_symbol = '+ '
 discharging_symbol = '- '
