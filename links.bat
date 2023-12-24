@@ -6,4 +6,8 @@ mklink /J %userprofile%\Documents\PowerShell ps7
 mklink /J %localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState terminal
 mklink /J %userprofile%\portable\KeyOp\data keyop
 mklink /J %appdata%\nvda nvda
+mklink /J %userprofile%\.config\scoop scoop
 mklink /H %appdata%\Notepad2.ini unsorted\Notepad2.ini 
+mklink /H %userprofile%\komorebi.json komorebi\komorebi.json
+mklink /H %userprofile%\applications.yaml komorebi\applications.yaml
+mklink /H %userprofile%\.config\whkdrc unsorted\whkdrc
