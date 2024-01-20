@@ -7,6 +7,8 @@ foobar2000-v2/library-v2.0/
 foobar2000-v2/nobadshutdown
 foobar2000-v2/running
 foobar2000-v2/index-data/
+foobar2000/playlists-*/
+foobar2000/library-error-log.txt
 ExplorerPatcher/Update *
 nvda/addonStore/
 nvda/logs/
