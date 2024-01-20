@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../style.css" media="screen">
-<title>NVDA Dev & Test Toolbox 6.0</title>
+<title>NVDA Dev & Test Toolbox 6.1</title>
 </head>
 <body>
 <h1>NVDA Dev &amp; Test Toolbox</h1>
@@ -66,12 +66,20 @@
 <li>Повідомляє поточну вибрану властивість для об’єкта навігатора; два
   натискання відображають цю інформацію у повідомленні для перегляду.</li>
 </ul>
-<p>Спочатку ці три команди не призначені; щоб їх використовувати, вам потрібно
-налаштувати їх у діалозі Жести вводу.</p>
 <p>Список підтримуваних властивостей такий: ім’я, роль, стан, значення,
 windowClassName, windowControlID, windowHandle, місцезнаходження, клас
 Python, клас Python mro.</p>
-<p>Ця функція є вдосконаленням прикладу в <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#toc22">посібнику розробника NVDA</a>.</p>
+<p>When using object navigation commands, you can also choose to have the
+currently selected property reported instead of NVDA usual object
+reporting.  A toggle command allows to switch between this custom reporting
+of objects and NVDA usual reporting.</p>
+<p>For exemple, you may select "windowClassName" property and enable custom
+object reporting.  Then when moving the navigator object to next or previous
+object, you will hear the object's windowClassName instead of usual
+reporting.</p>
+<p>All the commands of the Object property explorer are unassigned by default;
+you will have to assign them a shortcut in the Input gesture dialog to use
+them.</p>
 <h2>Режим розширеного опису сценарію</h2>
 <p>Коли режим розширеного опису сценарію активний, режим допомоги при введенні
 (NVDA+1) змінюється наступним чином. Якщо сценарій не має опису,
@@ -177,6 +185,8 @@ messages translated.</p>
 <li>Рядок заголовка зареєстрованого повідомлення містить функцію, яка
   зареєструвала це повідомлення, наприклад.:
   <code>INFO - config.ConfigManager._loadConfig (22:45:26.145) - MainThread (16580):</code>  </li>
+<li>The content of a message logged in input help mode (logged at info level):
+  Input help: gesture kb(desktop):NVDA+t, bound to script title on globalCommands.GlobalCommands`  </li>
 </ul>
 <p>Ви можете відкрити файл, що містить цей код, щоб зрозуміти контекст
 відстеження або зареєстрованого повідомлення. Просто натисніть C, щоб
@@ -289,6 +299,20 @@ messages translated.</p>
 чинності лише під час наступного запуску NVDA, коли буде виконано резервне
 копіювання.</p>
 <h2>Журнал змін</h2>
+<h3>Version 6.0</h3>
+<ul>
+<li>While using object navigation commands, a specific object property can be
+  reported instead of NVDA usual object reporting.</li>
+<li>In log reading mode, the "C" key to open a code file from the log now also
+  works on an input help message.</li>
+<li>Bugfix: The add-on can now start successfully when the number of logs to
+  save is set to its maximum value.</li>
+<li>Bugfix: Python console startup script's output does not prevent anymore to
+  jump to the first result in the console when using result navigation
+  commands.</li>
+<li>Note: From now on, localization updates will not appear anymore in the
+  change log.</li>
+</ul>
 <h3>Version 5.0</h3>
 <ul>
 <li>If Instant Translate add-on is installed, it is now possible to have
@@ -297,15 +321,12 @@ messages translated.</p>
   erorr messages as well as normal ERROR messages.</li>
 <li>New log quick navigation commands have been added to jump to input and to
   speech messages.</li>
-<li>
-<p>A new command allow to place a marker in the log; and specific quick
-  navigation commands in log reading mode allow to jump to them.
-  Credit: the initial idea for this feature comes from Debug Helper add-on by Luke Davis.</p>
-</li>
-<li>
-<p>Bubfix: The memorization of the last error do not fail anymore in some
-  cases.</p>
-</li>
+<li>A new command allow to place a marker in the log; and specific quick
+  navigation commands in log reading mode allow to jump to them. Credit: the
+  initial idea for this feature comes from Debug Helper add-on by Luke
+  Davis.</li>
+<li>Bubfix: The memorization of the last error do not fail anymore in some
+  cases.</li>
 <li>Bugfix: The add-on can initialize again with NVDA 2019.2.1.</li>
 <li>Bugfix: Log saving feature will not fail anymore with non-ASCII logs.</li>
 </ul>

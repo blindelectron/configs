@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Google Docs accessibility 1.0</title>
+</head>
+<body>
+<h1>Google Docs support for NVDA</h1>
+<p>This add-on enhances compatibility with Google Docs. This add-on works in browse mode by making QuickNav commands and cursor navigation commands work properly. For example, if you use Google Docs without this add-on, then pressing <code>H</code> will take you to the next heading, but only among the ones visible on the screen. This add-on fixes this behavior and <code>H</code> command will now take you to all headings in the document.</p>
+<h2>Setup</h2>
+<p>For this add-on to work properly, we need to enable screenreader mode and Braille mode. In order to do that:
+* Open any Google Doc.
+* Press <code>Control+Alt+Z</code> until you hear "Screenreader support enabled".
+* Press <code>Control+Alt+H</code> until you hear  "Braille support enabled".
+* Press <code>NVDA+Space</code> to enter browse mode if you are in forms mode.</p>
+<h2>Requirements</h2>
+<p>Supported browsers:</p>
+<ul>
+<li>Google Chrome</li>
+<li>Mozilla Firefox</li>
+</ul>
+<p>For now this add-on requires "en_us" keyboard locale to be installed on your computer. This is required because the add-on needs to resolve Google Docs keystrokes and it does so in "en_us" locale. It will crash if "en_us" locale is not found. Pull requests to fix this behavior are welcome.</p>
+<h2>Supported commands</h2>
+<p>Global commands:</p>
+<ul>
+<li><code>NVDA+Alt+G</code> - toggle Google Docs accessibility (allows to temporarily disable functionality of this add-on)</li>
+</ul>
+<p>QuickNav commands (their <code>Shift+</code> counterparts are omitted for brevity):</p>
+<ul>
+<li><code>H</code> - next heading</li>
+<li><code>1..6</code> - next heading level 1 through 6</li>
+<li><code>K</code> - next link</li>
+<li><code>L</code> - next list</li>
+<li><code>I</code> - next list item</li>
+<li><code>G</code> - next graphic</li>
+<li><code>T</code> - next table</li>
+</ul>
+<p>Navigation commands:</p>
+<ul>
+<li><code>Arrows</code></li>
+<li><code>Control+Arrows</code></li>
+<li><code>Home</code>, <code>End</code></li>
+<li><code>Control+Home</code>, <code>Control+End</code>
+<code>PageUp</code>, <code>PageDown</code></li>
+</ul>
+<h2>Known issues</h2>
+<ul>
+<li>This add-on requires <code>en_us</code> to be installed on the computer.</li>
+<li>This add-on converts NVDA commands into Google Docs gestures. Therefore their behavior cannot be adjusted.</li>
+<li>For example, pressing <code>H</code> repeatedly would wrap to the beginning of the document. This is inconvenient for NVDA users, but this is the default in Google Docs and unfortunately cannot be changed.</li>
+</ul>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../style.css" media="screen">
-<title>Tele NVDA remote assistance 2023.10.21</title>
+<title>Tele NVDA remote assistance 2023.12.22</title>
 </head>
 <body>
 <h1>TeleNVDA</h1>
@@ -18,6 +18,8 @@
 <li>An option allows blocking remote speech commands different from text.</li>
 <li>Improved support for proxy servers and TOR hidden services (<a href="https://addons.nvda-project.org/addons/proxy.en.html">Proxy support add-on</a> is required).</li>
 <li>Ability to change the f11 key to another gesture. Now this works as a common script so, you can assign gestures in the "Input Gestures" dialog.</li>
+<li>a gesture (unassigned by default) to open the addon options</li>
+<li>Ability to assign a gesture to the send ctrl+alt+delete option in the input Gestures dialog. Warning! you shouldn't assighn the ctrl+alt+delete keys to this option. Doing it  will stil work normally, but anytime you press ctrl+alt+delete keys to send the ctrl+alt+delete to the remote machine, your own machine will also be affected by the ctrl+alt+delete function, which is likely not what you expect!</li>
 <li>Ability to ignore the next immediate gesture completely, it is useful if you need to send to the remote machine the gesture used to toggle between host and remote machine.</li>
 <li>Ability to exchange small files (up to 10 MB) among users connected to the same session.</li>
 <li>Ability to forward ports via UPNP.</li>
@@ -77,7 +79,7 @@
 <p>Note that the shared link may not work if you copy it from a server running in direct connection mode.</p>
 <h2>Send Ctrl+Alt+Del</h2>
 <p>While sending keys, it is not possible to send the CTRL+Alt+del combination normally.</p>
-<p>If you need to send CTRL+Alt+del, and the remote system is on the secure desktop, use this command.</p>
+<p>If you need to send CTRL+Alt+del, and the remote system is on the secure desktop, use this command. You can also assighn a gesture for this command in the input Gestures dialog.</p>
 <h2>Send toggle key between local and remote computer</h2>
 <p>Usually when you press the assigned gesture to switch between the local and the remote machine, it won't be sent to the remote machine; it will switch between the local machine and the remote machine instead.</p>
 <p>If you need to send this or any gesture to the remote machine, you can override this behavior for the next immediate gesture by activating the ignore next gesture script.</p>

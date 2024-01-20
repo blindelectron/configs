@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../style.css" media="screen">
-<title>IBMTTS driver 23.6.1</title>
+<title>IBMTTS driver 23.12.1</title>
 </head>
 <body>
 <h1>IBMTTS driver, Add-on for NVDA</h1>
@@ -30,8 +30,15 @@
 <ul>
 <li>Enable abbreviation expansion: toggles expannsion of abbreviations. Note that disabling this option will also disable the expansion of any abbreviations specified in user-provided abbreviation dictionaries.</li>
 <li>Enable phrase prediction: if this option is enabled, the synthesizer will try to predict where pauses would occur in sentences based on their structure, for example, by using words like "and" or "the" as phrase boundaries. If this option is off, it will only pause if commas or other such punctuation is encountered.</li>
-<li>Shorten pauses: enable this option for shorter punctuation pauses, like those seen in other screen readers.</li>
-<li>Always send current speech settings: there is a bug in the synthesizer that will occasionally cause the speech and pitch settings to be briefly reset to their default values. The cause of this issue is currently unknown, however a workaround is to continuously send the current speech rate and pitch settings. This option should generally be enabled. However, it should be disabled if reading text that contains backquote voice tags.</li>
+<li>Pauses: This is a combo box with three options.</li>
+<li>Do not shorten: pauses will not be shortened at all, and the original pauses of IBMTTS will be used in all cases.</li>
+<li>Shorten at end of text only: pauses of punctuation symbols such as periods and commas will not be shortened, but they will be shortened when text ends, for example when pressing NVDA+t twice quickly to spell the title bar of an application character by character.</li>
+<li>
+<p>Shorten all pauses: all pauses including punctuation pauses and pauses that occur at the end of text will be shortened.</p>
+</li>
+<li>
+<p>Always send current speech settings: there is a bug in the synthesizer that will occasionally cause the speech and pitch settings to be briefly reset to their default values. The cause of this issue is currently unknown, however a workaround is to continuously send the current speech rate and pitch settings. This option should generally be enabled. However, it should be disabled if reading text that contains backquote voice tags.</p>
+</li>
 <li>Sample rate: changes the synthesizer's sound quality. Most useful for IBMTTS, where setting the sample rate to 8 kHz enables access to a new set of voices.</li>
 </ul>
 <h3>IBMTTS category settings.</h3>

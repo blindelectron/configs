@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../style.css" media="screen">
-<title>Resource Monitor 23.10</title>
+<title>Resource Monitor 23.11</title>
 </head>
 <body>
 <h1>Prati stanje resursa (Resource Monitor)</h1>
@@ -42,10 +42,11 @@ informacije o sustavu Windows. Važno je znati i sljedeće:</p>
 <ul>
 <li>Podaci o resursima ne mogu se kopirati u međuspremnik ako se dodatak
   pokreće na sigurnim ekranima.</li>
-<li>CPU usage is given for logical processors, not physical cores. This is
-  noticeable for processors which uses Hyper-Threading where number of CPU's
-  is twice the number of CPU cores. On some newer computers, not all CPU
-  cores will have hyper-threading enabled.</li>
+<li>Informacije o korištenju procesora dane su za logičke procesore, ne za
+  fizičke jezgre. To se može primijetiti kod procesora koji koriste
+  Hyper-Threading gdje je broj procesora dvostruko veći od broja jezgri. Na
+  nekim novijim računalima Hyper-Threading neće biti aktivirano za sve
+  jezgre CPU-a.</li>
 <li>Ako je u tijeku velika aktivnost diska, kao što je kopiranje velikih
   datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju
   diska.</li>
@@ -55,17 +56,17 @@ informacije o sustavu Windows. Važno je znati i sljedeće:</p>
 </ul>
 <p>Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
 s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.</p>
-<h2>Version 23.09</h2>
+<h2>Verzija 23.09</h2>
 <ul>
-<li>NVDA will no longer log startup error messages on Windows Server systems
-  when wireless capability modules are unavailable.</li>
+<li>NVDA više neće bilježiti poruke o greškama pri pokretanju na Windows
+  Server sustavima kada moduli bežičnih mogućnosti nisu dostupni.</li>
 </ul>
-<h2>Version 23.06</h2>
+<h2>Verzija 23.06</h2>
 <ul>
 <li>Situation where resourceMonitor doesn't work properly due to
   unavailability of wireless adapters has been fixed.</li>
 </ul>
-<h2>Version 23.05.1</h2>
+<h2>Verzija 23.05.1</h2>
 <p>wlanReporter NVDA-addon is now part of resourceMonitor!</p>
 <ul>
 <li>
@@ -83,11 +84,10 @@ s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.</p>
 <h2>Verzija 23.05</h2>
 <ul>
 <li>
-<p>added the ability to detect and present the state of the connected
-  wireless network.</p>
+<p>Dodana je mogućnost otkrivanja i prikaza stanja povezane bežične mreže.</p>
 <ul>
 <li>Najavljuje ime priključenog bežičnog SSID-a.</li>
-<li>Announces the strength of the ssid</li>
+<li>Najavljuje jačinu ssid-a</li>
 <li>Najavljuje da SSID nije pronađen ako nijedan nije otkriven.</li>
 </ul>
 </li>

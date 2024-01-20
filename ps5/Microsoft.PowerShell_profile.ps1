@@ -157,6 +157,9 @@ function gpush
 	git commit -am "$args"
 	git push
 }
+
+function glog { git --no-pager log --oneline $args}
+
 Function gpip {
  (Invoke-WebRequest http://ifconfig.me/ip ).Content
 }

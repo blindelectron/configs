@@ -143,7 +143,6 @@ if (Test-CommandExists nvim) {
     $EDITOR='notepad'
 }
 
-function ll { Get-ChildItem -Path $pwd -File }
 function g { Set-Location $HOME\github }
 function co { Set-Location $HOME\coding }
 function gcom
@@ -157,17 +156,22 @@ function gpush
 	git commit -am "$args"
 	git push
 }
+
+function glog { git --no-pager log --oneline $args}
+
 Function gpip {
  (Invoke-WebRequest http://ifconfig.me/ip ).Content
 }
 function uptime {
         #Windows Powershell    
+        <#
         Get-WmiObject win32_operatingsystem | Select-Object csname, @{LABEL='LastBootUpTime';
         EXPRESSION={$_.ConverttoDateTime($_.lastbootuptime)}}
+#>
 
         #Powershell Core / Powershell 7+ (Uncomment the below section and comment out the above portion)
 
-        <#
+        
         $bootUpTime = Get-WmiObject win32_operatingsystem | Select-Object lastbootuptime
         $plusMinus = $bootUpTime.lastbootuptime.SubString(21,1)
         $plusMinusMinutes = $bootUpTime.lastbootuptime.SubString(22, 3)
@@ -178,7 +182,7 @@ function uptime {
         $leftSplit = $bootUpTime.lastbootuptime.Split($plusMinus)[0]
         $upSince = [datetime]::ParseExact(($leftSplit + $plusMinus + $hourOffset), 'yyyyMMddHHmmss.ffffffzzz', $null)
         Get-WmiObject win32_operatingsystem | Select-Object @{LABEL='Machine Name'; EXPRESSION={$_.csname}}, @{LABEL='Last Boot Up Time'; EXPRESSION={$upsince}}
-        #>
+        
 
         #Works for Both (Just outputs the DateTime instead of that and the machine name)
         # net statistics workstation | Select-String "since" | foreach-object {$_.ToString().Replace('Statistics since ', '')}
@@ -213,6 +217,7 @@ Remove-Item Alias:cat
 function ls($args) {busybox ls -w 1 --color=auto $args}
 function la {ls -aa}
 function ll {ls -la}
+
 #set up ssh ip number function.
 function ssi() {
 $arg0=$args[0]
