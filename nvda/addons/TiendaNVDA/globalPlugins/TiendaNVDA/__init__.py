@@ -841,12 +841,14 @@ _("""Autor: {}
 Nombre del complemento: {}
 Nombre interno: {}
 Descripción: {}
+Página web: {}
 Desarrollo: {}\n""").format(
 	datos['author'],
 	datos['summary'],
 	datos['name'],
 	datos['description'],
-	_("Con soporte") if datos['legacy'] == 0 else _("Sin soporte"),
+	datos['url'],
+	_("Con soporte") if datos['legacy'] == 0 else _("Sin soporte")
 	)
 		self.txtResultado.SetValue(ficha)
 
@@ -856,11 +858,15 @@ _("""Canal: {}
 Versión: {}
 Mínimo NVDA: {}
 Testeado hasta versión de NVDA: {}
+Clave interna en la tienda: {}
+Enlace de descarga: {}
 Total descargas: {}\n""").format(
 	datos['links'][i]['channel'],
 	datos['links'][i]['version'],
 	datos['links'][i]['minimum'],
 	datos['links'][i]['lasttested'],
+	datos['links'][i]['file'],
+	datos['links'][i]['link'],
 	datos['links'][i]['downloads'],
 	)
 			self.txtResultado.AppendText(fichaEnlaces)
@@ -885,12 +891,14 @@ _("""Autor: {}
 Nombre del complemento: {}
 Nombre interno: {}
 Descripción: {}
+Página web: {}
 Desarrollo: {}\n""").format(
 	datos['author'],
 	datos['summary'],
 	datos['name'],
 	traducir,
-	_("Con soporte") if datos['legacy'] == 0 else _("Sin soporte"),
+	datos['url'],
+	_("Con soporte") if datos['legacy'] == 0 else _("Sin soporte")
 	)
 		self.txtResultado.SetValue(ficha)
 
@@ -900,11 +908,15 @@ _("""Canal: {}
 Versión: {}
 Mínimo NVDA: {}
 Testeado hasta versión de NVDA: {}
+Clave interna en la tienda: {}
+Enlace de descarga: {}
 Total descargas: {}\n""").format(
 	datos['links'][i]['channel'],
 	datos['links'][i]['version'],
 	datos['links'][i]['minimum'],
 	datos['links'][i]['lasttested'],
+	datos['links'][i]['file'],
+	datos['links'][i]['link'],
 	datos['links'][i]['downloads'],
 	)
 			self.txtResultado.AppendText(fichaEnlaces)
@@ -943,9 +955,9 @@ Total descargas: {}\n""").format(
 		self.menuFiltro = wx.Menu()
 		item1 = self.menuFiltro.Append(6, _("Mostrar todos los complementos"))
 		self.Bind(wx.EVT_MENU, self.onCargaFiltro, item1)
-		item2 = self.menuFiltro.Append(7, _("Mostrar los complementos con compatibilidad de API 2023"))
+		item2 = self.menuFiltro.Append(7, _("Mostrar los complementos con compatibilidad de API 2024"))
 		self.Bind(wx.EVT_MENU, self.onCargaFiltro, item2)
-		item3 = self.menuFiltro.Append(8, _("Mostrar los complementos con compatibilidad de API 2022"))
+		item3 = self.menuFiltro.Append(8, _("Mostrar los complementos con compatibilidad de API 2023"))
 		self.Bind(wx.EVT_MENU, self.onCargaFiltro, item3)
 		item4 = self.menuFiltro.Append(9, _("Mostrar los complementos ordenados por autor"))
 		self.Bind(wx.EVT_MENU, self.onCargaFiltro, item4)
@@ -1036,8 +1048,8 @@ Total descargas: {}\n""").format(
 			else:
 				self.listboxComplementos.Append(sorted(self.temporal, key=str.lower))
 		if self.indiceFiltro == 7:
-			self.SetTitle(ajustes.titulo + _(" - Complementos compatibles con API 2023"))
-			dataserver = [x for x in self.datos.dataServidor if x['links'][0]['lasttested'].split('.')[0] == "2023"]
+			self.SetTitle(ajustes.titulo + _(" - Complementos compatibles con API 2024"))
+			dataserver = [x for x in self.datos.dataServidor if x['links'][0]['lasttested'].split('.')[0] == "2024"]
 			for x in range(0, len(dataserver)):
 					self.temporal.append(dataserver[x]['summary'])
 			if ajustes.tempOrden == False:
@@ -1046,8 +1058,8 @@ Total descargas: {}\n""").format(
 				self.listboxComplementos.Append(sorted(self.temporal, key=str.lower))
 
 		if self.indiceFiltro == 8:
-			self.SetTitle(ajustes.titulo + _(" - Complementos compatibles con API 2022"))
-			dataserver = [x for x in self.datos.dataServidor if x['links'][0]['lasttested'].split('.')[0] == "2022"]
+			self.SetTitle(ajustes.titulo + _(" - Complementos compatibles con API 2023"))
+			dataserver = [x for x in self.datos.dataServidor if x['links'][0]['lasttested'].split('.')[0] == "2023"]
 			for x in range(0, len(dataserver)):
 					self.temporal.append(dataserver[x]['summary'])
 			if ajustes.tempOrden == False:
@@ -1679,6 +1691,12 @@ class ActualizacionDialogo(wx.Dialog):
 									addon.requestRemove()
 								break
 						addonHandler.installAddonBundle(bundle)
+						# Comprobamos si hay json de la tienda oficial y lo borramos.
+						if os.path.exists(os.path.join(globalVars.appArgs.configPath, "addons", "{}.json".format(bundleName))):
+							try:
+								os.remove(os.path.join(globalVars.appArgs.configPath, "addons", "{}.json".format(bundleName)))
+							except:
+								pass
 					else:
 						lstError.append(bundle.manifest['summary'])
 			if len(lstError) == 0:
