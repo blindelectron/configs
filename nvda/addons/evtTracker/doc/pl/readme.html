@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Event Tracker 23.5.5</title>
+</head>
+<body>
+<h1>Event Tracker</h1>
+<ul>
+<li>Autor: Joseph Lee, Thiago Seus, Luke Davis</li>
+<li>Pobierz <a href="https://www.nvaccess.org/addonStore/legacy?file=evtTracker">wersja stabilna</a></li>
+<li>Zgodność z NVDA: 2022.4 i nowsze</li>
+</ul>
+<p>Ten dodatek wyświetla informacje o obiektach, dla których zdarzenia zostały
+uruchomione. Właściwości zarejestrowane w trybie dziennika debugowania
+obejmują typ obiektu, nazwę, rolę, zdarzenie, moduł aplikacji i informacje
+specyficzne dla interfejsu API ułatwień dostępu, takie jak accName dla
+obiektu IAccessible i identyfikator automatyzacji dla obiektów UIA.</p>
+<p>Uwagi:</p>
+<ul>
+<li>Ten dodatek jest przeznaczony dla deweloperów i zaawansowanych
+  użytkowników, którzy muszą śledzić zdarzenia pochodzące z aplikacji i
+  różnych kontrolek.</li>
+<li>Aby korzystać z dodatku, NVDA musi logować się w trybie debugowania
+  (skonfigurowanym z poziomu ustawień ogólnych/rejestrowania lub ponownie
+  uruchomić z włączonym rejestrowaniem debugowania).</li>
+<li>Możliwe, że dodatki załadowane wcześniej niż Event Tracker mogą nie
+  przekazać zdarzenia innym dodatkom, w tym Event Tracker. Jeśli tak się
+  stanie, Moduł śledzenia zdarzeń nie będzie mógł rejestrować zdarzeń.</li>
+<li>Zdarzenia są obsługiwane z globalnych wtyczek, modułów aplikacji,
+  przechwytywaczy drzew i obiektów NVDA w tej kolejności.</li>
+</ul>
+<h2>Wydarzenia i informacje o nich</h2>
+<p>Śledzone i rejestrowane są następujące zdarzenia:</p>
+<ul>
+<li>Manipulacja ostrością: wzmocnienie ostrości, utrata ostrości, wprowadzenie
+  ostrości, pierwszy plan</li>
+<li>Zmiany: nazwa, wartość, stan, opis, aktywny region</li>
+<li>Inne zdarzenia: alert</li>
+<li>Zdarzenia UIA: kontroler, efekty upuszczania i upuszczania elementów
+  przeciągniętych, wybrany element, stan elementu, układ unieważniony,
+  powiadomienie, alert systemowy, zmiana tekstu, otwarta podpowiedź, otwarte
+  okno</li>
+</ul>
+<p>Dla każdego zdarzenia rejestrowane będą następujące informacje:</p>
+<ul>
+<li>Nazwa wydarzenia</li>
+<li>Obiekt</li>
+<li>Nazwa obiektu</li>
+<li>Rola obiektu</li>
+<li>Wartość lub stan obiektu w zależności od zdarzeń</li>
+<li>Moduł aplikacji</li>
+<li>W przypadku obiektów IAccessible: nazwa acc, identyfikator podrzędny</li>
+<li>W przypadku obiektów UIA: identyfikator automatyzacji, nazwa klasy,
+  właściwości powiadomienia w przypadku rejestrowania informacji o zdarzeniu
+  powiadomienia, liczba elementów podrzędnych dla zdarzenia unieważnionego
+  układu, właściwości stanu elementu, upuszczanie przeciągania i efekt
+  docelowy upuszczania, jeśli został zdefiniowany</li>
+</ul>
+<p>Możesz także przypisać gest do wyświetlania zdarzeń na liście (menu NVDA /
+preferencje / gesty wprowadzania, kategoria Śledzenie zdarzeń). Lista
+zapisuje do 100 ostatnio przetworzonych zdarzeń.</p>
+<h2>Wersja 23.02</h2>
+<ul>
+<li>Wymagana jest NVDA 2022.4 lub nowsza.</li>
+<li>Wymagany jest system Windows 10 21H2 (aktualizacja z listopada 2021
+  r./kompilacja 19044) lub nowszy.</li>
+<li>Zdarzenie alertu (głównie dla obiektów IAccessible) będzie śledzone.</li>
+</ul>
+<h2>Wersja 23.01</h2>
+<ul>
+<li>Wymagana jest NVDA 2022.3 lub nowsza.</li>
+<li>System Windows 10 lub nowszy jest wymagany, ponieważ systemy Windows 7, 8
+  i 8.1 nie są już obsługiwane przez firmę Microsoft od stycznia 2023 r.</li>
+</ul>
+<h2>Wersja 22.12</h2>
+<ul>
+<li>Dodano okno dialogowe listy zdarzeń (polecenie unsigned) do listy do 100
+  ostatnich wydarzeń zarejestrowanych przez dodatek (Thiago Seus).</li>
+<li>Dodatkowe informacje o zdarzeniach, takie jak właściwości powiadomień UIA,
+  są rejestrowane w tym samym czasie co zdarzenia.</li>
+</ul>
+<h2>Wersja 22.10</h2>
+<ul>
+<li>Ze względów bezpieczeństwa wymagana jest wersja NVDA 2022.2 lub nowsza.</li>
+<li>Śledzone są następujące zmiany właściwości UIA: efekt upuszczenia, efekt
+  upuszczenia.</li>
+<li>Tekst właściwości stanu elementu UIA jest rejestrowany.</li>
+<li>NVDA nie będzie już odtwarzać dźwięków błędów lub będzie się wydawało, że
+  nic nie robi, jeśli obiekt nie definiuje nazwy klasy okna.</li>
+</ul>
+<h2>Wersja 22.06</h2>
+<ul>
+<li>NVDA 2021.3 lub nowsza jest wymagana ze względów bezpieczeństwa.</li>
+</ul>
+<h2>Wersja 21.10</h2>
+<ul>
+<li>NVDA 2021.2 lub nowsza jest wymagana ze względu na zmiany w NVDA, które
+  mają wpływ na ten dodatek.</li>
+<li>Zdarzenie unieważnione w układzie UIA będzie śledzone.</li>
+<li>Informacje o roli obiektu i stanach będą przypominać informacje o
+  deweloperach znalezione w nowszych wersjach NVDA.</li>
+</ul>
+<h2>Wersja 21.07</h2>
+<ul>
+<li>Pierwsze wydanie.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

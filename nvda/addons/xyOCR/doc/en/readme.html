@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Xinyi OCR 3.0.1</title>
+</head>
+<body>
+<h1>Xinyi OCR</h1>
+<p>This is an NVDA addon that provides offline and online OCR recognition. Offline recognition is developed based on the PaddleOCR_json component.</p>
+<p>This add-on currently provides PaddleOCR_json's offline OCR recognition engine and the online Baidu general version and accurate version of the recognition engine. After installing the add-on, the PaddleOCR_json component will be automatically installed. More other offline and online OCR recognition engines will be gradually connected in the future.</p>
+<p>In addition, this plugin also provides image description function, which can identify image content.</p>
+<h2>Addon Advantages</h2>
+<ul>
+<li>The recognition speed is fast, and the offline recognition is about 100ms. The actual situation varies with the performance configuration of the computer.</li>
+<li>Powerful offline recognition accuracy, comparable to online recognition.</li>
+<li>The coordinates of the recognition result text are accurate, and the click response of the result text is accurate.</li>
+</ul>
+<h2>Keyboard Shortcuts</h2>
+<ul>
+<li>Navigation object OCR recognition: NVDA+ALT+O</li>
+<li>Clipboard OCR recognition: NVDA+ALT+SHIFT+O</li>
+<li>Switch OCR recognition engine: NVDA+ALT+9</li>
+<li>Image description: NVDA+ALT+P</li>
+<li>Clipboard image description: NVDA+ALT+SHIFT+P</li>
+</ul>
+<p>Shortcut key settings: You can set shortcut keys for each command under the "Xinyi OCR" category in the "Keys and Gestures" setting.</p>
+<h2>Feedback Contact</h2>
+<p>Any comments and suggestions are welcome to communicate:</p>
+<ul>
+<li>Project address: https://github.com/huaiyinfeilong/xyocr</li>
+<li>E-mail: huaiyinfeilong@163.com</li>
+<li>QQ: 354522977</li>
+<li>WeChat: huaiyinfeilong</li>
+</ul>
+<h2>Upgrade log</h2>
+<h3>Version 3.0.1</h3>
+<ul>
+<li>New image description black screen detection function: If the image description operation is performed while the Mu Lianping function is on, a prompt will be given.</li>
+</ul>
+<h3>Version 3.0</h3>
+<ul>
+<li>Add image content recognition function, which can identify and describe the images browsed and the images in the clipboard.</li>
+</ul>
+<h3>Version 2.0.2</h3>
+<p>*Fix the issue where online OCR may also be unavailable on machines where offline OCR is not available.</p>
+<h3>Version 2.0.1</h3>
+<ul>
+<li>Fix instability in network proxy environment.</li>
+</ul>
+<h3>Version 2.0</h3>
+<ul>
+<li>Added Baidu online OCR recognition engine, supports general recognition and accurate version recognition, and can use shared key and own private key. If you use your own private key, you need to configure it in the settings.</li>
+<li>Added screen curtain detection function, if OCR recognition is performed when the screen curtain is turned on, a prompt will be given.</li>
+<li>Remove the 64-bit system detection during installation, but after the non-64-bit system is installed, only online OCR recognition can be used and offline recognition cannot be used.</li>
+</ul>
+<h3>Version 1.3</h3>
+<ul>
+<li>Fix the problem that the version below NVDA 2023.1 cannot be installed.</li>
+</ul>
+<h3>Version 1.2</h3>
+<ul>
+<li>Added environment detection during installation, and will give a prompt that the installation cannot be completed for a non-64-bit system environment.</li>
+<li>Fixed the problem that PaddleOCR_json.exe would not exit automatically when NVDA exited abnormally, and continued to survive.</li>
+<li>Fix the problem that OCR recognition takes up too much memory as the number of recognitions increases.</li>
+<li>Fixed NVDA suspended animation problem during OCR recognition.</li>
+</ul>
+<h3>Version 1.1</h3>
+<ul>
+<li>Add clipboard recognition function, hotkey: NVDA+SHIFT+ALT+O</li>
+</ul>
+</body>
+</html>

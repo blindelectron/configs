@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>MathCAT: MathML:ää puheella ja pistekirjoituksella 0.3.9</title>
+</head>
+<body>
+<h1>MathCAT</h1>
+<ul>
+<li>Tekijä: Neil Soiffer</li>
+<li>Yhteensopivuus: NVDA 2018.1 tai uudempi (ei testattu aiemmissa versioissa)</li>
+<li>Lataa <a href="https://www.nvaccess.org/addonStore/legacy?file=mathcat">vakaa versio</a></li>
+</ul>
+<p>MathCAT on suunniteltu korvaamaan lopulta MathPlayerin, koska sitä ei enää
+tueta. MathCAT luo MathML:stä puhetta ja pistekirjoitusta. MathCATin
+tuottamaa matemaattista puhetta on paranneltu prosodialla, jotta se
+kuulostaa luonnollisemmalta. Puhetta voidaan navigoida kolmessa eri tilassa
+samoilla komennoilla kuin MathPlayerissa. Navigointisolmu näkyy lisäksi
+pistenäytöllä. Sekä Némethiä että UEB:tä tuetaan.</p>
+<p>MathCATissa on useita asetusvaihtoehtoja, jotka ohjaavat puhetta,
+navigointia ja pistekirjoitusta. Monia näistä voidaan määrittää MathCATin
+asetusvalintaikkunassa (löytyy NVDA:n Asetukset-valikosta). Lisätietoja saat
+<a href="https://nsoiffer.github.io/MathCAT/users.html">MathCATin
+dokumentaatiosta</a>.
+Dokumentaatiossa on linkki <a href="https://nsoiffer.github.io/MathCAT/nav-commands.html">taulukkoon, jossa luetellaan kaikki MathCATin
+navigointikomennot</a>.</p>
+<p>MathCAT on yleiskirjasto, joka tuottaa puhetta ja pistekirjoitusta
+MathML-muodosta. Sitä käytetään NVDA:n lisäksi myös muissa
+apuvälineteknologisissa projekteissa. Yleistä tietoa MathCAT-projektista on
+<a href="https://nsoiffer.github.io/MathCAT">MathCATin dokumentaatiosivulla</a>.</p>
+<p>Kenen tulisi käyttää MathCATia:</p>
+<ul>
+<li>Käyttäjien, jotka tarvitsevat korkealaatuista Nemeth-pistekirjoitusta
+  (MathPlayerin Nemeth perustuu liblouisin Nemeth-sukupolveen, jossa on
+  useita merkittäviä bugeja, joita on teknisesti vaikea korjata).</li>
+<li>Käyttäjien, jotka tarvitsevat teknistä UEB-pistekirjoitusta.</li>
+<li>Käyttäjien, jotka haluavat kokeilla uusinta teknologiaa ja ovat valmiita
+  auttamaan ilmoittamalla bugeista.</li>
+<li>Käyttäjien, jotka käyttävät puhesyntetisaattorina Eloquencea.</li>
+</ul>
+<p>Kenen EI tulisi käyttää MathCATia:</p>
+<ul>
+<li>Kaikkien, jotka käyttävät MathPlayeria muulla kuin englannin kielellä
+  (indonesian- ja vietnaminkieliset käännökset ovat käytettävissä, muita
+  käännöksiä on tulossa myöhemmin).</li>
+<li>Kaikkien, jotka käyttävät MathPlayeria muulla kuin
+  Nemeth/UEB-pistekirjoituksella (ota yhteyttä, jos haluat auttaa
+  pistekirjoituskäännöksen tekemisessä).</li>
+<li>Kaikkien, jotka pitävät enemmän Access8Mathista kuin MathPlayerista
+  (puheen tai muiden ominaisuuksien vuoksi).</li>
+</ul>
+<p>MathCATin puhesäännöt eivät ole vielä yhtä kattavia kuin MathPlayerissa
+(tämä voi olla toinen syy MathPlayerissa pysymiseen). MathCATia käytetään
+MathML 4 -ideoiden testausalustana, jonka avulla tekijät voivat ilmaista
+tarkoituksensa, jotta moniselitteiset merkinnät voidaan puhua oikein eikä
+arvailla. Olen viivytellyt liian monien sääntöjen lisäämistä, koska
+MathCATin arkkitehtuuri keskittyy käyttöön ja tekijän tarkoituksen
+päättelemiseen, eikä niitä ole vielä täysin ratkaistu.</p>
+<h2>MathCATin päivitysloki</h2>
+<h3>Versio 0.2</h3>
+<ul>
+<li>Paljon bugikorjauksia</li>
+<li>Parannuksia puheeseen</li>
+<li>Asetus tauon keston säätämiseen (toimii matematiikkapuheen suhteellisen
+  nopeuden muutosten kanssa)</li>
+<li>Tuki kemiallisten merkintöjen tunnistamiselle ja niiden asianmukaiselle
+  puhumiselle</li>
+<li>Käännökset indonesiaksi ja vietnamiksi</li>
+</ul>
+<h3>Versio 0.2.5</h3>
+<ul>
+<li>Lisää parannuksia kemiallisiin merkintöihin</li>
+<li>
+<p>Korjauksia Nemeth-merkintöihin:</p>
+<ul>
+<li>Lisätty "jättösääntöjä"</li>
+<li>Lisätty sääntöjä englannin kielen ilmaisimille</li>
+<li>Lisätty enemmän tapauksia, joissa monitoimi-ilmaisinta tarvitaan</li>
+<li>Nemeth-merkintöihin ja välimerkkeihin liittyviä korjauksia</li>
+</ul>
+</li>
+</ul>
+<h3>Versio 0.3.3</h3>
+<p>Tähän versioon on tehty useita bugikorjauksia. Merkittävimpiä uusia
+ominaisuuksia ja bugikorjauksia ovat:</p>
+<ul>
+<li>Lisätty espanjankielinen käännös (kiitos Noelia Ruizille ja María Allo
+  Roldánille)</li>
+<li>Muutettu navigointia siten, että se alkaa zoomattuna yhden tason lähemmäs</li>
+<li>Lisätty Ctrl+Alt+Nuolinäppäimet taulukkomaisissa rakenteissa
+  navigoimiseen. Näiden näppäinyhdistelmien pitäisi olla helpommin
+  muistettavat, koska niitä käytetään NVDA:ssa taulukkonavigointiin.</li>
+<li>Korjattu eSpeak-äänien NVDA-bugi, joka aiheutti niiden hidastumisen, kun
+  suhteellinen matematiikkapuheen nopeus oli asetettu tekstipuheen nopeutta
+  hitaammaksi.</li>
+<li>Tähän on tehty useita bugikorjauksia. Merkittävimmät uudet ominaisuudet ja
+  bugikorjaukset ovat: * Lisätty espanjankielinen käännös (kiitos Noelia
+  Ruizille ja María Allo Roldánille)  * Muutettu navigointia siten, että se
+  alkaa zoomattuna yhden tason lähemmäs * Lisätty Ctrl+Alt+Nuolinäppäimet
+  taulukkomaisissa rakenteissa navigoimiseen. Näiden näppäinyhdistelmien
+  pitäisi olla helpommin muistettavat, koska niitä käytetään NVDA:ssa
+  taulukkonavigointiin. * Korjattu eSpeak-äänien NVDA-bugi, joka aiheutti
+  niiden hidastumisen, kun suhteellinen matematiikkapuheen nopeus oli
+  asetettu tekstipuheen nopeutta hitaammaksi. * Korjattu OneCore-ääniä
+  koskeva ongelma, jotta ne lausuisivat pitkän a-äänteen.</li>
+</ul>
+<p>Paljon pieniä hienosäätöjä puheeseen ja bugikorjauksia sekä Nemethiin että
+UEB:hen.</p>
+<p>Huom: Nyt on käytettävissä vaihtoehto, jolla saa vietnamilaisen
+pistekirjoitusstandardin pistekirjoituksen tuottamiseen. Tämä on edelleen
+keskeneräinen ja liian virhealtis käytettäväksi muuhun kuin
+testaamiseen. Seuraavassa MathCATin versiossa pitäisi jo olla luotettava
+toteutus.</p>
+<h3>Versio 0.3.8</h3>
+<p>Pistekirjoitus:</p>
+<ul>
+<li>Valintaikkuna on käännetty useille kielille (kiitokset kääntäjille!)</li>
+<li>Alustava toteutus Espanjassa ja useissa portugalinkielisissä maissa
+  käytettävälle CMU-pistekirjoitusmerkistölle</li>
+<li>Merkittäviä parannuksia vietnamilaiseen pistekirjoitukseen</li>
+<li>Muutettu suhteellisen nopeuden liukusäädintä siten, että sen enimmäisarvo
+  on 100 % (sallii nyt vain hitaampien nopeuksien asettamisen). Lisätty myös
+  askelkokoja, jotta nopeuden merkittävä nostaminen/laskeminen olisi
+  helpompaa.</li>
+<li>Korjattu UEB:n bugeja ja lisätty merkkejä</li>
+</ul>
+<p>Muita korjauksia:</p>
+<ul>
+<li>Parannuksia vietnaminkieliseen puheeseen</li>
+<li>Korjattu OneCore-äänien bugi, joka sai ne sanomaan "a"</li>
+<li>Korjattu navigoinnin bugeja, joita esiintyi kun automaattinen
+  loitontaminen ei ole käytössä (ei oletuksena)</li>
+<li>Korjattu kielen vaihtamisen ja muutaman muun valintaikkunan muutosten
+  päivittämistä siten, että muutokset tulevat voimaan heti Käytä- tai
+  OK-painiketta painettaessa.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

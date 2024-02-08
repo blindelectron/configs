@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>MathCat: voz y braille a partir de MathML 0.3.9</title>
+</head>
+<body>
+<h1>MathCAT</h1>
+<ul>
+<li>Autor: Neil Soiffer</li>
+<li>Compatibilidad con NVDA: 2018.1 o posterior (no probado en versiones
+  anteriores)</li>
+<li>Descargar <a href="https://www.nvaccess.org/addonStore/legacy?file=mathcat">versión estable</a></li>
+</ul>
+<p>MathCat está diseñado para sustituir eventualmente a MathPlayer, ya que este
+último ya no está soportado. MathCat genera voz y braille desde MathML. La
+voz producida por MathCat para las matemáticas se mejora con entonación para
+que suene más natural. Se puede navegar por la voz con tres modos usando las
+mismas órdenes que en MathPlayer. Además, el nodo de navegación se indica en
+la pantalla Braille. Se soportan tanto Nemeth como UEB técnico.</p>
+<p>MathCat tiene varias opciones de configuración que controlan la voz, la
+navegación y el braille. Muchas de ellas pueden configurarse en el diálogo
+de opciones de MathCat (en el menú Preferencias de NVDA). Para más
+información sobre estos ajustes, consulta la <a href="https://nsoiffer.github.io/MathCAT/users.html">documentación de
+MathCat</a>.  La documentación
+incluye un enlace a <a href="https://nsoiffer.github.io/MathCAT/nav-commands.html">una tabla que enumera todas las órdenes de navegación
+de MathCat</a>.</p>
+<p>Nota: MathCat es una biblioteca general para generar voz y braille a partir
+de MathML. Es usada por otros proyectos de tecnologías de asistencia además
+de NVDA. Para información general sobre el proyecto MathCat, consulta la
+<a href="https://nsoiffer.github.io/MathCAT">página principal de documentación de
+MathCat</a>.</p>
+<p>Quién debería usar MathCat:</p>
+<ul>
+<li>Quien necesite Braille Nemeth de alta calidad (el Nemeth de MathPlayer se
+  basa en la generación Nemeth de Liblouis, que tiene una importante
+  cantidad de fallos técnicamente complicados de corregir).</li>
+<li>Quien necesite braille técnico UEB</li>
+<li>Quien quiera probar nuevas tecnologías y esté dispuesto a ayudar
+  informando de fallos</li>
+<li>Quien use Eloquence como voz</li>
+</ul>
+<p>Quién no debería usar MathCat:</p>
+<ul>
+<li>Cualquiera que use Math Player en idiomas distintos al inglés (existen
+  traducciones a indonesio, vietnamita y español; las traducciones se irán
+  haciendo en el futuro).</li>
+<li>Cualquiera que use MathPlayer con una salida braille sin Nemeth o UEB
+  (contacta conmigo si quieres ayudar con una traducción braille)</li>
+<li>Cualquiera que prefiera Access8Math a MathPlayer (por la voz u otras
+  funciones)</li>
+</ul>
+<p>Las reglas del habla de MathCat no son todavía tan extensas como las de
+MathPlayer -- esa puede ser otra razón para seguir con MathPlayer. MathCat
+se está usando como un banco de pruebas para MathML 4, que permite a los
+autores expresar su intención de tal forma que las notaciones ambiguas se
+verbalicen correctamente sin tener que adivinarlas. Me he esperado antes de
+añadir muchas reglas, ya que la arquitectura de MathCat se centra en usar e
+inferir la intención del autor, y esto aún no está completamente
+establecido.</p>
+<h2>Registro de actualización de MathCat</h2>
+<h3>Versión 0.2</h3>
+<ul>
+<li>Muchos fallos corregidos</li>
+<li>Mejoras en la voz</li>
+<li>Una opción en las preferencias para controlar la duración de las pausas
+  (funciona con los cambios relativos de velocidad de la voz en matemáticas)</li>
+<li>Soporte para reconocer notación química y verbalizarla adecuadamente</li>
+<li>Traducciones al indonesio y al vietnamita</li>
+</ul>
+<h3>Versión 0.2.5</h3>
+<ul>
+<li>Más mejoras en química</li>
+<li>
+<p>Correcciones en Nemeth:</p>
+<ul>
+<li>Añadidas reglas de "omisión"</li>
+<li>Añadidas algunas reglas para los indicadores en inglés</li>
+<li>Añadidos más casos donde es necesario el indicador Mulitpurpose</li>
+<li>Correcciones relacionadas con Nemeth y la puntuación</li>
+</ul>
+</li>
+</ul>
+<h3>Versión 0.3.3</h3>
+<p>Esta versión contiene bastantes correcciones de fallos. Las principales
+funciones nuevas y correcciones son:</p>
+<ul>
+<li>Se ha añadido traducción al español (gracias a Noelia Ruiz y María Allo
+  Roldán)</li>
+<li>Se modifica la navegación, de tal forma que ahora comienza ampliada en un
+  nivel</li>
+<li>Se añade control+alt+flechas como mecanismo para navegar por estructuras
+  tabulares. Estas teclas deberían ser más fáciles de memorizar, ya que se
+  usan para navegar por tablas en NVDA.</li>
+<li>Corregido un fallo con las voces de Espeak que provocaba que se
+  ralentizaran cuando la velocidad relativa matemática se configuraba para
+  ser más lenta que la velocidad de verbalización del texto.</li>
+<li>Solucionado un problema con las voces OneCore, que deberían poder
+  verbalizar el sonido de la 'a' larga.</li>
+</ul>
+<p>Hay montones de pequeños retoques en la voz y algunos fallos corregidos en
+Nemeth y UEB.</p>
+<p>Nota: ahora hay una opción para obtener braille estándar vietnamita en la
+salida braille. Este trabajo todavía está en progreso y tiene demasiados
+fallos como para usarlo para otra cosa que no sean pruebas. Espero que la
+próxima versión de MathCat contenga una implementación fiable.</p>
+<h3>Versión 0.3.8</h3>
+<p>Braille:</p>
+<ul>
+<li>Se ha internacionalizado el diálogo (¡Muchas gracias a los traductores!)</li>
+<li>Implementación inicial de CMU, código braille usado en España y varios
+  países de habla portuguesa</li>
+<li>Mejoras importantes al braille vietnamita</li>
+<li>Se cambia el deslizador del diálogo de velocidad relativa para que tenga
+  un valor máximo del 100% (ahora sólo permite configurar velocidades
+  menores). También se añaden pasos de tamaño para que sea más fácil
+  aumentar o disminuir la velocidad significativamente.</li>
+<li>Se corrigen algunos fallos de UEB y se añaden algunos caracteres para UEB</li>
+</ul>
+<p>Otras correcciones:</p>
+<ul>
+<li>Mejoras en la voz vietnamita</li>
+<li>Corregido un fallo con las voces OneCore, que decían "a"</li>
+<li>Se corrigen algunos fallos de navegación cuando <code>AutoZoomOut</code> es falso (no
+  el que hay por defecto)</li>
+<li>Se corrigen algunos cambios en los diálogos y en el idioma para que tengan
+  efecto inmediato cuando se pulse "Aplicar" o "Aceptar".</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

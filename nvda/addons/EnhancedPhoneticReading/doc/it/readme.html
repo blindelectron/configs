@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced Phonetic Reading 1.2</title>
+</head>
+<body>
+<h1>Enhanced phonetic reading NVDA Add-on</h1>
+<p>Questo componente aggiuntivo aggiunge alcune funzionalità alla lettura fonetica di NVDA, come la lettura delle descrizioni istantanea e ritardata.</p>
+<p>Copyright (C) 2022 David CM <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+<p>Questo pacchetto è distribuito secondo i termini della GNU General Public License, versione 2 o successive.</p>
+<h2>Download.</h2>
+<pre><code>L'ultima versione è disponibile per il
+</code></pre>
+<p><a href="https://davidacm.github.io/getlatest/gh/davidacm/EnhancedPhoneticReading">download a questo link</a></p>
+<h2>Funzionalità.</h2>
+<ul>
+<li>Descrizione ritardata: annuncia la descrizione dell'ultimo carattere letto dopo n millisecondi quanto il carattere è stato letto con i comandi di revisione, come ad esempio frecce, comandi di carattere attuale, precedente, successivo ecc....  </li>
+<li>Descrizione istantanea del carattere: Legge da descrizione del carattere attuale invece del carattere stesso. Questa funzionalità deve essere abilitata manualmente e verrà disabilitata alla chiusura di NVDA.</li>
+</ul>
+<h2>Note.</h2>
+<ul>
+<li>Quando la descrizione istantanea è abilitata, la descrizione ritardata non verrà annunciata.</li>
+<li>Questo componente aggiuntivo considera anche il cambio automatico della lingua. Pertanto, se l'ultimo carattere letto rilevato dal componente è stato pronunciato in un'altra lingua rispetto a quella predefinita e la commutazione automatica  è attiva, la descrizione verrà letta nella lingua rilevata.</li>
+<li>Solo per descrizioni ritardate: tutti i caratteri che non hanno una descrizione disponibile per la lingua specificata (locale characterDescriptions.dic) verranno ignorati. PER ESEMPIO. se leggi il carattere "4" e la lingua predefinita o rilevata corrente è lo spagnolo, non otterrai una descrizione ritardata perché lo spagnolo non ha una descrizione pe.</li>
+<li>For developers: In generale, qualsiasi carattere inviato con l'argomento textInfos.UNIT_CHARACTER a speech.speakTextInfo attiverà una descrizione ritardata del carattere.</li>
+</ul>
+<h2>Requisiti</h2>
+<p>Si necessita di NVDA 2019.3 o successivo.</p>
+<h2>Installazione</h2>
+<p>Si installa come un qualsiasi componente aggiuntivo di NVDA.</p>
+<h2>Utilizzo</h2>
+<p>La funzionalità del componente aggiuntivo verrà abilitata dopo l'installazione.<br />
+  Per abilitarlo o disabilitarlo, recarsi nelle impostazioni di NVDA e selezionare "Enhanced phonetic reading". In detta categoria è possibile impostare i seguenti parametri:</p>
+<ul>
+<li>Abilita la lettura ritardata delle descrizioni dei caratteri.</li>
+<li>Ritardo per l'annuncio della descrizione dei caratteri (in ms): il tempo che il componente aggiuntivo attende prima di pronunciare la descrizione del carattere letto. Non è possibile impostarlo ad un valore superiore a 20000 ms.</li>
+</ul>
+<h2>Scripts</h2>
+<ul>
+<li>Abilita o disabilita la descrizione istantanea dei caratteri: assegnato a "nvda + control + 2tn" o "nvda+ control + invio" per le tastiere laptop. Questo script Abilita o disabilita la descrizione istantanea dei caratteri.</li>
+<li>Abilita o disabilita la descrizione automatica dei caratteri: Nessuna combinazione assegnata. Questo script permette di abilitare o disabilitare la lettura ritardata dei caratteri.  </li>
+</ul>
+<p>È possibile assegnare un gesto o una combinazione di tasti nella categoria "voce" in "gesti e tasti di immissione"!.</p>
+<h2>Contributi, suggerimenti e donazioni</h2>
+<p>Se il mio progetto ti piace o questo software ti è utile nella vita quotidiana e vorresti contribuire in qualche modo, puoi donare con le seguenti modalità:</p>
+<ul>
+<li><a href="https://paypal.me/davicm">PayPal.</a></li>
+<li><a href="https://ko-fi.com/davidacm">Ko-fi.</a></li>
+<li><a href="https://davidacm.github.io/donations/">Criptovalute ed altri metodi.</a></li>
+</ul>
+<p>Se vuoi correggere bug, segnalare problemi o nuove funzionalità, puoi contattarmi a: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>.</p>
+<p>O nel repository  github di uesto progetto:
+  <a href="https://github.com/davidacm/enhancedphoneticreading">Enhanced phonetic reading in GitHub</a></p>
+<pre><code>Puoi ottenere l'ultima versione di questo componente aggiuntivo in detto repository.
+</code></pre>
+</body>
+</html>

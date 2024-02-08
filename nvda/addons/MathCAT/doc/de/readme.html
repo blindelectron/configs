@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>MathCAT: speech and braille from MathML 0.3.9</title>
+</head>
+<body>
+<h1>MathCAT</h1>
+<ul>
+<li>Autor: Neil Soiffer</li>
+<li>NVDA-Kompatibilität: 2018.1 oder neuer (nicht getestet in älteren
+  Versionen)</li>
+<li><a href="https://www.nvaccess.org/addonStore/legacy?file=mathcat">Stabile Version herunterladen</a></li>
+</ul>
+<p>MathCAT wurde entwickelt, um MathPlayer zu ersetzen, da MathPlayer nicht
+mehr unterstützt wird. MathCAT generiert Sprache und Blindenschrift aus
+MathML. Die von MathCAT erzeugte Sprache für Mathematik wird mit Prosodie
+verbessert, damit sie natürlicher klingt. Die Sprache kann in drei Modi mit
+denselben Befehlen wie MathPlayer bedient werden. Zusätzlich wird der
+Navigationsbereich auf einer Braillezeile angezeigt. Sowohl Nemeth- als auch
+UEB-Technik werden unterstützt.</p>
+<p>MathCAT verfügt über eine Reihe von Konfigurationsoptionen, die die
+Sprachausgabe, Navigation und die Braille-Ausgabe steuern. Viele dieser
+Optionen können in den MathCAT-Einstellungen vorgenommen werden (zu finden
+im NVDA-Menü). Weitere Informationen zu diesen Einstellungen finden Sie in
+der
+<a href="https://nsoiffer.github.io/MathCAT/users.html">MathCAT-Dokumentation</a>. Die
+Dokumentation enthält einen Link zu <a href="https://nsoiffer.github.io/MathCAT/nav-commands.html">einer Tabelle mit allen
+Navigationsbefehlen in
+MathCAT</a>.</p>
+<p>Hinweis: MathCAT ist eine allgemeine Bibliothek zur Erzeugung von Sprache
+und Braille aus MathML. Sie wird neben NVDA auch von anderen AT-Projekten
+verwendet. Informationen über das MathCAT-Projekt im Allgemeinen finden Sie
+auf der <a href="https://nsoiffer.github.io/MathCAT">Dokumentationsseite für
+MathCAT</a>.</p>
+<p>Wer sollte MathCAT benutzen:</p>
+<ul>
+<li>Diejenigen, die eine hohe Qualität der Nemeth-Brailleschrift benötigen
+  (die Nemeth-Schrift von MathPlayer basiert auf der Nemeth-Schrift von
+  liblouis, die eine Reihe schwerwiegender Fehler aufweist, die technisch
+  schwer zu beheben sind).</li>
+<li>Diejenigen, die die technische Braille-Schrift UEB benötigen</li>
+<li>Diejenigen, die die neueste Technologie ausprobieren wollen und bereit
+  sind, durch die Meldung von Fehlern zu helfen</li>
+<li>Diejenigen, die eine Eloquence-Stimme benutzen</li>
+</ul>
+<p>Wer sollte MathCAT NICHT benutzen:</p>
+<ul>
+<li>Alle, die MathPlayer außer in englischer Sprache verwenden (Übersetzungen
+  für Indonesisch und Vietnamesisch sind vorhanden; weitere Übersetzungen
+  werden in Zukunft folgen)</li>
+<li>Alle, die den MathPlayer mit einer Braille-Ausgabe außer Nemeth und UEB
+  benutzt (kontaktiert mich, wenn ihr mit einer Braille-Übersetzung
+  aushelfen wollt)</li>
+<li>Alle, die den Access8Math dem MathPlayer vorzieht (wegen der Sprache oder
+  anderer Funktionen)</li>
+</ul>
+<p>Die Sprachregeln von MathCAT sind noch nicht so umfangreich wie die von
+MathPlayer - ein weiterer Grund, bei MathPlayer zu bleiben. MathCAT wird als
+Testumgebung für Ideen für MathML 4 verwendet, mit denen die Autoren
+mehrdeutige Notationen korregieren können und diese dann nicht mehr erraten
+werden müssen. Ich habe mich noch etwas zurückgehalten, zu viele Regeln
+hinzuzufügen, da sich die Architektur von MathCAT auf die Verwendung und
+Ableitung von Autorenabsichten konzentriert und diese noch nicht vollständig
+geklärt sind.</p>
+<h2>Änderungsprotokoll für MathCAT</h2>
+<h3>Version 0.2</h3>
+<ul>
+<li>Viele Fehlerkorrekturen</li>
+<li>Verbesserungen für die Sprachausgabe</li>
+<li>Eine Einstellung zur Steuerung der Dauer von Pausen (funktioniert mit
+  Änderungen der relativen Sprechgeschwindigkeit für Mathematik)</li>
+<li>Unterstützung bei der Erkennung der chemischen Notation und deren
+  korrekten Aussprache</li>
+<li>Übersetzungen ins Indonesische und Vietnamesische</li>
+</ul>
+<h3>Version 0.2.5</h3>
+<ul>
+<li>Weitere Verbesserungen in Chemie</li>
+<li>
+<p>Korrekturen für Nemeth:</p>
+<ul>
+<li>Added "omission" rules</li>
+<li>Added some rules for English Language Indicators</li>
+<li>Added more cases where the Mulitpurpose indicator is needed</li>
+<li>Fixes related to Nemeth and punctuation</li>
+</ul>
+</li>
+</ul>
+<h3>Version 0.3.3</h3>
+<p>Diese Version enthält eine Reihe von Fehlerkorrekturen. Die wichtigsten
+neuen Funktionen und Fehlerkorrekturen sind:</p>
+<ul>
+<li>Spanisch Übersetzung hinzugefügt (Dank an Noelia Ruiz und María Allo
+  Roldán)</li>
+<li>Die Navigation wurde so geändert, dass sie um eine Ebene vergrößert
+  startet.</li>
+<li>Strg+Alt+Pfeiltasten als Möglichkeit zur Navigation in tabellarischen
+  Strukturen hinzugefügt. Diese Tasten sollten einprägsamer sein, da sie für
+  die Tabellennavigation in NVDA verwendet werden.</li>
+<li>Ein NVDA-Fehler für eSpeak-Stimmen wurde behoben, der dazu führte, dass
+  sie langsamer wurden, wenn die relative MathRate langsamer als die
+  Sprachgeschwindigkeit im Text eingestellt war.</li>
+<li>Ein Problem mit Onecore-Stimmen korrigiert, damit sie auch ein langen
+  A-Laut sprechen.</li>
+</ul>
+<p>Es gibt viele kleine Verbesserungen für die Sprachausgabe und einige
+Fehlerkorrekturen sowohl für Nemeth als auch für UEB.</p>
+<p>Hinweis: Es gibt jetzt eine Option, um den vietnamesischen Braille-Standard
+als Braille-Ausgabe zu erhalten. Diese ist noch in Arbeit und
+fehleranfällig, um außer zum Testen verwendet zu werden. Die nächste
+MathCAT-Version wird eine zuverlässige Implementierung enthalten.</p>
+<h3>Version 0.3.8</h3>
+<p>Braille:</p>
+<ul>
+<li>Dialog has been internationalized (many thanks to the translators!)</li>
+<li>Initial implementation of CMU -- braille code used in Spain and several
+  Portuguese speaking countries</li>
+<li>Significant improvements to Vietnamese braille</li>
+<li>Change relative rate dialog slider to have a maximum value of 100% (now
+  only allows setting slower rates). Also, added step sizes so it is easier
+  to raise/lower the rate significantly.</li>
+<li>Fix some UEB bugs and added some characters for UEB</li>
+</ul>
+<p>Other fixes:</p>
+<ul>
+<li>Improvements to Vietnamese speech</li>
+<li>Fixed bug with OneCore voices saying "a"</li>
+<li>Fixed some navigation bugs when <code>AutoZoomOut</code> is False (not the default)</li>
+<li>Fix updating around language changes and some other dialog changes so they
+  take effect immediately upon clicking "Apply" or "OK".</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

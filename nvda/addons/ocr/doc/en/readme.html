@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>OCR 2.2-dev</title>
+</head>
+<body>
+<h1>OCR</h1>
+<ul>
+<li>Authors: NV Access Limited &amp; other contributors. Currently maintained by Łukasz Golonka <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#117;&#107;&#97;&#115;&#122;&#46;&#103;&#111;&#108;&#111;&#110;&#107;&#97;&#64;&#109;&#97;&#105;&#108;&#98;&#111;&#120;&#46;&#111;&#114;&#103;">&#108;&#117;&#107;&#97;&#115;&#122;&#46;&#103;&#111;&#108;&#111;&#110;&#107;&#97;&#64;&#109;&#97;&#105;&#108;&#98;&#111;&#120;&#46;&#111;&#114;&#103;</a></li>
+<li>NVDA compatibility: 2019.3 and beyond</li>
+<li>Download <a href="https://addons.nvda-project.org/files/get.php?file=ocr">Stable version</a></li>
+<li>Download <a href="https://www.nvaccess.org/files/nvda-addons/ocr_0.20120529.01.nvda-addon">version compatible with NVDA 2019.2 and older</a></li>
+</ul>
+<p>Important: if you are using NVDA 2017.3 or later on Windows 10, please consider using buit-in Windows 10 OCR.
+Performs optical character recognition (OCR) to extract text from an object which is inaccessible. The Tesseract OCR engine is used. To perform OCR, move to the object in question using object navigation and press NVDA+r. You can set the OCR recognition language by going to the NVDA settings panel  and selecting OCR settings. The keyboard shortcut can be reassigned from NVDA input gestures dialog in the "Miscellaneous" category.</p>
+<h2>Change log:</h2>
+<h2>Changes for 2.2:</h2>
+<ul>
+<li>Compatibility with NVDA 2021.1</li>
+</ul>
+<h3>Changes for 2.1:</h3>
+<ul>
+<li>When recognition is performed on an edit field it is now possible to navigate it with the system caret without moving focus from it and back again.</li>
+<li>Tesseract release info is no longer written to the focused console.</li>
+<li>When no text is recognized this fact is announced to the user.</li>
+<li>It is no longer possible to attempt recognition on an invisible object.</li>
+<li>WX is now used to capture images instead of Pillow.</li>
+</ul>
+<h3>Changes for 2.0:</h3>
+<ul>
+<li>Compatibility with NVDA 2019.3 and later.</li>
+<li>It is possible to set different recognition languages for different configuration profiles.</li>
+<li>OCR settings can now be  changed from NVDA settings dialog rather than from a separate dialog in the tools menu.</li>
+</ul>
+</body>
+</html>

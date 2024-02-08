@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced Phonetic Reading 1.2</title>
+</head>
+<body>
+<h1>Enhanced phonetic reading NVDA Add-on</h1>
+<p>This add-on add some features to phonetic reading like delayed character descriptions and instant character descriptions.</p>
+<p>Copyright (C) 2022 - 2023 David CM <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+<p>This package is distributed under the terms of the GNU General Public License, version 2 or later.</p>
+<h2>Download.</h2>
+<pre><code>The latest release is available to
+</code></pre>
+<p><a href="https://davidacm.github.io/getlatest/gh/davidacm/EnhancedPhoneticReading">download in this link</a></p>
+<h2>Features.</h2>
+<ul>
+<li>Delayed descriptions: Announce the character description for the last read character after n milliseconds when the character was read by character review commands, E.G. left and right arrow keys, left, current or right character review commands, ETC.  </li>
+<li>Instant character descriptions: Read the character description instead of the current character. This feature must be enabled or disabled manually and will be deactivated when NVDA is closed.</li>
+</ul>
+<h2>Notes.</h2>
+<ul>
+<li>When instant character descriptions are enabled, delayed descriptions won't be announced.</li>
+<li>This add-on considers the auto language switching also. So if the last read character captured by this add-on was spoken in another language of your current default language, and auto language switching is on, the description will be read in the detected language.</li>
+<li>For delayed descriptions only: all characters that don't have a description available for the specified language (locale characterDescriptions.dic) will be ignored. E.G. if you read the character "4" and the current default or detected language is Spanish, you won't get a delayed description because Spanish  doesn't have a description for that symbol.</li>
+<li>For developers: In general, any character sent with textInfos.UNIT_CHARACTER argument to speech.speakTextInfo will activate a delayed character description.</li>
+</ul>
+<h2>Requirements</h2>
+<p>You need NVDA 2018.3 or later.</p>
+<h2>Installation</h2>
+<p>Just install it as a NVDA add-on.</p>
+<h2>Usage</h2>
+<p>The add-on functionality will be enabled once you install it.<br />
+  To enable or disable it, go to NVDA settings and select "Enhanced phonetic reading". In that category you can set the following parameters:</p>
+<ul>
+<li>Enable delayed descriptions for characters.</li>
+<li>Delay to announce  character descriptions (in ms): the time the add-on waits to speak the description for the read character. You can't set it greater than 20000 ms.</li>
+</ul>
+<h2>Scripts</h2>
+<ul>
+<li>toggle instant character descriptions: Assigned to "nvda + control + numpad2" or "nvda+ control + enter" for laptop keyboards. This script enables or disables the instant character descriptions feature.</li>
+<li>toggle delayed descriptions: no gestures assigned. This script lets you toggle the delayed descriptions status.  </li>
+</ul>
+<p>You can assign a command or gesture in speech category in the  NVDA input gestures dialog.</p>
+<h2>contributions, reports and donations</h2>
+<p>If you like my project or this software is useful for you in your daily life and you would like to contribute in some way, you can donate via the following methods:</p>
+<ul>
+<li><a href="https://paypal.me/davicm">PayPal.</a></li>
+<li><a href="https://ko-fi.com/davidacm">Ko-fi.</a></li>
+<li><a href="https://davidacm.github.io/donations/">cryptocurrencies and other methods.</a></li>
+</ul>
+<p>If you want to fix bugs, report problems or new features, you can contact me at: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#100;&#104;&#102;&#51;&#54;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>.</p>
+<p>Or in the github repository of this project:
+  <a href="https://github.com/davidacm/enhancedphoneticreading">Enhanced phonetic reading on GitHub</a></p>
+<pre><code>You can get the latest release of this add-on in that repository.
+</code></pre>
+</body>
+</html>

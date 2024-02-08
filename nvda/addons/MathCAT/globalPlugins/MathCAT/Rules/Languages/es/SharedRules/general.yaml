@@ -1,0 +1,992 @@
+---
+
+# number-sets are a little messy in that the base was converted to a number-set, so we have to match that (simple) case last
+- name: pos-neg-number-sets
+  tag: number-sets
+  match: "count(*)=2 and *[2][text()='+' or text()='-']"
+  replace:
+  - test:
+      if: "$Verbosity!='Terse'"
+      then:
+      - T: "la"
+  - bookmark: "*[2]/@id"
+  - test:
+    - if: "*[2][text()='+']"
+      then: [{T: "positivo"}]
+      else: [{T: "negativo"}]
+  - bookmark: "*[1]/@id"
+  - test:
+    - if: "*[1][text()='ℂ']"
+      then: [{T: números complejos}]
+    - else_if: "*[1][text()='ℕ']"
+      then: [{T:  números naturales}]
+    - else_if: "*[1][text()='ℚ']"
+      then: [{T: números racionales}]
+    - else_if: "*[1][text()='ℝ']"
+      then: [{T: números reales}]
+    - else_if: "*[1][text()='ℤ']"
+      then: [{T: enteros}]
+      else: [{x: "*[1][text()]"}] # shouldn't happen
+
+- name: dimension-number-sets
+
+  # should be single digit integer at this point (e.g, R^3)
+  tag: number-sets
+  match: "count(*)=2"
+  replace:
+  - bookmark: "*[1]/@id"
+  - test:
+    - if: "*[1][text()='ℂ']"
+      then: [{T: "C"}]
+    - else_if: "*[1][text()='ℕ']"
+      then: [{T: "N"}]
+    - else_if: "*[1][text()='ℚ']"
+      then: [{T: "Q"}]
+    - else_if: "*[1][text()='ℝ']"
+      then: [{T: "R"}]
+    - else_if: "*[1][text()='ℤ']"
+      then: [{T: "Z"}]
+      else: [{x: "*[1][text()]"}] # shouldn't happen
+  - bookmark: "*[2]/@id"
+  - x: "*[2]"
+
+- name: simple-number-sets
+  tag: number-sets
+  match: "count(*)=0"
+  replace:
+  - bookmark: "@id"
+  - test:
+    - if: "text()='ℂ'"
+      then: [{T: números complejos}]
+    - else_if: "text()='ℕ'"
+      then: [{T: números naturales}]
+    - else_if: "text()='ℚ'"
+      then: [{T: números racionales}]
+    - else_if: "text()='ℝ'"
+      then: [{T: números reales}]
+    - else_if: "text()='ℤ'"
+      then: [{T: enteros}]
+      else: [x: "text()"] # shouldn't happen
+
+- name: real-part
+  tag: real-part
+  match: "."
+  replace:
+  - bookmark: "@id"
+  - T: la parte real 
+
+- name: imaginary-part
+  tag: imaginary-part
+  match: "."
+  replace:
+  - bookmark: "@id"
+  - T: la parte imaginaria
+
+# rules on scripted vertical bars ('evaluated at')
+- name: evaluated-at-2
+  tag: evaluate
+  match: "count(*)=2"
+  replace:
+  - x: "*[1]"
+  - pause: auto
+  - T: evaluado en
+  - pause: auto
+  - x: "*[2]"
+
+- name: evaluated-at-3
+  tag: evaluate
+  match: "count(*)=3"
+  replace:
+  - x: "*[1]"
+  - pause: auto
+  - T:  evaluado en
+  - pause: auto
+  - x: "*[3]"
+  - T: "evaluado excepto en la misma expresión"
+  - x: "*[2]"
+
+- name: binomial
+  tag: binomial
+  match: "count(*)=2 and not(@data-intent-property)"
+  replace:
+  - x: "*[1]"
+  - T: elegir
+  - x: "*[2]"
+
+- name: permutation
+  tag: permutation-symbol
+  match: "count(*)=2 and not(@data-intent-property)"
+  replace:
+  - x: "*[2]"
+  - T: permutaciones de
+  - x: "*[1]"
+
+- name: intervals
+  tag: [open-interval, open-closed-interval, closed-interval, closed-open-interval]
+  match: "count(*)=2 and not(@data-intent-property)"
+  replace:
+  - test:
+      if: "$Verbosity!='Terse'"
+      then:
+      - T: "el"
+  - x: "translate(name(.),'-', ' ')"
+  - test:
+      if: "$Verbosity!='Terse'"
+      then:
+      - T: "de"
+      - x: "*[1]"
+      - T: "a"
+      - x: "*[2]"
+      else:
+      - x: "*[1]"
+      - T: "coma"
+      - x: "*[2]"
+
+- name: default-point
+  tag: point
+  match: "count(*)=2 and not(@data-intent-property)"
+  replace:
+  - test:
+      if: "$Verbosity!='Terse'"
+      then:
+      - T: "el"
+  - T: "punto"
+  - x: "*[1]"
+  - T: "coma"
+  - x: "*[2]"
+
+- name: absolute-value
+  tag: absolute-value
+  match: "count(*)=1 and not(@data-intent-property)"
+  replace:
+  - test:
+      if: "$Verbosity='Terse'"
+      then: [{T: "valor absoluto"}]
+      else: [{T: "el valor absoluto de"}]
+  - x: "*[1]"
+  - test:
+      if: "IsNode(*[1], 'leaf') or $Impairment != 'Blindness'"
+      then: [{pause: short}]
+      else: [{pause: short}, {T: final del valor absoluto}, {pause: short}]
+
+- name: negative
+  tag: negative
+  match: "count(*)=1 and not(@data-intent-property)"
+  replace:
+  - bookmark: "./@id"
+  - T: "negativo"
+  - x: "*[1]"
+
+- name: positive
+  tag: positive
+  match: "count(*)=1 and not(@data-intent-property)"
+  replace:
+  - bookmark: "./@id"
+  - T: "positivo"
+  - x: "*[1]"
+
+- name: subscript
+  tag: sub
+  match: "count(*)=2 and not(@data-intent-property)"
+  replace:
+  - x: "*[1]"
+  - T: "subíndice"
+  - x: "*[2]"
+
+- name: bigop-both
+  tag: large-op
+  match: "count(*) = 3"
+  replace:
+  - test:
+      if: "$Verbosity!='Terse'"
+      then: [{T: el}]
+  - x: "*[1]"
+  - T: de
+  - x: "*[2]"
+  - T: a
+  - x: "*[3]"
+  - test:
+      if: "following-sibling::*"
+      then: [{T: de}]
+
+- name: bigop-under
+  tag: large-op
+  match: "count(*)=2 and not(@data-intent-property)"
+  replace:
+  - test:
+      if: "$Verbosity!='Terse'"
+      then: [{T: el}]
+  - x: "*[1]"
+  - T: partido por
+  - x: "*[2]"
+  - test:
+      if: "following-sibling::*"
+      then: [{T: de}]
+
+- name: largeop
+  tag: mrow
+  match: "count(*)=2 and IsInDefinition(*[1], 'LargeOperators')"
+  replace:
+  - test:
+      if: "$Verbosity!='Terse'"
+      then: [{T: el}]
+  - x: "*[1]"
+  - T: de
+  - x: "*[2]"
+
+- name: limit
+  tag: limit
+  match: "count(*)=2 and not(@data-intent-property)"
+  replace:
+  - test:
+      if: "$Verbosity!='Terse'"
+      then: [t: ""]           # phrase('the' limit as x approaches 1)
+  - test:
+    - if: "*[1][.='lim']"
+      then: [T: "límite"]
+    - else_if: "*[1][.='limsup']"
+      then_test:
+          if: "$Verbosity='Terse'"
+          then: [t: "lim sup"]
+          else: [t: "limit superior"]
+    - else_if: "*[1][.='liminf']"
+      then_test:
+          if: "$Verbosity='Terse'"
+          then: [t: "lim inf"]
+          else: [t: "limit inferior"]
+    - else: [x: "*[1]"]
+  - T: "cuando"                      # phrase(the limit 'as' x approaches 1)
+  - x: "*[2]"
+  - pause: short
+
+- name: vector
+  tag: modified-variable
+  match: "count(*)=2 and *[2][text()='→']"
+  replace:
+  - T: "vector"
+  - x: "*[1]"
+
+- name: default
+
+  tag: modified-variable
+  match: "count(*)=2 and not(@data-intent-property)"
+  replace:
+  - x: "*[1]"
+  - x: "*[2]"
+  - pause: short
+
+- name: default
+  # handles single, double, etc., prime
+  tag: [skip-super, say-super]
+  match: "count(*)=2"
+  replace:
+  - x: "*[1]"
+  - test:
+      if: "name(.)='say-super'"
+      then_test:
+        if: "$Verbosity='Terse'"
+        then: {T: superíndice}
+        else: {T: superíndice}
+  - x: "*[2]"
+  - pause: short
+
+- name: msubsup-skip-super
+  # handles single, double, etc., prime
+  tag: [skip-super, say-super]
+  match: "count(*)=3"
+  replace:
+  - x: "*[1]"
+  - test:
+      if: "$Verbosity='Verbose'"
+      then: {T: "subíndice"}
+      else: {T: "subíndice"}
+  - x: "*[2]"
+  - test:
+      if: "not(IsNode(*[2],'leaf'))"
+      then:
+      - test:
+          if: "$Verbosity='Verbose'"
+          then: {T: "fin de subíndice"}
+          else: {T: "fin de subíndice"}
+      - pause: short
+      else_test:
+          if: "*[2][self::m:mi]"   # need a pause in "x sub k prime" so the prime is not associated with the 'k'
+          then: [pause: short]
+  - test:
+      if: "name(.)='say-super'"
+      then_test:
+        if: "$Verbosity='Verbose'"
+        then: {T: "superíndice"}
+        else: {T: "superíndice"}
+  - x: "*[3]"
+  - pause: short
+
+- name: sin
+  tag: mi
+  match: "text()='sin'"
+  replace:
+  - bookmark: "@id"
+  - T: "seno"
+- name: cos
+  tag: mi
+  match: "text()='cos'"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity='Terse'"
+      then: {T: cos}
+      else: {T: coseno}
+- name: tan
+  tag: mi
+  match: "text()='tan' or text()='tg'"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity='Terse'"
+      then: {T: tan}
+      else: {T: tangente}
+- name: sec
+  tag: mi
+  match: "text()='sec'"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity='Terse'"
+      then: {T: hallar}
+      else: {T: secante}
+- name: csc
+  tag: mi
+  match: "text()='csc'"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity='Terse'"
+      then: {T: hallar}
+      else: {T: cosecante}
+- name: cot
+  tag: mi
+  match: "text()='cot'"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity='Terse'"
+      then: {T: co-tan}
+      else: {T: cotangente}
+
+- name: sinh
+  tag: mi
+  match: "text()='sinh'"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity='Terse'"
+      then: {T: puesto que}
+      else: {T: seno hiperbólico}
+- name: cosh
+  tag: mi
+  match: "text()='cosh'"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity='Terse'"
+      then: {T: cosh}
+      else: {T: coseno hiperbólico}
+- name: tanh
+  tag: mi
+  match: "text()='tanh'"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity='Terse'"
+      then: {T: tangente}
+      else: {T: tangente hiperbólica}
+- name: sech
+  tag: mi
+  match: "text()='sech'"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity='Terse'"
+      then: {T: controlar}
+      else: {T: secante hiperbólica}
+- name: csch
+  tag: mi
+  match: "text()='csch'"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity='Terse'"
+      then: {T: controlar}
+      else: {T: cosecante hiperbólica}
+- name: coth
+  tag: mi
+  match: "text()='coth'"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity='Terse'"
+      then: {T: cotangente}
+      else: {T: cotangente hiperbólica}
+
+- # handle both log and ln
+  name: log
+  tag: mrow
+  variables: [{log_is_simple: "IsNode(*[3],'simple')"}]
+  match:
+  - "count(*)=3 and"
+  - "*[1][self::m:mi][text()='log' or text()='ln'] and"
+  - "*[2][self::m:mo][text()='⁡']"
+  replace:
+  - bookmark: "*[1]/@id"
+  - test:
+      if: "$log_is_simple"
+      then_test:
+      - if: "*[1][text()='log']"
+        then: [{T: log}]
+      - else_if: "$Verbosity='Terse'"
+        then: [{spell: "'ln'"}]
+        else: [{T: natural log}]
+      else:
+      - test:
+          if: "$Verbosity!='Terse' and not(log_is_simple)"
+          then: {T: el}
+      - test:
+        - if: "*[1][text()='log']"
+          then: [{T: log}]
+        - else_if: "$Verbosity='Terse'"
+          then: [{spell: "'ln'"}]
+          else: [{T: natural log}]
+      - T: de
+      - pause: short
+  - x: "*[3]"
+
+- name: log-base
+  tag: log-base
+  match: "not(@data-intent-property)"
+  replace:
+  - bookmark: "@id"
+  - test:
+      if: "$Verbosity!='Terse'"
+      then: {T: el}
+  - T: log base
+  - x: "*[1]"
+
+- name: multi-line
+  #   that eliminates the need for the if: else_if: ...
+  # IDEA:  set a variable with the word to say for the row (e.g., RowLabel = Row/Case/Line/...)
+  tag: [cases, equations, lines]
+  match: "."
+  replace:
+  - x: "count(*)"
+  - test:
+    - if: "self::m:cases"
+      then: [{T: "caso"}]
+    - else_if: "self::m:equations"
+      then: [{T: "ecuación"}]
+      else: [{T: "línea"}]
+  - test:
+    - if: "count(*) > 1"
+      then: [{ct: "s"}] # plural
+  - pause: short
+  - x: "*"
+
+- name: default-multiline
+  tag: [mtr, mlabeledtr]
+  match: "parent::m:cases or parent::m:equations or parent::m:lines"
+  replace:
+  - test:
+    - if: "parent::m:cases"
+      then: [{T: "caso"}]
+    - else_if: "parent::m:equations"
+      then: [{T: "ecuación"}]
+      else: [{T: "línea"}]
+  - x: "count(preceding-sibling::*)+1"
+  - test:
+      if: .[self::m:mlabeledtr]
+      then:
+      - T: etiquetada con
+      - x: "*[1]/*"
+  - pause: medium
+  - test:
+      if: .[self::m:mlabeledtr]
+      then: [{x: "*[position()>1]"}]
+      else: {x: "*"}
+
+- name: default-multiline
+  tag: mtd
+  match: "parent::*[parent::m:cases or parent::m:equations or parent::m:lines]"
+  variables: [LongPause: "$SpeechStyle = 'ClearSpeak' and $ClearSpeak_MultiLinePausesBetweenColumns = 'Long'"]
+  replace:
+  - x: "*"
+  - test:
+    # short pause after each element; medium pause if last element in a row; long pause for last element in matrix unless ClearSpeak override
+    - if: "count(following-sibling::*) > 0"
+      then_test:
+        if: "$LongPause"
+        then: {pause: medium}
+        else: {pause: short}
+    - else_if: "count(../following-sibling::*) > 0"
+      then_test:
+        if: "$LongPause"
+        then: {pause: long}
+        else: {pause: medium}
+      else: {pause: long}
+
+# Matrix/Determinant rules
+# matrix and determinant are the same other than "matrix"/"determinant" based on the bracketing chars
+# the pausing logic is pushed down to the <mtd>
+# the rules either speak the <mtr>s (to get "row n") or the <mtd>s. "column n" spoken if $IsColumnSilent is false
+- name: 1x1-matrix
+  tag: matrix
+  variables: [{IsColumnSilent: true()}]
+  match: "count(*)=1 and *[self::m:mtr][count(*) = 1]"
+  replace:
+  - OT: "la"
+  - T: "matriz 1 por 1"
+  - T: "con acceso"
+  - x: "*[1]/*"
+
+- name: 1x1-determinant
+  tag: determinant
+  variables: [{IsColumnSilent: true()}]
+  match: "count(*)=1 and *[self::m:mtr][count(*) = 1]"
+  replace:
+  - OT: "el"
+  - T: "determinante 1 por 1"
+  - T: "con acceso"
+  - x: "*[1]/*"
+
+# simpler reading methods for smaller matrices if the entries are simple
+- name: 2-or-3x1-matrix
+  tag: matrix
+  variables: [{IsColumnSilent: true()}]
+  match:
+  - "$ClearSpeak_Matrix != 'SpeakColNum' and " # "simple" isn't used for this preference
+  - "*[self::m:mtr][count(*) = 1] and " # one column
+  - count(*)<=3 and # at least two rows
+  - IsNode(*/*/*,'simple') # IsNode() returns true if all the nodes are simple
+  replace:
+  - test:
+      if: "$ClearSpeak_Matrix = 'Vector' or $ClearSpeak_Matrix = 'EndVector'"
+      then: {T: "el vector columna"}
+      else: {T: "la matriz columna"}
+  - x: count(*)
+  - T: "por 1 columna"
+  - pause: long
+  - x: "*/*"
+  - test:
+      if: "$ClearSpeak_Matrix = 'EndMatrix' or $ClearSpeak_Matrix = 'EndVector'"
+      then:
+      - T: "fin"
+      - test:
+          if: $ClearSpeak_Matrix = 'EndVector'
+          then: {T: vector}
+          else: {T: matriz}
+
+- name: default-column-matrix
+  tag: matrix
+  variables: [{IsColumnSilent: true()}]
+  match: "*[self::m:mtr][count(*) = 1]"
+  replace:
+  - test:
+      if: "$ClearSpeak_Matrix = 'Vector' or $ClearSpeak_Matrix = 'EndVector'"
+      then: {T: "el vector"}
+      else: {T: "la matriz"}
+  - x: "count(*)"
+  - T: "por 1 columna"
+  - pause: long
+  - x: "*" # select the rows (mtr)
+  - test:
+      if: "$ClearSpeak_Matrix = 'EndMatrix' or $ClearSpeak_Matrix = 'EndVector'"
+      then: [{T: "fin de la matriz"}]
+
+- name: 1x2-or-3-matrix
+  tag: matrix
+  variables: [{IsColumnSilent: "$SpeechStyle = 'ClearSpeak' and $ClearSpeak_Matrix != 'SpeakColNum'"}]
+  match:
+  - "$ClearSpeak_Matrix != 'SpeakColNum' and " # "simple" isn't used for this preference
+  - count(*)=1  and # one row
+  - count(*[1]/*)<=3 and # at least two cols
+  - IsNode(*/*/*,'simple') # IsNode() returns true if all the nodes are simple
+  replace:
+  - test:
+      if: "$ClearSpeak_Matrix = 'Vector' or $ClearSpeak_Matrix = 'EndVector'"
+      then: {T: "el vector"}
+      else: {T: "la matriz"}
+  - T: "1 por"
+  - x: count(*/*)
+  - T: "fila"
+  - pause: long
+  - x: "*/*"
+  - test:
+      if: "$ClearSpeak_Matrix = 'EndMatrix' or $ClearSpeak_Matrix = 'EndVector'"
+      then:
+      - T: "fin"
+      - test:
+          if: $ClearSpeak_Matrix = 'EndMatrix'
+          then: {T: matriz}
+          else: {T: vector}
+
+- name: default-row-matrix
+  tag: matrix
+  variables: [{IsColumnSilent: "$SpeechStyle = 'ClearSpeak' and $ClearSpeak_Matrix = 'SilentColNum'"}]
+  match: "count(*)=1" # one row
+  replace:
+  - test:
+      if: "$ClearSpeak_Matrix = 'Vector' or $ClearSpeak_Matrix = 'EndVector'"
+      then: {T: "el vector"}
+      else: {T: "la matriz"}
+  - T: "1 por"
+  - x: "count(*/*)"
+  - T: "fila"
+  - pause: long
+  - x: "*/*" # select the cols (mtd)
+  - test:
+      if: "$ClearSpeak_Matrix = 'EndMatrix' or $ClearSpeak_Matrix = 'EndVector'"
+      then:
+      - T: "fin"
+      - test:
+          if: $ClearSpeak_Matrix = 'EndMatrix'
+          then: {T: matriz}
+          else: {T: vector}
+
+- name: simple-small-matrix
+  tag: [matrix, determinant]
+  match:
+  - "$ClearSpeak_Matrix != 'SpeakColNum' and " # "simple" isn't used for this preference
+  - (count(*)<=3 and count(*[1]/*)<=3) and # no bigger than a 3x3 matrix
+  - IsNode(*/*/*,'simple') # IsNode() returns true if all the nodes are simple
+  variables: [{IsColumnSilent: "$SpeechStyle = 'ClearSpeak' and $ClearSpeak_Matrix != 'SpeakColNum'"}]
+  replace:
+  - test:
+      if: "self::m:determinant"
+      then: {T: "el determinante"}
+      else: {T: "la matriz"}
+  - x: count(*)
+  - T: por
+  - x: count(*[self::m:mtr][1]/*)
+  - pause: long
+  - x: "*"
+  - test:
+      if: "$ClearSpeak_Matrix = 'EndMatrix' or $ClearSpeak_Matrix = 'EndVector'"
+      then:
+      - T: fin
+      - test:
+          if: "self::m:determinant"
+          then: {T: "determinante"}
+          else: {T: "matriz"}
+
+- name: default-matrix
+  tag: [matrix, determinant]
+  variables: [{IsColumnSilent: "$SpeechStyle = 'ClearSpeak' and $ClearSpeak_Matrix = 'SilentColNum'"}]
+  match: "not(@data-intent-property)"
+  replace:
+  - test:
+      if: "self::m:determinant"
+      then: {T: "el determinante"}
+      else: {T: "la matriz"}
+  - x: "count(*)"
+  - T: por
+  - x: "count(*[self::m:mtr][1]/*)"
+  - pause: long
+  - x: "*"
+  - test:
+      if: "$ClearSpeak_Matrix = 'EndMatrix' or $ClearSpeak_Matrix = 'EndVector'"
+      then:
+      - T: fin
+      - test:
+          if: "self::m:determinant"
+          then: {T: determinante}
+          else: {T: matriz}
+
+- name: chemistry-msub
+
+  tag: [chemical-formula]
+  match: "*[1][text()='msub']"
+  replace:
+  - x: "*[2]"
+  - test:
+      if: "$Verbosity='Verbose'"
+      then: [{T: "subíndice"}]
+      else_test:
+        if: "$Verbosity='Medium'"
+        then: [{T: "subíndice"}]
+  - x: "*[3]"
+
+- name: chemistry-msup
+  tag: [chemical-formula]
+  match: "count(*)=3 and *[1][text()='msup']"
+  replace:
+  - x: "*[2]"
+  - test:
+      if: "$Verbosity='Verbose'"
+      then: [{T: "superíndice"}]
+      else_test:
+        if: "$Verbosity='Medium'"
+        then: [{T: "superíndice"}]
+  - x: "*[3]"
+  - test:
+      if: "following-sibling::*[1][text()='+' or text()='-']" # a little lazy -- assumes chemistry superscripts end with + or -
+      then: [{pause: medium}]
+
+-
+  # There currently is no way to do sub/super for n-ary number of args
+  # Instead, we just deal with up to two prescripts and up to four postscripts (repeating blocks of similar code [UGLY!])
+  # This hopefully covers all reasonable cases...
+  name: chemistry-scripts
+  tag: [chemical-formula, chemical-nuclide]
+  variables:
+  # computing the number of postscripts is messy because of <mprescripts> being optionally present -- we use "mod" to get the count right
+  - Prescripts: "m:mprescripts/following-sibling::*"
+  - NumChildren: "count(*)" # need to stash this since the count is wrong inside '*[...]' below
+  - Postscripts: "*[position()>1 and position() < (last() + ($NumChildren mod 2) -count($Prescripts))]"
+  match: . # should only be msubsup or mmultiscripts at this point
+  replace:
+  - test:
+      if: "$Prescripts" # we have at least one pre sub/super 
+      then:
+      # nuclide: speak the superscript first
+      - test:
+          if: "not($Prescripts[2][self::m:none])"
+          then:
+          - test:
+              if: "$Verbosity='Verbose'"
+              then: [{T: "superíndice"}]
+              else_test:
+                if: "$Verbosity='Medium'"
+                then: [{T: "superíndice"}]
+          - x: "$Prescripts[2]"
+          - pause: "short"
+      - test:
+          if: "not($Prescripts[1][self::m:none])"
+          then:
+          - test:
+              if: "$Verbosity='Verbose'"
+              then: [{T: "subíndice"}]
+              else_test:
+                if: "$Verbosity='Medium'"
+                then: [{T: "subíndice"}]
+          - x: "$Prescripts[1]"
+          - pause: "short"
+      - test:
+          if: "count($Prescripts) > 2" # can this happen for chemistry??? we allow for one *extra* pre sub/super pair
+          then:
+          - test:
+              if: "not($Prescripts[4][self::m:none])"
+              then:
+              - test:
+                  if: "$Verbosity='Verbose'"
+                  then: [{T: "subíndice"}]
+                  else_test:
+                    if: "$Verbosity='Medium'"
+                    then: [{T: "superíndice"}]
+              - x: "$Prescripts[4]"
+              - pause: "short"
+          - test:
+              if: "not($Prescripts[3][self::m:none])"
+              then:
+              - test:
+                  if: "$Verbosity='Verbose'"
+                  then: [{T: "subíndice"}]
+                  else_test:
+                    if: "$Verbosity='Medium'"
+                    then: [{T: "subíndice"}]
+              - x: "$Prescripts[3]"
+              - pause: "short"
+  - x: "*[1]" # base
+  - test:
+      if: "$Postscripts"
+      then:
+      - test:
+          if: "not($Postscripts[1][self::m:none])"
+          then:
+          - test:
+              if: "$Verbosity='Verbose'"
+              then: [{T: "subíndice"}]
+              else_test:
+                if: "$Verbosity='Medium'"
+                then: [{T: "subíndice"}]
+          - x: "$Postscripts[1]"
+          - pause: "short"
+      - test:
+          if: "not($Postscripts[2][self::m:none])"
+          then:
+          - test:
+              if: "$Verbosity='Verbose'"
+              then: [{T: "superíndice"}]
+              else_test:
+                if: "$Verbosity='Medium'"
+                then: [{T: "superíndice"}]
+          - x: "$Postscripts[2]"
+          - pause: "short"
+      - test:
+          if: "count($Postscripts) > 2"
+          then:
+          - test:
+              if: "not($Postscripts[3][self::m:none])"
+              then:
+              - test:
+                  if: "$Verbosity='Verbose'"
+                  then: [{T: "subíndice"}]
+                  else_test:
+                    if: "$Verbosity='Medium'"
+                    then: [{T: "subíndice"}]
+              - x: "$Postscripts[3]"
+              - pause: "short"
+          - test:
+              if: "not($Postscripts[4][self::m:none])"
+              then:
+              - test:
+                  if: "$Verbosity='Verbose'"
+                  then: [{T: "superíndice"}]
+                  else_test:
+                    if: "$Verbosity='Medium'"
+                    then: [{T: "superíndice"}]
+              - x: "$Postscripts[4]"
+              - pause: "short"
+          - test:
+              if: "count($Postscripts) > 4"
+              then:
+              - test:
+                  if: "not($Postscripts[5][self::m:none])"
+                  then:
+                  - test:
+                      if: "$Verbosity='Verbose'"
+                      then: [{T: "subíndice"}]
+                      else_test:
+                        if: "$Verbosity='Medium'"
+                        then: [{T: "subíndice"}]
+                  - x: "$Postscripts[5]"
+                  - pause: "short"
+              - test:
+                  if: "not($Postscripts[6][self::m:none])"
+                  then:
+                  - test:
+                      if: "$Verbosity='Verbose'"
+                      then: [{T: "superíndice"}]
+                      else_test:
+                        if: "$Verbosity='Medium'"
+                        then: [{T: "superíndice"}]
+                  - x: "$Postscripts[6]"
+                  - pause: "short"
+              - test:
+                  if: "count($Postscripts) > 6"
+                  then:
+                  - test:
+                      if: "not($Postscripts[7][self::m:none])"
+                      then:
+                      - test:
+                          if: "$Verbosity='Verbose'"
+                          then: [{T: "subíndice"}]
+                          else_test:
+                            if: "$Verbosity='Medium'"
+                            then: [{T: "subíndice"}]
+                      - x: "$Postscripts[7]"
+                      - pause: "short"
+                  - test:
+                      if: "not($Postscripts[8][self::m:none])"
+                      then:
+                      - test:
+                          if: "$Verbosity='Verbose'"
+                          then: [{T: "superíndice"}]
+                          else_test:
+                            if: "$Verbosity='Medium'"
+                            then: [{T: "superíndice"}]
+                      - x: "$Postscripts[8]"
+                      - pause: "short"
+      - test:
+          if: "$Postscripts[last()][not(self::m:none)] and following-sibling::*[1][text()='+' or text()='-']"
+          then: [{pause: medium}]
+
+- name: chemistry
+
+
+  tag: chemical-equation
+  match: "."
+  replace:
+  - x: "*"
+
+- name: chemical-element
+  tag: chemical-element
+  match: "."
+  replace:
+  - bookmark: "@id"
+  - spell: text()
+  - pause: short
+
+- name: chemical-state
+  tag: chemical-state
+  match: "count(*)=1"
+  replace:
+  - bookmark: "*[1]/@id"
+  - test:
+    - if: ".='s'"
+      then: [{T: "sólido"}]
+    - else_if: ".='l'"
+      then: [{T: "líquido"}]
+    - else_if: ".='g'"
+      then: [{T: "gaseoso"}]
+      else: [{T: "acuoso"}] # (aq)
+  - pause: short
+
+- name: chemical-formula-operator-bond
+  tag: chemical-formula-operator
+  match: "@data-chemical-bond"
+  replace:
+  # FIX: this might be better/more efficient if in unicode.yaml
+  - bookmark: "@id"
+  - test:
+    - if: "text()='-' or text() = ':'"
+      then: [{T: "enlace único"}]
+    - else_if: "text()='=' or text() = '::'"
+      then: [{T: "doble enlace"}]
+    - else_if: "text()='≡'"
+      then: [{T: "triple enlace"}]
+    - else_if: "text()='≣'"
+      then: [{T: "cuádruple enlace"}]
+      else: [{x: "text()"}]
+
+- name: chemical-formula-operator
+  tag: chemical-formula-operator
+  match: "."
+  replace:
+    x: "text()"
+
+- name: chemical-arrow-operator
+  tag: chemical-arrow-operator
+  match: "."
+  replace:
+  # FIX: this might be better/more efficient if in unicode.yaml
+  - bookmark: "@id"
+  - test:
+    - if: ".='→' or .='⟶'"
+      then_test:
+        if: "$Verbosity='Terse'"
+        then: [{T: "formas"}]
+        else: [{T: "da forma"}]
+    - else_if: ".='⇌' or .='\u1f8d2'"
+      then: [{T: "está en equilibrio con"}]
+    - else_if: ".='\u1f8d4'"
+      then: [{T: "equilibrado parcialmente hacia el lado izquierdo"}]
+    - else_if: ".='\u1f8d3'"
+      then: [{T: "equilibrado parcialmente hacia el lado derecho"}]
+      else: [x: "*"]
+
+- name: chemical-equation-operator
+  tag: chemical-equation-operator
+  match: "."
+  replace:
+  - bookmark: "@id"
+  - x: "text()"
+
+- name: none
+  tag: none
+  match: "../../*[self::m:chemical-formula or self::m:chemical-nuclide]"
+  replace:
+  - t: "" # don't say anything
+
+- name: ignore-intent-wrapper
+  tag: intent-wrapper
+  match: "."
+  replace:
+  - x: "*"

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>MathCAT: speech and braille from MathML 0.3.9</title>
+</head>
+<body>
+<h1>MathCAT</h1>
+<ul>
+<li>Forfatter: Neil Soiffer</li>
+<li>NVDA compatibility: 2018.1 or later (untested in earlier versions)</li>
+<li>Download <a href="https://www.nvaccess.org/addonStore/legacy?file=mathcat">stabil version</a></li>
+</ul>
+<p>MathCAT er designet til at erstatte MathPlayer, fordi MathPlayer ikke
+længere understøttes. MathCAT genererer tale og punkt fra MathML. Talen til
+matematik produceret af MathCAT er forbedret med prosodi, så den lyder mere
+naturlig. Talen kan navigeres i tre tilstande ved hjælp af de samme
+kommandoer som MathPlayer. Derudover er navigationsknuden vist på et
+punktdisplay. Både Nemeth og UEB teknisk understøttes.</p>
+<p>MathCAT har en række konfigurationsmuligheder, der styrer tale, navigation
+og punkt. Mange af disse kan indstilles i MathCAT-indstillingsdialogen
+(findes i meNVDA-menuen&gt;Opsætning). For mere information om disse
+indstillinger, læs
+<a href="https://nsoiffer.github.io/MathCAT/users.html">MathCAT-dokumentationen</a>.
+Dokumentationen indeholder et link til <a href="https://nsoiffer.github.io/MathCAT/nav-commands.html">en tabel med alle
+navigationskommandoer i
+MathCAT</a>.</p>
+<p>Bemærk: MathCAT er et generelt bibliotek til generering af tale og punkt fra
+MathML. Dette bruges af andre lignende projekter udover NVDA. For
+information om MathCAT-projektet, se
+<a href="https://nsoiffer.github.io/MathCAT">MathCAT-dokumentationssiden</a>.</p>
+<p>Hvem bør bruge MathCAT:</p>
+<ul>
+<li>Dem, der har brug for Nemeth-braille af høj kvalitet (MathPlayers Nemeth
+  er baseret på liblouis' Nemeth-generation, som har en række væsentlige
+  fejl, som er teknisk svære at rette).</li>
+<li>Dem, der har brug for UEB teknisk braille</li>
+<li>Dem, der ønsker at prøve den nyeste teknologi og er villige til at hjælpe
+  ved at rapportere fejl</li>
+<li>Dem, der bruger Eloquence som stemme</li>
+</ul>
+<p>Hvem bør IKKE bruge MathCAT:</p>
+<ul>
+<li>Enhver, der bruger MathPlayer med et andet sprog end engelsk
+  (oversættelser findes til indonesisk og vietnamesisk; oversættelser er
+  sandsynlige i fremtiden)</li>
+<li>Enhver, der bruger MathPlayer med et ikke-Nemeth/ikke-UEB brailleoutput
+  (kontakt mig, hvis du vil hjælpe med en brailleoversættelse)</li>
+<li>Enhver, der foretrækker Access8Math frem for MathPlayer (til tale eller
+  andre funktioner)</li>
+</ul>
+<p>MathCATs regler for tale er endnu ikke så omfattende som MathPlayers regler
+- det kan være endnu en grund til at holde sig til MathPlayer. MathCAT
+bliver brugt som et testbed for ideer til MathML 4, der gør det muligt for
+forfattere at udtrykke deres hensigt, så tvetydige notationer kan læses
+korrekt og ikke gættes på. Jeg har holdt op med at tilføje for mange regler,
+da arkitekturen i MathCAT er centreret omkring brug og udledning af
+forfatterens hensigt, og disse er ikke helt afklarede endnu.</p>
+<h2>MathCAT Update Log</h2>
+<h3>Version 0.2</h3>
+<ul>
+<li>Masser af fejlrettelser</li>
+<li>Forbedringer af tale</li>
+<li>En præferenceindstilling til at kontrollere varigheden af pause (fungerer
+  med ændringer af relativ talehastighed for matematik)</li>
+<li>Støtte til at genkende keminotation og tale den korrekt</li>
+<li>Oversættelser til indonesisk og vietnamesisk</li>
+</ul>
+<h3>Version 0.2.5</h3>
+<ul>
+<li>Flere forbedringer kemi</li>
+<li>
+<p>Rettelser til Nemeth:</p>
+<ul>
+<li>Added "omission" rules</li>
+<li>Added some rules for English Language Indicators</li>
+<li>Added more cases where the Mulitpurpose indicator is needed</li>
+<li>Fixes related to Nemeth and punctuation</li>
+</ul>
+</li>
+</ul>
+<h3>Version 0.3.3</h3>
+<p>Denne udgivelse indeholder en række fejlrettelser. De vigtigste nye
+funktioner og fejlrettelser er:</p>
+<ul>
+<li>Tilføjet spansk oversættelse (tak til Noelia Ruiz og María Allo Roldán)</li>
+<li>Ændret navigation, så den begynder at zoome i ét niveau</li>
+<li>Tilføjet cntrl+alt+pil som en måde at navigere i tabelstrukturer på. Disse
+  taster burde være mere mindeværdige, fordi de bruges til tabelnavigation i
+  NVDA.</li>
+<li>Virkede uden om NVDA-fejl for eSpeak-stemmer, der fik dem til at sænke
+  farten, når den relative MathRate var indstillet til at være langsommere
+  end teksttalehastigheden.</li>
+<li>Arbejdet med et OneCore-stemmeproblem, så de vil sige den lange 'a'-lyd.</li>
+</ul>
+<p>Der er masser af små justeringer af talen og nogle fejlrettelser til både
+Nemeth og UEB.</p>
+<p>Bemærk: der er nu en mulighed for at få Vietnams braillestandard som
+brailleoutput. Dette er stadig et igangværende arbejde og er for buggy til
+at blive brugt andet end til test. Jeg forventer, at den næste
+MathCAT-udgivelse vil indeholde en pålidelig implementering.</p>
+<h3>Version 0.3.8</h3>
+<p>Braille:</p>
+<ul>
+<li>Dialog has been internationalized (many thanks to the translators!)</li>
+<li>Initial implementation of CMU -- braille code used in Spain and several
+  Portuguese speaking countries</li>
+<li>Significant improvements to Vietnamese braille</li>
+<li>Change relative rate dialog slider to have a maximum value of 100% (now
+  only allows setting slower rates). Also, added step sizes so it is easier
+  to raise/lower the rate significantly.</li>
+<li>Fix some UEB bugs and added some characters for UEB</li>
+</ul>
+<p>Other fixes:</p>
+<ul>
+<li>Improvements to Vietnamese speech</li>
+<li>Fixed bug with OneCore voices saying "a"</li>
+<li>Fixed some navigation bugs when <code>AutoZoomOut</code> is False (not the default)</li>
+<li>Fix updating around language changes and some other dialog changes so they
+  take effect immediately upon clicking "Apply" or "OK".</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Olay İzleyici 23.5.5</title>
+</head>
+<body>
+<h1>Olay İzleyici</h1>
+<ul>
+<li>Yazar: Joseph Lee, Thiago Seus, Luke Davis</li>
+<li><a href="https://www.nvaccess.org/addonStore/legacy?file=evtTracker">Kararlı sürümü indir</a></li>
+<li>NVDA uyumluluğu: 2022.4 ve sonrası</li>
+</ul>
+<p>Bu eklenti, olayların tetiklendiği nesneler hakkında bilgi verir. Hata
+ayıklama günlük modunda kaydedilen özellikler, nesne türü, ad, rol, olay,
+uygulama modülü ve IAccessible nesnesi için accName ve UIA nesneleri için
+Otomasyon Kimliği gibi erişilebilirlik API'sine özgü bilgileri içerir.</p>
+<p>Notlar:</p>
+<ul>
+<li>Bu eklenti, uygulamalardan ve çeşitli denetimlerden gelen olayları
+  izlemesi gereken geliştiriciler ve uzman kullanıcılar için tasarlanmıştır.</li>
+<li>Eklentiyi kullanmak için, NVDA'nın hata ayıklama modunda oturum açması
+  gerekir (genel ayarlar/kayıt düzeyinden yapılandırılır veya hata ayıklama
+  günlüğü etkinken yeniden başlatılır).</li>
+<li>Olay İzleyicisi'nden önce yüklenen eklentilerin, olayı Olay İzleyicisi de
+  dahil olmak üzere diğer eklentilere aktarmaması mümkün olabilir. Bu
+  durumda, Olay İzleyici olayları günlüğe kaydedemez.</li>
+<li>Olaylar, bu sırayla global eklentiler, uygulama modülleri, ağaç
+  önleyiciler ve NVDA nesnelerinden işlenir.</li>
+</ul>
+<h2>Olaylar ve bilgileri</h2>
+<p>Aşağıdaki olaylar izlenir ve kaydedilir:</p>
+<ul>
+<li>Odak manipülasyonu: odak kazan, odak kaybet, odak girildi, ön plan</li>
+<li>Değişiklikler: ad, değer, durum, açıklama, canlı bölge</li>
+<li>Diğer olaylar: uyarı</li>
+<li>UIA olayları: denetleyici, sürükle bırak ve bırak hedef efektleri, seçilen
+  öğe, öğe durumu, düzen geçersiz kılındı, bildirim, sistem uyarısı, metin
+  değişikliği, araç ipucu açık, pencere açık</li>
+</ul>
+<p>Her olay için aşağıdaki bilgiler kaydedilecektir:</p>
+<ul>
+<li>Olay adı</li>
+<li>Nesne</li>
+<li>Nesne adı</li>
+<li>Nesne rolü</li>
+<li>Olaylara bağlı olarak nesne değeri veya durumu</li>
+<li>Uygulama modülü</li>
+<li>IErişilebilir nesneler için: erişim adı, alt kimlik</li>
+<li>UIA nesneleri için: Otomasyon Kimliği, sınıf adı, bildirim olay bilgisi
+  kaydediliyorsa bildirim özellikleri, düzen geçersiz kılınan olay için
+  çocuk sayısı, öğe durumu özellikleri, tanımlıysa sürükle bırak ve bırakma
+  hedefi etkisi</li>
+</ul>
+<p>Ayrıca olayları bir listede görüntülemek için bir hareket atayabilirsiniz
+(NVDA menüsü/Tercihler/Girdi hareketleri, Olay İzleyici kategorisi). Liste,
+işlenen en son 100 olayı kaydeder.</p>
+<h2>Sürüm 23.02</h2>
+<ul>
+<li>NVDA 2022.4 veya üstü gereklidir.</li>
+<li>Windows 10 21H2 (Kasım 2021 Güncellemesi/derlemesi 19044) veya üstü
+  gereklidir.</li>
+<li>Uyarı olayı (çoğunlukla IAccessible nesneler için) izlenecektir.</li>
+</ul>
+<h2>Sürüm 23.01</h2>
+<ul>
+<li>NVDA 2022.3 veya üstü gereklidir.</li>
+<li>Ocak 2023 itibariyle Windows 7, 8 ve 8.1 artık Microsoft tarafından
+  desteklenmediğinden Windows 10 veya sonraki sürümleri gereklidir.</li>
+</ul>
+<h2>Sürüm 22.12</h2>
+<ul>
+<li>Eklenti (Thiago Seus) tarafından kaydedilen en son 100 olayı listelemek
+  için olaylar listesi iletişim kutusu (komut atanmamış) eklendi.</li>
+<li>UIA bildirim özellikleri gibi ek olay bilgileri, olaylarla aynı anda
+  kaydedilir.</li>
+</ul>
+<h2>Sürüm 22.10</h2>
+<ul>
+<li>Güvenlik nedeniyle NVDA 2022.2 veya üstü gereklidir.</li>
+<li>Aşağıdaki UIA özellik değişiklikleri izlenir: sürükle bırak efekti,
+  bırakma hedefi etkisi.</li>
+<li>UIA öğe durumu özellik metni günlüğe kaydedilir.</li>
+<li>Bir nesne bir pencere sınıfı adı tanımlamıyorsa, NVDA artık hata sesleri
+  çalmayacak veya hiçbir şey yapmıyormuş gibi görünecektir.</li>
+</ul>
+<h2>Sürüm 22.06</h2>
+<ul>
+<li>Güvenlik nedeniyle NVDA 2021.3 veya üstü gereklidir.</li>
+</ul>
+<h2>Sürüm 21.10</h2>
+<ul>
+<li>Bu eklentiyi etkileyen NVDA değişiklikleri nedeniyle NVDA 2021.2 veya üstü
+  gereklidir.</li>
+<li>UIA düzeni geçersiz kılınan olay izlenecektir.</li>
+<li>Nesne rolü ve durum bilgileri, daha yeni NVDA sürümlerinde bulunan
+  geliştirici bilgilerine benzeyecektir.</li>
+</ul>
+<h2>Sürüm 21.07</h2>
+<ul>
+<li>İlk sürüm.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

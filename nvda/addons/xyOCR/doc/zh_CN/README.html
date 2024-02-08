@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Xinyi OCR 3.0.1</title>
+</head>
+<body>
+<h1>新翼OCR</h1>
+<p>这是一个提供离线和在线OCR识别的NVDA插件。离线识别基于PaddleOCR_json组件而开发。</p>
+<p>本插件目前提供PaddleOCR_json的离线OCR识别引擎和在线百度通用版、高精度版识别引擎，安装插件后会自动安装PaddleOCR_json组件。后续会逐步接入更多的其他离线、在线OCR识别引擎。</p>
+<p>此外，本插件还提供图像描述功能，可针对图片内容进行识别。</p>
+<h2>插件优点</h2>
+<ul>
+<li>识别速度快，离线识别大约100ms左右，实际情况因计算机性能配置而异。</li>
+<li>强悍的离线识别准确度，媲美在线识别。</li>
+<li>识别结果文字坐标精准，结果文字点击响应准确。</li>
+</ul>
+<h2>键盘快捷键</h2>
+<ul>
+<li>导航对象OCR识别：NVDA+ALT+O</li>
+<li>剪贴板OCR识别：NVDA+ALT+SHIFT+O</li>
+<li>切换OCR识别引擎：NVDA+ALT+9</li>
+<li>图像描述：NVDA+ALT+P</li>
+<li>剪贴板图像描述：NVDA+ALT+SHIFT+P</li>
+</ul>
+<p>快捷键设置：可在“按键与手势”设置中针对“新翼OCR”分类下各命令设置快捷键。</p>
+<h2>反馈联络</h2>
+<p>有任何意见建议欢迎沟通：</p>
+<ul>
+<li>项目地址：https://github.com/huaiyinfeilong/xyocr</li>
+<li>电子邮箱：huaiyinfeilong@163.com</li>
+<li>QQ：354522977</li>
+<li>微信：huaiyinfeilong</li>
+</ul>
+<h2>升级日志</h2>
+<h3>Version 3.0.1</h3>
+<ul>
+<li>新增图片描述黑屏检测：如果在黑屏功能开启状态下进行图片描述操作，将给出提示。</li>
+</ul>
+<h3>Version 3.0</h3>
+<ul>
+<li>新增图像内容识别功能，可针对浏览到的图片和剪贴板中的图片进行识别描述。</li>
+</ul>
+<h3>Version 2.0.2</h3>
+<ul>
+<li>修复在离线OCR不可用的机器上在线OCR可能也无法使用的问题。</li>
+</ul>
+<h3>Version 2.0.1</h3>
+<ul>
+<li>修复在网络代理环境中不稳定的问题。</li>
+</ul>
+<h3>Version 2.0</h3>
+<ul>
+<li>新增百度在线OCR识别引擎，支持通用版识别和高精度版识别,可以使用共享密钥和自己的私有密钥。如使用自己的私有密钥，需在设置中进行配置。</li>
+<li>新增黑屏检测功能，若当黑屏开启时进行OCR识别，将给出提示。</li>
+<li>去除安装时64位系统检测，但非64位系统安装后，仅能使用在线OCR识别而无法使用离线识别。</li>
+</ul>
+<h3>Version 1.3</h3>
+<ul>
+<li>修复在NVDA2023.1以下版本无法安装的问题。</li>
+</ul>
+<h3>Version 1.2</h3>
+<ul>
+<li>新增安装时环境检测，对于非64位系统环境给出无法完成安装提示。</li>
+<li>修复当NVDA异常退出后，PaddleOCR_json.exe不会自动退出，继续存活的问题。</li>
+<li>修复OCR识别随着识别次数增加而占用内存过大的问题。</li>
+<li>修复OCR识别过程中NVDA假死问题。</li>
+</ul>
+<h3>Version 1.1</h3>
+<ul>
+<li>增加剪贴板识别功能，热键：NVDA+SHIFT+ALT+O</li>
+</ul>
+</body>
+</html>

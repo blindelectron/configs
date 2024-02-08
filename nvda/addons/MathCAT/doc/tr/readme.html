@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>MathCAT: MathML'den konuşma ve braille 0.3.9</title>
+</head>
+<body>
+<h1>MathCAT</h1>
+<ul>
+<li>Yazar: Neil Soiffer</li>
+<li>NVDA uyumluluğu: 2018.1 veya sonrası (önceki sürümlerde denenmemiştir)</li>
+<li><a href="https://www.nvaccess.org/addonStore/legacy?file=mathcat">Kararlı sürümü indir</a></li>
+</ul>
+<p>MathCAT, sonunda MathPlayer'ın yerini alacak şekilde tasarlanmıştır çünkü
+MathPlayer artık desteklenmemektedir. MathCAT, MathML'den konuşma ve braille
+oluşturur. MathCAT tarafından üretilen matematik konuşması, kulağa daha
+doğal gelmesi için prozodi ile geliştirilmiştir. Konuşma, MathPlayer ile
+aynı komutlar kullanılarak üç modda gezinilebilir. Ek olarak, navigasyon
+düğümü bir braille ekranda gösterilir. Hem Nemeth hem de UEB teknik
+desteklenir.</p>
+<p>MathCAT konuşma, Gezinme ve braille'i kontrol eden bir dizi yapılandırma
+seçeneğine sahiptir.  Bunların çoğu MathCAT ayarlar iletişim kutusunda
+ayarlanabilir (NVDA Tercihler menüsünde bulunur).  Bu ayarlar hakkında daha
+fazla bilgi için [MathCAT belgelerine]
+(https://nsoiffer.github.io/MathCAT/users.html) bakın.  Belgeler
+<a href="https://nsoiffer.github.io/MathCAT/nav-commands.html">MathCAT'teki tüm gezinme komutlarını listeleyen bir
+tablo</a> için bir
+bağlantı içerir.</p>
+<p>Not: MathCAT, MathML'den konuşma ve braille oluşturmaya yönelik genel bir
+kitaplıktır. NVDA dışında diğer AT projeleri tarafından kullanılır. Genel
+olarak MathCAT projesi hakkında bilgi için ana <a href="https://nsoiffer.github.io/MathCAT">MathCAT Dokümantasyon
+sayfasına</a> bakın.</p>
+<p>MathCAT'ı kimler kullanmalı:</p>
+<ul>
+<li>Yüksek kaliteli Nemeth braille'e ihtiyaç duyanlar (MathPlayer'ın Nemeth'i,
+  teknik olarak düzeltilmesi zor olan bir dizi önemli hataya sahip olan
+  liblouis'in Nemeth nesline dayanmaktadır).</li>
+<li>UEB teknik braille'e ihtiyaç duyanlar</li>
+<li>En son teknolojiyi denemek isteyenler ve hataları bildirerek yardım etmeye
+  istekli olanlar</li>
+<li>Eloquence sesini kullananlar</li>
+</ul>
+<p>MathCAT'ı kimler KULLANMAMALIDIR:</p>
+<ul>
+<li>MathPlayer'ı İngilizce dışında bir dille kullanan herkes (Endonezce ve
+  Vietnamca için çeviriler mevcuttur; çeviriler gelecekte eklenecektir)</li>
+<li>MathPlayer'ı Nemeth olmayan/UEB olmayan braille çıktısıyla kullanan herkes
+  (bir braille çevirisine yardımcı olmak istiyorsanız benimle iletişime
+  geçin)</li>
+<li>Access8Math'i MathPlayer'a tercih eden herkes (konuşma veya diğer
+  özellikler için)</li>
+</ul>
+<p>MathCAT'in konuşma kuralları henüz MathPlayer'ın kuralları kadar kapsamlı
+değil -- bu, MathPlayer'a bağlı kalmanın başka bir nedeni olabilir. MathCAT,
+yazarların niyetlerini ifade etmelerine izin veren MathML 4 fikirleri için
+bir test ortamı olarak kullanılıyor, böylece belirsiz gösterimler doğru bir
+şekilde konuşulabilir ve tahmin edilemez. MathCAT'in mimarisi, yazar
+niyetini kullanma ve çıkarım yapma etrafında toplandığından ve bunlar henüz
+tam olarak çözülmediğinden, çok fazla kural eklemeyi erteledim.</p>
+<h2>MathCAT Güncelleme Günlüğü</h2>
+<h3>Sürüm 0.2</h3>
+<ul>
+<li>Çok sayıda hata düzeltmesi</li>
+<li>Konuşma iyileştirmeleri</li>
+<li>Duraklatma süresini kontrol etmek için bir tercih ayarı (matematik için
+  göreli konuşma hızındaki değişikliklerle çalışır)</li>
+<li>Kimya gösterimini tanıma ve uygun şekilde konuşma desteği</li>
+<li>Endonezce ve Vietnamca çeviriler</li>
+</ul>
+<h3>Sürüm 0.2.5</h3>
+<ul>
+<li>Kimya alanında daha fazla iyileştirme</li>
+<li>
+<p>Nemeth için Düzeltmeler:</p>
+<ul>
+<li>"İhmal" kuralları eklendi</li>
+<li>İngilizce Dil Göstergeleri için bazı kurallar eklendi</li>
+<li>Çok amaçlı göstergenin gerekli olduğu daha fazla durum eklendi</li>
+<li>Nemeth ve noktalama işaretleriyle ilgili düzeltmeler</li>
+</ul>
+</li>
+</ul>
+<h3>Sürüm 0.3.3</h3>
+<p>Bu sürümde bir dizi hata düzeltmesi var. Başlıca yeni özellikler ve hata
+düzeltmeleri şunlardır:</p>
+<ul>
+<li>İspanyolca Çeviri eklendi (Noelia Ruiz ve María Allo Roldán'a teşekkürler)</li>
+<li>Gezinme bir seviye yakınlaştırılmış olarak başlayacak şekilde değiştirildi</li>
+<li>Tablo yapılarında gezinmenin bir yolu olarak ctrl+alt+ok eklendi. Bu
+  tuşlar, NVDA'da tablolarda gezinmek için kullanıldıkları için daha akılda
+  kalıcı olmalıdır.</li>
+<li>Göreli Matematik Hızı metin konuşma hızından daha yavaş olarak
+  ayarlandığında, eSpeak seslerinin yavaşlamasına neden olan NVDA hatası
+  giderildi.</li>
+<li>Uzun 'a' sesini konuşabilmeleri için OneCore ses problemi üzerinde
+  çalıştık.</li>
+</ul>
+<p>Hem Nemeth hem de UEB için konuşmada pek çok küçük ayar ve bazı hata
+düzeltmeleri var.</p>
+<p>Not: Artık Vietnam'ın braille standardını braille çıktısı olarak alma
+seçeneği var. Bu hala devam eden bir çalışma ve test dışında
+kullanılamayacak kadar hatalı. Bir sonraki MathCAT sürümünün güvenilir bir
+uygulama içermesini bekliyorum.</p>
+<h3>Sürüm 0.3.8</h3>
+<p>Braille:</p>
+<ul>
+<li>Diyalog uluslararası hale getirildi (çevirmenlere çok teşekkürler!)</li>
+<li>CMU'nun ilk uygulaması - İspanya'da ve Portekizce konuşulan birkaç ülkede
+  kullanılan braille kodu</li>
+<li>Vietnamca braille alfabesinde önemli iyileştirmeler</li>
+<li>Göreli hız iletişim kutusunun kaydırıcısı maksimum %100 değerine sahip
+  olacak şekilde değiştirildi (artık yalnızca daha yavaş hızların
+  ayarlanmasına izin veriyor). Ayrıca, hızı önemli ölçüde artırmak/düşürmek
+  daha kolay olacak şekilde adım boyutları eklendi.</li>
+<li>Bazı UEB hataları düzeltildi ve UEB için bazı karakterler eklendi</li>
+</ul>
+<p>Diğer düzeltmeler:</p>
+<ul>
+<li>Vietnamca konuşmada iyileştirmeler</li>
+<li>OneCore seslerinin "a" demesiyle ilgili hata düzeltildi</li>
+<li>'Otomatik Yakınlaştırma' Yanlış olduğunda (varsayılan değil) bazı gezinme
+  hataları düzeltildi</li>
+<li>Dil değişiklikleri ve diğer bazı iletişim kutusu değişiklikleriyle ilgili
+  güncellemeler düzeltildi; böylece bunların "Uygula" veya "Tamam"
+  tıklandığında hemen etkili olması sağlandı.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

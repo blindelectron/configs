@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Event Tracker 23.5.5</title>
+</head>
+<body>
+<h1>Praćenje događaja (Event Tracker)</h1>
+<ul>
+<li>Autor: Joseph Lee, Thiago Seus, Luke Davis</li>
+<li>Preuzmi <a href="https://www.nvaccess.org/addonStore/legacy?file=evtTracker">stabilnu verziju</a></li>
+<li>NVDA kompatibilnost: 2022.4 i novije verzije</li>
+</ul>
+<p>Ovaj dodatak daje informacije o objektima za koje su pokrenuti
+događaji. Svojstva zabilježena u načinu dnevnika otklanjanja grešaka
+uključuju vrstu objekta, naziv, ulogu, događaj, modul aplikacije i
+informacije specifične za API pristupačnosti kao što su accName za
+IAccessible objekt i Automation Id za UIA objekte.</p>
+<p>Zabilješke:</p>
+<ul>
+<li>Ovaj je dodatak dizajniran za programere i napredne korisnike koji trebaju
+  mogućnost praćenja događaja koji dolaze iz aplikacija i raznih kontrola.</li>
+<li>Za korištenje dodatka, NVDA mora biti prijavljivanje u načinu ispravljanja
+  grešaka (konfigurirano u općim postavkama / razini prijave ili s ponovnim
+  pokretnjem s aktiviranim zapisivanjem ispravljanja grešaka).</li>
+<li>Moguće je da dodaci koji su učitani prije dodatka „Praćenja događaja” ne
+  proslijede događaj drugim dodacima, uključujući dodatak „Praćenje
+  događaja”. Ako se to dogodi, dodatak „Praćenje događaja” neće moći
+  zabilježiti događaje.</li>
+<li>Događajima se upravlja iz globalnih dodataka, modula aplikacija,
+  presretača stabla i NVDA objekata, tim redoslijedom.</li>
+</ul>
+<h2>Događaji i njihove informacije</h2>
+<p>Sljedeći događaji se prate i snimaju:</p>
+<ul>
+<li>Manipulacija fokusom: dobivanje fokusa, gubljenje fokusa, unesen fokus,
+  prvi plan</li>
+<li>Promjene: naziv, vrijednost, stanje, opis, regija uživo</li>
+<li>Ostali događaji: upozorenje</li>
+<li>UIA događaji: kontroler za, efekte povlačenja i ispuštanja cilja, odabran
+  element, stanje stavke, poništen raspored, obavijest, upozorenje sustava,
+  promjena teksta, otvoren opis alata, otvoren prozor</li>
+</ul>
+<p>Za svaki događaj zabilježit će se sljedeće informacije:</p>
+<ul>
+<li>Naziv događaja</li>
+<li>Objekt</li>
+<li>Naziv objekta</li>
+<li>Uloga objekta</li>
+<li>Vrijednost ili stanje objekta ovisno o događaju</li>
+<li>Modul aplikacije</li>
+<li>Za IAccessible objekte: ime računa, ID podređenog</li>
+<li>Za UIA objekte: ID automatizacije, ime klase, svojstva obavijesti ako se
+  snimaju informacije obavijesti događaja, broj podređenih za izgled
+  nevažećeg događaja, svojstva za stanje stavke, povuci-i-ispusti, te
+  ispuštanje efekta cilja ako je definiran</li>
+</ul>
+<p>Možeš dodijeliti i gestu za pregled događaja na popisu (NVDA
+izbornik/Postavke/Geste unosa, kategorija „Praćenje događaja”). Popis sprema
+do 100 najnovijih obrađenih događaja.</p>
+<h2>Verzija 23.02</h2>
+<ul>
+<li>Potrebna je NVDA verzija 2022.4 ili novija.</li>
+<li>Potreban je sustav Windows 10 21H2 (aktualizirana verzija iz studenog
+  2021./izgradnja 19044) ili novija verzija.</li>
+<li>Događaji upozorenja (uglavnom za IAccessible objekte) će se pratiti.</li>
+</ul>
+<h2>Verzija 23.01</h2>
+<ul>
+<li>Potrebna je NVDA verzija 2022.3 ili novija.</li>
+<li>Zahtijeva Windows 10 ili noviju verziju, jer od siječnja 2023. Microsoft
+  više ne pordržava Windows 7, 8 i 8.1.</li>
+</ul>
+<h2>Verzija 22.12</h2>
+<ul>
+<li>Added events list dialog (command unassigned) to list up to 100 recent
+  events recorded by the add-on (Thiago Seus).</li>
+<li>Additional event information such as UIA notification properties are
+  recorded at the same time as events.</li>
+</ul>
+<h2>Verzija 22.10</h2>
+<ul>
+<li>Iz sigurnosnih razloga je potrebna je NVDA verzija 2022.2 ili novija.</li>
+<li>The following UIA property changes are tracked: drag drop effect, drop
+  target effect.</li>
+<li>UIA item status property text is logged.</li>
+<li>NVDA will no longer play error tones or appear to do nothing if an object
+  does not define a window class name.</li>
+</ul>
+<h2>Verzija 22.06</h2>
+<ul>
+<li>Iz sigurnosnih razloga je potrebna je NVDA verzija 2021.3 ili novija.</li>
+</ul>
+<h2>Verzija 21.10</h2>
+<ul>
+<li>NVDA 2021.2 or later is required due to changes to NVDA that affects this
+  add-on.</li>
+<li>UIA layout invalidated event will be tracked.</li>
+<li>Object role and states information will resemble developer info found in
+  more recent NVDA releases.</li>
+</ul>
+<h2>Verzija 21.07</h2>
+<ul>
+<li>Prvo izdanje.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

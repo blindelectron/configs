@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>IndentNav 1.13</title>
+</head>
+<body>
+<h1>IndentNav addon for NVDA</h1>
+<p>This addon allows NVDA users to navigate by indentation level or offset of lines.
+While editing source code in many programming languages, it allows to jump between the lines of the same indentation level, as well as quickly find lines with greater or lesser indentation level.
+It also provides similar keystrokes in tree views.</p>
+<p>Please note that as of version v1.5 (January 2019) IndentNav no longer works in browsers. Browser navigation functionality has been released as another <a href="https://github.com/mltony/nvda-browser-nav">BrowserNav add-on</a>, that must be installed separately.</p>
+<h2>Download</h2>
+<ul>
+<li>Current stable version (Python 3 only, requires NVDA 2019.3 or later): <a href="https://github.com/mltony/nvda-indent-nav/releases/latest/download/IndentNav.nvda-addon">IndentNav</a></li>
+<li>Last Python 2 version (compatible with NVDA 2019.2 and prior): <a href="https://github.com/mltony/nvda-indent-nav/releases/download/v1.6/IndentNav-1.6.nvda-addon">IndentNav v1.6</a>.</li>
+</ul>
+<h2>Usage</h2>
+<p>IndentNav can  be useful for editing source code in many programming languages. 
+Languages like Python require the source code to be properly indented, while in many other programming languages it is strongly recommended.
+With IndentNav you can press NVDA+Alt+DownArrow or UpArrow to jump to next or previous line with the same indentation level.
+You can also press NVDA+Alt+LeftArrow to jump to a parent line, that is a previous line with lower indentation level.
+In Python you can easily find current function definition or class definition.
+You can also press NVDA+Alt+RightArrow to go to the first child of current line, that is next line with greater indentation level.</p>
+<p>If your NVDA is set to express line indentation as tones, then IndentNav will quickly play the tones of all the skipped lines.
+Otherwise it will only crackle to roughly denote the number of skipped lines.</p>
+<p>IndentNav also works in tree views.</p>
+<p>Keystrokes:</p>
+<ul>
+<li>NVDA+Alt+UpArrow or DownArrow: Jump to previous or next line with the same indentation level within the current indentation block.</li>
+<li>NVDA+Alt+Control+UpArrow or DownArrow: Force-jump to previous or next line with the same indentation level. This command will jump to other indentation blocks (such as other Python functions) if necessary.</li>
+<li>NVDA+Alt+Shift+UpArrow or DownArrow: Jump to first or last line with the same indentation level within the current indentation block.</li>
+<li>NVDA+alt+LeftArrow: Jump to parent - that is previous line with lesser indentation level.</li>
+<li>NVDA+control+alt+LeftArrow: Jump to next parent - that is next line with lesser indentation level.</li>
+<li>NVDA+Alt+RightArrow: Jump to first child - that is next line with greater indentation level within the same indentation block.</li>
+<li>NVDA+control+Alt+RightArrow: Jump to previous  child - that is previous line with greater indentation level within the same indentation block.</li>
+<li>NVDA+I: Announce parent line without moving the cursor there. Press twice or multiple times to query second level or further level parent.</li>
+<li>NVDA+control+I: Select current indentation block. Press repeatedly to select multiple indentation blocks.</li>
+<li>NVDA+Alt+I: Select current indentation block and all the following indentation blocks on the same level. Press twice to copy to clipboard.</li>
+<li>NVDA+V: Indent paste, that is first reindent current clipboard text to match indentation level of current file and then paste.</li>
+</ul>
+<h2>Known issues</h2>
+<ul>
+<li>IndentNav doesn't  support VSCode at this time. Due to its internal optimizations, VSCode doesn't load the entire document in the editable control, which makes it impossible to find lines far from current line.<br />
+  Please use <a href="https://github.com/mltony/vscode-indent-nav/">IndentNav VSCode extension</a> instead.
+  Or alternatively, please consider using <a href="https://marketplace.visualstudio.com/items?itemName=kaiwood.indentation-level-movement">Indentation Level Movement</a> VSCode extension instead.</li>
+<li>Experimental VSCode support has been added in vscode branch, but at this time it doesn't work well enough.</li>
+</ul>
+<h2>Source code</h2>
+<p>Source code is available at <a href="http://github.com/mltony/nvda-indent-nav">http://github.com/mltony/nvda-indent-nav</a>.</p>
+</body>
+</html>
