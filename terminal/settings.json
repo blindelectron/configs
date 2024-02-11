@@ -369,6 +369,7 @@
     ],
     "showTerminalTitleInTitlebar": false,
     "tabSwitcherMode": "disabled",
+    "theme": "dark",
     "themes": [],
     "windowingBehavior": "useNew",
     "wordDelimiters": " /\\()\"'-.,:;<>~!@#$%^&*|+=[]{}~?\u2502"
